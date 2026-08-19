@@ -1,0 +1,52 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Tenants
+Refresh
+
+Error loading data
+
+No static resource v2/_count.
+
+Try again
+Documentation
+TENANT CONFIGURATION
+
+Configuring Tenants
+
+How to configure ULBs and cities
+
+What is a Tenant?
+
+A tenant represents a body (State/ULB) in the system
+
+RELATED DOCS
+
+MDMS Service
+
+Where tenant config is stored
+
+Open DIGIT Docs

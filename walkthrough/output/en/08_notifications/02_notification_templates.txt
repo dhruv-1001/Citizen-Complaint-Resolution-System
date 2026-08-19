@@ -1,0 +1,84 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+State Info
+City Modules
+ID Formats
+Workflow Business Services
+Workflow Config
+Auto Escalation
+SLA Config
+Role Actions
+Roles
+Action Mappings
+Encryption Policy
+Decryption ABAC
+Masking Patterns
+Security Policy
+Inbox Config
+Deactivation Reasons
+Degrees
+Employment Tests
+Specializations
+Gender Types
+Employee Status
+Employee Type
+Cron Jobs
+UI Homepage
+Theme Config
+Mobile Number Validation
+Tenant Boundary (HRMS)
+Auto-Escalation Ignored
+Workflow BS Master
+PGR UI Constants
+Map Configuration
+PGR Notification Routing
+PGR Notification Templates
+PGR Provider Templates
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+PGR Notification Templates
+Schema: RAINMAKER-PGR.NotificationTemplate
+Refresh
+Add filter
+
+Error loading data
+
+No static resource v2/_count.
+
+Try again
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

@@ -1,0 +1,173 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Advanced Entities
+
+Browse and manage all MDMS schema data.
+
+State Info
+
+common-masters.StateInfo
+
+City Modules
+
+tenant.citymodule
+
+ID Formats
+
+common-masters.IdFormat
+
+Business Services
+
+Workflow.BusinessService
+
+Workflow Config
+
+Workflow.BusinessServiceConfig
+
+Auto Escalation
+
+Workflow.AutoEscalation
+
+SLA Config
+
+common-masters.wfSlaConfig
+
+Role Actions
+
+ACCESSCONTROL-ROLEACTIONS.roleactions
+
+Roles
+
+ACCESSCONTROL-ROLES.roles
+
+Action Mappings
+
+ACCESSCONTROL-ACTIONS-TEST.actions-test
+
+Encryption Policy
+
+DataSecurity.EncryptionPolicy
+
+Decryption ABAC
+
+DataSecurity.DecryptionABAC
+
+Masking Patterns
+
+DataSecurity.MaskingPatterns
+
+Security Policy
+
+DataSecurity.SecurityPolicy
+
+Inbox Config
+
+INBOX.InboxQueryConfiguration
+
+Deactivation Reasons
+
+egov-hrms.DeactivationReason
+
+Degrees
+
+egov-hrms.Degree
+
+Employment Tests
+
+egov-hrms.EmploymentTest
+
+Specializations
+
+egov-hrms.Specalization
+
+Gender Types
+
+common-masters.GenderType
+
+Employee Status
+
+egov-hrms.EmployeeStatus
+
+Employee Type
+
+egov-hrms.EmployeeType
+
+Cron Jobs
+
+common-masters.CronJobAPIConfig
+
+UI Homepage
+
+common-masters.uiHomePage
+
+Theme Config
+
+common-masters.ThemeConfig
+
+Mobile Number Validation
+
+common-masters.MobileNumberValidation
+
+Tenant Boundary (HRMS)
+
+egov-location.TenantBoundary
+
+Auto-Escalation Ignored
+
+Workflow.AutoEscalationStatesToIgnore
+
+Workflow BS Master
+
+Workflow.BusinessServiceMasterConfig
+
+PGR UI Constants
+
+RAINMAKER-PGR.UIConstants
+
+Map Configuration
+
+RAINMAKER-PGR.MapConfig
+
+PGR Notification Routing
+
+RAINMAKER-PGR.NotificationRouting
+
+PGR Notification Templates
+
+RAINMAKER-PGR.NotificationTemplate
+
+PGR Provider Templates
+
+RAINMAKER-PGR.NotificationProviderTemplate
+
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

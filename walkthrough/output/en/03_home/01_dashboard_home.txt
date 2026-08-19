@@ -1,0 +1,85 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+DIGIT Management Studio
+
+...
+
+Tenants
+
+...
+
+Departments
+
+...
+
+Designations
+
+...
+
+Complaint Types
+
+268
+
+Employees
+
+31
+
+Boundaries
+
+0
+
+Complaints
+
+14258
+
+Localization Messages
+
+100
+
+Users
+
+49
+
+Access Roles
+
+Documentation
+GETTING STARTED
+
+DIGIT Platform Overview
+
+Understand the DIGIT architecture
+
+Multi-Tenant Configuration
+
+How tenants work in DIGIT
+
+CORE SERVICES
+
+MDMS Overview
+
+Master Data Management Service
+
+Boundary Service
+
+Manage administrative boundaries
+
+Open DIGIT Docs

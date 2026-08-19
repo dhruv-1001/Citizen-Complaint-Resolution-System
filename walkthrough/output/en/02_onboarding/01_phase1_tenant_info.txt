@@ -1,0 +1,54 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 1: Tenant & Branding Setup
+
+Create tenant and configure branding assets
+
+100 existing tenants already configured under ke. Skip Phase 1 by selecting one.
+Use existing tenant →
+What You'll Do:
+• Create new tenant/ULB configuration
+• Upload logo and branding assets
+• Configure state-level branding
+
+Template Required:
+
+Tenant And Branding Master.xlsx
+
+Download Template
+Step 1.1
+
+Upload Tenant Master Excel
+
+Not started
+Step 1.2
+
+State Branding Configuration
+
+Requires Step 1.1
+Use existing tenant
+Start Setup
+
+DIGIT Complaints Management • Press Ctrl+/ for help

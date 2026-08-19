@@ -1,0 +1,34 @@
+Bomet County
+English
+S
+Home
+/
+Inbox
+Search Citizen Complaint
+Citizen Complaint Resolution System
+New Complaint
+Complaint No
+Mobile No
++254
+Date Range
+Search
+CLEAR SEARCH
+Complaint Subtype
+County*
+Select County
+Status
+Pending for assignment
+Pending for re-assignment
+Pending at last mile employee
+Rejected
+Resolved
+Closed after rejection
+Closed after resolution
+Pending at Supervisor
+Resolved by Supervisor
+Cancelled
+Apply
+Clear All
+My Complaints
+All Complaints
+No Results Found

@@ -1,0 +1,117 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Notification Providers
+Novu integrations — credentials redacted server-side
+4
+Sync WhatsApp templates
+Add Provider
+Refresh
+Channel	Provider	Name	Active	Primary	Actions
+
+SMS
+	
+novu
+	
+Novu Inbox
+	
+YES
+	
+NO
+	
+Verify
+Test
+Templates
+
+
+SMS
+	
+novu
+	
+Novu Inbox
+	
+YES
+	
+NO
+	
+Verify
+Test
+Templates
+
+
+SMS
+	
+twilio
+	
+Twilio SMS
+	
+YES
+	
+YES
+	
+Verify
+Test
+Templates
+
+
+SMS
+	
+twilio
+	
+Twilio SMS
+	
+YES
+	
+YES
+	
+Verify
+Test
+Templates
+
+Showing 1-4 of 4
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

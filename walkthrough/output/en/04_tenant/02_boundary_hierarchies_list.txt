@@ -1,0 +1,127 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Boundary Hierarchies
+238
+Refresh
+Create
+Add filter
+Hierarchy Type
+	
+Tenant
+	app.fields.levels
+
+ADMIN
+	
+ke
+	
+County → SubCounty → Ward
+
+
+POC_MZPT_ADMIN
+	
+ke
+	
+Município → Distrito Municipal → Bairro → Quarteirão
+
+
+PW_008600DA_BHDUP
+	
+ke
+	
+X
+
+
+PW_02A92697_BHSHOW
+	
+ke
+	
+ROOT → MID → LEAF
+
+
+PW_02D821DD_BHSHOW
+	
+ke
+	
+ROOT → MID → LEAF
+
+
+PW_0383280B_BHCREATE
+	
+ke
+	
+LEVEL_A → LEVEL_B
+
+
+PW_05A64EB0_BHCREATE
+	
+ke
+	
+LEVEL_A → LEVEL_B
+
+
+PW_07AA453B_BHSHAPE
+	
+ke
+	
+ONLY
+
+
+PW_08CF2239_BHSHOW
+	
+ke
+	
+ROOT → MID → LEAF
+
+
+PW_0A14F989_BHSHAPE
+	
+ke
+	
+ONLY
+
+Showing 1-10 of 238
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 24
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

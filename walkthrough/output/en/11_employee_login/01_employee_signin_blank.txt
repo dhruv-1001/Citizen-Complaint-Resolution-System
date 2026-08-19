@@ -1,0 +1,11 @@
+Bomet County
+
+Login
+User Name*
+Password*
+City*
+Select city
+I agree to the DIGIT's
+Privacy Policy
+Login
+Forgot password?

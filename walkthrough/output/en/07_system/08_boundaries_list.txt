@@ -1,0 +1,144 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Hide map
+Boundary map
+32 of 33 boundaries with map geometry
++
+−
+ Leaflet | © OpenStreetMap contributors
+Boundaries
+31
+Refresh
+Create
+Code
+	
+Boundary Type
+	
+Tenant
+
+
+BOMET
+	
+County
+	
+ke
+
+
+BOMET_BOMET_CENTRAL
+	
+SubCounty
+	
+ke
+
+
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_CENTRAL_MUTARAKWA
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_CENTRAL_NADARAWETA
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_CENTRAL_SILIBWET_TOWNSHIP
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_CENTRAL_SINGORWET
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_EAST
+	
+SubCounty
+	
+ke
+
+
+BOMET_BOMET_EAST_CHEMANER
+	
+Ward
+	
+ke
+
+
+BOMET_BOMET_EAST_KEMBU
+	
+Ward
+	
+ke
+
+Showing 1-10 of 31
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 4
+Next
+Documentation
+BOUNDARY MANAGEMENT
+
+Boundary Service
+
+Create and manage boundary hierarchies
+
+Location Services
+
+Legacy boundary management
+
+Boundary API Specs
+
+API reference for boundaries
+
+GUIDES
+
+Migrate Boundary Data
+
+Migrate from legacy to new boundary service
+
+Open DIGIT Docs

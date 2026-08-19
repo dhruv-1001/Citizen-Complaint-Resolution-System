@@ -1,0 +1,66 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+User Preferences
+Per-user notification consent — read-only
+1
+Refresh
+User	Preferred Language	WhatsApp	SMS	Email
+
+f662c033-acc8-40d0-b219-2fe2cbbf6004
+	
+hi_IN
+	
+GRANTED
+	
+GRANTED
+	
+GRANTED
+
+Showing 1-1 of 1
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

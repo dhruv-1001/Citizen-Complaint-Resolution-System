@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sitemap · DIGIT Configurator + Employee UI — bomet walkthrough</title>
+<script src="https://unpkg.com/vis-network@10.1.0/standalone/umd/vis-network.min.js"></script>
+<style>
+  :root{--bg:#0b1020;--panel:#121a2e;--ink:#e8edf7;--mut:#9fb0d0;--line:#26304a;--accent:#2f6fdb;}
+  *{box-sizing:border-box;} html,body{margin:0;height:100%;}
+  body{background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  header h1{font-size:17px;margin:0;}
+  header .sub{color:var(--mut);font-size:12.5px;}
+  .spacer{flex:1;}
+  .toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;}
+  .toggle button{background:transparent;color:var(--mut);border:0;padding:7px 16px;font-size:13px;cursor:pointer;}
+  .toggle button.active{background:var(--accent);color:#04130a;font-weight:600;}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mut);}
+  .legend span{display:inline-flex;align-items:center;gap:5px;}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
+  a.gallery{color:var(--accent);text-decoration:none;font-size:12.5px;border:1px solid var(--line);padding:6px 12px;border-radius:8px;}
+  a.gallery:hover{border-color:var(--accent);}
+  #net{width:100%;height:calc(100vh - 120px);}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(4,7,16,.92);display:none;z-index:50;flex-direction:column;}
+  #lb.open{display:flex;}
+  #lb .bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);}
+  #lb .bar b{font-size:15px;} #lb .bar .meta{color:var(--mut);font-size:12.5px;}
+  #lb .zoomctl{margin-left:auto;display:flex;align-items:center;gap:4px;}
+  #lb .zoomctl button{background:#1b2438;color:var(--ink);border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:14px;min-width:30px;height:28px;padding:0 8px;}
+  #lb .zoomctl button:hover{border-color:var(--accent);}
+  #lb .zoomctl #zlabel{min-width:50px;font-size:12.5px;color:var(--mut);background:none;border:0;}
+  #lb .bar .x{margin-left:14px;cursor:pointer;font-size:22px;color:var(--mut);background:none;border:0;}
+  #lb .stage{flex:1;display:flex;align-items:safe center;justify-content:safe center;overflow:auto;padding:16px;}
+  #lb img{max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:zoom-in;user-select:none;-webkit-user-drag:none;flex-shrink:0;}
+  #lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;color:#fff;background:rgba(0,0,0,.35);
+           border:0;cursor:pointer;padding:6px 16px;border-radius:8px;}
+  #lb .prev{left:14px;} #lb .next{right:14px;}
+  #lb .count{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:var(--mut);font-size:12.5px;}
+</style></head>
+<body>
+<header>
+  <div>
+    <h1>DIGIT Configurator &amp; Employee UI <span style="color:var(--mut)">· bometfeedbackhub.digit.org</span></h1>
+    <div class="sub">45/45 screens captured · click a node to zoom its screenshots</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="legend"><span><i class="dot" style="background:#d8973c"></i>Sign In</span><span><i class="dot" style="background:#8b5cf6"></i>Onboarding wizard</span><span><i class="dot" style="background:#2f6fdb"></i>Management console</span><span><i class="dot" style="background:#3f7fae"></i>Masters & registries</span><span><i class="dot" style="background:#2bb3a3"></i>Notifications</span><span><i class="dot" style="background:#c2477f"></i>Dashboards</span><span><i class="dot" style="background:#5fa8d3"></i>Forms & bulk import</span><span><i class="dot" style="background:#c0392b"></i>Known gaps</span><span><i class="dot" style="background:#3fae6b"></i>Employee UI</span></div>
+  
+  <a class="gallery" href="gallery.html">Grid gallery →</a>
+</header>
+<div id="net"></div>
+
+<div id="lb">
+  <div class="bar"><b id="lbTitle"></b><span class="meta" id="lbMeta"></span>
+    <div class="zoomctl">
+      <button onclick="zoomBy(-1)" title="Zoom out (−)">−</button>
+      <button id="zlabel" onclick="zoomToggle()" title="Toggle fit / 100% — or click the image">Fit</button>
+      <button onclick="zoomBy(1)" title="Zoom in (+)">+</button>
+    </div>
+    <button class="x" onclick="closeLb()" title="Close (Esc)">✕</button></div>
+  <div class="stage">
+    <button class="nav prev" onclick="step(-1)">‹</button>
+    <img id="lbImg" src="">
+    <button class="nav next" onclick="step(1)">›</button>
+    <div class="count" id="lbCount"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {"nodes": [{"id": "login", "label": "Configurator Sign In", "level": 0, "group": "auth", "imgs": {"en": "en/01_login/02_signin_filled_onboarding_mode.png"}, "color": "#d8973c", "captured": true}, {"id": "onb_p1", "label": "Phase 1 \u00b7 Tenant & Branding", "level": 1, "group": "onboard", "imgs": {"en": "en/02_onboarding/01_phase1_tenant_info.png"}, "color": "#8b5cf6", "captured": true}, {"id": "onb_p2", "label": "Phase 2 \u00b7 Boundary Setup", "level": 2, "group": "onboard", "imgs": {"en": "en/02_onboarding/02_phase2_boundaries.png"}, "color": "#8b5cf6", "captured": true}, {"id": "onb_p3", "label": "Phase 3 \u00b7 Common Masters", "level": 3, "group": "onboard", "imgs": {"en": "en/02_onboarding/03_phase3_masters.png"}, "color": "#8b5cf6", "captured": true}, {"id": "onb_p4", "label": "Phase 4 \u00b7 Employee Onboarding", "level": 4, "group": "onboard", "imgs": {"en": "en/02_onboarding/04_phase4_employees.png"}, "color": "#8b5cf6", "captured": true}, {"id": "onb_done", "label": "Setup Complete", "level": 5, "group": "onboard", "imgs": {"en": "en/02_onboarding/05_complete.png"}, "color": "#8b5cf6", "captured": true}, {"id": "mgmt_home", "label": "Management Dashboard", "level": 1, "group": "manage", "imgs": {"en": "en/03_home/01_dashboard_home.png"}, "color": "#2f6fdb", "captured": true}, {"id": "mgmt_advanced", "label": "Advanced \u00b7 all MDMS masters", "level": 2, "group": "manage", "imgs": {"en": "en/03_home/02_advanced_all_masters.png"}, "color": "#2f6fdb", "captured": true}, {"id": "pgr_dash", "label": "PGR Dashboard", "level": 2, "group": "dash", "imgs": {"en": "en/09_dashboards/01_pgr_dashboard.png"}, "color": "#c2477f", "captured": true}, {"id": "public_dash", "label": "Public Dashboard config", "level": 2, "group": "dash", "imgs": {"en": "en/09_dashboards/02_public_dashboard_configure.png"}, "color": "#c2477f", "captured": true}, {"id": "tenants", "label": "Tenants", "level": 3, "group": "masters", "imgs": {"en": "en/04_tenant/01_tenants_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "bnd_hier", "label": "Boundary Hierarchies", "level": 3, "group": "masters", "imgs": {"en": "en/04_tenant/02_boundary_hierarchies_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "complaints", "label": "Complaints (empty)", "level": 3, "group": "masters", "imgs": {"en": "en/05_complaints/01_complaints_list_empty.png"}, "color": "#3f7fae", "captured": true}, {"id": "localization", "label": "Localization Messages", "level": 3, "group": "masters", "imgs": {"en": "en/05_complaints/02_localization_messages_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "employees", "label": "Employees", "level": 3, "group": "masters", "imgs": {"en": "en/06_people/01_employees_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "org_chart", "label": "Org Chart", "level": 3, "group": "masters", "imgs": {"en": "en/06_people/03_org_chart.png"}, "color": "#3f7fae", "captured": true}, {"id": "users", "label": "Users", "level": 4, "group": "masters", "imgs": {"en": "en/06_people/04_users_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "access_roles", "label": "Access Roles", "level": 4, "group": "masters", "imgs": {"en": "en/07_system/01_access_roles_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "workflows", "label": "Workflow Business Services", "level": 4, "group": "masters", "imgs": {"en": "en/07_system/03_workflows_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "processes", "label": "Workflow Processes (empty)", "level": 4, "group": "masters", "imgs": {"en": "en/07_system/05_processes_list_empty.png"}, "color": "#3f7fae", "captured": true}, {"id": "mdms_schemas", "label": "MDMS Schemas", "level": 4, "group": "masters", "imgs": {"en": "en/07_system/06_mdms_schemas_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "boundaries", "label": "Boundaries", "level": 4, "group": "masters", "imgs": {"en": "en/07_system/08_boundaries_list.png"}, "color": "#3f7fae", "captured": true}, {"id": "notif_configure", "label": "Notifications \u00b7 Configure", "level": 5, "group": "notify", "imgs": {"en": "en/08_notifications/01_notification_configure.png"}, "color": "#2bb3a3", "captured": true}, {"id": "notif_templates", "label": "Notification Templates", "level": 5, "group": "notify", "imgs": {"en": "en/08_notifications/02_notification_templates.png"}, "color": "#2bb3a3", "captured": true}, {"id": "notif_logs", "label": "Notification Logs", "level": 5, "group": "notify", "imgs": {"en": "en/08_notifications/03_notification_logs.png"}, "color": "#2bb3a3", "captured": true}, {"id": "notif_providers", "label": "Notification Providers", "level": 5, "group": "notify", "imgs": {"en": "en/08_notifications/04_notification_providers.png"}, "color": "#2bb3a3", "captured": true}, {"id": "notif_prefs", "label": "User Preferences", "level": 5, "group": "notify", "imgs": {"en": "en/08_notifications/05_user_preferences.png"}, "color": "#2bb3a3", "captured": true}, {"id": "dept_create", "label": "Create Department (form only)", "level": 6, "group": "forms", "imgs": {"en": "en/04_tenant/05_department_create_filled.png"}, "color": "#5fa8d3", "captured": true}, {"id": "emp_create", "label": "Create Employee (form only)", "level": 6, "group": "forms", "imgs": {"en": "en/06_people/09_employee_create_filled.png"}, "color": "#5fa8d3", "captured": true}, {"id": "bnd_create", "label": "Create Boundary (form only)", "level": 6, "group": "forms", "imgs": {"en": "en/07_system/11_boundary_create_filled.png"}, "color": "#5fa8d3", "captured": true}, {"id": "emp_bulk", "label": "Employees \u00b7 Bulk import", "level": 6, "group": "forms", "imgs": {"en": "en/06_people/06_employees_bulk_import.png"}, "color": "#5fa8d3", "captured": true}, {"id": "loc_bulk", "label": "Localization \u00b7 Bulk import", "level": 6, "group": "forms", "imgs": {"en": "en/06_people/07_localization_bulk_import.png"}, "color": "#5fa8d3", "captured": true}, {"id": "gap_departments", "label": "Departments \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/01_departments_list_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_designations", "label": "Designations \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/02_designations_list_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_types", "label": "Complaint Types \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/03_complaint_types_list_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_hierarchies", "label": "Complaint Hierarchies \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/04_complaint_hierarchies_list_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_mapconfig", "label": "Map Configuration \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/05_map_configuration_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_routing", "label": "Notification Routing \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/06_notification_routing_error.png"}, "color": "#c0392b", "captured": true}, {"id": "gap_provtpl", "label": "Provider Templates \u2014 load error", "level": 7, "group": "gaps", "imgs": {"en": "en/10_known_gaps/07_provider_templates_whatsapp_error.png"}, "color": "#c0392b", "captured": true}, {"id": "emp_login", "label": "Employee Sign In", "level": 0, "group": "emp", "imgs": {"en": "en/11_employee_login/03_employee_signin_filled.png"}, "color": "#3fae6b", "captured": true}, {"id": "emp_home", "label": "Employee Home", "level": 1, "group": "emp", "imgs": {"en": "en/11_employee_login/04_employee_home.png"}, "color": "#3fae6b", "captured": true}, {"id": "emp_inbox_v2", "label": "PGR Inbox v2 (search + filters)", "level": 2, "group": "emp", "imgs": {"en": "en/12_employee_inbox/01_inbox_v2_search_and_filters.png"}, "color": "#3fae6b", "captured": true}, {"id": "emp_inbox_v1", "label": "PGR Inbox (legacy)", "level": 2, "group": "emp", "imgs": {"en": "en/12_employee_inbox/03_inbox_v1_legacy.png"}, "color": "#3fae6b", "captured": true}, {"id": "emp_search", "label": "Search Complaint", "level": 2, "group": "emp", "imgs": {"en": "en/14_employee_search/01_search_complaint_no_results.png"}, "color": "#3fae6b", "captured": true}, {"id": "emp_new", "label": "New Complaint intake (not submitted)", "level": 3, "group": "emp", "imgs": {"en": "en/13_employee_new_complaint/04_create_complaint_filled_not_submitted.png"}, "color": "#3fae6b", "captured": true}], "edges": [{"from": "login", "to": "onb_p1", "label": "Onboarding mode"}, {"from": "login", "to": "mgmt_home", "label": "Management mode"}, {"from": "onb_p1", "to": "onb_p2", "label": ""}, {"from": "onb_p2", "to": "onb_p3", "label": ""}, {"from": "onb_p3", "to": "onb_p4", "label": ""}, {"from": "onb_p4", "to": "onb_done", "label": ""}, {"from": "mgmt_home", "to": "mgmt_advanced", "label": "Advanced"}, {"from": "mgmt_home", "to": "pgr_dash", "label": ""}, {"from": "mgmt_home", "to": "public_dash", "label": ""}, {"from": "employees", "to": "emp_create", "label": "Create"}, {"from": "employees", "to": "emp_bulk", "label": "Bulk import"}, {"from": "boundaries", "to": "bnd_create", "label": "Create"}, {"from": "localization", "to": "loc_bulk", "label": "Bulk import"}, {"from": "gap_departments", "to": "dept_create", "label": "Create"}, {"from": "emp_login", "to": "emp_home", "label": "Login"}, {"from": "emp_home", "to": "emp_inbox_v2", "label": "Search Complaint"}, {"from": "emp_home", "to": "emp_inbox_v1", "label": ""}, {"from": "emp_home", "to": "emp_search", "label": ""}, {"from": "emp_inbox_v2", "to": "emp_new", "label": "New Complaint"}, {"from": "mgmt_home", "to": "tenants", "label": ""}, {"from": "mgmt_home", "to": "bnd_hier", "label": ""}, {"from": "mgmt_home", "to": "complaints", "label": ""}, {"from": "mgmt_home", "to": "localization", "label": ""}, {"from": "mgmt_home", "to": "employees", "label": ""}, {"from": "mgmt_home", "to": "org_chart", "label": ""}, {"from": "mgmt_home", "to": "users", "label": ""}, {"from": "mgmt_home", "to": "access_roles", "label": ""}, {"from": "mgmt_home", "to": "workflows", "label": ""}, {"from": "mgmt_home", "to": "processes", "label": ""}, {"from": "mgmt_home", "to": "mdms_schemas", "label": ""}, {"from": "mgmt_home", "to": "boundaries", "label": ""}, {"from": "mgmt_home", "to": "notif_configure", "label": ""}, {"from": "mgmt_home", "to": "notif_templates", "label": ""}, {"from": "mgmt_home", "to": "notif_logs", "label": ""}, {"from": "mgmt_home", "to": "notif_providers", "label": ""}, {"from": "mgmt_home", "to": "notif_prefs", "label": ""}, {"from": "mgmt_home", "to": "gap_departments", "label": ""}, {"from": "mgmt_home", "to": "gap_designations", "label": ""}, {"from": "mgmt_home", "to": "gap_types", "label": ""}, {"from": "mgmt_home", "to": "gap_hierarchies", "label": ""}, {"from": "mgmt_home", "to": "gap_mapconfig", "label": ""}, {"from": "mgmt_home", "to": "gap_routing", "label": ""}, {"from": "mgmt_home", "to": "gap_provtpl", "label": ""}], "shots": {"login": {"shots": {"en": ["en/01_login/02_signin_filled_onboarding_mode.png", "en/01_login/01_signin_blank.png", "en/01_login/03_signin_filled_management_mode.png"]}, "caption": "/configurator/login \u2014 username, password, root tenant, and the Onboarding/Management mode switch"}, "onb_p1": {"shots": {"en": ["en/02_onboarding/01_phase1_tenant_info.png"]}, "caption": "Phase 1: create the tenant and upload branding (100 tenants already exist under ke)"}, "onb_p2": {"shots": {"en": ["en/02_onboarding/02_phase2_boundaries.png"]}, "caption": "Phase 2: boundary hierarchy \u2014 view-only for this operator's roles"}, "onb_p3": {"shots": {"en": ["en/02_onboarding/03_phase3_masters.png"]}, "caption": "Phase 3: departments, designations and complaint types"}, "onb_p4": {"shots": {"en": ["en/02_onboarding/04_phase4_employees.png"]}, "caption": "Phase 4: bulk employee creation with roles and jurisdictions"}, "onb_done": {"shots": {"en": ["en/02_onboarding/05_complete.png"]}, "caption": "Completion summary: 33 departments, 46 designations, 685 complaint types at ke"}, "mgmt_home": {"shots": {"en": ["en/03_home/01_dashboard_home.png"]}, "caption": "Management console home \u2014 record counts per registry"}, "mgmt_advanced": {"shots": {"en": ["en/03_home/02_advanced_all_masters.png"]}, "caption": "Advanced: every generic MDMS master the data provider exposes"}, "pgr_dash": {"shots": {"en": ["en/09_dashboards/01_pgr_dashboard.png"]}, "caption": "PGR operational dashboard"}, "public_dash": {"shots": {"en": ["en/09_dashboards/02_public_dashboard_configure.png"]}, "caption": "Public dashboard configuration"}, "tenants": {"shots": {"en": ["en/04_tenant/01_tenants_list.png"]}, "caption": "Tenant registry"}, "bnd_hier": {"shots": {"en": ["en/04_tenant/02_boundary_hierarchies_list.png", "en/04_tenant/03_boundary_hierarchies_detail.png"]}, "caption": "Boundary hierarchy definitions (ADMIN hierarchy shown)"}, "complaints": {"shots": {"en": ["en/05_complaints/01_complaints_list_empty.png"]}, "caption": "Complaint registry \u2014 bomet currently holds zero PGR complaints"}, "localization": {"shots": {"en": ["en/05_complaints/02_localization_messages_list.png"]}, "caption": "Localization messages (14,258 on this deployment)"}, "employees": {"shots": {"en": ["en/06_people/01_employees_list.png", "en/06_people/02_employees_detail.png"]}, "caption": "HRMS employees, list and detail"}, "org_chart": {"shots": {"en": ["en/06_people/03_org_chart.png"]}, "caption": "Department/designation org chart"}, "users": {"shots": {"en": ["en/06_people/04_users_list.png", "en/06_people/05_users_detail.png"]}, "caption": "User accounts, list and detail"}, "access_roles": {"shots": {"en": ["en/07_system/01_access_roles_list.png", "en/07_system/02_access_roles_detail.png"]}, "caption": "Access roles (49 on this deployment)"}, "workflows": {"shots": {"en": ["en/07_system/03_workflows_list.png", "en/07_system/04_workflows_detail.png"]}, "caption": "Workflow business services \u2014 the PGR state machine"}, "processes": {"shots": {"en": ["en/07_system/05_processes_list_empty.png"]}, "caption": "Workflow process instances \u2014 empty, no complaints exist"}, "mdms_schemas": {"shots": {"en": ["en/07_system/06_mdms_schemas_list.png", "en/07_system/07_mdms_schemas_detail.png"]}, "caption": "MDMS v2 schema definitions"}, "boundaries": {"shots": {"en": ["en/07_system/08_boundaries_list.png", "en/07_system/09_boundaries_detail.png"]}, "caption": "Boundary records (BOMET shown)"}, "notif_configure": {"shots": {"en": ["en/08_notifications/01_notification_configure.png"]}, "caption": "Notification routing configuration surface"}, "notif_templates": {"shots": {"en": ["en/08_notifications/02_notification_templates.png"]}, "caption": "Notification templates"}, "notif_logs": {"shots": {"en": ["en/08_notifications/03_notification_logs.png"]}, "caption": "Notification delivery log (Novu bridge)"}, "notif_providers": {"shots": {"en": ["en/08_notifications/04_notification_providers.png"]}, "caption": "Configured notification providers"}, "notif_prefs": {"shots": {"en": ["en/08_notifications/05_user_preferences.png"]}, "caption": "Per-user notification preferences"}, "dept_create": {"shots": {"en": ["en/04_tenant/05_department_create_filled.png", "en/04_tenant/04_department_create_blank.png"]}, "caption": "Department create form, blank and filled \u2014 never submitted"}, "emp_create": {"shots": {"en": ["en/06_people/09_employee_create_filled.png", "en/06_people/08_employee_create_blank.png"]}, "caption": "Employee create form, blank and filled \u2014 never submitted"}, "bnd_create": {"shots": {"en": ["en/07_system/11_boundary_create_filled.png", "en/07_system/10_boundary_create_blank.png"]}, "caption": "Boundary create form, blank and filled \u2014 never submitted"}, "emp_bulk": {"shots": {"en": ["en/06_people/06_employees_bulk_import.png"]}, "caption": "Employee bulk import (XLSX upload)"}, "loc_bulk": {"shots": {"en": ["en/06_people/07_localization_bulk_import.png"]}, "caption": "Localization bulk import"}, "gap_departments": {"shots": {"en": ["en/10_known_gaps/01_departments_list_error.png"]}, "caption": "Departments list \u2014 'Error loading data: No static resource v2/_count'"}, "gap_designations": {"shots": {"en": ["en/10_known_gaps/02_designations_list_error.png"]}, "caption": "Designations list \u2014 same missing MDMS v2/_count endpoint"}, "gap_types": {"shots": {"en": ["en/10_known_gaps/03_complaint_types_list_error.png"]}, "caption": "Complaint Types list \u2014 same missing MDMS v2/_count endpoint"}, "gap_hierarchies": {"shots": {"en": ["en/10_known_gaps/04_complaint_hierarchies_list_error.png"]}, "caption": "Complaint Hierarchies list \u2014 same missing MDMS v2/_count endpoint"}, "gap_mapconfig": {"shots": {"en": ["en/10_known_gaps/05_map_configuration_error.png"]}, "caption": "Map Configuration \u2014 same missing MDMS v2/_count endpoint"}, "gap_routing": {"shots": {"en": ["en/10_known_gaps/06_notification_routing_error.png"]}, "caption": "Notification Routing \u2014 same missing MDMS v2/_count endpoint"}, "gap_provtpl": {"shots": {"en": ["en/10_known_gaps/07_provider_templates_whatsapp_error.png"]}, "caption": "Provider Templates (WhatsApp) \u2014 same missing MDMS v2/_count endpoint"}, "emp_login": {"shots": {"en": ["en/11_employee_login/03_employee_signin_filled.png", "en/11_employee_login/01_employee_signin_blank.png", "en/11_employee_login/02_employee_city_picker.png"]}, "caption": "/digit-ui/employee \u2014 city picker, credentials, privacy consent"}, "emp_home": {"shots": {"en": ["en/11_employee_login/04_employee_home.png"]}, "caption": "Employee home. Only PGR is enabled on bomet; DSS/HRMS/Workbench fall back here"}, "emp_inbox_v2": {"shots": {"en": ["en/12_employee_inbox/01_inbox_v2_search_and_filters.png", "en/12_employee_inbox/02_inbox_v2_search_results_empty.png"]}, "caption": "PGR inbox v2: complaint no / mobile / date search, subtype + county + status filters"}, "emp_inbox_v1": {"shots": {"en": ["en/12_employee_inbox/03_inbox_v1_legacy.png"]}, "caption": "Legacy PGR inbox"}, "emp_search": {"shots": {"en": ["en/14_employee_search/01_search_complaint_no_results.png"]}, "caption": "Search Complaint \u2014 no results, the deployment has no complaints"}, "emp_new": {"shots": {"en": ["en/13_employee_new_complaint/04_create_complaint_filled_not_submitted.png", "en/13_employee_new_complaint/01_create_complaint_blank.png", "en/13_employee_new_complaint/02_dropdown_category_open.png", "en/13_employee_new_complaint/03_dropdown_county_open.png"]}, "caption": "New complaint intake: complainant, type/category/sub-type, map pin, description"}}};
+const LANGS = [["en", "EN"]];
+const LANG_URLS = {};
+const STR = {"subtitle": "{captured}/{total} screens captured \u00b7 click a node to zoom its screenshots", "no_capture": "no capture", "alt_lang": "(other language)", "none": "no capture available"};
+let lang = "en";
+
+const GRAY = "data:image/svg+xml;utf8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="240" height="150"><rect width="100%" height="100%" fill="#1b2438"/>'+
+  '<text x="50%" y="50%" fill="#5b6b8c" font-family="sans-serif" font-size="13" text-anchor="middle" dy=".3em">'+STR.no_capture+'</text></svg>'
+);
+
+function imgFor(n){ return n.imgs[lang] || GRAY; }
+
+const visNodes = new vis.DataSet(DATA.nodes.map(n => ({
+  id:n.id, label:n.label, level:n.level,
+  shape:"image", image:imgFor(n),
+  brokenImage:GRAY,
+  size:34,
+  font:{color:"#e8edf7", size:13, multi:false, vadjust:4, face:"-apple-system,Segoe UI,Roboto"},
+  borderWidth:3, color:{border:n.captured? n.color : "#3a4660", background:"#121a2e"},
+  shapeProperties:{useBorderWithImage:true},
+  opacity: n.captured? 1 : 0.45,
+})));
+
+const visEdges = new vis.DataSet(DATA.edges.map((e,i)=>({
+  id:"e"+i, from:e.from, to:e.to, label:e.label||undefined,
+  arrows:{to:{enabled:true,scaleFactor:0.6}},
+  color:{color:"#3a4660",highlight:"#2f6fdb"},
+  font:{color:"#7f8db0",size:10,strokeWidth:0,align:"middle"},
+  smooth:{type:"cubicBezier",forceDirection:"vertical",roundness:0.45},
+})));
+
+const container = document.getElementById("net");
+const network = new vis.Network(container, {nodes:visNodes, edges:visEdges}, {
+  layout:{hierarchical:{enabled:true,direction:"UD",sortMethod:"directed",levelSeparation:150,nodeSpacing:190,treeSpacing:230}},
+  physics:false,
+  interaction:{hover:true,zoomView:true,dragView:true,tooltipDelay:120},
+  nodes:{labelHighlightBold:false},
+});
+
+network.on("click", params => {
+  if(params.nodes.length){ openLb(params.nodes[0]); }
+});
+
+// ---- lightbox ----
+let curNode=null, curShots=[], curIdx=0;
+function shotsFor(id, l){ const s=(DATA.shots[id]||{}).shots||{}; return s[l]||[]; }
+function openLb(id){
+  curNode=id; curShots=shotsFor(id, lang); curIdx=0;
+  const node = DATA.nodes.find(n=>n.id===id);
+  document.getElementById("lbTitle").textContent = node? node.label : id;
+  if(!curShots.length){
+    // fallback to any other language that has captures
+    for(const [code] of LANGS){
+      if(code!==lang && shotsFor(id, code).length){ curShots = shotsFor(id, code); break; }
+    }
+    document.getElementById("lbMeta").textContent = curShots.length? STR.alt_lang : STR.none;
+  } else {
+    document.getElementById("lbMeta").textContent = "("+lang.toUpperCase()+")";
+  }
+  render();
+  document.getElementById("lb").classList.add("open");
+}
+function shotName(p){ return p.split("/").pop().replace(/\.png$/,"").replace(/^\d+_/,"").replace(/_/g," "); }
+function render(){
+  const img=document.getElementById("lbImg");
+  zoom=0;                                   // reset zoom on each new shot
+  if(curShots.length){ img.src=curShots[curIdx]; img.style.display="block"; applyZoom(); }
+  else { img.style.display="none"; }
+  const nm = curShots.length? shotName(curShots[curIdx]) : "";
+  const counter = curShots.length>1 ? (curIdx+1)+" / "+curShots.length+"  ·  " : "";
+  document.getElementById("lbCount").textContent = counter + nm;
+}
+function step(d){ if(!curShots.length) return; curIdx=(curIdx+d+curShots.length)%curShots.length; render(); }
+function closeLb(){ document.getElementById("lb").classList.remove("open"); }
+
+// ---- zoom ----
+let zoom=0; const ZLVL=[0,1,1.5,2,3];       // 0 = fit-to-screen; else multiplier of natural pixels
+function applyZoom(){
+  const img=document.getElementById("lbImg");
+  if(zoom===0){ img.style.maxWidth="100%"; img.style.maxHeight="none"; img.style.width="auto"; img.style.height="auto"; img.style.cursor="zoom-in"; }
+  else { img.style.maxWidth="none"; img.style.maxHeight="none"; img.style.height="auto";
+         img.style.width=(img.naturalWidth*ZLVL[zoom])+"px"; img.style.cursor="grab"; }
+  document.getElementById("zlabel").textContent = zoom===0 ? "Fit" : Math.round(ZLVL[zoom]*100)+"%";
+}
+function zoomBy(d){ zoom=Math.max(0,Math.min(ZLVL.length-1, zoom+d)); applyZoom(); }
+function zoomToggle(){ zoom = zoom===0 ? 1 : 0; applyZoom(); }
+
+// click image toggles fit/100% (unless it was a pan-drag); drag pans when zoomed
+(function(){
+  const img=document.getElementById("lbImg");
+  const stage=document.querySelector("#lb .stage");
+  let pan=null, moved=false;
+  img.addEventListener("mousedown", e=>{ if(zoom===0){return;} pan={x:e.clientX,y:e.clientY,l:stage.scrollLeft,t:stage.scrollTop}; moved=false; img.style.cursor="grabbing"; e.preventDefault(); });
+  window.addEventListener("mousemove", e=>{ if(!pan)return; if(Math.abs(e.clientX-pan.x)+Math.abs(e.clientY-pan.y)>3) moved=true; stage.scrollLeft=pan.l-(e.clientX-pan.x); stage.scrollTop=pan.t-(e.clientY-pan.y); });
+  window.addEventListener("mouseup", ()=>{ if(pan){ pan=null; img.style.cursor="grab"; } });
+  img.addEventListener("click", e=>{ if(moved){ moved=false; return; } zoomToggle(); });
+})();
+
+document.addEventListener("keydown",e=>{
+  if(!document.getElementById("lb").classList.contains("open")) return;
+  if(e.key==="Escape") closeLb();
+  else if(e.key==="ArrowRight") step(1);
+  else if(e.key==="ArrowLeft") step(-1);
+  else if(e.key==="+"||e.key==="=") zoomBy(1);
+  else if(e.key==="-"||e.key==="_") zoomBy(-1);
+  else if(e.key==="0") { zoom=0; applyZoom(); }
+});
+
+// ---- language toggle ----
+function setLang(l){
+  lang=l;
+  document.querySelectorAll(".toggle button").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
+  DATA.nodes.forEach(n=> visNodes.update({id:n.id, image:imgFor(n)}));
+  if(document.getElementById("lb").classList.contains("open") && curNode){ openLb(curNode); }
+  if(LANG_URLS[l]){ try{ history.replaceState(null,'', LANG_URLS[l]); }catch(e){} }
+}
+document.querySelectorAll(".toggle button").forEach(b=>{ b.onclick=()=>setLang(b.dataset.lang); });
+
+network.once("afterDrawing",()=>network.fit({animation:false}));
+</script>
+</body></html>

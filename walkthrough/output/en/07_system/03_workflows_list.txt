@@ -1,0 +1,64 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Workflow Business Services
+1
+Refresh
+Business Service
+	
+Business
+	
+SLA
+
+
+PGR
+	
+pgr-services
+	
+5 days
+
+Showing 1-1 of 1
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

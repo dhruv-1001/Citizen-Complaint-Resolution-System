@@ -1,0 +1,290 @@
+{
+  "login": {
+    "en": [
+      "en/01_login/02_signin_filled_onboarding_mode.png",
+      "en/01_login/01_signin_blank.png",
+      "en/01_login/03_signin_filled_management_mode.png"
+    ],
+    "caption": "/configurator/login \u2014 username, password, root tenant, and the Onboarding/Management mode switch"
+  },
+  "onb_p1": {
+    "en": [
+      "en/02_onboarding/01_phase1_tenant_info.png"
+    ],
+    "caption": "Phase 1: create the tenant and upload branding (100 tenants already exist under ke)"
+  },
+  "onb_p2": {
+    "en": [
+      "en/02_onboarding/02_phase2_boundaries.png"
+    ],
+    "caption": "Phase 2: boundary hierarchy \u2014 view-only for this operator's roles"
+  },
+  "onb_p3": {
+    "en": [
+      "en/02_onboarding/03_phase3_masters.png"
+    ],
+    "caption": "Phase 3: departments, designations and complaint types"
+  },
+  "onb_p4": {
+    "en": [
+      "en/02_onboarding/04_phase4_employees.png"
+    ],
+    "caption": "Phase 4: bulk employee creation with roles and jurisdictions"
+  },
+  "onb_done": {
+    "en": [
+      "en/02_onboarding/05_complete.png"
+    ],
+    "caption": "Completion summary: 33 departments, 46 designations, 685 complaint types at ke"
+  },
+  "mgmt_home": {
+    "en": [
+      "en/03_home/01_dashboard_home.png"
+    ],
+    "caption": "Management console home \u2014 record counts per registry"
+  },
+  "mgmt_advanced": {
+    "en": [
+      "en/03_home/02_advanced_all_masters.png"
+    ],
+    "caption": "Advanced: every generic MDMS master the data provider exposes"
+  },
+  "tenants": {
+    "en": [
+      "en/04_tenant/01_tenants_list.png"
+    ],
+    "caption": "Tenant registry"
+  },
+  "bnd_hier": {
+    "en": [
+      "en/04_tenant/02_boundary_hierarchies_list.png",
+      "en/04_tenant/03_boundary_hierarchies_detail.png"
+    ],
+    "caption": "Boundary hierarchy definitions (ADMIN hierarchy shown)"
+  },
+  "dept_create": {
+    "en": [
+      "en/04_tenant/05_department_create_filled.png",
+      "en/04_tenant/04_department_create_blank.png"
+    ],
+    "caption": "Department create form, blank and filled \u2014 never submitted"
+  },
+  "complaints": {
+    "en": [
+      "en/05_complaints/01_complaints_list_empty.png"
+    ],
+    "caption": "Complaint registry \u2014 bomet currently holds zero PGR complaints"
+  },
+  "localization": {
+    "en": [
+      "en/05_complaints/02_localization_messages_list.png"
+    ],
+    "caption": "Localization messages (14,258 on this deployment)"
+  },
+  "employees": {
+    "en": [
+      "en/06_people/01_employees_list.png",
+      "en/06_people/02_employees_detail.png"
+    ],
+    "caption": "HRMS employees, list and detail"
+  },
+  "org_chart": {
+    "en": [
+      "en/06_people/03_org_chart.png"
+    ],
+    "caption": "Department/designation org chart"
+  },
+  "users": {
+    "en": [
+      "en/06_people/04_users_list.png",
+      "en/06_people/05_users_detail.png"
+    ],
+    "caption": "User accounts, list and detail"
+  },
+  "emp_bulk": {
+    "en": [
+      "en/06_people/06_employees_bulk_import.png"
+    ],
+    "caption": "Employee bulk import (XLSX upload)"
+  },
+  "loc_bulk": {
+    "en": [
+      "en/06_people/07_localization_bulk_import.png"
+    ],
+    "caption": "Localization bulk import"
+  },
+  "emp_create": {
+    "en": [
+      "en/06_people/09_employee_create_filled.png",
+      "en/06_people/08_employee_create_blank.png"
+    ],
+    "caption": "Employee create form, blank and filled \u2014 never submitted"
+  },
+  "access_roles": {
+    "en": [
+      "en/07_system/01_access_roles_list.png",
+      "en/07_system/02_access_roles_detail.png"
+    ],
+    "caption": "Access roles (49 on this deployment)"
+  },
+  "workflows": {
+    "en": [
+      "en/07_system/03_workflows_list.png",
+      "en/07_system/04_workflows_detail.png"
+    ],
+    "caption": "Workflow business services \u2014 the PGR state machine"
+  },
+  "processes": {
+    "en": [
+      "en/07_system/05_processes_list_empty.png"
+    ],
+    "caption": "Workflow process instances \u2014 empty, no complaints exist"
+  },
+  "mdms_schemas": {
+    "en": [
+      "en/07_system/06_mdms_schemas_list.png",
+      "en/07_system/07_mdms_schemas_detail.png"
+    ],
+    "caption": "MDMS v2 schema definitions"
+  },
+  "boundaries": {
+    "en": [
+      "en/07_system/08_boundaries_list.png",
+      "en/07_system/09_boundaries_detail.png"
+    ],
+    "caption": "Boundary records (BOMET shown)"
+  },
+  "bnd_create": {
+    "en": [
+      "en/07_system/11_boundary_create_filled.png",
+      "en/07_system/10_boundary_create_blank.png"
+    ],
+    "caption": "Boundary create form, blank and filled \u2014 never submitted"
+  },
+  "notif_configure": {
+    "en": [
+      "en/08_notifications/01_notification_configure.png"
+    ],
+    "caption": "Notification routing configuration surface"
+  },
+  "notif_templates": {
+    "en": [
+      "en/08_notifications/02_notification_templates.png"
+    ],
+    "caption": "Notification templates"
+  },
+  "notif_logs": {
+    "en": [
+      "en/08_notifications/03_notification_logs.png"
+    ],
+    "caption": "Notification delivery log (Novu bridge)"
+  },
+  "notif_providers": {
+    "en": [
+      "en/08_notifications/04_notification_providers.png"
+    ],
+    "caption": "Configured notification providers"
+  },
+  "notif_prefs": {
+    "en": [
+      "en/08_notifications/05_user_preferences.png"
+    ],
+    "caption": "Per-user notification preferences"
+  },
+  "pgr_dash": {
+    "en": [
+      "en/09_dashboards/01_pgr_dashboard.png"
+    ],
+    "caption": "PGR operational dashboard"
+  },
+  "public_dash": {
+    "en": [
+      "en/09_dashboards/02_public_dashboard_configure.png"
+    ],
+    "caption": "Public dashboard configuration"
+  },
+  "gap_departments": {
+    "en": [
+      "en/10_known_gaps/01_departments_list_error.png"
+    ],
+    "caption": "Departments list \u2014 'Error loading data: No static resource v2/_count'"
+  },
+  "gap_designations": {
+    "en": [
+      "en/10_known_gaps/02_designations_list_error.png"
+    ],
+    "caption": "Designations list \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "gap_types": {
+    "en": [
+      "en/10_known_gaps/03_complaint_types_list_error.png"
+    ],
+    "caption": "Complaint Types list \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "gap_hierarchies": {
+    "en": [
+      "en/10_known_gaps/04_complaint_hierarchies_list_error.png"
+    ],
+    "caption": "Complaint Hierarchies list \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "gap_mapconfig": {
+    "en": [
+      "en/10_known_gaps/05_map_configuration_error.png"
+    ],
+    "caption": "Map Configuration \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "gap_routing": {
+    "en": [
+      "en/10_known_gaps/06_notification_routing_error.png"
+    ],
+    "caption": "Notification Routing \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "gap_provtpl": {
+    "en": [
+      "en/10_known_gaps/07_provider_templates_whatsapp_error.png"
+    ],
+    "caption": "Provider Templates (WhatsApp) \u2014 same missing MDMS v2/_count endpoint"
+  },
+  "emp_login": {
+    "en": [
+      "en/11_employee_login/03_employee_signin_filled.png",
+      "en/11_employee_login/01_employee_signin_blank.png",
+      "en/11_employee_login/02_employee_city_picker.png"
+    ],
+    "caption": "/digit-ui/employee \u2014 city picker, credentials, privacy consent"
+  },
+  "emp_home": {
+    "en": [
+      "en/11_employee_login/04_employee_home.png"
+    ],
+    "caption": "Employee home. Only PGR is enabled on bomet; DSS/HRMS/Workbench fall back here"
+  },
+  "emp_inbox_v2": {
+    "en": [
+      "en/12_employee_inbox/01_inbox_v2_search_and_filters.png",
+      "en/12_employee_inbox/02_inbox_v2_search_results_empty.png"
+    ],
+    "caption": "PGR inbox v2: complaint no / mobile / date search, subtype + county + status filters"
+  },
+  "emp_inbox_v1": {
+    "en": [
+      "en/12_employee_inbox/03_inbox_v1_legacy.png"
+    ],
+    "caption": "Legacy PGR inbox"
+  },
+  "emp_new": {
+    "en": [
+      "en/13_employee_new_complaint/04_create_complaint_filled_not_submitted.png",
+      "en/13_employee_new_complaint/01_create_complaint_blank.png",
+      "en/13_employee_new_complaint/02_dropdown_category_open.png",
+      "en/13_employee_new_complaint/03_dropdown_county_open.png"
+    ],
+    "caption": "New complaint intake: complainant, type/category/sub-type, map pin, description"
+  },
+  "emp_search": {
+    "en": [
+      "en/14_employee_search/01_search_complaint_no_results.png"
+    ],
+    "caption": "Search Complaint \u2014 no results, the deployment has no complaints"
+  }
+}

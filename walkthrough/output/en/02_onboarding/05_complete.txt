@@ -1,0 +1,56 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Setup Complete!
+
+All phases completed successfully
+
+Tenant: KE
+
+Environment: bometfeedbackhub.digit.org
+
+Open DIGIT
+Phase	Records at tenant
+Phase 1: Tenant & Branding	ke
+Phase 2: Boundary Setup	0 boundaries
+Phase 3: Common Masters	33 depts, 46 desigs, 685 complaint types
+Phase 4: Employees	100 employees
+
+Counts reflect the current total at tenant ke — including any data present from earlier setup sessions. To see only what this walk created, browse the Management UI and filter by code prefix.
+
+Your complaints management system is ready!
+• Employees can login at bometfeedbackhub.digit.org/digit-ui/employee/user/login
+• Citizens can file complaints at bometfeedbackhub.digit.org/digit-ui/citizen
+• Access complaint management based on their roles
+• Handle complaints in their assigned jurisdictions
+
+Default credentials: the employee's code (e.g. TEST_EMP_001) as username, password eGov@123. HRMS overrides the supplied userName with the employee code on create — that's the value that actually authenticates.
+
+Start New Setup
+View Setup History
+Logout
+
+Session completed • All data has been saved to DIGIT
+
+DIGIT Complaints Management • Press Ctrl+/ for help

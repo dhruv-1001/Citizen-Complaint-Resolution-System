@@ -1,0 +1,9 @@
+# Local python env created by ./setup.sh
+.venv/
+__pycache__/
+
+# Reconnaissance artefacts and the composite sheet — both regenerable, and
+# neither is referenced by the gallery or the docs. The 63 captured screens in
+# output/en/ ARE committed, so the gallery works straight from a clone.
+output/_recon/
+output/_graph_all.png

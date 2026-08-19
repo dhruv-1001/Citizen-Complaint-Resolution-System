@@ -1,0 +1,58 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Hierarchy: ADMIN
+DETAILS
+Hierarchy Type
+ADMIN
+Tenant
+Bomet County
+HIERARCHY LEVELS
+County
+SubCounty
+Ward
+AUDIT
+Created by
+system
+Created at
+13 Apr 2026, 11:21 am
+Last modified by
+system
+Last modified at
+13 Apr 2026, 11:21 am
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

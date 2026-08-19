@@ -1,0 +1,20 @@
+Skip to main content
+DIGIT Complaints Management
+
+Admin Console
+
+Sign In
+Enter your credentials to continue
+Mode
+Onboarding
+Management
+Username*
+Password*
+Tenant Code
+*
+
+Root tenant for authentication
+
+Sign In
+
+Requires MDMS_ADMIN or SUPERUSER role

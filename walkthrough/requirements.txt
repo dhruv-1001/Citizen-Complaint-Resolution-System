@@ -1,0 +1,3 @@
+# The walkthrough helpers (Walker, build_sitemap, build_flow_gallery, build_composite).
+# Pulled straight from the upstream repo — it is not on PyPI.
+playwright-scraper @ git+https://github.com/ChakshuGautam/playwright-scraper.git

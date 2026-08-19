@@ -1,0 +1,55 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+PGR Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+Employees
+Org Chart
+Users
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Bulk import employees
+
+Tenant: ke
+
+DEPARTMENTS
+33
+DESIGNATIONS
+46
+ROLES
+49
+BOUNDARIES
+31
+STEP 1 · DOWNLOAD TEMPLATE
+Download template
+STEP 2 · UPLOAD FILLED FILE
+
+Drop .xlsx / .xls / .csv here, or click to browse
+
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs
