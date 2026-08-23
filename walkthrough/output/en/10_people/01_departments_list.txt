@@ -1,0 +1,165 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Departments
+33
+Export
+Bulk import
+Refresh
+Create
+Status
+All
+Active
+Inactive
+Code
+	
+Name
+	
+Status
+	
+Description
+	Actions
+
+ADMIN_PUBLIC_SVC
+	
+Administration, Public Service & Special Programs
+	
+Active
+	
+--
+	
+
+
+AGRI_LIVESTOCK
+	
+Agriculture, Livestock, Fisheries & Cooperatives
+	
+Active
+	
+--
+	
+
+
+ambiental
+	
+Ambiental
+	
+Active
+	
+--
+	
+
+
+BOMET_MUNICIPALITY
+	
+Bomet Municipality
+	
+Active
+	
+--
+	
+
+
+DEPT_1
+	
+Street Lights
+	
+Active
+	
+--
+	
+
+
+DEPT_10
+	
+Others
+	
+Active
+	
+--
+	
+
+
+DEPT_13
+	
+Tax Branch
+	
+Active
+	
+--
+	
+
+
+DEPT_2
+	
+Building & Roads
+	
+Active
+	
+--
+	
+
+
+DEPT_25
+	
+Accounts Branch
+	
+Active
+	
+--
+	
+
+
+DEPT_3
+	
+Health & Sanitation
+	
+Active
+	
+--
+	
+
+Showing 1-10 of 33
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 4
+Next
+Documentation
+DEPARTMENT SETUP
+
+MDMS Master Data
+
+How master data is managed
+
+PGR Department Mapping
+
+How departments map to complaint types
+
+Open DIGIT Docs

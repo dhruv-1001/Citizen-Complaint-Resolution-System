@@ -1,0 +1,87 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Verify Boundary Data
+File: 02-Boundaries.xlsx
+Polygon outlines (optional)
+
+Drop a GeoJSON FeatureCollection to draw real boundary outlines on the citizen map. Skip to use the default placeholder shape.
+
+All (1256)
+Valid (1256)
+Errors (0)
+Status	Code	Name	Type	Parent
+
+Valid	maputo	Maputo	Município	-
+
+Valid	kampfumu	KaMpfumu	Distrito Municipal	maputo
+
+Valid	nlhamankulu	Nlhamankulu	Distrito Municipal	maputo
+
+Valid	kamaxakeni	KaMaxakeni	Distrito Municipal	maputo
+
+Valid	kamavota	KaMavota	Distrito Municipal	maputo
+
+Valid	kamubukwana	KaMubukwana	Distrito Municipal	maputo
+
+Valid	katembe	KaTembe	Distrito Municipal	maputo
+
+Valid	kanyaka	KaNyaka	Distrito Municipal	maputo
+
+Valid	alto_mae_a	Alto Maé A	Bairro	kampfumu
+
+Valid	alto_mae_b	Alto Maé B	Bairro	kampfumu
+
+Valid	central_a	Central A	Bairro	kampfumu
+
+Valid	central_b	Central B	Bairro	kampfumu
+
+Valid	central_c	Central C	Bairro	kampfumu
+
+Valid	coop	Coop	Bairro	kampfumu
+
+Valid	malhangalene_a	Malhangalene A	Bairro	kampfumu
+
+Valid	malhangalene_b	Malhangalene B	Bairro	kampfumu
+
+Valid	polana_cimento_a	Polana Cimento A	Bairro	kampfumu
+
+Valid	polana_cimento_b	Polana Cimento B	Bairro	kampfumu
+
+Valid	sommerschield	Sommerschield	Bairro	kampfumu
+
+Valid	alto_mae_a_q1	Q1	Quarteirão	alto_mae_a
+
+Showing first 20 of 1256 rows
+
+Summary: 1256 total | 1256 valid | 0 errors
+
+← Back
+Upload 1256 Boundaries
+
+DIGIT Complaints Management • Press Ctrl+/ for help

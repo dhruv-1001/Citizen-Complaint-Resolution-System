@@ -1,0 +1,44 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Create Department
+Name*
+Code*
+Active
+Cancel
+Create
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

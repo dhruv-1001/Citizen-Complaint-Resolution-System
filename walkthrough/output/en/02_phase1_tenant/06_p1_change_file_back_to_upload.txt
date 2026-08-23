@@ -1,0 +1,41 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 1: Tenant & Branding Setup
+
+Create tenant and configure branding assets
+
+1. Upload
+2. Preview
+3. Branding
+Step 1.1: Upload Tenant Master Excel
+
+Drop Tenant And Branding Master.xlsx here
+
+or click to browse
+
+Download Template
+← Back
+
+DIGIT Complaints Management • Press Ctrl+/ for help

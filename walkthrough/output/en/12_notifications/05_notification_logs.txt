@@ -1,0 +1,237 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Notification Logs
+SMS/Email delivered via Novu — WHATSAPP shows as SKIPPED (no provider yet)
+185711
+Refresh
+Channel
+All
+SMS
+Email
+WhatsApp
+Status
+All
+Sent
+Delivered
+Failed
+Pending
+Skipped
+Created
+	Complaint	Channel	Status	Recipient	Template	Attempts	Error
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***e01
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***1fe
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***dc7
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***ac7
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***14b
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***36a
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***1c9
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195602
+	
+SMS
+	
+SENT
+	
+***a42
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195601
+	
+WHATSAPP
+	
+SKIPPED
+	
+***4f1
+	
+CITIZEN.APPLY.PENDINGFORASSIGNMENT.WHATSAPP.en_IN
+	
+1
+	
+NB_NO_PROVIDER: No provider enabled for channel WHATSAPP
+
+
+24 Aug 2026, 3:24 am
+	
+PG-PGR-2026-08-24-195601
+	
+SMS
+	
+SENT
+	
+***4f1
+	
+CITIZEN.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+Showing 1-10 of 185711
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 18572
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

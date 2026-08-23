@@ -1,0 +1,48 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 1: Tenant & Branding Setup
+
+Create tenant and configure branding assets
+
+✓ Upload
+2. Preview
+3. Branding
+File loaded: 01-Tenant-And-Branding-Master.xlsx
+Tenant Info
+Branding Details
+Status	Display Name	Tenant Code	Type	City
+
+Valid	Município de Maputo	mz.maputo	Municipality	Maputo
+District:Cidade de Maputo
+Coordinates:-25.9692, 32.5732
+This will create:
+• New tenant: mz.maputo (Município de Maputo)
+• City module configuration
+• MDMS entries for tenant
+• Localization entries
+← Change File
+Upload to DIGIT
+
+DIGIT Complaints Management • Press Ctrl+/ for help

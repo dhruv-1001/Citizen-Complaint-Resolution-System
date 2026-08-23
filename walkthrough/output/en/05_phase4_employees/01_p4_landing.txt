@@ -1,0 +1,50 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 4: Employee Onboarding
+
+Bulk create employee accounts with roles and jurisdictions
+
+No boundaries found for tenant "ke". Complete Phase 2 (boundaries) first, then retry.
+Retry
+Prerequisites Met:
+Phase 1: Tenant created
+Phase 2: Boundaries configured
+Phase 3: Departments & Designations created
+What You'll Do:
+• Generate a dynamic employee template
+• Fill in employee details (name, mobile, department, role)
+• Bulk create employee accounts with login credentials
+
+Template: Employee_Master_Dynamic.xlsx
+
+Available data from DIGIT:
+
+• Departments: 33 loaded
+• Designations: 50 loaded
+• Roles: 49 available
+• Boundaries: 0 loaded
+Start Phase 4
+
+DIGIT Complaints Management • Press Ctrl+/ for help

@@ -1,0 +1,48 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Create Boundary Hierarchy
+
+Define the boundary hierarchy for tenant: KE
+
+Hierarchy Type Name*
+
+Common types: ADMIN, REVENUE, ADMIN1, ADMIN2
+
+Define Levels (top to bottom)
+Level 1:
+[Root]
+Level 2:
+Level 3:
+Level 4:
+[Lowest]
+Add Level
+← Back
+Create Hierarchy
+
+DIGIT Complaints Management • Press Ctrl+/ for help

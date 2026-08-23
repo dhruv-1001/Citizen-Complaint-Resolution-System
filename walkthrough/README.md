@@ -62,22 +62,28 @@ build_flow_gallery(..., asset_prefix="/digit-bomet/")
 | Flow | Screens |
 |---|---|
 | Configurator · Sign In | login form, both mode toggles |
-| Configurator · Onboarding wizard | phases 1–4 + the completion summary |
+| Onboarding · Phase 1 — Tenant & Branding | landing, use-existing-tenant picker, upload, preview (both tabs), change-file |
+| Onboarding · Phase 2 — Boundary Setup | source choice, both Excel paths, define/select hierarchy, template, verify (All/Valid/Errors + GeoJSON), OSM search → map levels |
+| Onboarding · Phase 3 — Common Masters | landing, upload, parsed departments + designations |
+| Onboarding · Phase 4 — Employee Onboarding | landing (blocked on this deployment), per-row employee validation |
+| Onboarding · Complete | the completion summary |
 | Configurator · Management console | dashboard home, Advanced (all MDMS masters) |
-| Configurator · Tenant management | tenants, boundary hierarchies + detail, department create form |
-| Configurator · Complaints & localization | complaint registry, localization messages |
-| Configurator · People | employees + detail, org chart, users + detail, bulk imports, employee create form |
-| Configurator · System | access roles, workflow services + detail, processes, MDMS schemas + detail, boundaries + detail, boundary create form |
-| Configurator · Notifications | configure, templates, logs, providers, user preferences |
-| Configurator · Dashboards | PGR dashboard, public dashboard config |
-| Configurator · Known gaps | the seven screens that error on this deployment (see below) |
+| Configurator · Tenant, boundaries & map | tenants, boundary hierarchies + detail, boundaries + detail, map configuration, boundary create form |
+| Configurator · Complaints & localization | complaint registry, complaint types, complaint hierarchies + detail, localization messages |
+| Configurator · People & org structure | departments + detail, designations + detail, employees + detail, org chart, users + detail, bulk imports, create forms |
+| Configurator · System | access roles, workflow services + detail, processes, MDMS schemas + detail |
+| Configurator · Notifications | configure, routing, templates, provider templates, logs, providers, preferences |
+| Configurator · Public dashboard | anonymous-access configuration |
 | Employee UI · Sign In | city picker, credentials, consent |
 | Employee UI · Inbox | PGR inbox v2 (search + filters), legacy inbox |
+| Employee UI · Complaint detail | one complaint opened from the inbox + its workflow timeline |
 | Employee UI · New complaint | intake form blank → filled, with the category and county pickers open |
 | Employee UI · Search complaint | search result state |
 
-The onboarding wizard is reached by **direct URL** (`/configurator/phase/1` … `/phase/4`), not by
-clicking through it — walking it with clicks would run real tenant provisioning against `ke`.
+The onboarding wizard is walked with **real clicks**, stopping at every control that would POST to
+DIGIT. The screens behind those controls are named — not faked — in the
+[screen inventory](../docs/digit-ui-walkthrough.md#screen-inventory-against-the-product-doc), which
+follows the product team's *CMS Configurator: Onboarding UI Screens & Windows Inventory* doc.
 
 ---
 
@@ -91,10 +97,13 @@ that:
    DIGIT write verb (`_create`, `_update`, `_delete`, `_upsert`, `_transition`, …) and every
    `PUT`/`PATCH`/`DELETE`. It cannot simply block `POST` — DIGIT reads are `POST /…/_search`.
    Blocked attempts are printed and written to `output/_guard.log`.
-2. **No forward-clicking.** The capture scripts navigate by URL and never call the library's
-   `click_forward()`, which is built to press Continue/Submit/Create/Publish.
-3. **Forms are filled but never submitted.** Create forms are shot blank, then smart-filled, then
-   abandoned.
+2. **A hard stop before every write control.** The wizard is walked by clicking, but never through
+   *Upload to DIGIT*, *Create Hierarchy*, *Upload N Boundaries*, *Create & Continue*,
+   *Create Hierarchy & Boundaries* or the Create-Employees confirmation. The library's
+   `click_forward()` — built to press Continue/Submit/Create/Publish — is never called.
+3. **Uploads that never leave the browser.** The wizard parses each workbook client-side, so the
+   preview/verify screens are reached by handing a sample file from `fixtures/` to the file input.
+   Create forms are shot blank, then smart-filled, then abandoned.
 
 Every run so far has ended with `read-only guard: no mutating requests were attempted`.
 
@@ -104,15 +113,17 @@ Every run so far has ended with `read-only guard: no mutating requests were atte
 
 ```bash
 ./setup.sh      # once — venv, playwright-scraper, headless chromium
-./run_all.sh    # ~12 min: wipes output/en, re-captures both apps, re-renders the site
+./run_all.sh    # ~20 min: wipes output/en, re-captures both apps, re-renders the site
 ```
 
 Individual pieces:
 
 ```bash
-.venv/bin/python capture_configurator.py 07_system     # one flow
+.venv/bin/python capture_configurator.py 11_system     # one management flow
+.venv/bin/python capture_onboarding.py 03_phase2_boundary   # one wizard phase
 .venv/bin/python capture_employee.py                   # all employee flows
 .venv/bin/python build_site.py                         # re-render HTML only
+.venv/bin/python build_doc.py                          # re-render the markdown
 ```
 
 Credentials and target default to `ADMIN` / `eGov@123` / tenant `ke` on bomet and are overridable:
@@ -126,13 +137,18 @@ WT_HOST=https://other.digit.org WT_TENANT=xx WT_USER=… WT_PASS=… ./run_all.s
 | File | What it does |
 |---|---|
 | `lib.py` | read-only guard, both login helpers, retrying `goto` |
-| `capture_configurator.py` | the ten configurator flows; route table mirrors `configurator/src/admin/DigitLayout.tsx` |
-| `capture_employee.py` | the four employee-UI flows |
+| `capture_configurator.py` | sign-in + the management console; route table mirrors `configurator/src/admin/DigitLayout.tsx` |
+| `capture_onboarding.py` | the 4-phase wizard, walked screen by screen up to each write |
+| `capture_employee.py` | the five employee-UI flows |
+| `fixtures/` | sample onboarding workbooks, parsed in-browser to reach the preview/verify screens |
 | `build_site.py` | screen graph + captions → `index.html`, `gallery.html`, `_graph_all.png` |
+| `build_doc.py` | the same capture → `docs/digit-ui-walkthrough.md` |
 | `recon.py`, `probe_routes.py`, `probe_employee.py` | reconnaissance; re-run when bomet changes |
 | `output/_recon/` | route-state JSON the flow lists were derived from |
+| `output/_thumbs/` | top-cropped node images for the graph — vis-network scales an image node by width, so a full-page screenshot of a long wizard screen would otherwise stretch into a sliver |
 
-`output/en/` (the 63 captured screens) and the rendered `index.html` / `gallery.html` are committed, so
+`output/en/` (the 89 captured screens), `output/_thumbs/` and the rendered `index.html` /
+`gallery.html` are committed, so
 the gallery works straight from a clone with no re-run. Only `output/_recon/` and the `_graph_all.png`
 composite are gitignored — both are regenerated by `./run_all.sh`.
 
@@ -143,33 +159,30 @@ A flat, GitHub-readable rendering of the same capture lives at
 
 ## What the capture found on bomet
 
-Recorded here because it shapes what the gallery shows.
+Recorded here because it shapes what the gallery shows. The long version, with evidence, is in
+[`docs/digit-ui-walkthrough.md`](../docs/digit-ui-walkthrough.md#what-the-capture-found-on-bomet).
 
-**1. Seven management screens fail to load.** Departments, Designations, Complaint Types,
-Complaint Hierarchies, Map Configuration, Notification Routing and Provider Templates all render
-*"Error loading data — No static resource v2/\_count."* The configurator's datagrid calls
-`POST /egov-mdms-service/v2/_count` for pagination; the egov-mdms image deployed on bomet does not
-serve that endpoint, though `v2/_search` works:
+**1. The seven broken management screens are fixed.** Departments, Designations, Complaint Types,
+Complaint Hierarchies, Map Configuration, Notification Routing and Provider Templates used to render
+*"Error loading data — No static resource v2/\_count."* The deployment now serves
+`POST /egov-mdms-service/v2/_count` (200, `totalCount`), so all seven load and the management
+dashboard shows real numbers instead of `…`. They live in their normal sections now; the
+`10_known_gaps` flow is gone.
 
-```
-POST /egov-mdms-service/v2/_count  → NoResourceFoundException: No static resource v2/_count.
-POST /egov-mdms-service/v2/_search → 200, returns records
-```
+**2. Phase 4 is blocked by test-leftover boundary hierarchies.** It reports *"No boundaries found for
+tenant ke"* even though 88 boundaries exist under `ADMIN`. `Phase4Page.tsx` takes
+`getHierarchies(tenant)[0]`, and that list comes back unsorted with `limit: 100` — on bomet all 100
+entries on the first page are `PW_*` Playwright leftovers and `ADMIN` is not among them. The same
+list is what Phase 2's *Select Existing Hierarchy* screen offers, and it is why the completion page
+reports `0 boundaries`.
 
-The same gap explains the `…` placeholders instead of counts on the management dashboard's
-Tenants / Departments / Designations / Complaint Types tiles. It is a deployment version skew,
-not a data problem — the data is there. They are captured in the `10_known_gaps` flow rather than
-scattered through the tour.
+**3. The deployment now has real complaints.** 5,179 at `ke`, where an earlier capture found none
+anywhere. The inbox, the registry, workflow processes and the complaint detail + workflow timeline
+all have data.
 
-**2. The deployment holds no complaints.** `pgr-services/v2/request/_search` returns zero rows for
-all 126 tenants, and `_count` at `ke` is 0. So the employee inbox, the complaint registry and
-workflow processes are all genuinely empty, and there is no complaint detail screen to capture.
-The PGR analytics endpoint still reports `complaintsResolved: 85` — aggregates outliving the
-records they were computed from. Seeding a complaint would have been a write, so it was not done.
-
-**3. Only PGR is enabled in the employee UI.** `/dss/*`, `/hrms/*` and `/workbench/*` all fall
+**4. Only PGR is enabled in the employee UI.** `/dss/*`, `/hrms/*` and `/workbench/*` all fall
 back to the home screen.
 
-**4. Tenant `ke` *is* "Bomet County".** The employee UI's city picker lists ~126 tenants, all but a
-handful named `Target Tenant NNNNNN` — leftovers from automated test runs. `ADMIN` exists only at
-`ke`, so "Bomet County" is the only city selection that authenticates.
+**5. Test data everywhere.** 138 tenants and 270 boundary hierarchies, mostly named `PW_*`,
+`ke.tgt*` or `Target Tenant NNNNNN`. Tenant `ke` *is* "Bomet County", and `ADMIN` exists only there,
+so it is the only city selection in the employee UI that authenticates.

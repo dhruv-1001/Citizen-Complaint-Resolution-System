@@ -1,0 +1,105 @@
+Bomet County
+English
+S
+Home
+/
+Inbox
+Search Citizen Complaint
+Citizen Complaint Resolution System
+New Complaint
+Complaint No
+Mobile No
++254
+Date Range
+Search
+CLEAR SEARCH
+Complaint Subtype
+County*
+Select County
+Status
+Pending for assignment
+Pending for re-assignment
+Pending at last mile employee
+Rejected
+Resolved
+Closed after rejection
+Closed after resolution
+Pending at Supervisor
+Resolved by Supervisor
+Cancelled
+Apply
+Clear All
+My Complaints
+All Complaints
+COMPLAINT NO
+LOCALITY
+CURRENT STATUS
+CURRENT OWNER
+SLA (DAYS REMAINING)
+PG-PGR-2026-04-13-000826
+ServiceSchedulingComplaints
+Mutarakwa
+Pending At Supervisor
+NA
+-119
+PG-PGR-2026-04-13-000848
+complaints.categories.AppointmentCancelled/ExcessiveDelays
+Chemaner
+Pending At Supervisor
+NA
+-119
+PG-PGR-2026-05-16-048508
+Staff Misconduct
+Silibwet Township
+Pending for assignment
+loki1
+-99
+PG-PGR-2026-05-15-047197
+AmbulanceDelays
+Chesoen
+Pending for assignment
+Steve Odhiambo
+-98
+PG-PGR-2026-05-17-049902
+LandWayleaveDisputes
+Silibwet Township
+Pending for assignment
+Cassie Csr
+-98
+PG-PGR-2026-05-17-049915
+MajorInfrastructureRehabilitation
+Silibwet Township
+Pending for assignment
+Ward Supervisor
+-98
+PG-PGR-2026-05-17-049987
+MaternalNeonatalEmergencies
+Nyangores
+Pending for assignment
+Steve Odhiambo
+-97
+PG-PGR-2026-05-17-050005
+Staff Misconduct
+Silibwet Township
+Pending for assignment
+CHESOEN Ward CSR
+-97
+PG-PGR-2026-05-18-051130
+LandWayleaveDisputes
+Silibwet Township
+Pending at LME
+Ward Supervisor
+-97
+PG-PGR-2026-05-18-051200
+LandWayleaveDisputes
+Silibwet Township
+Pending for assignment
+CHESOEN Ward CSR
+-97
+ROWS_PER_PAGE
+10
+20
+30
+40
+50
+1-10 of 1693

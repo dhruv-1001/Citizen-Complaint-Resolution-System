@@ -1,0 +1,57 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Boundary Data Upload
+
+Hierarchy: PW_4E63B06D_BHSHAPE • Levels: ONLY
+
+Download Template
+
+Boundary_Template_PW_4E63B06D_BHSHAPE.xlsx
+
+Required columns:
+
+• code - Unique boundary code
+• name - Display name
+• boundaryType - Level type (ONLY)
+• parentCode - Parent boundary code (optional for root)
+Download Template
+
+Drop your filled boundary template here
+
+or click to browse
+
+After upload, you'll be able to attach an optional GeoJSON file for real boundary outlines on the map.
+
+Important Rules:
+• Each boundary must have a unique code
+• Parent boundary must exist before child
+• Do not skip hierarchy levels
+← Back
+
+DIGIT Complaints Management • Press Ctrl+/ for help

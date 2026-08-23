@@ -1,0 +1,84 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+DIGIT Management Studio
+
+138
+
+Tenants
+
+33
+
+Departments
+
+50
+
+Designations
+
+771
+
+Complaint Types
+
+313
+
+Employees
+
+88
+
+Boundaries
+
+5179
+
+Complaints
+
+14460
+
+Localization Messages
+
+100
+
+Users
+
+49
+
+Access Roles
+
+Documentation
+GETTING STARTED
+
+DIGIT Platform Overview
+
+Understand the DIGIT architecture
+
+Multi-Tenant Configuration
+
+How tenants work in DIGIT
+
+CORE SERVICES
+
+MDMS Overview
+
+Master Data Management Service
+
+Boundary Service
+
+Manage administrative boundaries
+
+Open DIGIT Docs

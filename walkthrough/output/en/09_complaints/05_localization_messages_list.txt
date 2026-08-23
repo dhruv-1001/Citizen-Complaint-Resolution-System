@@ -1,0 +1,206 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Types
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Localization Messages
+14460
+Export
+Bulk import
+Refresh
+Create
+Module:
+All modules
+Code
+	
+Module
+	
+EN (en_IN)
+	
+HI (hi_IN)
+	
+PT (pt_BR)
+	
+FR (fr_FR)
+	Actions
+
+2 Star or below
+	
+rainmaker-common
+	
+2 stars or below
+	
+2 स्टार या नीचे
+	
+— missing —
+	
+— missing —
+	
+
+
+3 Star and Above
+	
+rainmaker-common
+	
+— missing —
+	
+3 स्टार और ऊपर
+	
+— missing —
+	
+— missing —
+	
+
+
+AADHAAR_IS_REQUIRED
+	
+rainmaker-common
+	
+Aadhaar number is required
+	
+— missing —
+	
+— missing —
+	
+Le numéro Aadhaar est requis
+	
+
+
+ABG_ABG_GENERATE_NEW_BILL
+	
+rainmaker-common
+	
+— missing —
+	
+नया बिल जनरेट करें
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_ABG_PAY
+	
+rainmaker-common
+	
+— missing —
+	
+भुगतन करे
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_COMMON_TABLE_COL_ACTION
+	
+rainmaker-common
+	
+— missing —
+	
+कार्यवाही
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_COMMON_TABLE_COL_BILL_AMOUNT
+	
+rainmaker-common
+	
+— missing —
+	
+बिल की राशि (रु)
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_COMMON_TABLE_COL_BILL_DATE
+	
+rainmaker-common
+	
+— missing —
+	
+बिल की तिथि
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_COMMON_TABLE_COL_BILL_NO
+	
+rainmaker-common
+	
+— missing —
+	
+बिल नंबर
+	
+— missing —
+	
+— missing —
+	
+
+
+ABG_COMMON_TABLE_COL_CONSUMER_NAME
+	
+rainmaker-common
+	
+— missing —
+	
+उपभोक्ता का नाम
+	
+— missing —
+	
+— missing —
+	
+
+Showing 1-10 of 14460
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1446
+Next
+Documentation
+LOCALIZATION
+
+Localization Service
+
+Multi-language support for DIGIT
+
+Adding Localization
+
+How to add new languages
+
+Open DIGIT Docs

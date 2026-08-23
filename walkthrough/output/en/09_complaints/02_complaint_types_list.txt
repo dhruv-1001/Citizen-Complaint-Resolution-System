@@ -1,0 +1,250 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Types
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Complaint Types
+771
+Refresh
+Department
+All
+Accounts Branch
+Administration, Public Service & Special Programs
+Agriculture, Livestock, Fisheries & Cooperatives
+Ambiental
+Bomet Municipality
+Building & Roads
+Building Branch
+Citizen service desk
+Complaint Cell
+Dummy Department
+Education, Youth, Sports & Vocational Training
+Environment
+Executive Branch
+Finance, Economic Planning & ICT
+Gender, Culture & Social Services
+Health & Sanitation
+HealthServices
+Horticulture
+Lands, Housing & Urban Planning
+Medical Services
+Obras Públicas
+Operation & Maintenance
+Others
+Public Works
+PW Dept for designation tests (PW_DESIG_DEPTA_TJ1IWV)
+PW Dept for designation tests (PW_DESIG_DEPTB_TJ1IWW)
+PW Dept for designation tests (PW_DESIG_DEPTC_TJ1IWX)
+Roads, Public Works & Transport
+Street Lights
+Tax Branch
+Trade, Energy, Tourism, Investment & Industry
+Water, Sanitation, Environment, Natural Resources & Climate
+Works Branch
+Parent
+	
+Service Code
+	
+Name
+	
+Department
+	
+SLA (hrs)
+	
+Status
+	Actions
+
+complaints.categories.Absenteeism/StaffShortageAffectingDelivery
+	
+Absenteeism/StaffShortageAffectingDelivery
+	
+Absenteeism / Staff shortage affecting delivery
+	
+Administration, Public Service & Special Programs
+	
+168
+	
+Active
+	
+
+
+HealthWorkers
+	
+AbsenteeismStaffShortageAffectingDelivery
+	
+Absenteeism / Staff shortage affecting delivery
+	
+Medical Services
+	
+169
+	
+Active
+	
+
+
+CountyGovernment_RoadsAndTransport_RoadSafety_AccidentProneArea
+	
+AccidentProneAreaDangerousJunction
+	
+Dangerous Junction
+	
+DEPT_020
+	
+96
+	
+Active
+	
+
+
+complaints.categories.AMBULANCE_DELAYS_AMBULANCE_BREAKDOWN_CREW_UNRESPONSIVE
+	
+AMBULANCE_DELAYS_AMBULANCE_BREAKDOWN_CREW_UNRESPONSIVE
+	
+Ambulance Delays - Ambulance breakdown / Crew unresponsive
+	
+Medical Services
+	
+24
+	
+Active
+	
+
+
+complaints.categories.AMBULANCE_DELAYS_AMBULANCE_DELAYED_OR_DID_NOT_ARRIVE
+	
+AMBULANCE_DELAYS_AMBULANCE_DELAYED_OR_DID_NOT_ARRIVE
+	
+Ambulance Delays - Ambulance delayed or did not arrive
+	
+Medical Services
+	
+24
+	
+Active
+	
+
+
+complaints.categories.AmbulanceBreakdown/CrewUnresponsive
+	
+AmbulanceBreakdown/CrewUnresponsive
+	
+Ambulance breakdown / Crew unresponsive
+	
+Medical Services
+	
+48
+	
+Active
+	
+
+
+AmbulanceDelays
+	
+AmbulanceBreakdownCrewUnresponsive
+	
+Ambulance breakdown / Crew unresponsive
+	
+Medical Services
+	
+24
+	
+Active
+	
+
+
+MedicalServices
+	
+AmbulanceDelay
+	
+Ambulance delayed or did not arrive
+	
+Medical Services
+	
+24
+	
+Active
+	
+
+
+AmbulanceDelays
+	
+AmbulanceDelayedOrDidNotArrive
+	
+Ambulance delayed or did not arrive
+	
+Medical Services
+	
+48
+	
+Active
+	
+
+
+SampleAuthorityType_SampleMainCategory_AnotherSector
+	
+AnotherSectorExampleSubType3
+	
+Example Sub-type 3
+	
+Building & Roads
+	
+72
+	
+Active
+	
+
+Showing 1-10 of 771
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 78
+Next
+Documentation
+PGR CONFIGURATION
+
+Complaint Types List
+
+All available complaint types
+
+Grievance Sub Types
+
+Configure complaint subtypes and SLAs
+
+PGR Service Config
+
+Service definitions and workflow
+
+USER GUIDES
+
+File Complaints (CSR)
+
+How CSR files complaints
+
+Resolve Complaints (FME)
+
+How FME resolves complaints
+
+Open DIGIT Docs

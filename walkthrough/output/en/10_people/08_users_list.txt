@@ -1,0 +1,194 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+Employees
+Org Chart
+Users
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Users
+100
+Refresh
+Create
+Type
+All
+Citizen
+Employee
+System
+Username
+	
+Name
+	
+Mobile
+	
+Type
+	
+Active
+	Roles
+
+0712345001
+	
+Jane Mwangi
+	
+0712345001
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+0712345678
+	
+E2E Verifier
+	
+0712345678
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+123456789
+	
+Vinoth
+	
+123456789
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+177680713
+	
+Playwright Test Citizen
+	
+177680713
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+178186271
+	
+Playwright Test Citizen
+	
+178186271
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+178238563
+	
+E2E Lifecycle Citizen
+	
+178238563
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+179785784
+	
+Playwright Test Citizen
+	
+179785784
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+179841771
+	
+E2E Lifecycle Citizen
+	
+179841771
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+700001935
+	
+Test 700001935
+	
+700001935
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+
+705391631
+	
+705391631
+	
+705391631
+	
+CITIZEN
+	
+Active
+	
+1 roles
+
+Showing 1-10 of 100
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 10
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

@@ -1,0 +1,278 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Types
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Complaints
+5179
+Refresh
+Create
+Status
+All
+Pending Assignment
+Pending Reassignment
+Pending at LME
+Pending at Supervisor
+Resolved
+Resolved by Supervisor
+Rejected
+Closed (after resolution)
+Closed (after rejection)
+Cancelled
+Department
+All
+Accounts Branch
+Administration, Public Service & Special Programs
+Agriculture, Livestock, Fisheries & Cooperatives
+Ambiental
+Bomet Municipality
+Building & Roads
+Building Branch
+Citizen service desk
+Complaint Cell
+Dummy Department
+Education, Youth, Sports & Vocational Training
+Environment
+Executive Branch
+Finance, Economic Planning & ICT
+Gender, Culture & Social Services
+Health & Sanitation
+HealthServices
+Horticulture
+Lands, Housing & Urban Planning
+Medical Services
+Obras Públicas
+Operation & Maintenance
+Others
+Public Works
+PW Dept for designation tests (PW_DESIG_DEPTA_TJ1IWV)
+PW Dept for designation tests (PW_DESIG_DEPTB_TJ1IWW)
+PW Dept for designation tests (PW_DESIG_DEPTC_TJ1IWX)
+Roads, Public Works & Transport
+Street Lights
+Tax Branch
+Trade, Energy, Tourism, Investment & Industry
+Water, Sanitation, Environment, Natural Resources & Climate
+Works Branch
+Add filter
+Request ID
+	
+Type
+	Department	
+Description
+	
+Status
+	Citizen	Locality	
+Created
+
+
+PG-PGR-2026-08-24-197399
+	
+WaterPressureisVeryLess
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+Load test complaint - WaterPressureisVeryLess - VU LoadTestC…
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_BOMET_EAST_MERIGI
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197398
+	
+DamagedOrBlockedFootpath
+	
+Medical Services
+	
+Load test complaint - DamagedOrBlockedFootpath - VU LoadTest…
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_CHEPALUNGU_SIONGIROI
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197397
+	
+DeadAnimals
+	
+Medical Services
+	
+Load test complaint - DeadAnimals - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_KONOIN_BOITO
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197396
+	
+ShortageOfWater
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+Load test complaint - ShortageOfWater - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_BOMET_EAST_LONGISA
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197395
+	
+ShortageOfWater
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+Load test complaint - ShortageOfWater - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_BOMET_EAST_LONGISA
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197394
+	
+DamagedGarbageBin
+	
+Medical Services
+	
+Load test complaint - DamagedGarbageBin - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_CHEPALUNGU_SIGOR
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197393
+	
+ManholeCoverMissingOrDamaged
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+Load test complaint - ManholeCoverMissingOrDamaged - VU Load…
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_BOMET_EAST_CHEMANER
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197392
+	
+NoStreetlight
+	
+Medical Services
+	
+Load test complaint - NoStreetlight - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_KONOIN_KIMULOT
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197391
+	
+StrayAnimals
+	
+Medical Services
+	
+Load test complaint - StrayAnimals - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_SOTIK_RONGENA_MANARET
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197390
+	
+NoWaterSupply
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+Load test complaint - NoWaterSupply - VU LoadTestCitizen
+	
+RESOLVED
+	
+LoadTestCitizen
+	
+BOMET_BOMET_EAST_KIPRERES
+	
+24 Aug 2026, 3:20 am
+
+Showing 1-10 of 5179
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 518
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

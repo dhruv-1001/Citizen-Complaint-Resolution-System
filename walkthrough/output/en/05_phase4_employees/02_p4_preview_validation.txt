@@ -1,0 +1,49 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 4: Employee Onboarding
+
+Bulk create employee accounts with roles and jurisdictions
+
+No boundaries found for tenant "ke". Complete Phase 2 (boundaries) first, then retry.
+Retry
+Prerequisites Met:
+Phase 1: Tenant created
+Phase 2: Boundaries configured
+Phase 3: Departments & Designations created
+File: 04-Employees-JaneDoe-FILLED.xlsx
+Status	Name	Mobile	DOB	Dept	Designation	Roles
+
+Error	Jane Doe	840000001	1990-01-15	ambiental,obras_publicas	agente	EMPLOYEE,GRO,PGR_LME
+
+Summary: 1 total | 0 valid | 1 errors
+
+Validation errors found:
+
+Jane Doe: Boundary "maputo" not found; Mobile number does not match the configured format
+← Back
+Re-upload Fixed File
+Create 0 Employees
+
+DIGIT Complaints Management • Press Ctrl+/ for help

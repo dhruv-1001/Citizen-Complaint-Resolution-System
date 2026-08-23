@@ -1,0 +1,284 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+State Info
+City Modules
+ID Formats
+Workflow Business Services
+Workflow Config
+Auto Escalation
+SLA Config
+Role Actions
+Roles
+Action Mappings
+Encryption Policy
+Decryption ABAC
+Masking Patterns
+Security Policy
+Inbox Config
+Deactivation Reasons
+Degrees
+Employment Tests
+Specializations
+Gender Types
+Employee Status
+Employee Type
+Cron Jobs
+UI Homepage
+Theme Config
+Mobile Number Validation
+Tenant Boundary (HRMS)
+Auto-Escalation Ignored
+Workflow BS Master
+PGR UI Constants
+Map Configuration
+PGR Notification Routing
+PGR Notification Templates
+PGR Provider Templates
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+PGR Notification Templates
+Schema: RAINMAKER-PGR.NotificationTemplate
+47
+Refresh
+Add filter
+Audience
+	
+Action
+	
+To State
+	
+Channel
+	
+Locale
+	
+Body
+	
+Active
+	
+Subject
+	Actions
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+EMAIL
+	
+en_IN
+	
+Dear Citizen, Your complaint for {complaint_type} has been submitted with ID {id} on {date}. You can track your complaint status on the web portal. EGOVS
+	
+Active
+	
+DIGIT: Complaint {id} ({complaint_type})
+	
+
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+EMAIL
+	
+hi_IN
+	
+प्रिय नागरिक, आपकी शिकायत {complaint_type} को {id} आईडी के साथ {date} को जमा कर दी गई है। आप अपनी शिकायत की स्थिति वेब पोर्टल पर देख सकते हैं। ई-गव फाउंडेशन
+	
+Active
+	
+DIGIT: शिकायत {id} ({complaint_type})
+	
+
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+SMS
+	
+en_IN
+	
+Dear Citizen, Your complaint for {complaint_type} has been submitted with ID {id} on {date}. You can track your complaint status on the web portal. EGOVS
+	
+Active
+	
+--
+	
+
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+SMS
+	
+hi_IN
+	
+प्रिय नागरिक, आपकी शिकायत {complaint_type} को {id} आईडी के साथ {date} को जमा कर दी गई है। आप अपनी शिकायत की स्थिति वेब पोर्टल पर देख सकते हैं। ई-गव फाउंडेशन
+	
+Active
+	
+--
+	
+
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+WHATSAPP
+	
+en_IN
+	
+Dear Citizen, Your complaint for {complaint_type} has been submitted with ID {id} on {date}. You can track your complaint status on the web portal. EGOVS
+	
+Active
+	
+--
+	
+
+
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+WHATSAPP
+	
+hi_IN
+	
+प्रिय नागरिक, आपकी शिकायत {complaint_type} को {id} आईडी के साथ {date} को जमा कर दी गई है। आप अपनी शिकायत की स्थिति वेब पोर्टल पर देख सकते हैं। ई-गव फाउंडेशन
+	
+Active
+	
+--
+	
+
+
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+EMAIL
+	
+en_IN
+	
+Dear Citizen, Your complaint for {complaint_type} with ID {id} submitted on {date} has been assigned to {emp_name}, {emp_designation}, {emp_department}. You can track your complaint status and connect with our officials on the web portal. EGOVS
+	
+Active
+	
+DIGIT: Complaint {id} ({complaint_type})
+	
+
+
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+EMAIL
+	
+hi_IN
+	
+प्रिय नागरिक, {complaint_type} और आईडी {id} वाली आपकी शिकायत, जो {date} को जमा की गई थी, {emp_name}, {emp_designation} और {emp_department} को सौंपी गई है। आप पोर्टल पर अपनी शिकायत की स्थिति देख सकते हैं। ई-गव फाउंडेशन
+	
+Active
+	
+DIGIT: शिकायत {id} ({complaint_type})
+	
+
+
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+SMS
+	
+en_IN
+	
+Dear Citizen, Your complaint for {complaint_type} with ID {id} submitted on {date} has been assigned to {emp_name}, {emp_designation}, {emp_department}. You can track your complaint status and connect with our officials on the web portal. EGOVS
+	
+Active
+	
+--
+	
+
+
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+SMS
+	
+hi_IN
+	
+प्रिय नागरिक, {complaint_type} और आईडी {id} वाली आपकी शिकायत, जो {date} को जमा की गई थी, {emp_name}, {emp_designation} और {emp_department} को सौंपी गई है। आप पोर्टल पर अपनी शिकायत की स्थिति देख सकते हैं। ई-गव फाउंडेशन
+	
+Active
+	
+--
+	
+
+Showing 1-10 of 47
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 5
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

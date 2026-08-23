@@ -1,0 +1,36 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Fetch Boundaries from OSM
+
+Enter the name of your city or region to automatically fetch administrative boundaries and their map polygons from OpenStreetMap.
+
+Search
+← Back
+
+DIGIT Complaints Management • Press Ctrl+/ for help

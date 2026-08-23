@@ -1,0 +1,120 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+State Info
+City Modules
+ID Formats
+Workflow Business Services
+Workflow Config
+Auto Escalation
+SLA Config
+Role Actions
+Roles
+Action Mappings
+Encryption Policy
+Decryption ABAC
+Masking Patterns
+Security Policy
+Inbox Config
+Deactivation Reasons
+Degrees
+Employment Tests
+Specializations
+Gender Types
+Employee Status
+Employee Type
+Cron Jobs
+UI Homepage
+Theme Config
+Mobile Number Validation
+Tenant Boundary (HRMS)
+Auto-Escalation Ignored
+Workflow BS Master
+PGR UI Constants
+Map Configuration
+PGR Notification Routing
+PGR Notification Templates
+PGR Provider Templates
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Map Configuration
+Schema: RAINMAKER-PGR.MapConfig
+1
+Refresh
+Add filter
+Code
+	
+Max Zoom
+	
+Min Zoom
+	
+Tile Url
+	
+Default Zoom
+	
+Base Map Theme
+	
+Tile Attribution
+	
+Boundary Tenant Id
+	Actions
+
+DEFAULT
+	
+--
+	
+--
+	
+--
+	
+9
+	
+light
+	
+--
+	
+--
+	
+
+Showing 1-1 of 1
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

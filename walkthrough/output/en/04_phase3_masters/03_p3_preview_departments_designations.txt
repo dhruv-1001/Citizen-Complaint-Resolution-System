@@ -1,0 +1,49 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 3: Common Masters
+
+Configure departments, designations, and complaint types
+
+File: 03-Common-and-Complaint-Master.xlsx
+Depts (2) & Desig (2)
+Departments
+Status	Code	Name	Active
+
+Valid	ambiental	Ambiental	Yes
+
+Valid	obras_publicas	Obras Públicas	Yes
+Designations
+Status	Code	Name	Department
+
+Valid	agente	Agente	ambientalobras_publicas
+
+Valid	inspector	Inspector	ambientalobras_publicas
+
+Summary: 2 departments • 2 designations
+
+← Change File
+Create & Continue
+
+DIGIT Complaints Management • Press Ctrl+/ for help

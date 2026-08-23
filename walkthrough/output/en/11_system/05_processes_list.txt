@@ -1,0 +1,146 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Workflow Processes
+150
+Refresh
+Business ID
+	
+Action
+	State	
+Created
+
+
+PG-PGR-2026-08-24-197399
+	
+RESOLVE
+	
+RESOLVED
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197399
+	
+ASSIGN
+	
+PENDINGATLME
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197399
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197398
+	
+RESOLVE
+	
+RESOLVED
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197398
+	
+ASSIGN
+	
+PENDINGATLME
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197396
+	
+RESOLVE
+	
+RESOLVED
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197398
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197397
+	
+RESOLVE
+	
+RESOLVED
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197396
+	
+ASSIGN
+	
+PENDINGATLME
+	
+24 Aug 2026, 3:20 am
+
+
+PG-PGR-2026-08-24-197395
+	
+RESOLVE
+	
+RESOLVED
+	
+24 Aug 2026, 3:20 am
+
+Showing 1-10 of 150
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 15
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

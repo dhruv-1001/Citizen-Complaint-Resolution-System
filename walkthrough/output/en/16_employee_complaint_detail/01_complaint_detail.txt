@@ -1,0 +1,51 @@
+Bomet County
+English
+S
+Home
+/
+Complaint Details
+Complaint Details
+Complaint No.
+PG-PGR-2026-04-13-000826
+Category
+ServiceSchedulingComplaints
+Sub-Type
+Service postponed
+Filed Date
+13/04/2026
+County
+Bomet
+Sub County
+Bomet Central
+Ward
+Mutarakwa
+Current Status
+Pending at Supervisor
+Landmark
+NA
+Description
+dsfgsdfgsfg
+Complaint's Location
+Kamandura Mai-Mahiu Narok Road, Bomet
++
+−
+ Leaflet | © CARTO © OSM
+Open in Maps
+Lat: -0.781700
+Lng: 35.342800
+Complaint Timeline
+WF_PGR_ESCALATE
+31/05/2026
+County GRO
+Contact Details: 711000001
+Comments : "Auto-escalated: SLA breach at level 0"
+Assigned
+13/04/2026
+Bomet Admin
+Contact Details: 9100000003
+Comments : "test"
+Applied
+13/04/2026
+Test Citizen
+Contact Details: 9876543211
+Take action

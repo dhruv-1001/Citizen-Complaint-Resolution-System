@@ -1,10 +1,10 @@
 # DIGIT Configurator & Employee UI — visual walkthrough
 
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
-the DIGIT configurator (onboarding wizard + management console) and the digit-ui employee app.
+the DIGIT configurator (4-phase onboarding wizard + management console) and the digit-ui employee app.
 
-**63 screens · 14 flows · captured 2026-08-19 · read-only.** Nothing on the deployment was created,
-updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
+**89 screens · 18 flows · captured 2026-08-24 · read-only.** Nothing on the deployment was
+created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
 
 > **There is an interactive version.** This page is the flat, shareable rendering. The capture also
 > produces an interactive sitemap graph — one thumbnail node per screen, edges following the real
@@ -17,19 +17,24 @@ updated or deleted; see [How the capture stayed read-only](#how-the-capture-stay
 ## Contents
 
 - [Configurator · Sign In](#configurator--sign-in)
-- [Configurator · Onboarding wizard](#configurator--onboarding-wizard)
+- [Onboarding · Phase 1 — Tenant & Branding](#onboarding--phase-1--tenant--branding)
+- [Onboarding · Phase 2 — Boundary Setup](#onboarding--phase-2--boundary-setup)
+- [Onboarding · Phase 3 — Common Masters](#onboarding--phase-3--common-masters)
+- [Onboarding · Phase 4 — Employee Onboarding](#onboarding--phase-4--employee-onboarding)
+- [Onboarding · Complete](#onboarding--complete)
 - [Configurator · Management console](#configurator--management-console)
-- [Configurator · Tenant management](#configurator--tenant-management)
+- [Configurator · Tenant, boundaries & map](#configurator--tenant-boundaries--map)
 - [Configurator · Complaints & localization](#configurator--complaints--localization)
-- [Configurator · People](#configurator--people)
-- [Configurator · System](#configurator--system)
+- [Configurator · People & org structure](#configurator--people--org-structure)
+- [Configurator · System (roles, workflow, MDMS)](#configurator--system-roles-workflow-mdms)
 - [Configurator · Notifications](#configurator--notifications)
-- [Configurator · Dashboards](#configurator--dashboards)
-- [Configurator · Known gaps on this deployment](#configurator--known-gaps-on-this-deployment)
+- [Configurator · Public dashboard](#configurator--public-dashboard)
 - [Employee UI · Sign In](#employee-ui--sign-in)
 - [Employee UI · Complaint inbox](#employee-ui--complaint-inbox)
+- [Employee UI · Complaint detail & workflow](#employee-ui--complaint-detail--workflow)
 - [Employee UI · New complaint intake](#employee-ui--new-complaint-intake)
 - [Employee UI · Search complaint](#employee-ui--search-complaint)
+- [Screen inventory, against the product doc](#screen-inventory-against-the-product-doc)
 - [What the capture found on bomet](#what-the-capture-found-on-bomet)
 - [How the capture stayed read-only](#how-the-capture-stayed-read-only)
 - [How to view the interactive version](#how-to-view-the-interactive-version)
@@ -39,327 +44,455 @@ updated or deleted; see [How the capture stayed read-only](#how-the-capture-stay
 
 ## Configurator · Sign In
 
-`/configurator/login`. One form, one switch: **Onboarding** drives the 4-phase provisioning wizard, **Management** drives the react-admin console. Both authenticate against the root (state-level) tenant, `ke`.
+`/configurator/login`. One form, one switch: **Onboarding** drives the 4-phase provisioning wizard, **Management** drives the react-admin console. Both authenticate against the root (state-level) tenant, `ke`. The `?` next to Tenant Code is a native tooltip, not a screen.
 
 **The sign-in form as it loads**
 
 ![The sign-in form as it loads](../walkthrough/output/en/01_login/01_signin_blank.png)
 
-**Filled, with **Onboarding** mode selected**
+**Filled, Onboarding mode selected**
 
-![Filled, with **Onboarding** mode selected](../walkthrough/output/en/01_login/02_signin_filled_onboarding_mode.png)
+![Filled, Onboarding mode selected](../walkthrough/output/en/01_login/02_signin_filled_onboarding_mode.png)
 
-**Filled, with **Management** mode selected**
+**Filled, Management mode selected**
 
-![Filled, with **Management** mode selected](../walkthrough/output/en/01_login/03_signin_filled_management_mode.png)
+![Filled, Management mode selected](../walkthrough/output/en/01_login/03_signin_filled_management_mode.png)
 
 ---
 
-## Configurator · Onboarding wizard
+## Onboarding · Phase 1 — Tenant & Branding
 
-The four provisioning phases plus the completion summary. Captured by navigating directly to `/configurator/phase/1` … `/phase/4` — clicking through the wizard would have run real tenant provisioning against `ke`. Note the view-only banners on phases 2–4: this operator's roles can review those steps but not write them.
+Two ways out of the landing screen: reuse a tenant that already exists, or upload a Tenant Master workbook. The workbook is parsed **in the browser**, so the preview screens below cost the deployment nothing — the sample file describes Maputo, which is why the preview shows `mz.maputo` rather than Bomet. Everything past **Upload to DIGIT** (branding, the image preview modal, the Phase 1 summary) writes, and is listed as not captured in the [screen inventory](#screen-inventory-against-the-product-doc).
 
-**Phase 1 — Tenant & Branding Setup. 100 tenants already exist under `ke`, so the wizard offers to skip ahead**
+**Phase 1 landing — 100 tenants already exist under `ke`, so the skip-ahead banner appears**
 
-![Phase 1 — Tenant & Branding Setup. 100 tenants already exist under `ke`, so the wizard offers to skip ahead](../walkthrough/output/en/02_onboarding/01_phase1_tenant_info.png)
+![Phase 1 landing — 100 tenants already exist under ke, so the skip-ahead banner appears](../walkthrough/output/en/02_phase1_tenant/01_p1_landing.png)
 
-**Phase 2 — Boundary Setup (view-only for this operator)**
+**Use Existing Tenant. Picking a row jumps to Phase 2 without creating anything**
 
-![Phase 2 — Boundary Setup (view-only for this operator)](../walkthrough/output/en/02_onboarding/02_phase2_boundaries.png)
+![Use Existing Tenant. Picking a row jumps to Phase 2 without creating anything](../walkthrough/output/en/02_phase1_tenant/02_p1_select_existing_tenant.png)
 
-**Phase 3 — Common Masters: departments, designations, complaint types**
+**Step 1.1 — the Tenant Master dropzone**
 
-![Phase 3 — Common Masters: departments, designations, complaint types](../walkthrough/output/en/02_onboarding/03_phase3_masters.png)
+![Step 1.1 — the Tenant Master dropzone](../walkthrough/output/en/02_phase1_tenant/03_p1_upload_tenant_master.png)
 
-**Phase 4 — Employee Onboarding, bulk accounts with roles and jurisdictions**
+**Preview, Tenant Info tab: the parsed row and exactly what creating it would do**
 
-![Phase 4 — Employee Onboarding, bulk accounts with roles and jurisdictions](../walkthrough/output/en/02_onboarding/04_phase4_employees.png)
+![Preview, Tenant Info tab: the parsed row and exactly what creating it would do](../walkthrough/output/en/02_phase1_tenant/04_p1_preview_tenant_info.png)
 
-**Completion summary: 33 departments, 46 designations, 685 complaint types at `ke`**
+**Preview, Branding Details tab**
 
-![Completion summary: 33 departments, 46 designations, 685 complaint types at `ke`](../walkthrough/output/en/02_onboarding/05_complete.png)
+![Preview, Branding Details tab](../walkthrough/output/en/02_phase1_tenant/05_p1_preview_branding_details.png)
+
+***← Change File* returns to the dropzone**
+
+![← Change File returns to the dropzone](../walkthrough/output/en/02_phase1_tenant/06_p1_change_file_back_to_upload.png)
+
+---
+
+## Onboarding · Phase 2 — Boundary Setup
+
+The widest phase: two independent paths to the same result. The **Excel** path picks or defines a hierarchy, hands you a template shaped to that hierarchy's levels, then validates the filled workbook row by row with an optional GeoJSON sidecar for real map outlines. The **OpenStreetMap** path searches Nominatim, pulls the administrative levels from Overpass, and asks you to name them. Both stop at the same wall: the button that creates the hierarchy and the boundaries.
+
+**Choose the boundary source: OpenStreetMap or Excel**
+
+![Choose the boundary source: OpenStreetMap or Excel](../walkthrough/output/en/03_phase2_boundary/01_p2_landing_choose_source.png)
+
+**Excel path — define a new hierarchy or reuse an existing one**
+
+![Excel path — define a new hierarchy or reuse an existing one](../walkthrough/output/en/03_phase2_boundary/02_p2_excel_choose_path.png)
+
+**Define Hierarchy — name plus an ordered, contiguous level list**
+
+![Define Hierarchy — name plus an ordered, contiguous level list](../walkthrough/output/en/03_phase2_boundary/03_p2_create_hierarchy_blank.png)
+
+**The same form filled in. *Create Hierarchy* writes, so it was not clicked**
+
+![The same form filled in. Create Hierarchy writes, so it was not clicked](../walkthrough/output/en/03_phase2_boundary/04_p2_create_hierarchy_filled.png)
+
+**Select Existing Hierarchy — every entry here is a test leftover (see finding 2)**
+
+![Select Existing Hierarchy — every entry here is a test leftover (see finding 2)](../walkthrough/output/en/03_phase2_boundary/05_p2_select_existing_hierarchy.png)
+
+**A hierarchy selected**
+
+![A hierarchy selected](../walkthrough/output/en/03_phase2_boundary/06_p2_hierarchy_selected.png)
+
+**Boundary Data Upload — the template is generated for the chosen hierarchy's levels**
+
+![Boundary Data Upload — the template is generated for the chosen hierarchy's levels](../walkthrough/output/en/03_phase2_boundary/07_p2_download_template.png)
+
+**Verify Boundary Data, All tab — 1,256 rows parsed from the sample workbook**
+
+![Verify Boundary Data, All tab — 1,256 rows parsed from the sample workbook](../walkthrough/output/en/03_phase2_boundary/08_p2_verify_all.png)
+
+**Valid tab**
+
+![Valid tab](../walkthrough/output/en/03_phase2_boundary/09_p2_verify_valid.png)
+
+**Errors tab — empty for this file**
+
+![Errors tab — empty for this file](../walkthrough/output/en/03_phase2_boundary/10_p2_verify_errors.png)
+
+**With the optional GeoJSON sidecar attached: 68 of 1,256 boundaries get real outlines**
+
+![With the optional GeoJSON sidecar attached: 68 of 1,256 boundaries get real outlines](../walkthrough/output/en/03_phase2_boundary/11_p2_verify_with_geojson.png)
+
+**OSM path — search the area on Nominatim**
+
+![OSM path — search the area on Nominatim](../walkthrough/output/en/03_phase2_boundary/12_p2_osm_search.png)
+
+**Search term entered**
+
+![Search term entered](../walkthrough/output/en/03_phase2_boundary/13_p2_osm_search_typed.png)
+
+**Map Admin Levels — the OSM levels found for Bomet, each mapped to a hierarchy level. *Create Hierarchy & Boundaries* writes, so this is where the capture stops**
+
+![Map Admin Levels — the OSM levels found for Bomet, each mapped to a hierarchy level. Create Hierarchy & Boundaries writes, so this is where the capture stops](../walkthrough/output/en/03_phase2_boundary/14_p2_osm_map_levels.png)
+
+---
+
+## Onboarding · Phase 3 — Common Masters
+
+Departments, designations and complaint types from one workbook. Upload and preview are client-side; **Create & Continue** writes, so the complaint-hierarchy step behind it is not captured.
+
+**Phase 3 landing**
+
+![Phase 3 landing](../walkthrough/output/en/04_phase3_masters/01_p3_landing.png)
+
+**Common Master dropzone**
+
+![Common Master dropzone](../walkthrough/output/en/04_phase3_masters/02_p3_upload_common_master.png)
+
+**Parsed departments and designations with per-row validation**
+
+![Parsed departments and designations with per-row validation](../walkthrough/output/en/04_phase3_masters/03_p3_preview_departments_designations.png)
+
+---
+
+## Onboarding · Phase 4 — Employee Onboarding
+
+Phase 4 is **blocked on this deployment** — its reference load reports *No boundaries found for tenant "ke"*, which disables **Start Phase 4** and hides the template generator behind it. Why that happens is [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies). The file input is rendered outside the step, so the employee workbook can still be parsed and its per-row validation captured.
+
+**Phase 4 landing. Note the contradiction: *Prerequisites Met — Phase 2: Boundaries configured*, directly under *No boundaries found for tenant "ke"***
+
+![Phase 4 landing. Note the contradiction: Prerequisites Met — Phase 2: Boundaries configured, directly under No boundaries found for tenant "ke"](../walkthrough/output/en/05_phase4_employees/01_p4_landing.png)
+
+**Per-row employee validation. Every row fails on the missing boundary, so *Create Employees* stays disabled and the confirmation dialog behind it is unreachable**
+
+![Per-row employee validation. Every row fails on the missing boundary, so Create Employees stays disabled and the confirmation dialog behind it is unreachable](../walkthrough/output/en/05_phase4_employees/02_p4_preview_validation.png)
+
+---
+
+## Onboarding · Complete
+
+The end-of-wizard summary: live tenant totals, links into the employee and citizen apps, and three buttons. **View Setup History** has no `onClick` handler in `configurator/src/pages/CompletePage.tsx` — it renders and does nothing.
+
+**The completion summary**
+
+![The completion summary](../walkthrough/output/en/06_onboarding_complete/01_complete_summary.png)
 
 ---
 
 ## Configurator · Management console
 
-The console landing page and the Advanced view that exposes every generic MDMS master the data provider knows about.
+The react-admin console. Home counts every registry; **Advanced** exposes every generic MDMS master the data provider knows about.
 
-**Management console home, with per-registry record counts**
+**Management console home**
 
-![Management console home, with per-registry record counts](../walkthrough/output/en/03_home/01_dashboard_home.png)
+![Management console home](../walkthrough/output/en/07_home/01_dashboard_home.png)
 
 **Advanced — every generic MDMS master**
 
-![Advanced — every generic MDMS master](../walkthrough/output/en/03_home/02_advanced_all_masters.png)
+![Advanced — every generic MDMS master](../walkthrough/output/en/07_home/02_advanced_all_masters.png)
 
 ---
 
-## Configurator · Tenant management
+## Configurator · Tenant, boundaries & map
 
-Tenant registry, boundary hierarchy definitions, and the department create form — shot blank and filled, never submitted.
+Tenant registry, boundary hierarchy definitions, boundary records and the per-tenant map configuration, plus the boundary create form (filled, never submitted).
 
 **Tenant registry**
 
-![Tenant registry](../walkthrough/output/en/04_tenant/01_tenants_list.png)
+![Tenant registry](../walkthrough/output/en/08_tenant/01_tenants_list.png)
 
 **Boundary hierarchy definitions**
 
-![Boundary hierarchy definitions](../walkthrough/output/en/04_tenant/02_boundary_hierarchies_list.png)
+![Boundary hierarchy definitions](../walkthrough/output/en/08_tenant/02_boundary_hierarchies_list.png)
 
-**The ADMIN hierarchy in detail**
+**One hierarchy in detail**
 
-![The ADMIN hierarchy in detail](../walkthrough/output/en/04_tenant/03_boundary_hierarchies_detail.png)
+![One hierarchy in detail](../walkthrough/output/en/08_tenant/03_boundary_hierarchies_detail.png)
 
-**Department create form, blank**
+**Boundary records**
 
-![Department create form, blank](../walkthrough/output/en/04_tenant/04_department_create_blank.png)
+![Boundary records](../walkthrough/output/en/08_tenant/04_boundaries_list.png)
 
-**The same form filled — never submitted**
+**One boundary in detail**
 
-![The same form filled — never submitted](../walkthrough/output/en/04_tenant/05_department_create_filled.png)
+![One boundary in detail](../walkthrough/output/en/08_tenant/05_boundaries_detail.png)
+
+**Map Configuration — centre, zoom and tiles per tenant**
+
+![Map Configuration — centre, zoom and tiles per tenant](../walkthrough/output/en/08_tenant/06_map_configuration.png)
+
+**Boundary create form, blank**
+
+![Boundary create form, blank](../walkthrough/output/en/08_tenant/07_boundary_create_blank.png)
+
+**The same form filled in — never submitted**
+
+![The same form filled in — never submitted](../walkthrough/output/en/08_tenant/08_boundary_create_filled.png)
 
 ---
 
 ## Configurator · Complaints & localization
 
-The complaint registry (empty on this deployment — see the findings below) and the 14,258 localization messages.
+The complaint registry and the masters behind it — complaint types, the category/sub-type hierarchy, and the localization messages that label them in the citizen and employee apps.
 
-**Complaint registry — no records exist on this deployment**
+**Complaint registry**
 
-![Complaint registry — no records exist on this deployment](../walkthrough/output/en/05_complaints/01_complaints_list_empty.png)
+![Complaint registry](../walkthrough/output/en/09_complaints/01_complaints_list.png)
 
-**Localization messages (14,258 of them)**
+**Complaint Types**
 
-![Localization messages (14,258 of them)](../walkthrough/output/en/05_complaints/02_localization_messages_list.png)
+![Complaint Types](../walkthrough/output/en/09_complaints/02_complaint_types_list.png)
+
+**Complaint Hierarchies**
+
+![Complaint Hierarchies](../walkthrough/output/en/09_complaints/03_complaint_hierarchies_list.png)
+
+**The PGR hierarchy in detail**
+
+![The PGR hierarchy in detail](../walkthrough/output/en/09_complaints/04_complaint_hierarchies_detail.png)
+
+**Localization messages**
+
+![Localization messages](../walkthrough/output/en/09_complaints/05_localization_messages_list.png)
 
 ---
 
-## Configurator · People
+## Configurator · People & org structure
 
-HRMS employees, user accounts, the org chart, both bulk-import surfaces, and the employee create form blank and filled.
+Departments, designations, employees, users and the org chart, plus the two bulk-import surfaces and the department/employee create forms.
 
-**HRMS employees**
+**Departments**
 
-![HRMS employees](../walkthrough/output/en/06_people/01_employees_list.png)
+![Departments](../walkthrough/output/en/10_people/01_departments_list.png)
 
-**An employee record**
+**One department in detail**
 
-![An employee record](../walkthrough/output/en/06_people/02_employees_detail.png)
+![One department in detail](../walkthrough/output/en/10_people/02_departments_detail.png)
 
-**Department / designation org chart**
+**Designations**
 
-![Department / designation org chart](../walkthrough/output/en/06_people/03_org_chart.png)
+![Designations](../walkthrough/output/en/10_people/03_designations_list.png)
 
-**User accounts**
+**One designation in detail**
 
-![User accounts](../walkthrough/output/en/06_people/04_users_list.png)
+![One designation in detail](../walkthrough/output/en/10_people/04_designations_detail.png)
 
-**A user record**
+**Employees**
 
-![A user record](../walkthrough/output/en/06_people/05_users_detail.png)
+![Employees](../walkthrough/output/en/10_people/05_employees_list.png)
 
-**Employee bulk import (XLSX)**
+**One employee in detail**
 
-![Employee bulk import (XLSX)](../walkthrough/output/en/06_people/06_employees_bulk_import.png)
+![One employee in detail](../walkthrough/output/en/10_people/06_employees_detail.png)
+
+**Org chart**
+
+![Org chart](../walkthrough/output/en/10_people/07_org_chart.png)
+
+**Users**
+
+![Users](../walkthrough/output/en/10_people/08_users_list.png)
+
+**One user in detail**
+
+![One user in detail](../walkthrough/output/en/10_people/09_users_detail.png)
+
+**Employee bulk import**
+
+![Employee bulk import](../walkthrough/output/en/10_people/10_employees_bulk_import.png)
 
 **Localization bulk import**
 
-![Localization bulk import](../walkthrough/output/en/06_people/07_localization_bulk_import.png)
+![Localization bulk import](../walkthrough/output/en/10_people/11_localization_bulk_import.png)
+
+**Department create form, blank**
+
+![Department create form, blank](../walkthrough/output/en/10_people/12_department_create_blank.png)
+
+**The same form filled in — never submitted**
+
+![The same form filled in — never submitted](../walkthrough/output/en/10_people/13_department_create_filled.png)
 
 **Employee create form, blank**
 
-![Employee create form, blank](../walkthrough/output/en/06_people/08_employee_create_blank.png)
+![Employee create form, blank](../walkthrough/output/en/10_people/14_employee_create_blank.png)
 
-**The same form filled — never submitted**
+**The same form filled in — never submitted**
 
-![The same form filled — never submitted](../walkthrough/output/en/06_people/09_employee_create_filled.png)
+![The same form filled in — never submitted](../walkthrough/output/en/10_people/15_employee_create_filled.png)
 
 ---
 
-## Configurator · System
+## Configurator · System (roles, workflow, MDMS)
 
-Access roles, the PGR workflow state machine, workflow process instances, MDMS v2 schemas, and boundary records — each with its detail view where one exists.
+Access roles, the PGR workflow business service (the state machine every complaint runs through), live workflow process instances, and the MDMS v2 schema registry.
 
-**Access roles (49 on this deployment)**
+**Access roles**
 
-![Access roles (49 on this deployment)](../walkthrough/output/en/07_system/01_access_roles_list.png)
+![Access roles](../walkthrough/output/en/11_system/01_access_roles_list.png)
 
-**A role and its actions**
+**One role in detail**
 
-![A role and its actions](../walkthrough/output/en/07_system/02_access_roles_detail.png)
+![One role in detail](../walkthrough/output/en/11_system/02_access_roles_detail.png)
 
 **Workflow business services**
 
-![Workflow business services](../walkthrough/output/en/07_system/03_workflows_list.png)
+![Workflow business services](../walkthrough/output/en/11_system/03_workflows_list.png)
 
-**The PGR state machine**
+**The PGR state machine in detail**
 
-![The PGR state machine](../walkthrough/output/en/07_system/04_workflows_detail.png)
+![The PGR state machine in detail](../walkthrough/output/en/11_system/04_workflows_detail.png)
 
-**Workflow process instances — empty, since no complaints exist**
+**Workflow process instances**
 
-![Workflow process instances — empty, since no complaints exist](../walkthrough/output/en/07_system/05_processes_list_empty.png)
+![Workflow process instances](../walkthrough/output/en/11_system/05_processes_list.png)
 
-**MDMS v2 schema definitions**
+**MDMS v2 schemas**
 
-![MDMS v2 schema definitions](../walkthrough/output/en/07_system/06_mdms_schemas_list.png)
+![MDMS v2 schemas](../walkthrough/output/en/11_system/06_mdms_schemas_list.png)
 
-**A schema in detail**
+**One schema in detail**
 
-![A schema in detail](../walkthrough/output/en/07_system/07_mdms_schemas_detail.png)
-
-**Boundary records**
-
-![Boundary records](../walkthrough/output/en/07_system/08_boundaries_list.png)
-
-**The BOMET boundary**
-
-![The BOMET boundary](../walkthrough/output/en/07_system/09_boundaries_detail.png)
-
-**Boundary create form, blank**
-
-![Boundary create form, blank](../walkthrough/output/en/07_system/10_boundary_create_blank.png)
-
-**The same form filled — never submitted**
-
-![The same form filled — never submitted](../walkthrough/output/en/07_system/11_boundary_create_filled.png)
+![One schema in detail](../walkthrough/output/en/11_system/07_mdms_schemas_detail.png)
 
 ---
 
 ## Configurator · Notifications
 
-The Novu-backed notification surfaces: routing configuration, templates, the delivery log, configured providers, and per-user preferences.
+Routing configuration, templates, provider templates, the delivery log from the Novu bridge, configured providers, and per-user preferences.
 
 **Notification routing configuration**
 
-![Notification routing configuration](../walkthrough/output/en/08_notifications/01_notification_configure.png)
+![Notification routing configuration](../walkthrough/output/en/12_notifications/01_notification_configure.png)
+
+**Notification Routing rules**
+
+![Notification Routing rules](../walkthrough/output/en/12_notifications/02_notification_routing.png)
 
 **Notification templates**
 
-![Notification templates](../walkthrough/output/en/08_notifications/02_notification_templates.png)
+![Notification templates](../walkthrough/output/en/12_notifications/03_notification_templates.png)
 
-**Delivery log (Novu bridge)**
+**Provider templates (WhatsApp)**
 
-![Delivery log (Novu bridge)](../walkthrough/output/en/08_notifications/03_notification_logs.png)
+![Provider templates (WhatsApp)](../walkthrough/output/en/12_notifications/04_provider_templates_whatsapp.png)
+
+**Delivery log from the Novu bridge**
+
+![Delivery log from the Novu bridge](../walkthrough/output/en/12_notifications/05_notification_logs.png)
 
 **Configured providers**
 
-![Configured providers](../walkthrough/output/en/08_notifications/04_notification_providers.png)
+![Configured providers](../walkthrough/output/en/12_notifications/06_notification_providers.png)
 
 **Per-user notification preferences**
 
-![Per-user notification preferences](../walkthrough/output/en/08_notifications/05_user_preferences.png)
+![Per-user notification preferences](../walkthrough/output/en/12_notifications/07_user_preferences.png)
 
 ---
 
-## Configurator · Dashboards
+## Configurator · Public dashboard
 
-The PGR operational dashboard and the public dashboard configuration screen.
-
-**PGR operational dashboard**
-
-![PGR operational dashboard](../walkthrough/output/en/09_dashboards/01_pgr_dashboard.png)
+Anonymous, credential-free access to the tenant's dashboard, and the stable URL it is shared under. `/manage/pgr-dashboard` exists in `configurator/src/App.tsx` but not in the bundle bomet serves — that route falls back to the console home.
 
 **Public dashboard configuration**
 
-![Public dashboard configuration](../walkthrough/output/en/09_dashboards/02_public_dashboard_configure.png)
+![Public dashboard configuration](../walkthrough/output/en/13_dashboards/01_public_dashboard_configure.png)
 
----
+**Public dashboard configuration**
 
-## Configurator · Known gaps on this deployment
-
-**These seven screens do not work on bomet today.** They are collected here rather than scattered through the tour above. All seven fail the same way and for the same reason — see [What the capture found](#what-the-capture-found-on-bomet).
-
-**Departments — *Error loading data: No static resource v2/_count***
-
-![Departments — *Error loading data: No static resource v2/_count*](../walkthrough/output/en/10_known_gaps/01_departments_list_error.png)
-
-**Designations — same failure**
-
-![Designations — same failure](../walkthrough/output/en/10_known_gaps/02_designations_list_error.png)
-
-**Complaint Types — same failure**
-
-![Complaint Types — same failure](../walkthrough/output/en/10_known_gaps/03_complaint_types_list_error.png)
-
-**Complaint Hierarchies — same failure**
-
-![Complaint Hierarchies — same failure](../walkthrough/output/en/10_known_gaps/04_complaint_hierarchies_list_error.png)
-
-**Map Configuration — same failure**
-
-![Map Configuration — same failure](../walkthrough/output/en/10_known_gaps/05_map_configuration_error.png)
-
-**Notification Routing — same failure**
-
-![Notification Routing — same failure](../walkthrough/output/en/10_known_gaps/06_notification_routing_error.png)
-
-**Provider Templates (WhatsApp) — same failure**
-
-![Provider Templates (WhatsApp) — same failure](../walkthrough/output/en/10_known_gaps/07_provider_templates_whatsapp_error.png)
+![Public dashboard configuration](../walkthrough/output/en/13_dashboards/02_public_dashboard_configure.png)
 
 ---
 
 ## Employee UI · Sign In
 
-`/digit-ui/employee`. City picker, credentials, privacy consent. The city list holds ~126 tenants, almost all of them `Target Tenant NNNNNN` leftovers from automated test runs; **Bomet County** is the real one.
+`/digit-ui/employee`. City picker, credentials, privacy consent. Tenant `ke` is listed as **Bomet County** — the only selection that authenticates, because `ADMIN` exists only there.
 
-**The employee sign-in card, in Bomet County branding**
+**The employee sign-in screen**
 
-![The employee sign-in card, in Bomet County branding](../walkthrough/output/en/11_employee_login/01_employee_signin_blank.png)
+![The employee sign-in screen](../walkthrough/output/en/14_employee_login/01_employee_signin_blank.png)
 
 **City picker, filtered**
 
-![City picker, filtered](../walkthrough/output/en/11_employee_login/02_employee_city_picker.png)
+![City picker, filtered](../walkthrough/output/en/14_employee_login/02_employee_city_picker.png)
 
-**Filled, with consent given**
+**Filled, with privacy consent ticked**
 
-![Filled, with consent given](../walkthrough/output/en/11_employee_login/03_employee_signin_filled.png)
+![Filled, with privacy consent ticked](../walkthrough/output/en/14_employee_login/03_employee_signin_filled.png)
 
-**Employee home. Only PGR is enabled here — `/dss/*`, `/hrms/*` and `/workbench/*` all fall back to this screen**
+**Employee home. Only PGR is enabled here**
 
-![Employee home. Only PGR is enabled here — `/dss/*`, `/hrms/*` and `/workbench/*` all fall back to this screen](../walkthrough/output/en/11_employee_login/04_employee_home.png)
+![Employee home. Only PGR is enabled here](../walkthrough/output/en/14_employee_login/04_employee_home.png)
 
 ---
 
 ## Employee UI · Complaint inbox
 
-Inbox v2 with its search panel (complaint number, mobile, date range) and filter rail (subtype, county, status), plus the legacy inbox. Both are empty because the deployment holds no complaints.
+Inbox v2 with its search panel and filter rail, and the legacy inbox behind it. It opens on **My Complaints**, which is empty for `ADMIN` — the deployment's 5,179 complaints belong to other employees, and **All Complaints** is the tab that shows them.
 
-**Inbox v2 — search panel and filter rail**
+**Inbox v2 as it opens — search panel, filter rail, and the *My Complaints* tab, empty for this operator**
 
-![Inbox v2 — search panel and filter rail](../walkthrough/output/en/12_employee_inbox/01_inbox_v2_search_and_filters.png)
+![Inbox v2 as it opens — search panel, filter rail, and the My Complaints tab, empty for this operator](../walkthrough/output/en/15_employee_inbox/01_inbox_v2_my_complaints.png)
 
-**After running a search: no results**
+**The *All Complaints* tab: complaint number, locality, status, current owner and SLA days remaining**
 
-![After running a search: no results](../walkthrough/output/en/12_employee_inbox/02_inbox_v2_search_results_empty.png)
+![The All Complaints tab: complaint number, locality, status, current owner and SLA days remaining](../walkthrough/output/en/15_employee_inbox/02_inbox_v2_all_complaints.png)
 
 **The legacy inbox**
 
-![The legacy inbox](../walkthrough/output/en/12_employee_inbox/03_inbox_v1_legacy.png)
+![The legacy inbox](../walkthrough/output/en/15_employee_inbox/03_inbox_v1_legacy.png)
+
+---
+
+## Employee UI · Complaint detail & workflow
+
+One complaint opened from the inbox: the detail card, and the workflow history below the fold. Opening a complaint is a read; none of the action buttons on it were clicked.
+
+**A complaint opened from the inbox: category, sub-type, jurisdiction, status, description and map pin**
+
+![A complaint opened from the inbox: category, sub-type, jurisdiction, status, description and map pin](../walkthrough/output/en/16_employee_complaint_detail/01_complaint_detail.png)
+
+**The complaint timeline below it — applied, assigned, then auto-escalated on an SLA breach**
+
+![The complaint timeline below it — applied, assigned, then auto-escalated on an SLA breach](../walkthrough/output/en/16_employee_complaint_detail/02_complaint_workflow_timeline.png)
 
 ---
 
 ## Employee UI · New complaint intake
 
-The counter-staff intake form: complainant details, complaint type → category → sub-type cascade, a Leaflet map pin for the location, and a description. Filled in for the capture and **not** submitted.
+The counter-staff intake form: complainant details, the complaint type → category → sub-type cascade, a Leaflet map pin, and a description. Filled in for the capture and **not** submitted.
 
 **The intake form as it loads**
 
-![The intake form as it loads](../walkthrough/output/en/13_employee_new_complaint/01_create_complaint_blank.png)
+![The intake form as it loads](../walkthrough/output/en/17_employee_new_complaint/01_create_complaint_blank.png)
 
 **Complaint category picker open**
 
-![Complaint category picker open](../walkthrough/output/en/13_employee_new_complaint/02_dropdown_category_open.png)
+![Complaint category picker open](../walkthrough/output/en/17_employee_new_complaint/02_dropdown_category_open.png)
 
 **County picker open**
 
-![County picker open](../walkthrough/output/en/13_employee_new_complaint/03_dropdown_county_open.png)
+![County picker open](../walkthrough/output/en/17_employee_new_complaint/03_dropdown_county_open.png)
 
 **Filled in and left there — SUBMIT was never clicked**
 
-![Filled in and left there — SUBMIT was never clicked](../walkthrough/output/en/13_employee_new_complaint/04_create_complaint_filled_not_submitted.png)
+![Filled in and left there — SUBMIT was never clicked](../walkthrough/output/en/17_employee_new_complaint/04_create_complaint_filled_not_submitted.png)
 
 ---
 
@@ -367,54 +500,159 @@ The counter-staff intake form: complainant details, complaint type → category 
 
 The Search Complaint entry point from the home screen.
 
-**Search Complaint — no results**
+**Search Complaint from the home screen — the same inbox surface, opened on its search panel**
 
-![Search Complaint — no results](../walkthrough/output/en/14_employee_search/01_search_complaint_no_results.png)
+![Search Complaint from the home screen — the same inbox surface, opened on its search panel](../walkthrough/output/en/18_employee_search/01_search_complaint_entry.png)
+
+---
+
+## Screen inventory, against the product doc
+
+The rows below follow the *CMS Configurator: Onboarding UI Screens & Windows Inventory* doc —
+every trigger it lists, and what this capture could reach. A screen is marked **write** when the
+button that opens it POSTs to DIGIT: this capture runs against a live shared deployment and never
+writes, so those screens are named here rather than faked.
+
+### Entry: Login
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| Open the configurator URL | Sign-In screen | [captured](#configurator--sign-in) |
+| Sign In (Onboarding mode) | Phase 1 landing | [captured](#onboarding--phase-1--tenant--branding) |
+| Help (`?`) icon | — | native `title` tooltip on the Tenant Code label, not a screen |
+
+### Phase 1 — Tenant & Branding
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| "Use existing tenant →" | Select Existing Tenant | [captured](#onboarding--phase-1--tenant--branding) |
+| "Use this →" on a row | Skips to Phase 2 landing | [captured](#onboarding--phase-2--boundary-setup) |
+| "Start Setup →" | Upload Tenant Master Excel | [captured](#onboarding--phase-1--tenant--branding) |
+| Successful file upload | Preview (Tenant Info / Branding Details) | [captured](#onboarding--phase-1--tenant--branding) |
+| "← Change File" | Back to Upload | [captured](#onboarding--phase-1--tenant--branding) |
+| "Upload to DIGIT" | Branding (Step 1.2) | **write** — creates the tenant |
+| "Preview" on a branding row | Image Preview modal | behind the write above |
+| "Continue" on Branding | Phase 1 Complete summary | behind the write above |
+| "Continue to Phase 2" | Phase 2 landing | reached by URL instead |
+
+### Phase 2 — Boundary Setup
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| "Proceed to Phase 3" | Skips to Phase 3 landing | client-side only |
+| "Search OSM" | OSM Search | [captured](#onboarding--phase-2--boundary-setup) |
+| Running a search | Select Map Levels | [captured](#onboarding--phase-2--boundary-setup) |
+| Confirming levels (areas skipped) | Review Skipped Areas | **write-adjacent** — the same button creates immediately when nothing was skipped, so it was never clicked |
+| Confirming the OSM import | Creating → Boundaries Created | **write** |
+| "Upload Excel" | Excel Landing (new vs existing hierarchy) | [captured](#onboarding--phase-2--boundary-setup) |
+| "Create New Hierarchy" | Define Hierarchy | [captured](#onboarding--phase-2--boundary-setup) (filled, not submitted) |
+| "Use Existing Hierarchy" | Select Hierarchy | [captured](#onboarding--phase-2--boundary-setup) |
+| Confirming a hierarchy | Download Template | [captured](#onboarding--phase-2--boundary-setup) |
+| Uploading the filled file | Verify Boundary Data (+ GeoJSON slot) | [captured](#onboarding--phase-2--boundary-setup) |
+| "Upload N Boundaries" | Boundaries Created | **write** |
+| "Continue to Phase 3" | Phase 3 landing | reached by URL instead |
+
+### Phase 3 — Common Masters
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| "Start Setup" | Upload Common Master Excel | [captured](#onboarding--phase-3--common-masters) |
+| Successful upload | Preview (departments / designations) | [captured](#onboarding--phase-3--common-masters) |
+| "Create & Continue" | Creating → Define Complaint Hierarchy | **write** |
+| Confirming hierarchy levels | Download Complaint Hierarchy Template | behind the write above |
+| Uploading the complaint-type file | Verify Complaint Hierarchy | behind the write above |
+| "Create N Sub-types" | Phase 3 Complete | **write** |
+
+### Phase 4 — Employee Onboarding
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| "Start Phase 4" | Generate Employee Template | **blocked on this deployment** — see [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies) |
+| "Download Template" | file download, no new screen | not reachable, same cause |
+| Uploading the filled file | Preview (per-row validation) | [captured](#onboarding--phase-4--employee-onboarding) |
+| "Create N Employees" | Confirmation dialog | disabled — 0 valid rows, same cause |
+| "Create" in the dialog | Creating Employees | **write** |
+| Creation finishes | Complete Setup (+ credentials CSV) | **write** |
+| "Re-upload Fixed File" | file picker, back through Preview | visible in the [Phase 4 preview](#onboarding--phase-4--employee-onboarding) |
+| "Complete Setup" | Onboarding Complete | reached by URL instead |
+
+### Final: Onboarding Complete
+
+| Trigger | Opens | In this capture |
+| --- | --- | --- |
+| End of Phase 4 | Complete page | [captured](#onboarding--complete) |
+| "Start New Setup" | Phase 1 landing (does not reset prior state) | client-side only |
+| "View Setup History" | nothing | confirmed: the button has no `onClick` handler |
 
 ---
 
 ## What the capture found on bomet
 
-Three things worth knowing before anyone reads the screens above as a product demo.
-
-### 1. Seven management screens fail to load
+### 1. The seven broken management screens are fixed
 
 Departments, Designations, Complaint Types, Complaint Hierarchies, Map Configuration, Notification
-Routing and Provider Templates all render **"Error loading data — No static resource v2/_count."**
-
-The configurator's datagrid calls `POST /egov-mdms-service/v2/_count` to size its pagination. The
-egov-mdms image deployed on bomet does not serve that endpoint, although `v2/_search` works fine:
+Routing and Provider Templates used to render **"Error loading data — No static resource
+v2/_count."** They all load now:
 
 ```
-POST /egov-mdms-service/v2/_count   → NoResourceFoundException: No static resource v2/_count.
+POST /egov-mdms-service/v2/_count   → 200 {"totalCount": 692}
 POST /egov-mdms-service/v2/_search  → 200, returns records
 ```
 
-The same gap is why the management dashboard shows `…` instead of numbers on its Tenants,
-Departments, Designations and Complaint Types tiles. **This is deployment version skew, not missing
-data** — the records are there and `_search` returns them. Fixing it means moving bomet onto an
-egov-mdms build that serves `v2/_count`.
+The configurator's datagrid calls `_count` to size its pagination, and the egov-mdms image on bomet
+did not serve that endpoint. It does now, so those seven screens sit in their normal sections in
+this walkthrough instead of in a "known gaps" section, and the management dashboard shows real
+numbers on every tile rather than `…`.
 
-### 2. The deployment holds no complaints
+### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 
-`pgr-services/v2/request/_search` returns zero rows for **all 126 tenants**, and `_count` at `ke` is
-`0`. So the employee inbox, the complaint registry and the workflow process list are all genuinely
-empty, and there is no complaint-detail or workflow-history screen to show. Seeding one would have
-been a write, so it was not done.
+Phase 4 refuses to start: **"No boundaries found for tenant `ke`. Complete Phase 2 (boundaries)
+first, then retry."** Boundaries *do* exist — the console lists 88 of them under the `ADMIN`
+hierarchy, `BOMET → SubCounty → Ward`. The wizard just never looks at them.
 
-Curiously the PGR analytics endpoint still reports `complaintsResolved: 85` — aggregates outliving
-the records they were computed from.
+`Phase4Page.tsx` picks the hierarchy to search by taking the first one the API returns:
 
-### 3. Only PGR is enabled in the employee UI
+```ts
+const hierarchies = await boundaryService.getHierarchies(targetTenant).catch(() => []);
+const hierarchyType = hierarchies[0]?.hierarchyType;
+```
+
+and `boundary.ts` fetches that list unsorted, `limit: 100`. On bomet:
+
+```
+tenant ke holds 265 boundary hierarchy definitions
+first page (limit 100): 100 of 100 are PW_* Playwright test leftovers
+first entry: PW_4E63B06D_BHSHAPE   (levels: ONLY, no relationships)
+ADMIN: not in the first 100 at all
+```
+
+So `hierarchies[0]` is a throwaway hierarchy from an automated test run, the boundary search under it
+returns nothing, and Phase 4 blocks. The same list is what Phase 2's **Select Existing Hierarchy**
+screen shows — 100 `PW_*` entries and no `ADMIN`.
+
+Two separate things to fix: the deployment is carrying test junk that should be cleaned up, and the
+wizard should not be picking a hierarchy by array position.
+
+Phase 4's landing screen also states *Prerequisites Met — Phase 2: Boundaries configured* directly
+above the error saying there are none; the checklist is static text, not a live check.
+
+### 3. The deployment now has real complaints
+
+`ke` holds **5,179 complaints**, where an earlier capture found none across every tenant. The
+employee inbox, the complaint registry, the workflow process list and the complaint detail +
+workflow-history screens all have data to show.
+
+### 4. Only PGR is enabled in the employee UI
 
 `/dss/*`, `/hrms/*` and `/workbench/*` all fall back to the employee home screen. The employee app on
 bomet is PGR-only.
 
-### Incidental: tenant `ke` *is* "Bomet County"
+### Incidental: test data everywhere
 
-The employee UI's city picker lists ~126 tenants, all but a handful named `Target Tenant NNNNNN` —
-leftovers from automated test runs. `ADMIN` exists only at `ke`, so **Bomet County** is the only city
-selection that authenticates.
+The tenant list holds 138 tenants and the boundary-hierarchy list 270 definitions, the large majority
+named `PW_*`, `ke.tgt*` or `Target Tenant NNNNNN` — automated-test leftovers. Tenant `ke` is
+displayed as **Bomet County**, and `ADMIN` exists only there, so it is the only city selection in the
+employee UI that authenticates.
 
 ---
 
@@ -428,12 +666,18 @@ independent layers prevented that:
    write verb — `_create`, `_update`, `_delete`, `_upsert`, `_transition`, and so on — plus every
    `PUT`, `PATCH` and `DELETE`. It cannot simply block `POST`: DIGIT *reads* are
    `POST /…/_search`. Blocked attempts are logged to `output/_guard.log`.
-2. **No forward-clicking.** Screens are reached by direct URL navigation. The scraper library's
-   `click_forward()` helper — which is built to press Continue / Submit / Create / Publish / Go Live —
-   is never called.
-3. **Forms are filled but abandoned.** Every create form is shot blank, smart-filled, then left.
+2. **A hard stop before every write control.** The onboarding wizard is walked with real clicks, but
+   the capture stops at **Upload to DIGIT**, **Create Hierarchy**, **Upload N Boundaries**,
+   **Create & Continue**, **Create Hierarchy & Boundaries** and the Create-Employees confirmation.
+   The scraper library's `click_forward()` helper — built to press Continue / Submit / Create — is
+   never called.
+3. **Uploads that never leave the browser.** The wizard parses each workbook client-side, so the
+   preview and verification screens are reached by handing a sample file to the file input and
+   letting the SPA read it. Nothing is sent to the deployment; the sample workbooks are in
+   [`walkthrough/fixtures/`](../walkthrough/fixtures).
 
-Every run ended with `read-only guard: no mutating requests were attempted`.
+Create forms are shot blank, smart-filled, then abandoned. Every run ended with
+`read-only guard: no mutating requests were attempted`.
 
 ---
 
@@ -471,15 +715,17 @@ Everything needed lives in [`walkthrough/`](../walkthrough), built on
 ```bash
 cd walkthrough
 ./setup.sh      # once — venv, playwright-scraper, headless chromium
-./run_all.sh    # ~12 min: re-captures both apps and re-renders the site
+./run_all.sh    # ~20 min: re-captures both apps and re-renders the site
 ```
 
 Individual pieces:
 
 ```bash
-.venv/bin/python capture_configurator.py 07_system   # one flow
-.venv/bin/python capture_employee.py                 # all employee flows
-.venv/bin/python build_site.py                       # re-render the HTML only
+.venv/bin/python capture_configurator.py 11_system      # one management flow
+.venv/bin/python capture_onboarding.py 03_phase2_boundary   # one wizard phase
+.venv/bin/python capture_employee.py                    # all employee flows
+.venv/bin/python build_site.py                          # re-render the HTML only
+.venv/bin/python build_doc.py                           # re-render this markdown
 ```
 
 Host, tenant and credentials default to bomet and are overridable:

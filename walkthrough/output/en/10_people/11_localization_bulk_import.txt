@@ -1,0 +1,50 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Types
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back to Localization
+Bulk import localization
+
+Upload an .xlsx/.csv with columns code, module, locale, message. Tenant: ke.
+
+1. Download the template
+
+Pre-filled with example rows for en_IN, fr_FR, pt_PT, default, plus an Instructions sheet.
+
+Download template
+2. Upload your file
+
+Existing keys will be overwritten. Localization service cache is busted automatically on success.
+
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

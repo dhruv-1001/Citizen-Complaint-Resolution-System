@@ -1,0 +1,154 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Tenants
+138
+Refresh
+Code
+	
+Name
+	
+City
+	
+District
+
+
+ke
+	
+Bomet County
+	
+Bomet County
+	
+Ke
+
+
+ke.demo
+	
+Demo County
+	
+Demo County
+	
+ke
+
+
+ke.democgvkcd
+	
+ke.democgvkcd
+	
+ke.democgvkcd
+	
+ke
+
+
+ke.demoiiawou
+	
+ke.demoiiawou
+	
+ke.demoiiawou
+	
+ke
+
+
+ke.demoixeri
+	
+ke.demoixeri
+	
+ke.demoixeri
+	
+ke
+
+
+ke.demokppguw
+	
+ke.demokppguw
+	
+ke.demokppguw
+	
+ke
+
+
+ke.demoppzzcf
+	
+ke.demoppzzcf
+	
+ke.demoppzzcf
+	
+ke
+
+
+ke.demottyyzz
+	
+ke.demottyyzz
+	
+ke.demottyyzz
+	
+ke
+
+
+ke.demowigwsz
+	
+ke.demowigwsz
+	
+ke.demowigwsz
+	
+ke
+
+
+ke.demozclfbw
+	
+ke.demozclfbw
+	
+ke.demozclfbw
+	
+ke
+
+Showing 1-10 of 138
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 14
+Next
+Documentation
+TENANT CONFIGURATION
+
+Configuring Tenants
+
+How to configure ULBs and cities
+
+What is a Tenant?
+
+A tenant represents a body (State/ULB) in the system
+
+RELATED DOCS
+
+MDMS Service
+
+Where tenant config is stored
+
+Open DIGIT Docs

@@ -1,0 +1,59 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Department: Administration, Public Service & Special Programs
+Edit
+DETAILS
+Code
+ADMIN_PUBLIC_SVC
+Name
+Administration, Public Service & Special Programs
+Status
+Active
+Description
+--
+RELATED
+Complaint Types
+22
+Absenteeism / Staff shortage affecting delivery
+Delay in attending / No skilled staff available
+Gross misconduct / Abuse of authority
+Health Workers - Absenteeism / Staff shortage affecting delivery
+Human Resource Disciplinary Cases - Chronic absenteeism / Poor performance
++17 more
+No employees found
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

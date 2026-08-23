@@ -84,6 +84,55 @@ def write_guard_log() -> None:
         print("\nread-only guard: no mutating requests were attempted")
 
 
+# ---------------------------------------------------------------- fixtures
+
+# Sample onboarding workbooks (copies of local-testing/onboarding, which is
+# gitignored). The wizard parses these IN THE BROWSER — reaching the preview /
+# verify screens costs the deployment nothing. They describe Maputo, not Bomet;
+# that is deliberate and captioned, because the point of those screens is the
+# parser + validation UI, not the data.
+FIXTURES = HERE / "fixtures"
+FIX_TENANT = FIXTURES / "01-Tenant-And-Branding-Master.xlsx"
+FIX_BOUNDARY = FIXTURES / "02-Boundaries.xlsx"
+FIX_POLYGON = FIXTURES / "02-Boundaries-Polygons.geojson"
+FIX_MASTERS = FIXTURES / "03-Common-and-Complaint-Master.xlsx"
+FIX_EMPLOYEES = FIXTURES / "04-Employees-JaneDoe-FILLED.xlsx"
+
+
+async def attach(page, selector: str, path, *, wait_ms: int = 3000) -> None:
+    """Hand a file to a hidden <input type=file> and let the SPA parse it."""
+    await page.set_input_files(selector, str(path))
+    await page.wait_for_timeout(wait_ms)
+
+
+async def click_text(page, text: str, *, timeout: int = 8000, wait_ms: int = 2200) -> bool:
+    """Click the first visible element carrying `text`; report whether it worked.
+
+    Half the onboarding wizard's navigation is plain <div onClick>, not buttons,
+    so role-based locators miss it.
+    """
+    for sel in (f"button:has-text({text!r})", f"h4:has-text({text!r})", f"text={text}"):
+        loc = page.locator(sel).first
+        try:
+            await loc.wait_for(state="visible", timeout=timeout // 3 or 2000)
+            await loc.click(timeout=timeout)
+            await page.wait_for_timeout(wait_ms)
+            return True
+        except Exception:
+            continue
+    print(f"[click miss] {text!r}")
+    return False
+
+
+async def has_text(page, text: str, *, timeout: int = 3000) -> bool:
+    """Is `text` on screen right now? Used to branch on which step rendered."""
+    try:
+        await page.locator(f"text={text}").first.wait_for(state="visible", timeout=timeout)
+        return True
+    except Exception:
+        return False
+
+
 # ---------------------------------------------------------------- login
 
 async def goto(page, url: str, *, wait_ms: int = 1800, retries: int = 3) -> None:

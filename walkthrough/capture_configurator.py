@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Capture the DIGIT configurator on bometfeedbackhub.digit.org.
 
+Sign-in plus the management console. The 4-phase onboarding wizard lives in
+`capture_onboarding.py`.
+
 READ-ONLY. Every screen is reached by direct URL navigation (the route table is
 `configurator/src/admin/DigitLayout.tsx`), create/edit forms are screenshotted
 blank and smart-filled but NEVER submitted, and `lib.install_readonly_guard`
 aborts any request that would mutate the deployment.
 
-Run one flow at a time with:  python3 capture_configurator.py 04_tenant
+Run one flow at a time with:  python3 capture_configurator.py 08_tenant
 """
 import asyncio, sys
 from playwright.async_api import async_playwright
@@ -77,23 +80,10 @@ async def f01_login(ctx):
     await page.close()
 
 
-async def f02_onboarding(ctx):
-    """The 4-phase onboarding wizard. Reached by direct URL — walking it with
-    clicks would run real provisioning against tenant `ke`."""
-    page = await ctx.new_page()
-    await install_page_hooks(page)
-    await login(page, shots=False, mode="onboarding")
-    w = Walker(page, OUT / "en" / "02_onboarding")
-    for n, name in ((1, "tenant_info"), (2, "boundaries"), (3, "masters"), (4, "employees")):
-        await screen(w, f"/phase/{n}", f"phase{n}_{name}", settle=4000)
-    await screen(w, "/complete", "complete", settle=3500)
-    await page.close()
-
-
-async def f03_home(ctx):
+async def f07_home(ctx):
     page = await ctx.new_page(); await install_page_hooks(page)
     await login(page, shots=False, mode="management")
-    w = Walker(page, OUT / "en" / "03_home")
+    w = Walker(page, OUT / "en" / "07_home")
     await screen(w, "/manage", "dashboard_home", settle=4500)
     await screen(w, "/manage/advanced", "advanced_all_masters", settle=4000)
     await page.close()
@@ -102,59 +92,61 @@ async def f03_home(ctx):
 # Route -> (label, capture a detail row?)  ------------------------------------
 # Reflects what bometfeedbackhub.digit.org actually renders: see
 # `probe_routes.py` / output/_recon/route_states.json. The seven MDMS-backed
-# lists that 500 on this deployment (its egov-mdms image has no `v2/_count`)
-# are captured separately in 10_known_gaps rather than scattered through the
-# tour.
+# lists that used to 500 here (Departments, Designations, Complaint Types,
+# Complaint Hierarchies, Map Configuration, Notification Routing, Provider
+# Templates) load since the deployment picked up an egov-mdms image that serves
+# `v2/_count`, so they sit in their natural sections again instead of in a
+# separate "known gaps" flow.
 MANAGE_FLOWS = {
-    "04_tenant": [
+    "08_tenant": [
         ("/manage/tenants", "tenants_list", None),
         ("/manage/boundary-hierarchies", "boundary_hierarchies_list", "row"),
+        ("/manage/boundaries", "boundaries_list", "row"),
+        ("/manage/map-config", "map_configuration", None),
     ],
-    "05_complaints": [
-        ("/manage/complaints", "complaints_list_empty", None),
+    "09_complaints": [
+        ("/manage/complaints", "complaints_list", None),
+        ("/manage/complaint-hierarchy", "complaint_types_list", "row"),
+        ("/manage/complaint-hierarchies", "complaint_hierarchies_list", "row"),
         ("/manage/localization", "localization_messages_list", "row"),
     ],
-    "06_people": [
+    "10_people": [
+        ("/manage/departments", "departments_list", "row"),
+        ("/manage/designations", "designations_list", "row"),
         ("/manage/employees", "employees_list", "row"),
         ("/manage/org-chart", "org_chart", None),
         ("/manage/users", "users_list", "row"),
         ("/manage/employees/bulk", "employees_bulk_import", None),
         ("/manage/localization/bulk", "localization_bulk_import", None),
     ],
-    "07_system": [
+    "11_system": [
         ("/manage/access-roles", "access_roles_list", "row"),
         ("/manage/workflow-business-services", "workflows_list", "row"),
-        ("/manage/workflow-processes", "processes_list_empty", None),
+        ("/manage/workflow-processes", "processes_list", None),
         ("/manage/mdms-schemas", "mdms_schemas_list", "row"),
-        ("/manage/boundaries", "boundaries_list", "row"),
     ],
-    "08_notifications": [
+    "12_notifications": [
         ("/manage/notification-configure", "notification_configure", None),
+        ("/manage/notification-routing", "notification_routing", None),
         ("/manage/notification-template", "notification_templates", None),
+        ("/manage/notification-provider-template", "provider_templates_whatsapp", None),
         ("/manage/notification-log", "notification_logs", None),
         ("/manage/notification-provider", "notification_providers", "row"),
         ("/manage/notification-preference", "user_preferences", None),
     ],
-    "09_dashboards": [
-        ("/manage/pgr-dashboard", "pgr_dashboard", None),
+    # /manage/pgr-dashboard exists in configurator/src/App.tsx but not in the
+    # bundle bomet serves — react-admin falls back to the console home, so
+    # capturing it would just duplicate 07_home.
+    "13_dashboards": [
         ("/manage/public-dashboard", "public_dashboard_configure", None),
-    ],
-    "10_known_gaps": [
-        ("/manage/departments", "departments_list_error", None),
-        ("/manage/designations", "designations_list_error", None),
-        ("/manage/complaint-hierarchy", "complaint_types_list_error", None),
-        ("/manage/complaint-hierarchies", "complaint_hierarchies_list_error", None),
-        ("/manage/map-config", "map_configuration_error", None),
-        ("/manage/notification-routing", "notification_routing_error", None),
-        ("/manage/notification-provider-template", "provider_templates_whatsapp_error", None),
     ],
 }
 
 # Create forms: captured blank and smart-filled, NEVER submitted.
 CREATE_FORMS = {
-    "04_tenant": [("/manage/departments/create", "department_create")],
-    "06_people": [("/manage/employees/create", "employee_create")],
-    "07_system": [("/manage/boundaries/create", "boundary_create")],
+    "10_people": [("/manage/departments/create", "department_create"),
+                  ("/manage/employees/create", "employee_create")],
+    "08_tenant": [("/manage/boundaries/create", "boundary_create")],
 }
 
 
@@ -178,8 +170,7 @@ async def install_page_hooks(page):
 
 FLOWS = {
     "01_login": f01_login,
-    "02_onboarding": f02_onboarding,
-    "03_home": f03_home,
+    "07_home": f07_home,
     **{k: (lambda ctx, k=k: manage_flow(ctx, k)) for k in MANAGE_FLOWS},
 }
 

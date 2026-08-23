@@ -1,0 +1,262 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+State Info
+City Modules
+ID Formats
+Workflow Business Services
+Workflow Config
+Auto Escalation
+SLA Config
+Role Actions
+Roles
+Action Mappings
+Encryption Policy
+Decryption ABAC
+Masking Patterns
+Security Policy
+Inbox Config
+Deactivation Reasons
+Degrees
+Employment Tests
+Specializations
+Gender Types
+Employee Status
+Employee Type
+Cron Jobs
+UI Homepage
+Theme Config
+Mobile Number Validation
+Tenant Boundary (HRMS)
+Auto-Escalation Ignored
+Workflow BS Master
+PGR UI Constants
+Map Configuration
+PGR Notification Routing
+PGR Notification Templates
+PGR Provider Templates
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+PGR Notification Routing
+Schema: RAINMAKER-PGR.NotificationRouting
+28
+Refresh
+Add filter
+Business Service
+	
+Action
+	
+To State
+	
+Audience
+	
+Channel
+	
+Active
+	
+From State
+	Actions
+
+PGR
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+CITIZEN
+	
+EMAIL
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+CITIZEN
+	
+SMS
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+CITIZEN
+	
+WHATSAPP
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+GRO
+	
+SMS
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+CITIZEN
+	
+EMAIL
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+CITIZEN
+	
+SMS
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+CITIZEN
+	
+WHATSAPP
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+EMPLOYEE
+	
+EMAIL
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+EMPLOYEE
+	
+SMS
+	
+Active
+	
+--
+	
+
+
+PGR
+	
+ASSIGN
+	
+PENDINGATLME
+	
+EMPLOYEE
+	
+WHATSAPP
+	
+Active
+	
+--
+	
+
+Showing 1-10 of 28
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 3
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

@@ -1,0 +1,37 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 3: Common Masters
+
+Configure departments, designations, and complaint types
+
+Step 3.1: Upload Common Master Excel
+
+Drop Common and Complaint Master.xlsx here
+
+or click to browse
+
+← Back
+
+DIGIT Complaints Management • Press Ctrl+/ for help

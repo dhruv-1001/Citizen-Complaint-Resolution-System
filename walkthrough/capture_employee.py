@@ -7,7 +7,9 @@ aborts anything that would write.
 
 What bomet actually serves: PGR only. /dss/*, /hrms/* and /workbench/* all fall
 back to the home screen — those modules are not enabled on this deployment (see
-output/_recon/employee_routes.json).
+output/_recon/employee_routes.json). The deployment now carries real complaints,
+so the inbox opens onto a complaint detail + workflow timeline; opening one is a
+read, and none of the action buttons on it are ever clicked.
 """
 import asyncio, sys
 from playwright.async_api import async_playwright
@@ -16,39 +18,72 @@ from lib import (EMPLOYEE, VIEWPORT, OUT, goto, employee_login,
                  install_readonly_guard, write_guard_log)
 
 
-async def f11_login(ctx):
+async def f14_login(ctx):
     page = await ctx.new_page()
     page.on("pageerror", lambda e: print(f"[pageerror] {str(e)[:140]}"))
-    w = Walker(page, OUT / "en" / "11_employee_login")
+    w = Walker(page, OUT / "en" / "14_employee_login")
     await employee_login(page, w, shots=True)
     await w.shot("employee_home")
     return page
 
 
-async def f12_inbox(ctx, page=None):
+async def f15_inbox(ctx, page=None):
     page = page or await ctx.new_page()
     if "/user/login" in page.url or page.url.rstrip("/").endswith("/employee") is False:
         pass
-    w = Walker(page, OUT / "en" / "12_employee_inbox")
+    w = Walker(page, OUT / "en" / "15_employee_inbox")
     await goto(page, f"{EMPLOYEE}/pgr/inbox-v2", wait_ms=7000)
-    await w.shot("inbox_v2_search_and_filters")
+    await w.shot("inbox_v2_my_complaints")
 
-    # run a search — /pgr-services `_search` is a read, so this is safe
-    try:
-        await page.get_by_text("Search", exact=True).first.click(timeout=6000)
-        await page.wait_for_timeout(4000)
-        await w.shot("inbox_v2_search_results_empty")
-    except Exception as e:
-        print(f"[skip] inbox search: {str(e)[:90]}")
+    # The inbox opens on "My Complaints", which is empty for ADMIN — the
+    # deployment's 5k complaints are owned by other employees. "All Complaints"
+    # is the tab with rows; switching tabs only re-runs `_search`.
+    if await switch_to_all_complaints(page):
+        await w.shot("inbox_v2_all_complaints")
 
     await goto(page, f"{EMPLOYEE}/pgr/inbox", wait_ms=6000)
     await w.shot("inbox_v1_legacy")
     return page
 
 
-async def f13_new_complaint(ctx, page=None):
+async def switch_to_all_complaints(page) -> bool:
+    try:
+        await page.get_by_text("All Complaints", exact=True).first.click(timeout=8000)
+        await page.wait_for_timeout(6000)
+        return True
+    except Exception as e:
+        print(f"[skip] All Complaints tab: {str(e)[:90]}")
+        return False
+
+
+async def f16_complaint_detail(ctx, page=None):
+    """Open one complaint from the inbox: detail card + workflow timeline."""
     page = page or await ctx.new_page()
-    w = Walker(page, OUT / "en" / "13_employee_new_complaint")
+    w = Walker(page, OUT / "en" / "16_employee_complaint_detail")
+    await goto(page, f"{EMPLOYEE}/pgr/inbox-v2", wait_ms=8000)
+    await switch_to_all_complaints(page)
+    # rows are div-based; the complaint number is the only link out
+    rows = page.locator("a[href*='/pgr/complaint-details/']")
+    try:
+        if not await rows.count():
+            print("[skip] no complaint row to open")
+            return page
+        await rows.first.click(timeout=8000)
+        await page.wait_for_timeout(7000)
+    except Exception as e:
+        print(f"[skip] opening complaint: {str(e)[:90]}")
+        return page
+    await w.shot("complaint_detail")
+    # the workflow history sits below the fold on a 900px viewport
+    await page.mouse.wheel(0, 1600)
+    await page.wait_for_timeout(1500)
+    await w.shot("complaint_workflow_timeline")
+    return page
+
+
+async def f17_new_complaint(ctx, page=None):
+    page = page or await ctx.new_page()
+    w = Walker(page, OUT / "en" / "17_employee_new_complaint")
     await goto(page, f"{EMPLOYEE}/pgr/create-complaint", wait_ms=7000)
     await w.shot("create_complaint_blank")
 
@@ -73,21 +108,23 @@ async def f13_new_complaint(ctx, page=None):
     return page
 
 
-async def f14_home_cards(ctx, page=None):
+async def f18_home_cards(ctx, page=None):
     page = page or await ctx.new_page()
-    w = Walker(page, OUT / "en" / "14_employee_search")
+    w = Walker(page, OUT / "en" / "18_employee_search")
     await goto(page, EMPLOYEE, wait_ms=6000)
     try:
         await page.get_by_text("Search Complaint", exact=True).first.click(timeout=8000)
         await page.wait_for_timeout(6000)
-        await w.shot("search_complaint_no_results")
+        await w.shot("search_complaint_entry")
     except Exception as e:
         print(f"[skip] search card: {str(e)[:90]}")
     return page
 
 
-FLOWS = {"11_employee_login": f11_login, "12_employee_inbox": f12_inbox,
-         "13_employee_new_complaint": f13_new_complaint, "14_employee_search": f14_home_cards}
+FLOWS = {"14_employee_login": f14_login, "15_employee_inbox": f15_inbox,
+         "16_employee_complaint_detail": f16_complaint_detail,
+         "17_employee_new_complaint": f17_new_complaint,
+         "18_employee_search": f18_home_cards}
 
 
 async def main():
@@ -100,7 +137,7 @@ async def main():
         for name in want:
             print(f"\n########## {name}")
             try:
-                if name == "11_employee_login":
+                if name == "14_employee_login":
                     page = await FLOWS[name](ctx)
                 else:
                     if page is None:          # flows after login reuse the session

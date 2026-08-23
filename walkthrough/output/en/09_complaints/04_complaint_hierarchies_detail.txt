@@ -1,0 +1,382 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Types
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Hierarchy: PGR
+DETAILS
+Hierarchy Type
+PGR
+Levels
+2
+Total nodes
+2328
+Leaf complaint types
+751
+HIERARCHY LEVELS (DEFINITION)
+CATEGORY
+SUB_TYPE
+leaf · serviceCode level
+FULL HIERARCHY
+Collapse all
+Expand all
+AUTHORITY_TYPE
+Municipal Authority
+(MunicipalAuthority)
+MAIN_CATEGORY
+Infrastructure
+(MunicipalAuthority_Infrastructure)
+SECTOR
+Road Maintenance
+(MunicipalAuthority_Infrastructure_RoadMaintenance)
+Sub-Type
+Pothole Issues
+(MunicipalAuthority_Infrastructure_RoadMaintenance_PotholeIssues)
+COMP_TYPE
+Pothole on Main Road
+(PotholeIssuesPotholeOnMainRoad)
+leaf · DEPT_001 · 24h
+COMP_TYPE
+Pothole on Side Street
+(PotholeIssuesPotholeOnSideStreet)
+leaf · DEPT_002 · 36h
+COMP_TYPE
+Pothole Near School Zone
+(PotholeIssuesPotholeNearSchoolZone)
+leaf · DEPT_003 · 24h
+Sub-Type
+Road Surface Damage
+(MunicipalAuthority_Infrastructure_RoadMaintenance_RoadSurfaceDamage)
+COMP_TYPE
+Cracked Road Surface
+(RoadSurfaceDamageCrackedRoadSurface)
+leaf · DEPT_004 · 48h
+COMP_TYPE
+Collapsed Road Edge
+(RoadSurfaceDamageCollapsedRoadEdge)
+leaf · DEPT_005 · 72h
+SECTOR
+Street Lighting
+(MunicipalAuthority_Infrastructure_StreetLighting)
+Sub-Type
+Broken Lights
+(MunicipalAuthority_Infrastructure_StreetLighting_BrokenLights)
+COMP_TYPE
+Street Light Not Working
+(BrokenLightsStreetLightNotWorking)
+leaf · DEPT_006 · 48h
+COMP_TYPE
+Flickering Street Light
+(BrokenLightsFlickeringStreetLight)
+leaf · DEPT_007 · 36h
+Sub-Type
+Missing Lights
+(MunicipalAuthority_Infrastructure_StreetLighting_MissingLights)
+COMP_TYPE
+No Light in Dark Alley
+(MissingLightsNoLightInDarkAlley)
+leaf · DEPT_008 · 96h
+SECTOR
+Road Maintenance
+(MunicipalAuthority_RoadMaintenance)
+Sub-Type
+Pothole Issues
+(MunicipalAuthority_RoadMaintenance_PotholeIssues)
+Sub-Type
+Road Surface Damage
+(MunicipalAuthority_RoadMaintenance_RoadSurfaceDamage)
+SECTOR
+Street Lighting
+(MunicipalAuthority_StreetLighting)
+Sub-Type
+Broken Lights
+(MunicipalAuthority_StreetLighting_BrokenLights)
+Sub-Type
+Missing Lights
+(MunicipalAuthority_StreetLighting_MissingLights)
+SECTOR
+Waste Management
+(MunicipalAuthority_WasteManagement)
+Sub-Type
+Missed Collection
+(MunicipalAuthority_WasteManagement_MissedCollection)
+Sub-Type
+Illegal Dumping
+(MunicipalAuthority_WasteManagement_IllegalDumping)
+MAIN_CATEGORY
+Environment
+(MunicipalAuthority_Environment)
+SECTOR
+Waste Management
+(MunicipalAuthority_Environment_WasteManagement)
+Sub-Type
+Missed Collection
+(MunicipalAuthority_Environment_WasteManagement_MissedCollection)
+COMP_TYPE
+Garbage Not Collected
+(MissedCollectionGarbageNotCollected)
+leaf · DEPT_009 · 24h
+COMP_TYPE
+Overflowing Bin
+(MissedCollectionOverflowingBin)
+leaf · DEPT_010 · 24h
+Sub-Type
+Illegal Dumping
+(MunicipalAuthority_Environment_WasteManagement_IllegalDumping)
+COMP_TYPE
+Dumping on Road Reserve
+(IllegalDumpingDumpingOnRoadReserve)
+leaf · DEPT_011 · 48h
+SECTOR
+Green Spaces
+(MunicipalAuthority_Environment_GreenSpaces)
+Sub-Type
+Park Damage
+(MunicipalAuthority_Environment_GreenSpaces_ParkDamage)
+COMP_TYPE
+Vandalised Park Equipment
+(ParkDamageVandalisedParkEquipment)
+leaf · DEPT_012 · 72h
+SECTOR
+Green Spaces
+(MunicipalAuthority_GreenSpaces)
+Sub-Type
+Park Damage
+(MunicipalAuthority_GreenSpaces_ParkDamage)
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aaadhfbjd
+(PwauthorityTypeAaadhfbjd)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aaadhfbjd
+(PwauthorityTypeAaadhfbjd_PwmainCategoryAaadhfbjd)
+SECTOR
+PWSECTOR_aaadhfbjd
+(PwauthorityTypeAaadhfbjd_PwmainCategoryAaadhfbjd_PwsectorAaadhfbjd)
+Sub-Type
+PWSUB_aaadhfbjd
+(PwsectorAaadhfbjdPwsubAaadhfbjd)
+leaf · PWD_aaadhfbjd · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aacjiaghj
+(PwauthorityTypeAacjiaghj)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aacjiaghj
+(PwauthorityTypeAacjiaghj_PwmainCategoryAacjiaghj)
+SECTOR
+PWSECTOR_aacjiaghj
+(PwauthorityTypeAacjiaghj_PwmainCategoryAacjiaghj_PwsectorAacjiaghj)
+Sub-Type
+PWSUB_aacjiaghj
+(PwsectorAacjiaghjPwsubAacjiaghj)
+leaf · PWD_aacjiaghj · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aaeighhif
+(PwauthorityTypeAaeighhif)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aaeighhif
+(PwauthorityTypeAaeighhif_PwmainCategoryAaeighhif)
+SECTOR
+PWSECTOR_aaeighhif
+(PwauthorityTypeAaeighhif_PwmainCategoryAaeighhif_PwsectorAaeighhif)
+Sub-Type
+PWSUB_aaeighhif
+(PwsectorAaeighhifPwsubAaeighhif)
+leaf · PWD_aaeighhif · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aafifegdd
+(PwauthorityTypeAafifegdd)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aafifegdd
+(PwauthorityTypeAafifegdd_PwmainCategoryAafifegdd)
+SECTOR
+PWSECTOR_aafifegdd
+(PwauthorityTypeAafifegdd_PwmainCategoryAafifegdd_PwsectorAafifegdd)
+Sub-Type
+PWSUB_aafifegdd
+(PwsectorAafifegddPwsubAafifegdd)
+leaf · PWD_aafifegdd · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aahadcbbi
+(PwauthorityTypeAahadcbbi)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aahadcbbi
+(PwauthorityTypeAahadcbbi_PwmainCategoryAahadcbbi)
+SECTOR
+PWSECTOR_aahadcbbi
+(PwauthorityTypeAahadcbbi_PwmainCategoryAahadcbbi_PwsectorAahadcbbi)
+Sub-Type
+PWSUB_aahadcbbi
+(PwsectorAahadcbbiPwsubAahadcbbi)
+leaf · PWD_aahadcbbi · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abbfjfijf
+(PwauthorityTypeAbbfjfijf)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abbfjfijf
+(PwauthorityTypeAbbfjfijf_PwmainCategoryAbbfjfijf)
+SECTOR
+PWSECTOR_abbfjfijf
+(PwauthorityTypeAbbfjfijf_PwmainCategoryAbbfjfijf_PwsectorAbbfjfijf)
+Sub-Type
+PWSUB_abbfjfijf
+(PwsectorAbbfjfijfPwsubAbbfjfijf)
+leaf · PWD_abbfjfijf · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abcdiiijg
+(PwauthorityTypeAbcdiiijg)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abcdiiijg
+(PwauthorityTypeAbcdiiijg_PwmainCategoryAbcdiiijg)
+SECTOR
+PWSECTOR_abcdiiijg
+(PwauthorityTypeAbcdiiijg_PwmainCategoryAbcdiiijg_PwsectorAbcdiiijg)
+Sub-Type
+PWSUB_abcdiiijg
+(PwsectorAbcdiiijgPwsubAbcdiiijg)
+leaf · PWD_abcdiiijg · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abcggbeij
+(PwauthorityTypeAbcggbeij)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abcggbeij
+(PwauthorityTypeAbcggbeij_PwmainCategoryAbcggbeij)
+SECTOR
+PWSECTOR_abcggbeij
+(PwauthorityTypeAbcggbeij_PwmainCategoryAbcggbeij_PwsectorAbcggbeij)
+Sub-Type
+PWSUB_abcggbeij
+(PwsectorAbcggbeijPwsubAbcggbeij)
+leaf · PWD_abcggbeij · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abfbeefee
+(PwauthorityTypeAbfbeefee)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abfbeefee
+(PwauthorityTypeAbfbeefee_PwmainCategoryAbfbeefee)
+SECTOR
+PWSECTOR_abfbeefee
+(PwauthorityTypeAbfbeefee_PwmainCategoryAbfbeefee_PwsectorAbfbeefee)
+Sub-Type
+PWSUB_abfbeefee
+(PwsectorAbfbeefeePwsubAbfbeefee)
+leaf · PWD_abfbeefee · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abgacjdeb
+(PwauthorityTypeAbgacjdeb)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abgacjdeb
+(PwauthorityTypeAbgacjdeb_PwmainCategoryAbgacjdeb)
+SECTOR
+PWSECTOR_abgacjdeb
+(PwauthorityTypeAbgacjdeb_PwmainCategoryAbgacjdeb_PwsectorAbgacjdeb)
+Sub-Type
+PWSUB_abgacjdeb
+(PwsectorAbgacjdebPwsubAbgacjdeb)
+leaf · PWD_abgacjdeb · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abhfjjegg
+(PwauthorityTypeAbhfjjegg)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abhfjjegg
+(PwauthorityTypeAbhfjjegg_PwmainCategoryAbhfjjegg)
+SECTOR
+PWSECTOR_abhfjjegg
+(PwauthorityTypeAbhfjjegg_PwmainCategoryAbhfjjegg_PwsectorAbhfjjegg)
+Sub-Type
+PWSUB_abhfjjegg
+(PwsectorAbhfjjeggPwsubAbhfjjegg)
+leaf · PWD_abhfjjegg · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abjddiddi
+(PwauthorityTypeAbjddiddi)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abjddiddi
+(PwauthorityTypeAbjddiddi_PwmainCategoryAbjddiddi)
+SECTOR
+PWSECTOR_abjddiddi
+(PwauthorityTypeAbjddiddi_PwmainCategoryAbjddiddi_PwsectorAbjddiddi)
+Sub-Type
+PWSUB_abjddiddi
+(PwsectorAbjddiddiPwsubAbjddiddi)
+leaf · PWD_abjddiddi · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_acahfadbg
+(PwauthorityTypeAcahfadbg)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_acahfadbg
+(PwauthorityTypeAcahfadbg_PwmainCategoryAcahfadbg)
+SECTOR
+PWSECTOR_acahfadbg
+(PwauthorityTypeAcahfadbg_PwmainCategoryAcahfadbg_PwsectorAcahfadbg)
+Sub-Type
+PWSUB_acahfadbg
+(PwsectorAcahfadbgPwsubAcahfadbg)
+leaf · PWD_acahfadbg · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_acdifdfef
+(PwauthorityTypeAcdifdfef)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_acdifdfef
+(PwauthorityTypeAcdifdfef_PwmainCategoryAcdifdfef)
+SECTOR
+PWSECTOR_acdifdfef
+(PwauthorityTypeAcdifdfef_PwmainCategoryAcdifdfef_PwsectorAcdifdfef)
+Sub-Type
+PWSUB_acdifdfef
+(PwsectorAcdifdfefPwsubAcdifdfef)
+leaf · PWD_acdifdfef · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_acejbdcgj
+(PwauthorityTypeAcejbdcgj)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_acejbdcgj
+(PwauthorityTypeAcejbdcgj_PwmainCategoryAcejbdcgj)
+SECTOR
+PWSECTOR_acejbdcgj
+(PwauthorityTypeAcejbdcgj_PwmainCategoryAcejbdcgj_PwsectorAcejbdcgj)
+Sub-Type
+PWSUB_acejbdcgj
+(PwsectorAcejbdcgjPwsubAcejbdcgj)
+leaf · PWD_acejbdcgj · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_acffgadfi
+(PwauthorityTypeAcffgadfi)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_acffgadfi
+(PwauthorityTypeAcffgadfi_PwmainCategoryAcffgadfi)
+SECTOR
+PWSECTOR_acffgadfi
+(PwauthorityTypeAcffgadfi_PwmainCategoryAcffgadfi_PwsectorAcffgadfi)
+Loading more… (100 of 2328)
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

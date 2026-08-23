@@ -1,0 +1,46 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Verify Boundary Data
+File: 02-Boundaries.xlsx
+Polygon outlines (optional)
+
+Drop a GeoJSON FeatureCollection to draw real boundary outlines on the citizen map. Skip to use the default placeholder shape.
+
+All (1256)
+Valid (1256)
+Errors (0)
+
+No errors found
+
+Summary: 1256 total | 1256 valid | 0 errors
+
+← Back
+Upload 1256 Boundaries
+
+DIGIT Complaints Management • Press Ctrl+/ for help

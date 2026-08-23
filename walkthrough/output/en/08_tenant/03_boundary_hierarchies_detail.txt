@@ -1,0 +1,58 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Back
+Hierarchy: ADMI
+DETAILS
+Hierarchy Type
+ADMI
+Tenant
+Target Tenant 669354
+HIERARCHY LEVELS
+Country
+State
+City
+Ward
+AUDIT
+Created by
+fd328e56-5834-4e95-bf41-28bd7242714b
+Created at
+21 Aug 2026, 3:25 pm
+Last modified by
+fd328e56-5834-4e95-bf41-28bd7242714b
+Last modified at
+21 Aug 2026, 3:25 pm
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs

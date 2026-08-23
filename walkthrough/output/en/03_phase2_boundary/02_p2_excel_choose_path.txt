@@ -1,0 +1,42 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Choose Your Path
+Option 1: Create New Hierarchy
+
+For first-time setup. Define levels like: State → City → Ward
+
+Create New
+Option 2: Use Existing Hierarchy
+
+100 hierarchy(s) found for this tenant.
+
+Select Existing
+← Back
+
+DIGIT Complaints Management • Press Ctrl+/ for help

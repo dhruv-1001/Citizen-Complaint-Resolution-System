@@ -1,0 +1,186 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+Designations
+50
+Export
+Bulk import
+Refresh
+Create
+Status
+All
+Active
+Inactive
+Add filter
+Code
+	
+Name
+	
+Status
+	Department	
+Description
+	Actions
+
+agente
+	
+Agente
+	
+Active
+	
+--
+	
+Agente do Campo
+	
+
+
+AO
+	
+Accounts Officer
+	
+Active
+	
+--
+	
+Accounts Officer
+	
+
+
+chief_officer
+	
+Chief Officer
+	
+Active
+	
+--
+	
+Chief Officer
+	
+
+
+COMM
+	
+Commissioner
+	
+Active
+	
+--
+	
+Commissioner
+	
+
+
+DESIG_01
+	
+Superintending Engineer ( B&R)
+	
+Active
+	
+--
+	
+Superintending Engineer ( B&R)
+	
+
+
+DESIG_02
+	
+Corporation Engineer (B&R)
+	
+Active
+	
+--
+	
+Corporation Engineer (B&R)
+	
+
+
+DESIG_03
+	
+Asst. Engineer ( B&R)
+	
+Active
+	
+--
+	
+Asst. Engineer ( B&R)
+	
+
+
+DESIG_04
+	
+Junior Engineer ( B&R)
+	
+Active
+	
+--
+	
+Junior Engineer ( B&R)
+	
+
+
+DESIG_05
+	
+Land Scape Officer
+	
+Active
+	
+--
+	
+Land Scape Officer
+	
+
+
+DESIG_06
+	
+Superintending Engineer ( O&M)
+	
+Active
+	
+--
+	
+Superintending Engineer ( O&M)
+	
+
+Showing 1-10 of 50
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 5
+Next
+Documentation
+DESIGNATION SETUP
+
+HRMS Designation
+
+Configure employee designations
+
+Complaint Types & Designations
+
+Map designations to complaint routing
+
+Open DIGIT Docs

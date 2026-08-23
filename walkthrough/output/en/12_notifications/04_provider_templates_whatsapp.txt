@@ -1,0 +1,284 @@
+Skip to main content
+DIGITComplaints Management
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Configure
+Notification Routing
+Notification Templates
+Provider Templates (WhatsApp)
+Notification Logs
+Notification Providers
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+State Info
+City Modules
+ID Formats
+Workflow Business Services
+Workflow Config
+Auto Escalation
+SLA Config
+Role Actions
+Roles
+Action Mappings
+Encryption Policy
+Decryption ABAC
+Masking Patterns
+Security Policy
+Inbox Config
+Deactivation Reasons
+Degrees
+Employment Tests
+Specializations
+Gender Types
+Employee Status
+Employee Type
+Cron Jobs
+UI Homepage
+Theme Config
+Mobile Number Validation
+Tenant Boundary (HRMS)
+Auto-Escalation Ignored
+Workflow BS Master
+PGR UI Constants
+Map Configuration
+PGR Notification Routing
+PGR Notification Templates
+PGR Provider Templates
+Switch to Onboarding
+
+Super Admin
+
+ke
+
+Management Mode
+custom
+EN
+Theme
+PGR Provider Templates
+Schema: RAINMAKER-PGR.NotificationProviderTemplate
+14
+Refresh
+Add filter
+Provider
+	
+Channel
+	
+Audience
+	
+Action
+	
+To State
+	
+Locale
+	
+Template Id
+	
+Active
+	Actions
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+en_IN
+	
+HX67fae4a61c4f50db8a11ebac21c50a79
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+APPLY
+	
+PENDINGFORASSIGNMENT
+	
+hi_IN
+	
+HX0f48a25c5dff81a1c5ee47a2cd122b36
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+en_IN
+	
+HX9d0ab22fb14080bdfd3d4cb43d9bd6f7
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+ASSIGN
+	
+PENDINGATLME
+	
+hi_IN
+	
+HX0d5538241557b1b56a910b8a48fc6b48
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+RATE
+	
+CLOSEDAFTERRESOLUTION
+	
+en_IN
+	
+HXa0ad0ef3f58903809464f1707a9347a8
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+RATE
+	
+CLOSEDAFTERRESOLUTION
+	
+hi_IN
+	
+HX84ff2205a1ea72eaa1326fd93bb37368
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+REASSIGN
+	
+PENDINGFORREASSIGNMENT
+	
+en_IN
+	
+HX7dc390ab0a8cd7cd3bde32768278dbd7
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+REASSIGN
+	
+PENDINGFORREASSIGNMENT
+	
+hi_IN
+	
+HX276d74eefa5ae90d2e0716a4cdc3c7ca
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+REJECT
+	
+REJECTED
+	
+en_IN
+	
+HXea318abc741dd5c09555617a4ecad490
+	
+Active
+	
+
+
+twilio
+	
+WHATSAPP
+	
+CITIZEN
+	
+REJECT
+	
+REJECTED
+	
+hi_IN
+	
+HX38efc29e9d643f7e8717cbf11015c4aa
+	
+Active
+	
+
+Showing 1-10 of 14
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 2
+Next
+Documentation
+DIGIT DOCUMENTATION
+
+Core Platform Docs
+
+DIGIT Core documentation
+
+Product Docs
+
+DIGIT product documentation
+
+Open DIGIT Docs
