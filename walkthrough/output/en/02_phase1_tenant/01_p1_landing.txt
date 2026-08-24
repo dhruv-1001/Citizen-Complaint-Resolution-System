@@ -26,7 +26,7 @@ Phase 1: Tenant & Branding Setup
 
 Create tenant and configure branding assets
 
-100 existing tenants already configured under ke. Skip Phase 1 by selecting one.
+6 existing tenants already configured under ke. Skip Phase 1 by selecting one.
 Use existing tenant →
 What You'll Do:
 • Create new tenant/ULB configuration

@@ -20,7 +20,7 @@ EN
 Theme
 DIGIT Management Studio
 
-138
+6
 
 Tenants
 
@@ -32,23 +32,23 @@ Departments
 
 Designations
 
-771
+778
 
 Complaint Types
 
-313
+321
 
 Employees
 
-88
+60
 
 Boundaries
 
-5179
+2257
 
 Complaints
 
-14460
+15492
 
 Localization Messages
 

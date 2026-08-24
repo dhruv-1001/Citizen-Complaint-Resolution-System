@@ -24,7 +24,7 @@ custom
 EN
 Theme
 Tenants
-138
+6
 Refresh
 Code
 	
@@ -44,87 +44,51 @@ Bomet County
 Ke
 
 
-ke.demo
+ke.etoebeta
 	
-Demo County
+E2E Roles Beta
 	
-Demo County
-	
-ke
-
-
-ke.democgvkcd
-	
-ke.democgvkcd
-	
-ke.democgvkcd
+E2E Roles Beta
 	
 ke
 
 
-ke.demoiiawou
+ke.etoeroles
 	
-ke.demoiiawou
+E2E Roles Alpha
 	
-ke.demoiiawou
-	
-ke
-
-
-ke.demoixeri
-	
-ke.demoixeri
-	
-ke.demoixeri
+E2E Roles Alpha
 	
 ke
 
 
-ke.demokppguw
+ke.hajbvfg
 	
-ke.demokppguw
+ke.hajbvfg
 	
-ke.demokppguw
-	
-ke
-
-
-ke.demoppzzcf
-	
-ke.demoppzzcf
-	
-ke.demoppzzcf
+ke.hajbvfg
 	
 ke
 
 
-ke.demottyyzz
+ke.india
 	
-ke.demottyyzz
+India
 	
-ke.demottyyzz
+India
 	
-ke
+—
 
 
-ke.demowigwsz
+ke.testcity09230
 	
-ke.demowigwsz
+Random City 09230
 	
-ke.demowigwsz
+My City
 	
-ke
+My District
 
-
-ke.demozclfbw
-	
-ke.demozclfbw
-	
-ke.demozclfbw
-	
-ke
-
-Showing 1-10 of 138
+Showing 1-6 of 6
 
 Rows per page:
 10
@@ -132,7 +96,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 14
+Page 1 of 1
 Next
 Documentation
 TENANT CONFIGURATION

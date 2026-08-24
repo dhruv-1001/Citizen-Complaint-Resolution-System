@@ -27,7 +27,7 @@ EN
 Theme
 Notification Logs
 SMS/Email delivered via Novu — WHATSAPP shows as SKIPPED (no provider yet)
-185711
+410035
 Refresh
 Channel
 All
@@ -44,151 +44,15 @@ Skipped
 Created
 	Complaint	Channel	Status	Recipient	Template	Attempts	Error
 
-24 Aug 2026, 3:24 am
+24 Aug 2026, 5:00 am
 	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***e01
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***1fe
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***dc7
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***ac7
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***14b
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***36a
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***1c9
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195602
-	
-SMS
-	
-SENT
-	
-***a42
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 3:24 am
-	
-PG-PGR-2026-08-24-195601
+PG-PGR-2026-08-24-197536
 	
 WHATSAPP
 	
 SKIPPED
 	
-***4f1
+***110
 	
 CITIZEN.APPLY.PENDINGFORASSIGNMENT.WHATSAPP.en_IN
 	
@@ -197,15 +61,15 @@ CITIZEN.APPLY.PENDINGFORASSIGNMENT.WHATSAPP.en_IN
 NB_NO_PROVIDER: No provider enabled for channel WHATSAPP
 
 
-24 Aug 2026, 3:24 am
+24 Aug 2026, 5:00 am
 	
-PG-PGR-2026-08-24-195601
+PG-PGR-2026-08-24-197536
 	
 SMS
 	
 SENT
 	
-***4f1
+***110
 	
 CITIZEN.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
 	
@@ -213,7 +77,143 @@ CITIZEN.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
 	
 --
 
-Showing 1-10 of 185711
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***8e4
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***865
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***b9f
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***02f
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***04e
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***b09
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***f0e
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+
+24 Aug 2026, 5:00 am
+	
+PG-PGR-2026-08-24-197536
+	
+SMS
+	
+SENT
+	
+***9d6
+	
+GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
+	
+1
+	
+--
+
+Showing 1-10 of 410035
 
 Rows per page:
 10
@@ -221,7 +221,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 18572
+Page 1 of 41004
 Next
 Documentation
 DIGIT DOCUMENTATION

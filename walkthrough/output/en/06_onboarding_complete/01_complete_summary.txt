@@ -34,7 +34,7 @@ Open DIGIT
 Phase	Records at tenant
 Phase 1: Tenant & Branding	ke
 Phase 2: Boundary Setup	0 boundaries
-Phase 3: Common Masters	33 depts, 50 desigs, 758 complaint types
+Phase 3: Common Masters	33 depts, 50 desigs, 765 complaint types
 Phase 4: Employees	100 employees
 
 Counts reflect the current total at tenant ke — including any data present from earlier setup sessions. To see only what this walk created, browse the Management UI and filter by code prefix.

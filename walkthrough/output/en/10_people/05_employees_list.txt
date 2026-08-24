@@ -23,7 +23,7 @@ EN
 Theme
 Bulk import
 Employees
-313
+321
 Refresh
 Create
 Status
@@ -44,9 +44,9 @@ Active
 
 ADMIN_HRMS
 	
-Super Admin
+Admin
 	
-9999999999
+0111111111
 	
 INACTIVE
 	
@@ -191,7 +191,7 @@ Medical Officer
 	
 Active
 
-Showing 1-10 of 313
+Showing 1-10 of 321
 
 Rows per page:
 10
@@ -199,7 +199,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 32
+Page 1 of 33
 Next
 Documentation
 EMPLOYEE MANAGEMENT

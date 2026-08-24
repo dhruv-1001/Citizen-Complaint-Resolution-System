@@ -24,7 +24,7 @@ custom
 EN
 Theme
 Boundary Hierarchies
-270
+281
 Refresh
 Create
 Add filter
@@ -32,13 +32,6 @@ Hierarchy Type
 	
 Tenant
 	app.fields.levels
-
-ADMI
-	
-ke.tgt669354
-	
-Country → State → City → Ward
-
 
 ADMIN
 	
@@ -49,30 +42,58 @@ County → SubCounty → Ward
 
 ADMIN
 	
-ke.testcity001
+ke.india
 	
-Country → State → City → Ward
+State → District → Ward
 
 
 ADMIN
 	
-ke.tgt826204
+ke.etoebeta
 	
-Country → State → City → Ward
+County → SubCounty → Ward
 
 
 ADMIN
 	
-ke.tgt669354
+ke.etoeroles
 	
-Disctrict → Nation
+County → SubCounty → Ward
 
 
-ADMIN_DEMO
+ADMIN
 	
-ke.tgt669354
+ke.hajbvfg
 	
-Country → State → City → Ward
+County → District → City → Ward
+
+
+INDIA
+	
+ke.india
+	
+State → District → Ward
+
+
+KE-ADMIN
+	
+ke.india
+	
+State → District → Ward
+
+
+KE-ADMIN
+	
+ke.etoebeta
+	
+County → SubCounty → Ward
+
+
+KE-ADMIN
+	
+ke.etoeroles
+	
+County → SubCounty → Ward
 
 
 POC_MZPT_ADMIN
@@ -81,28 +102,7 @@ ke
 	
 Município → Distrito Municipal → Bairro → Quarteirão
 
-
-PW_008600DA_BHDUP
-	
-ke
-	
-X
-
-
-PW_02A92697_BHSHOW
-	
-ke
-	
-ROOT → MID → LEAF
-
-
-PW_02D821DD_BHSHOW
-	
-ke
-	
-ROOT → MID → LEAF
-
-Showing 1-10 of 270
+Showing 1-10 of 281
 
 Rows per page:
 10
@@ -110,7 +110,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 27
+Page 1 of 29
 Next
 Documentation
 DIGIT DOCUMENTATION

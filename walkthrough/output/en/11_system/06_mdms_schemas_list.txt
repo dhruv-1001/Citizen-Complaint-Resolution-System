@@ -24,7 +24,7 @@ custom
 EN
 Theme
 MDMS Schemas
-65
+70
 Refresh
 Code
 	
@@ -120,7 +120,7 @@ ke
 	
 Active
 
-Showing 1-10 of 65
+Showing 1-10 of 70
 
 Rows per page:
 10

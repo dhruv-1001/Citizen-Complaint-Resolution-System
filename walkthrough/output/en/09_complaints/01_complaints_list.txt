@@ -23,7 +23,7 @@ custom
 EN
 Theme
 Complaints
-5179
+2257
 Refresh
 Create
 Status
@@ -85,176 +85,176 @@ Status
 Created
 
 
-PG-PGR-2026-08-24-197399
+PG-PGR-2026-08-24-197536
 	
-WaterPressureisVeryLess
-	
-Water, Sanitation, Environment, Natural Resources & Climate
-	
-Load test complaint - WaterPressureisVeryLess - VU LoadTestC…
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_BOMET_EAST_MERIGI
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197398
-	
-DamagedOrBlockedFootpath
-	
-Medical Services
-	
-Load test complaint - DamagedOrBlockedFootpath - VU LoadTest…
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_CHEPALUNGU_SIONGIROI
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197397
-	
-DeadAnimals
-	
-Medical Services
-	
-Load test complaint - DeadAnimals - VU LoadTestCitizen
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_KONOIN_BOITO
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197396
-	
-ShortageOfWater
+RudeBehavior
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-Load test complaint - ShortageOfWater - VU LoadTestCitizen
+E2E API test — 2026-08-23T23:29:59.419Z
 	
-RESOLVED
+PENDINGFORASSIGNMENT
 	
-LoadTestCitizen
+E2E API Citizen
 	
-BOMET_BOMET_EAST_LONGISA
+BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 3:20 am
+24 Aug 2026, 4:59 am
 
 
-PG-PGR-2026-08-24-197395
+PG-PGR-2026-08-24-197534
 	
-ShortageOfWater
+RudeBehavior
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-Load test complaint - ShortageOfWater - VU LoadTestCitizen
+PW track-complaint test — auto-filed
 	
-RESOLVED
+PENDINGFORASSIGNMENT
 	
-LoadTestCitizen
+E2E-Citizen-1787525453614
 	
-BOMET_BOMET_EAST_LONGISA
+BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 3:20 am
+24 Aug 2026, 4:59 am
 
 
-PG-PGR-2026-08-24-197394
+PG-PGR-2026-08-24-197533
 	
-DamagedGarbageBin
-	
-Medical Services
-	
-Load test complaint - DamagedGarbageBin - VU LoadTestCitizen
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_CHEPALUNGU_SIGOR
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197393
-	
-ManholeCoverMissingOrDamaged
+RudeBehavior
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-Load test complaint - ManholeCoverMissingOrDamaged - VU Load…
+PW reopen UI test — auto-resolved by spec
 	
 RESOLVED
 	
-LoadTestCitizen
+E2E-Citizen-1787525453614
 	
-BOMET_BOMET_EAST_CHEMANER
+BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 3:20 am
+24 Aug 2026, 4:59 am
 
 
-PG-PGR-2026-08-24-197392
+PG-PGR-2026-08-24-197531
 	
-NoStreetlight
-	
-Medical Services
-	
-Load test complaint - NoStreetlight - VU LoadTestCitizen
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_KONOIN_KIMULOT
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197391
-	
-StrayAnimals
-	
-Medical Services
-	
-Load test complaint - StrayAnimals - VU LoadTestCitizen
-	
-RESOLVED
-	
-LoadTestCitizen
-	
-BOMET_SOTIK_RONGENA_MANARET
-	
-24 Aug 2026, 3:20 am
-
-
-PG-PGR-2026-08-24-197390
-	
-NoWaterSupply
+RudeBehavior
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-Load test complaint - NoWaterSupply - VU LoadTestCitizen
+PW rate UI test — auto-resolved by spec
 	
 RESOLVED
 	
-LoadTestCitizen
+E2E-Citizen-1787525453614
 	
-BOMET_BOMET_EAST_KIPRERES
+BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 3:20 am
+24 Aug 2026, 4:58 am
 
-Showing 1-10 of 5179
+
+PG-PGR-2026-08-24-197530
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+PW #1750 prime-meridian geo-location detail test
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:58 am
+
+
+PG-PGR-2026-08-24-197529
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+PW #1750 legacy zero geo-location detail test
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:58 am
+
+
+PG-PGR-2026-08-24-197528
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+PW #1750 equator geo-location detail test
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:58 am
+
+
+PG-PGR-2026-08-24-197527
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+PW #1750 missing geo-location detail test
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:58 am
+
+
+PG-PGR-2026-08-24-197526
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+PW detail-page test — auto-filed
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:58 am
+
+
+PG-PGR-2026-08-24-197518
+	
+RudeBehavior
+	
+Water, Sanitation, Environment, Natural Resources & Climate
+	
+reject-ui seed 2026-08-23T23:22:03.691Z
+	
+PENDINGFORASSIGNMENT
+	
+E2E-Citizen-1787525453614
+	
+BOMET_BOMET_CENTRAL_CHESOEN
+	
+24 Aug 2026, 4:52 am
+
+Showing 1-10 of 2257
 
 Rows per page:
 10
@@ -262,7 +262,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 518
+Page 1 of 226
 Next
 Documentation
 DIGIT DOCUMENTATION

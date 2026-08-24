@@ -63,7 +63,7 @@ build_flow_gallery(..., asset_prefix="/digit-bomet/")
 |---|---|
 | Configurator · Sign In | login form, both mode toggles |
 | Onboarding · Phase 1 — Tenant & Branding | landing, use-existing-tenant picker, upload, preview (both tabs), change-file |
-| Onboarding · Phase 2 — Boundary Setup | source choice, both Excel paths, define/select hierarchy, template, verify (All/Valid/Errors + GeoJSON), OSM search → map levels |
+| Onboarding · Phase 2 — Boundary Setup | **both paths**: Excel (define/select hierarchy → template → verify All/Valid/Errors + GeoJSON) and OpenStreetMap (typeahead → 3 admin levels for Cidade de Maputo → all included and named) |
 | Onboarding · Phase 3 — Common Masters | landing, upload, parsed departments + designations |
 | Onboarding · Phase 4 — Employee Onboarding | landing (blocked on this deployment), per-row employee validation |
 | Onboarding · Complete | the completion summary |
@@ -130,7 +130,12 @@ Credentials and target default to `ADMIN` / `eGov@123` / tenant `ke` on bomet an
 
 ```bash
 WT_HOST=https://other.digit.org WT_TENANT=xx WT_USER=… WT_PASS=… ./run_all.sh
+WT_OSM_QUERY="Cidade de Maputo" .venv/bin/python capture_onboarding.py 03_phase2_boundary
 ```
+
+`WT_OSM_QUERY` is the area Phase 2's OpenStreetMap path imports. It wants somewhere with a small,
+clean set of administrative levels — `Cidade de Maputo` resolves to three (city → distrito
+municipal → bairro), which is what the walkthrough shows.
 
 ### Files
 
@@ -170,11 +175,11 @@ dashboard shows real numbers instead of `…`. They live in their normal section
 `10_known_gaps` flow is gone.
 
 **2. Phase 4 is blocked by test-leftover boundary hierarchies.** It reports *"No boundaries found for
-tenant ke"* even though 88 boundaries exist under `ADMIN`. `Phase4Page.tsx` takes
-`getHierarchies(tenant)[0]`, and that list comes back unsorted with `limit: 100` — on bomet all 100
-entries on the first page are `PW_*` Playwright leftovers and `ADMIN` is not among them. The same
-list is what Phase 2's *Select Existing Hierarchy* screen offers, and it is why the completion page
-reports `0 boundaries`.
+tenant ke"* even though boundaries exist under `ADMIN`. `Phase4Page.tsx` takes
+`getHierarchies(tenant)[0]`, and that list comes back unsorted with `limit: 100`. Tenant `ke` holds
+273 hierarchy definitions, only two of them real (`POC_MZPT_ADMIN`, `ADMIN`) — and `ADMIN` is the
+*last* one returned, so the wizard's first page never contains it. The same list is what Phase 2's
+*Select Existing Hierarchy* screen offers, and it is why the completion page reports `0 boundaries`.
 
 **3. The deployment now has real complaints.** 5,179 at `ke`, where an earlier capture found none
 anywhere. The inbox, the registry, workflow processes and the complaint detail + workflow timeline
@@ -183,6 +188,7 @@ all have data.
 **4. Only PGR is enabled in the employee UI.** `/dss/*`, `/hrms/*` and `/workbench/*` all fall
 back to the home screen.
 
-**5. Test data everywhere.** 138 tenants and 270 boundary hierarchies, mostly named `PW_*`,
-`ke.tgt*` or `Target Tenant NNNNNN`. Tenant `ke` *is* "Bomet County", and `ADMIN` exists only there,
-so it is the only city selection in the employee UI that authenticates.
+**5. The cleanup reached the tenants, not the hierarchies.** The tenant registry is down to 45 from
+138, so the `Target Tenant NNNNNN` leftovers are gone from the tenant list and Phase 1's picker. The
+273 boundary hierarchies are still there (finding 2). Tenant `ke` *is* "Bomet County", and `ADMIN`
+exists only there, so it is the only city selection in the employee UI that authenticates.

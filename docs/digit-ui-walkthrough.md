@@ -3,7 +3,7 @@
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
 the DIGIT configurator (4-phase onboarding wizard + management console) and the digit-ui employee app.
 
-**89 screens · 18 flows · captured 2026-08-24 · read-only.** Nothing on the deployment was
+**90 screens · 18 flows · captured 2026-08-24 · read-only.** Nothing on the deployment was
 created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
 
 > **There is an interactive version.** This page is the flat, shareable rendering. The capture also
@@ -64,9 +64,9 @@ created, updated or deleted; see [How the capture stayed read-only](#how-the-cap
 
 Two ways out of the landing screen: reuse a tenant that already exists, or upload a Tenant Master workbook. The workbook is parsed **in the browser**, so the preview screens below cost the deployment nothing — the sample file describes Maputo, which is why the preview shows `mz.maputo` rather than Bomet. Everything past **Upload to DIGIT** (branding, the image preview modal, the Phase 1 summary) writes, and is listed as not captured in the [screen inventory](#screen-inventory-against-the-product-doc).
 
-**Phase 1 landing — 100 tenants already exist under `ke`, so the skip-ahead banner appears**
+**Phase 1 landing. Tenants already exist under `ke`, so the skip-ahead banner offers to reuse one**
 
-![Phase 1 landing — 100 tenants already exist under ke, so the skip-ahead banner appears](../walkthrough/output/en/02_phase1_tenant/01_p1_landing.png)
+![Phase 1 landing. Tenants already exist under ke, so the skip-ahead banner offers to reuse one](../walkthrough/output/en/02_phase1_tenant/01_p1_landing.png)
 
 **Use Existing Tenant. Picking a row jumps to Phase 2 without creating anything**
 
@@ -92,7 +92,13 @@ Two ways out of the landing screen: reuse a tenant that already exists, or uploa
 
 ## Onboarding · Phase 2 — Boundary Setup
 
-The widest phase: two independent paths to the same result. The **Excel** path picks or defines a hierarchy, hands you a template shaped to that hierarchy's levels, then validates the filled workbook row by row with an optional GeoJSON sidecar for real map outlines. The **OpenStreetMap** path searches Nominatim, pulls the administrative levels from Overpass, and asks you to name them. Both stop at the same wall: the button that creates the hierarchy and the boundaries.
+The widest phase, and **both of its paths are captured below**.
+
+The **Upload from Excel** path (shots 2–11) picks or defines a hierarchy, hands you a template shaped to that hierarchy's levels, then validates the filled workbook row by row, with an optional GeoJSON sidecar for real map outlines.
+
+The **Fetch from OpenStreetMap** path (shots 12–16) types an area into the Nominatim typeahead, pulls that relation's administrative levels from Overpass, and asks you to include and name each one. `Cidade de Maputo` is used here because it resolves to a clean three-level hierarchy — one city, six *distritos municipais*, sixty-three *bairros* — all three included and named.
+
+Both paths stop at the same wall: the button that creates the hierarchy and the boundaries.
 
 **Choose the boundary source: OpenStreetMap or Excel**
 
@@ -110,9 +116,9 @@ The widest phase: two independent paths to the same result. The **Excel** path p
 
 ![The same form filled in. Create Hierarchy writes, so it was not clicked](../walkthrough/output/en/03_phase2_boundary/04_p2_create_hierarchy_filled.png)
 
-**Select Existing Hierarchy — every entry here is a test leftover (see finding 2)**
+**Select Existing Hierarchy — every entry offered is a `PW_*` test leftover; the real `ADMIN` hierarchy is the 273rd definition at this tenant and the screen only asks for the first 100 (see [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))**
 
-![Select Existing Hierarchy — every entry here is a test leftover (see finding 2)](../walkthrough/output/en/03_phase2_boundary/05_p2_select_existing_hierarchy.png)
+![Select Existing Hierarchy — every entry offered is a PW_ test leftover; the real ADMIN hierarchy is the 273rd definition at this tenant and the screen only asks for the first 100 (see finding 2(#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))](../walkthrough/output/en/03_phase2_boundary/05_p2_select_existing_hierarchy.png)
 
 **A hierarchy selected**
 
@@ -122,9 +128,9 @@ The widest phase: two independent paths to the same result. The **Excel** path p
 
 ![Boundary Data Upload — the template is generated for the chosen hierarchy's levels](../walkthrough/output/en/03_phase2_boundary/07_p2_download_template.png)
 
-**Verify Boundary Data, All tab — 1,256 rows parsed from the sample workbook**
+**Verify Boundary Data, All tab — every row of the sample workbook, parsed in the browser**
 
-![Verify Boundary Data, All tab — 1,256 rows parsed from the sample workbook](../walkthrough/output/en/03_phase2_boundary/08_p2_verify_all.png)
+![Verify Boundary Data, All tab — every row of the sample workbook, parsed in the browser](../walkthrough/output/en/03_phase2_boundary/08_p2_verify_all.png)
 
 **Valid tab**
 
@@ -134,21 +140,29 @@ The widest phase: two independent paths to the same result. The **Excel** path p
 
 ![Errors tab — empty for this file](../walkthrough/output/en/03_phase2_boundary/10_p2_verify_errors.png)
 
-**With the optional GeoJSON sidecar attached: 68 of 1,256 boundaries get real outlines**
+**With the optional GeoJSON sidecar attached — it reports how many boundaries it can give real outlines to**
 
-![With the optional GeoJSON sidecar attached: 68 of 1,256 boundaries get real outlines](../walkthrough/output/en/03_phase2_boundary/11_p2_verify_with_geojson.png)
+![With the optional GeoJSON sidecar attached — it reports how many boundaries it can give real outlines to](../walkthrough/output/en/03_phase2_boundary/11_p2_verify_with_geojson.png)
 
-**OSM path — search the area on Nominatim**
+**OSM path — search the area to import**
 
-![OSM path — search the area on Nominatim](../walkthrough/output/en/03_phase2_boundary/12_p2_osm_search.png)
+![OSM path — search the area to import](../walkthrough/output/en/03_phase2_boundary/12_p2_osm_search.png)
 
-**Search term entered**
+**The Nominatim typeahead resolving *Cidade de Maputo/Mozambique*; picking a suggestion scopes the Overpass lookup to that exact relation**
 
-![Search term entered](../walkthrough/output/en/03_phase2_boundary/13_p2_osm_search_typed.png)
+![The Nominatim typeahead resolving Cidade de Maputo/Mozambique; picking a suggestion scopes the Overpass lookup to that exact relation](../walkthrough/output/en/03_phase2_boundary/13_p2_osm_search_typeahead.png)
 
-**Map Admin Levels — the OSM levels found for Bomet, each mapped to a hierarchy level. *Create Hierarchy & Boundaries* writes, so this is where the capture stops**
+**Suggestion picked, ready to search**
 
-![Map Admin Levels — the OSM levels found for Bomet, each mapped to a hierarchy level. Create Hierarchy & Boundaries writes, so this is where the capture stops](../walkthrough/output/en/03_phase2_boundary/14_p2_osm_map_levels.png)
+![Suggestion picked, ready to search](../walkthrough/output/en/03_phase2_boundary/14_p2_osm_search_typed.png)
+
+**Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8)**
+
+![Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8)](../walkthrough/output/en/03_phase2_boundary/15_p2_osm_map_levels.png)
+
+**Each level named — *Município → Distrito Municipal → Bairro*. The selection is now valid and *Create Hierarchy & Boundaries* is enabled; that click writes, so this is where the capture stops**
+
+![Each level named — Município → Distrito Municipal → Bairro. The selection is now valid and Create Hierarchy & Boundaries is enabled; that click writes, so this is where the capture stops](../walkthrough/output/en/03_phase2_boundary/16_p2_osm_levels_named.png)
 
 ---
 
@@ -414,23 +428,19 @@ Anonymous, credential-free access to the tenant's dashboard, and the stable URL 
 
 ![Public dashboard configuration](../walkthrough/output/en/13_dashboards/01_public_dashboard_configure.png)
 
-**Public dashboard configuration**
-
-![Public dashboard configuration](../walkthrough/output/en/13_dashboards/02_public_dashboard_configure.png)
-
 ---
 
 ## Employee UI · Sign In
 
-`/digit-ui/employee`. City picker, credentials, privacy consent. Tenant `ke` is listed as **Bomet County** — the only selection that authenticates, because `ADMIN` exists only there.
+`/digit-ui/employee`. City picker, credentials, privacy consent. Tenant `ke` is the only selection that authenticates, because `ADMIN` exists only there — and since the cleanup the picker labels it **Ke**, not *Bomet County*. Its MDMS record still reads `Bomet County`, so this is digit-ui falling back to a prettified tenant code when the label's localization message is missing, not lost data.
 
 **The employee sign-in screen**
 
 ![The employee sign-in screen](../walkthrough/output/en/14_employee_login/01_employee_signin_blank.png)
 
-**City picker, filtered**
+**The city picker — six tenants, `ke` among them as *Ke***
 
-![City picker, filtered](../walkthrough/output/en/14_employee_login/02_employee_city_picker.png)
+![The city picker — six tenants, ke among them as Ke](../walkthrough/output/en/14_employee_login/02_employee_city_picker.png)
 
 **Filled, with privacy consent ticked**
 
@@ -444,7 +454,7 @@ Anonymous, credential-free access to the tenant's dashboard, and the stable URL 
 
 ## Employee UI · Complaint inbox
 
-Inbox v2 with its search panel and filter rail, and the legacy inbox behind it. It opens on **My Complaints**, which is empty for `ADMIN` — the deployment's 5,179 complaints belong to other employees, and **All Complaints** is the tab that shows them.
+Inbox v2 with its search panel and filter rail, and the legacy inbox behind it. It opens on **My Complaints**, which is empty for `ADMIN` — the deployment's complaints belong to other employees, and **All Complaints** is the tab that shows them.
 
 **Inbox v2 as it opens — search panel, filter rail, and the *My Complaints* tab, empty for this operator**
 
@@ -513,6 +523,8 @@ every trigger it lists, and what this capture could reach. A screen is marked **
 button that opens it POSTs to DIGIT: this capture runs against a live shared deployment and never
 writes, so those screens are named here rather than faked.
 
+All **42** triggers the doc lists are accounted for below: **21** captured, **12** behind a write this capture will not perform, **3** blocked by [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies), and **6** that open no new screen of their own — client-side navigation into a phase this capture reaches by URL, a tooltip, a file download, or a dead button.
+
 ### Entry: Login
 
 | Trigger | Opens | In this capture |
@@ -539,15 +551,16 @@ writes, so those screens are named here rather than faked.
 
 | Trigger | Opens | In this capture |
 | --- | --- | --- |
-| "Proceed to Phase 3" | Skips to Phase 3 landing | client-side only |
+| "Proceed to Phase 3" | Skips to Phase 3 landing | [captured](#onboarding--phase-2--boundary-setup) — the banner is on the landing shot, because `ke` already has a hierarchy |
 | "Search OSM" | OSM Search | [captured](#onboarding--phase-2--boundary-setup) |
 | Running a search | Select Map Levels | [captured](#onboarding--phase-2--boundary-setup) |
-| Confirming levels (areas skipped) | Review Skipped Areas | **write-adjacent** — the same button creates immediately when nothing was skipped, so it was never clicked |
+| Confirming levels (areas skipped) | Review Skipped Areas | **write** — the same button creates immediately when nothing was skipped, so it was never clicked |
 | Confirming the OSM import | Creating → Boundaries Created | **write** |
 | "Upload Excel" | Excel Landing (new vs existing hierarchy) | [captured](#onboarding--phase-2--boundary-setup) |
 | "Create New Hierarchy" | Define Hierarchy | [captured](#onboarding--phase-2--boundary-setup) (filled, not submitted) |
 | "Use Existing Hierarchy" | Select Hierarchy | [captured](#onboarding--phase-2--boundary-setup) |
 | Confirming a hierarchy | Download Template | [captured](#onboarding--phase-2--boundary-setup) |
+| Naming every OSM level | selection becomes valid | [captured](#onboarding--phase-2--boundary-setup) |
 | Uploading the filled file | Verify Boundary Data (+ GeoJSON slot) | [captured](#onboarding--phase-2--boundary-setup) |
 | "Upload N Boundaries" | Boundaries Created | **write** |
 | "Continue to Phase 3" | Phase 3 landing | reached by URL instead |
@@ -573,7 +586,7 @@ writes, so those screens are named here rather than faked.
 | "Create N Employees" | Confirmation dialog | disabled — 0 valid rows, same cause |
 | "Create" in the dialog | Creating Employees | **write** |
 | Creation finishes | Complete Setup (+ credentials CSV) | **write** |
-| "Re-upload Fixed File" | file picker, back through Preview | visible in the [Phase 4 preview](#onboarding--phase-4--employee-onboarding) |
+| "Re-upload Fixed File" | file picker, back through Preview | [captured](#onboarding--phase-4--employee-onboarding) — the button sits on the preview screen |
 | "Complete Setup" | Onboarding Complete | reached by URL instead |
 
 ### Final: Onboarding Complete
@@ -581,7 +594,7 @@ writes, so those screens are named here rather than faked.
 | Trigger | Opens | In this capture |
 | --- | --- | --- |
 | End of Phase 4 | Complete page | [captured](#onboarding--complete) |
-| "Start New Setup" | Phase 1 landing (does not reset prior state) | client-side only |
+| "Start New Setup" | Phase 1 landing (does not reset prior state) | client-side only — `handleStartNew` is a bare `navigate('/phase/1')`, and the source says so: *"In real app, would reset state"* |
 | "View Setup History" | nothing | confirmed: the button has no `onClick` handler |
 
 ---
@@ -607,8 +620,8 @@ numbers on every tile rather than `…`.
 ### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 
 Phase 4 refuses to start: **"No boundaries found for tenant `ke`. Complete Phase 2 (boundaries)
-first, then retry."** Boundaries *do* exist — the console lists 88 of them under the `ADMIN`
-hierarchy, `BOMET → SubCounty → Ward`. The wizard just never looks at them.
+first, then retry."** Boundaries *do* exist — the console lists them under the `ADMIN` hierarchy,
+`BOMET → SubCounty → Ward`. The wizard just never looks at them.
 
 `Phase4Page.tsx` picks the hierarchy to search by taking the first one the API returns:
 
@@ -617,42 +630,59 @@ const hierarchies = await boundaryService.getHierarchies(targetTenant).catch(() 
 const hierarchyType = hierarchies[0]?.hierarchyType;
 ```
 
-and `boundary.ts` fetches that list unsorted, `limit: 100`. On bomet:
+and `boundary.ts` fetches that list **unsorted, `limit: 100`, `offset: 0`**. Paging through every
+definition at `ke` shows why that never works here:
 
 ```
-tenant ke holds 265 boundary hierarchy definitions
-first page (limit 100): 100 of 100 are PW_* Playwright test leftovers
-first entry: PW_4E63B06D_BHSHAPE   (levels: ONLY, no relationships)
-ADMIN: not in the first 100 at all
+273 boundary hierarchy definitions at tenant ke
+  2 are real:      POC_MZPT_ADMIN, ADMIN
+271 are PW_*       Playwright test leftovers
+ADMIN is the LAST one returned (index 272 of 273)
+the wizard only ever asks for the first 100 → it never sees ADMIN
 ```
 
-So `hierarchies[0]` is a throwaway hierarchy from an automated test run, the boundary search under it
-returns nothing, and Phase 4 blocks. The same list is what Phase 2's **Select Existing Hierarchy**
-screen shows — 100 `PW_*` entries and no `ADMIN`.
+So `hierarchies[0]` is a throwaway hierarchy from an automated test run, the boundary search under
+it returns nothing, and Phase 4 blocks. The same list is what Phase 2's **Select Existing
+Hierarchy** screen renders, which is why that screen shows a hundred `PW_*` entries and offers no
+way to reach `ADMIN`, and why the completion page reports `0 boundaries`.
 
-Two separate things to fix: the deployment is carrying test junk that should be cleaned up, and the
-wizard should not be picking a hierarchy by array position.
+Note the tenant cleanup already done on this deployment did *not* clear these: tenants dropped from
+138 to 45, while the boundary hierarchies stayed at 273. `boundary-service` does expose
+`boundary-hierarchy-definition/_delete` — `utilities/crs_dataloader/unified_loader.py` calls it — so
+they can be removed the same way.
+
+Two separate things to fix: the deployment is still carrying boundary-hierarchy test junk, and the
+wizard should not be picking a hierarchy by array position out of an unsorted, truncated list.
 
 Phase 4's landing screen also states *Prerequisites Met — Phase 2: Boundaries configured* directly
 above the error saying there are none; the checklist is static text, not a live check.
 
 ### 3. The deployment now has real complaints
 
-`ke` holds **5,179 complaints**, where an earlier capture found none across every tenant. The
+`ke` holds **2,257 complaints**, where an earlier capture found none across every tenant. The
 employee inbox, the complaint registry, the workflow process list and the complaint detail +
 workflow-history screens all have data to show.
+
+The console's other counts at capture time: 6 tenants, 33 departments,
+50 designations, 778 complaint types, 321 employees,
+60 boundaries, 15,492 localization messages.
 
 ### 4. Only PGR is enabled in the employee UI
 
 `/dss/*`, `/hrms/*` and `/workbench/*` all fall back to the employee home screen. The employee app on
 bomet is PGR-only.
 
-### Incidental: test data everywhere
+### Incidental: what the cleanup did and did not reach
 
-The tenant list holds 138 tenants and the boundary-hierarchy list 270 definitions, the large majority
-named `PW_*`, `ke.tgt*` or `Target Tenant NNNNNN` — automated-test leftovers. Tenant `ke` is
-displayed as **Bomet County**, and `ADMIN` exists only there, so it is the only city selection in the
-employee UI that authenticates.
+The tenant registry has been cleaned — 6 tenants, down from the 138 an earlier capture found, so
+the `Target Tenant NNNNNN` leftovers are gone from the tenant list and from Phase 1's
+*Use Existing Tenant* picker. The boundary hierarchies were not: 273 definitions, 271 of them
+`PW_*` (see finding 2).
+
+One side effect worth knowing: the employee city picker now labels tenant `ke` as **Ke** rather than
+*Bomet County*. The MDMS record still carries `"name": "Bomet County"`, so digit-ui is falling back
+to a prettified code because the label's localization message no longer resolves. `ADMIN` still
+exists only at `ke`, so it remains the only selection that authenticates.
 
 ---
 

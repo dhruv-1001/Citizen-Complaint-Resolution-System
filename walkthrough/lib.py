@@ -204,35 +204,61 @@ async def dismiss_overlays(page) -> None:
 
 # ---------------------------------------------------------------- employee UI
 
-EMP_CITY = os.environ.get("WT_EMP_CITY", "Bomet County")   # the display name of tenant `ke`
+EMP_CITY = os.environ.get("WT_EMP_CITY", "")   # blank = resolve it from the picker
+
+
+async def _pick_city(page, city: str, walker=None) -> str:
+    """Select the tenant in the employee city picker and report what it was called.
+
+    The label is not stable: this deployment has shown tenant `ke` as both
+    "Bomet County" and, after a data cleanup, "Ke" — digit-ui falls back to a
+    prettified code when the tenant's localization message is missing, even
+    though the MDMS record still carries the real name. So match on what the
+    picker actually renders rather than on a hard-coded name.
+    """
+    await page.click("button:has-text('Select city')", timeout=15000)
+    await page.wait_for_timeout(1200)
+
+    async def options() -> list[str]:
+        loc = page.get_by_role("option")
+        return [(await loc.nth(i).inner_text()).strip() for i in range(await loc.count())]
+
+    opts = await options()
+    # the Search box only appears once the list is long
+    search = page.locator("input[placeholder='Search']")
+    if city and city not in opts and await search.count():
+        await search.first.fill(city.split()[0])
+        await page.wait_for_timeout(1000)
+        opts = await options()
+
+    wanted = [c for c in (city, TENANT.capitalize(), TENANT.upper(), TENANT) if c]
+    target = next((w for w in wanted if w in opts), None)
+    if target is None:
+        raise RuntimeError(f"city picker offers {opts!r}, none of {wanted!r}")
+    if walker:                      # shoot the list while it is still open
+        await walker.shot("employee_city_picker")
+    await page.get_by_role("option", name=target, exact=True).first.click(timeout=10000)
+    await page.wait_for_timeout(700)
+    print(f"[employee login] city = {target!r} (offered: {opts!r})")
+    return target
 
 
 async def employee_login(page, walker=None, *, city: str = EMP_CITY, shots: bool = True):
     """Sign into the digit-ui employee app.
 
-    Three non-obvious bits, all learned from the live page:
-      * the city combobox filters through a "Search" box and renders
-        `li[role=option]` — matching on page text alone hits the "Bomet County"
+    Two non-obvious bits, both learned from the live page:
+      * the city combobox renders `li[role=option]` and only grows a "Search"
+        box when the list is long — matching on page text alone hits the
         banner heading instead of the option;
       * the privacy `<input type=checkbox>` has `pointer-events: none`, so the
-        styled `<label for=...>` is what toggles it;
-      * Login stays disabled until city + consent are both set.
+        styled `<label for=...>` is what toggles it.
     """
     await goto(page, EMPLOYEE, wait_ms=5000)
     await page.wait_for_selector("#emp-username", state="visible", timeout=45000)
     if shots and walker:
         await walker.shot("employee_signin_blank")
 
-    await page.click("button:has-text('Select city')", timeout=15000)
-    await page.wait_for_timeout(800)
-    search = page.locator("input[placeholder='Search']")
-    if await search.count():
-        await search.first.fill(city.split()[0])
-        await page.wait_for_timeout(1000)
-    if shots and walker:
-        await walker.shot("employee_city_picker")
-    await page.get_by_role("option", name=city).first.click(timeout=10000)
-    await page.wait_for_timeout(700)
+    await _pick_city(page, city, walker if shots else None)
 
     await page.fill("#emp-username", USERNAME)
     await page.fill("#emp-password", PASSWORD)

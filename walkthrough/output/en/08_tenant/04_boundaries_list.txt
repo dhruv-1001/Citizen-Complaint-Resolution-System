@@ -30,7 +30,7 @@ Boundary map
 −
  Leaflet | © OpenStreetMap contributors
 Boundaries
-88
+60
 Refresh
 Create
 Code
@@ -109,7 +109,7 @@ Ward
 	
 ke
 
-Showing 1-10 of 88
+Showing 1-10 of 60
 
 Rows per page:
 10
@@ -117,7 +117,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 9
+Page 1 of 6
 Next
 Documentation
 BOUNDARY MANAGEMENT

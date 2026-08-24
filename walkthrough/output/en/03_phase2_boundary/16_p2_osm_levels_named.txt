@@ -1,0 +1,52 @@
+Skip to main content
+DIGITAdmin Console
+Management
+
+Super Admin
+
+ke
+
+Phase 1
+
+Tenant
+
+Phase 2
+
+Boundary
+
+Phase 3
+
+Common
+
+Phase 4
+
+Employee
+
+Phase 2: Boundary Setup
+
+Define geographic hierarchy for your tenant
+
+Map Admin Levels
+We found 3 levels of administrative boundaries for Cidade de Maputo. Tick the levels to include and name each — the selection must be a contiguous range (you can drop the outer levels, but not skip one in the middle).
+OSM Admin Level 4
+1 regions
+
+Examples: Cidade de Maputo
+
+Hierarchy Name
+OSM Admin Level 5
+6 regions
+
+Examples: Distrito Municipal de KaTembe, Distrito Municipal de KaMavota, Distrito Municipal de KaMaxakeni, etc.
+
+Hierarchy Name
+OSM Admin Level 8
+63 regions
+
+Examples: Laulane, Ferroviário, Inguide, etc.
+
+Hierarchy Name
+← Back
+Create Hierarchy & Boundaries
+
+DIGIT Complaints Management • Press Ctrl+/ for help

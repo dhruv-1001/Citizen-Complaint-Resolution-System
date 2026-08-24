@@ -22,15 +22,15 @@ custom
 EN
 Theme
 Back
-Employee: Super Admin
+Employee: Admin
 Edit
 EMPLOYEE INFO
 Employee Code
 ADMIN_HRMS
 Name
-Super Admin
+Admin
 Mobile
-9999999999
+0111111111
 Status
 INACTIVE
 Type
@@ -47,30 +47,18 @@ Date of Birth
 Email
 --
 Roles
-Complaint Assessor
-Department GRO
-Complaint Assessor
-Employee
-Citizen
-Super User
-Super User
-Complainant
-Employee
-Internal Microservice Role
-Super User
-Department GRO
 MDMS ADMIN
-Complainant
-Employee
-Localisation admin
-Complaint Resolver
 Complaint Assessor
-Internal Microservice Role
+Localisation admin
+Employee
+Complainant
 PGR Viewer
-Citizen
-Complaint Resolver
+Internal Microservice Role
+Super User
 Complaint Resolver
 HRMS Admin
+Department GRO
+Citizen
 ASSIGNMENTS
 Department	Designation	From Date	Current
 
@@ -80,11 +68,11 @@ Chief Sanitary Inspector
 	30 Jul 2026	Current
 JURISDICTIONS
 Hierarchy	Boundary Type	Boundary
-REVENUE	City	
-bomet
-
 ADMIN	Country	
 PWB1_105269771
+
+REVENUE	City	
+bomet
 Documentation
 DIGIT DOCUMENTATION
 

@@ -77,13 +77,15 @@
   "onb_p2_osm_search": {
     "en": [
       "en/03_phase2_boundary/12_p2_osm_search.png",
-      "en/03_phase2_boundary/13_p2_osm_search_typed.png"
+      "en/03_phase2_boundary/13_p2_osm_search_typeahead.png",
+      "en/03_phase2_boundary/14_p2_osm_search_typed.png",
+      "en/03_phase2_boundary/16_p2_osm_levels_named.png"
     ],
     "caption": "OSM Search: look the area up on Nominatim before importing"
   },
   "onb_p2_osm_levels": {
     "en": [
-      "en/03_phase2_boundary/14_p2_osm_map_levels.png"
+      "en/03_phase2_boundary/15_p2_osm_map_levels.png"
     ],
     "caption": "Map Admin Levels \u2014 OSM levels found for Bomet, each mapped to a hierarchy level"
   },
@@ -324,8 +326,7 @@
   },
   "public_dash": {
     "en": [
-      "en/13_dashboards/01_public_dashboard_configure.png",
-      "en/13_dashboards/02_public_dashboard_configure.png"
+      "en/13_dashboards/01_public_dashboard_configure.png"
     ],
     "caption": "Public dashboard configuration"
   },

@@ -24,26 +24,25 @@ custom
 EN
 Theme
 Back
-Hierarchy: ADMI
+Hierarchy: ADMIN
 DETAILS
 Hierarchy Type
-ADMI
+ADMIN
 Tenant
-Target Tenant 669354
+Bomet County
 HIERARCHY LEVELS
-Country
-State
-City
+County
+SubCounty
 Ward
 AUDIT
 Created by
-fd328e56-5834-4e95-bf41-28bd7242714b
+system
 Created at
-21 Aug 2026, 3:25 pm
+13 Apr 2026, 11:21 am
 Last modified by
-fd328e56-5834-4e95-bf41-28bd7242714b
+system
 Last modified at
-21 Aug 2026, 3:25 pm
+13 Apr 2026, 11:21 am
 Documentation
 DIGIT DOCUMENTATION
 

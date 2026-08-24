@@ -30,9 +30,9 @@ PGR
 Levels
 2
 Total nodes
-2328
+2356
 Leaf complaint types
-751
+758
 HIERARCHY LEVELS (DEFINITION)
 CATEGORY
 SUB_TYPE
@@ -367,7 +367,7 @@ PWMAIN_CATEGORY_acffgadfi
 SECTOR
 PWSECTOR_acffgadfi
 (PwauthorityTypeAcffgadfi_PwmainCategoryAcffgadfi_PwsectorAcffgadfi)
-Loading more… (100 of 2328)
+Loading more… (100 of 2356)
 Documentation
 DIGIT DOCUMENTATION
 

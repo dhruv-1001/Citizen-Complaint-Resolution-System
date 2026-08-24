@@ -21,12 +21,19 @@ walkthrough doc as "not captured", not faked.
 
 Run one flow at a time with:  python3 capture_onboarding.py 03_phase2_boundary
 """
-import asyncio, sys
+import asyncio, os, sys
 from playwright.async_api import async_playwright
 from playwright_scraper import Walker
 from lib import (CONFIGURATOR, VIEWPORT, OUT, goto, login, install_readonly_guard,
                  write_guard_log, dismiss_overlays, attach, click_text, has_text,
                  FIX_TENANT, FIX_BOUNDARY, FIX_POLYGON, FIX_MASTERS, FIX_EMPLOYEES)
+
+
+# The OSM demo area. "Cidade de Maputo" resolves to three administrative
+# levels, which is what the walkthrough wants to show — a full, contiguous
+# hierarchy with every level named.
+OSM_QUERY = os.environ.get("WT_OSM_QUERY", "Cidade de Maputo")
+OSM_LEVEL_NAMES = ("Município", "Distrito Municipal", "Bairro")
 
 
 async def phase(page, w, n, label, *, settle=5000):
@@ -144,18 +151,56 @@ async def f_phase2(ctx):
     await click_text(page, "Fetch from OpenStreetMap")
     await w.shot("p2_osm_search")
     try:
-        await page.locator("input[placeholder*='Maputo']").first.fill("Bomet")
-        await page.wait_for_timeout(500)
+        await page.locator("input[placeholder*='Maputo']").first.fill(OSM_QUERY)
+        await page.wait_for_timeout(3000)           # Nominatim typeahead
+        sugg = page.locator("ul li")
+        if await sugg.count():
+            await w.shot("p2_osm_search_typeahead")
+            # picking a suggestion scopes the Overpass lookup to that relation
+            await sugg.first.click(timeout=5000)
+            await page.wait_for_timeout(1200)
         await w.shot("p2_osm_search_typed")
         await page.locator("button:has-text('Search')").first.click(timeout=6000)
         await page.wait_for_timeout(30000)          # Nominatim + Overpass are slow
-        if await has_text(page, "Create Hierarchy & Boundaries", timeout=15000):
-            await w.shot("p2_osm_map_levels")       # STOP: the next click writes
+        if await has_text(page, "Create Hierarchy & Boundaries", timeout=20000):
+            await w.shot("p2_osm_map_levels")
+            # OSM levels arrive pre-ticked; only shoot again if that changed
+            if await tick_all_levels(page):
+                await w.shot("p2_osm_levels_selected")
+            await name_levels(page)
+            # every level ticked and named -> "Create Hierarchy & Boundaries" is
+            # now enabled. That click writes, so this is where the capture ends.
+            await w.shot("p2_osm_levels_named")
         else:
             await w.shot("p2_osm_search_result")
     except Exception as e:
         print(f"[osm skip] {str(e)[:120]}")
     await page.close()
+
+
+async def tick_all_levels(page) -> int:
+    """Include every admin level OSM returned. Each toggle re-renders the list,
+    so the locator is re-queried on every pass."""
+    ticked = 0
+    for i in range(await page.locator("input[type=checkbox]").count()):
+        box = page.locator("input[type=checkbox]").nth(i)
+        try:
+            if not await box.is_checked():
+                await box.check(timeout=5000)
+                await page.wait_for_timeout(500)
+                ticked += 1
+        except Exception as e:
+            print(f"[level skip] {i}: {str(e)[:70]}")
+    print(f"[osm] {ticked} level(s) ticked")
+    return ticked
+
+
+async def name_levels(page) -> None:
+    for i in range(await page.locator("input[placeholder='e.g., District']").count()):
+        name = OSM_LEVEL_NAMES[i] if i < len(OSM_LEVEL_NAMES) else f"Level {i + 1}"
+        await page.locator("input[placeholder='e.g., District']").nth(i).fill(name)
+        await page.wait_for_timeout(400)
+    await page.wait_for_timeout(800)
 
 
 # ------------------------------------------------------- Phase 3: masters

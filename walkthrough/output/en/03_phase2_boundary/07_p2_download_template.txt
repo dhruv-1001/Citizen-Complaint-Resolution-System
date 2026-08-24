@@ -28,11 +28,11 @@ Define geographic hierarchy for your tenant
 
 Boundary Data Upload
 
-Hierarchy: PW_4E63B06D_BHSHAPE • Levels: ONLY
+Hierarchy: PW_C8899BE5_BHSHAPE • Levels: ONLY
 
 Download Template
 
-Boundary_Template_PW_4E63B06D_BHSHAPE.xlsx
+Boundary_Template_PW_C8899BE5_BHSHAPE.xlsx
 
 Required columns:
 
