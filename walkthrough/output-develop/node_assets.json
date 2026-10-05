@@ -50,14 +50,13 @@
   "review": {
     "en": [
       "en/d02_signup/09_review.png",
-      "en/d02_signup/10_provisioning.png",
-      "en/d02_signup/11_provisioning_failed_mdms_schema_not_visible.png"
+      "en/d02_signup/10_provisioning.png"
     ],
     "caption": "Review, then provisioning \u2014 failed once on MDMS_SCHEMA_NOT_VISIBLE, finished on retry"
   },
   "workspace": {
     "en": [
-      "en/d02_signup/12_choose_workspace_after_retry.png"
+      "en/d02_signup/11_choose_workspace.png"
     ],
     "caption": "Choose a workspace"
   },

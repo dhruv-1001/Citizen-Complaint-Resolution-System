@@ -28,9 +28,8 @@ RUN = {
         ("s06_prefs_fill_01_preferences_country_mozambique.png", "preferences_mozambique_defaults"),
         ("s07_review_01_preferences_filled.png", "preferences_filled"),
         ("s07_review_02_review.png", "review"),
-        ("s08_create_03_creating_3.png", "provisioning"),
-        ("s08_create_04_after_create.png", "provisioning_failed_mdms_schema_not_visible"),
-        ("s10_workspace_01_choose_workspace.png", "choose_workspace_after_retry"),
+        ("s08_create_02_creating_0.png", "provisioning"),
+        ("s10_workspace_01_choose_workspace.png", "choose_workspace"),
     ],
     "d03_branding": [
         ("s11_branding_01_branding_blank.png", "branding_blank"),

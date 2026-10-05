@@ -36,8 +36,10 @@ SECTIONS = [
      "creates the tenant, the organisation, the founder's DIGIT login and their roles.\n\n"
      "The account below is the throwaway workspace this walkthrough onboarded: **Cidade de "
      "Maputo**, code `MZ-CDM`, tenant `cidadedemaputo`, Mozambique, English + Portuguese, "
-     "`Africa/Maputo`, January–December. Provisioning failed once on a timing race and the backend "
-     "finished it on retry — see [finding 3](#3-sign-up-provisioning-can-fail-on-a-read-after-write-race)."),
+     "`Africa/Maputo`, January–December. Provisioning hits a timing race on this deployment and is "
+     "finished by the backend's own retries a few minutes later; the error it shows in between is "
+     "described in [finding 3](#3-sign-up-provisioning-fails-on-a-read-after-write-race) rather "
+     "than pictured."),
 
     ("d03_branding", "Onboarding · 1 Branding",
      "Logo, organisation name (read-only here; it lives in Workspace settings) and one of three "
@@ -111,9 +113,8 @@ SHOTS = {
     "preferences_mozambique_defaults": "Picking Mozambique pre-fills `Africa/Maputo` and the slug `cidade-de-maputo`, but not Portuguese",
     "preferences_filled": "Portuguese added, financial year January–December, founder's mobile",
     "review": "Review — the code is now `MZ-CDM`",
-    "provisioning": "Provisioning",
-    "provisioning_failed_mdms_schema_not_visible": "*Setup did not finish — MDMS_SCHEMA_NOT_VISIBLE*",
-    "choose_workspace_after_retry": "Reloaded a minute later: the backend's own retry finished it, and the workspace is there to choose",
+    "provisioning": "Provisioning: account, organisation, membership, permissions, DIGIT login",
+    "choose_workspace": "Provisioned — choose the workspace",
 
     "branding_blank": "Branding, 0 of 5 done, every later step locked",
     "branding_logo_uploaded": "Logo uploaded",
@@ -238,14 +239,21 @@ That guard is meant to force the tenant-scoped URL, but the bundle's asset paths
 also blocks the bundle. The employee app is blank for every tenant slug; so is
 `/<slug>/digit-ui/citizen`. The digit-ui-v2 citizen app at `/citizen` is unaffected.
 
-### 3. Sign-up provisioning can fail on a read-after-write race
+### 3. Sign-up provisioning fails on a read-after-write race
 
-The first **Create account** ended in *Setup did not finish — MDMS_SCHEMA_NOT_VISIBLE*. Provisioning
+Both sign-ups made for this capture hit it. The first **Create account** ended in *Setup did not
+finish — MDMS_SCHEMA_NOT_VISIBLE*; a second, made to re-check it, ended in the record-level
+variant, *MDMS_RECORD_NOT_VISIBLE*. Provisioning
 creates the tenant's MDMS schemas and immediately searches for each one; MDMS creates schemas
 asynchronously (`schema/v1/_create` → 202), so the search right after came back empty and
 `OnboardingSteps.ensureSchema` gave up. Five seconds later the same search returned the schema.
-The error is marked retryable and the backend finished on its own — reloading the page a minute
-later showed the workspace — but the screen in between tells the person their setup failed.
+The error is marked retryable and the backend finished on its own both times — after about one
+and three minutes — and reloading the page then showed the workspace. But the screen in between
+tells the person their setup failed and offers **Try again**.
+
+On the same flow: the Account step checks that the *code* is free ("Available.") but not the
+*name*. Organisation names are unique, so a taken name passes every step and is refused only at
+**Create account** — *Could not continue — ORGANIZATION_NAME is already in use*.
 
 ### 4. Finish setup needs one GRO per department, and does not say so
 
@@ -305,7 +313,11 @@ Authorised for this walkthrough, and kept in place:
   not set `enable_turbopass`, so a redeploy from it would remove both.
 * **The Cidade de Maputo workspace** — tenant `cidadedemaputo`, 79 boundaries, 5 departments,
   3 designations, 7 employees, 4 categories / 14 subcategories at 72 h, owned by the throwaway
-  account `walkthrough.maputo@example.com` (mail in Mailpit). No other tenant was touched.
+  account `walkthrough.maputo@example.com` (mail in Mailpit).
+* **A second, empty workspace** — *Conselho Municipal de Maputo*, code `CMM`, slug `maputo`, owned
+  by `walkthrough.signup@example.com`; signed up only to re-check finding 3, not onboarded.
+
+No other tenant was touched.
 
 Separately, and not changed: this host publishes several container ports straight to the internet,
 including Postgres (`15432`) and Redis (`16379`).
