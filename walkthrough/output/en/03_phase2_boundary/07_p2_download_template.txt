@@ -2,7 +2,7 @@ Skip to main content
 DIGITAdmin Console
 Management
 
-Super Admin
+Admin
 
 ke
 
@@ -28,11 +28,11 @@ Define geographic hierarchy for your tenant
 
 Boundary Data Upload
 
-Hierarchy: PW_C8899BE5_BHSHAPE • Levels: ONLY
+Hierarchy: PW_D3EA3A84_BHSHAPE • Levels: ONLY
 
 Download Template
 
-Boundary_Template_PW_C8899BE5_BHSHAPE.xlsx
+Boundary_Template_PW_D3EA3A84_BHSHAPE.xlsx
 
 Required columns:
 

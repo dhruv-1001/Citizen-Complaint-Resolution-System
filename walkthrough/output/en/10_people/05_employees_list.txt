@@ -13,7 +13,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -23,7 +23,7 @@ EN
 Theme
 Bulk import
 Employees
-321
+500
 Refresh
 Create
 Status
@@ -42,17 +42,122 @@ Status
 Active
 
 
-ADMIN_HRMS
+AD_CSR
 	
-Admin
+Amy Csr
 	
-0111111111
+7872981928
 	
-INACTIVE
+EMPLOYED
 	
-Health & Sanitation
+Administration, Public Service & Special Programs
 	
-Chief Sanitary Inspector
+Accountant
+	
+Active
+
+
+AD_GRO
+	
+Garrison Gro
+	
+7823781728
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accountant
+	
+Active
+
+
+AD_GRO_DIR
+	
+Gene GroDir
+	
+7811278127
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accounts Officer
+	
+Active
+
+
+AD_GRO_SUP
+	
+Sheldon GroSup
+	
+7812781279
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accounts Officer
+	
+Active
+
+
+AD_LME
+	
+Leonard Lme
+	
+7871928912
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accountant
+	
+Active
+
+
+AD_LME_CO
+	
+Charlie
+	
+7283782738
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accounts Officer
+	
+Active
+
+
+AD_LME_DIR
+	
+Adrian LmeDir
+	
+7812791829
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accounts Officer
+	
+Active
+
+
+AD_LME_SUP
+	
+Mira LmeSup
+	
+7187817281
+	
+EMPLOYED
+	
+Administration, Public Service & Special Programs
+	
+Accounts Officer
 	
 Active
 
@@ -72,21 +177,6 @@ Accounts Officer
 Active
 
 
-BOMET_CSR_CHESOEN_1780282462
-	
-CHESOEN Ward CSR
-	
-712392462
-	
-EMPLOYED
-	
-Building & Roads
-	
-Commissioner
-	
-Active
-
-
 DEMO_CCRS_1780224082
 	
 Garbage Collection Officer
@@ -101,97 +191,7 @@ Accountant
 	
 Active
 
-
-DEMO_CCRS_PW_1780225045803
-	
-Playwright Demo Employee
-	
-712345670
-	
-EMPLOYED
-	
-Accounts Branch
-	
-Accountant
-	
-Active
-
-
-DEMO_CCRS_PW_1780226345635
-	
-Playwright Demo Employee
-	
-726345635
-	
-EMPLOYED
-	
-Accounts Branch
-	
-Accountant
-	
-Active
-
-
-DEMO_CCRS_PW_1780234189385
-	
-Playwright Demo Employee
-	
-734189385
-	
-EMPLOYED
-	
-Accounts Branch
-	
-Accountant
-	
-Active
-
-
-DEMO_ENV
-	
-Demo Env
-	
-700000012
-	
-EMPLOYED
-	
-Environment
-	
-Officer
-	
-Active
-
-
-DEMO_HEALTH
-	
-Demo Health
-	
-700000011
-	
-EMPLOYED
-	
-Medical Services
-	
-Officer
-	
-Active
-
-
-DEMO_WATER
-	
-Demo Water
-	
-700000010
-	
-EMPLOYED
-	
-Water, Sanitation, Environment, Natural Resources & Climate
-	
-Medical Officer
-	
-Active
-
-Showing 1-10 of 321
+Showing 1-10 of 500
 
 Rows per page:
 10
@@ -199,7 +199,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 33
+Page 1 of 50
 Next
 Documentation
 EMPLOYEE MANAGEMENT

@@ -12,10 +12,11 @@ Workflows
 Processes
 MDMS Schemas
 Boundaries
+Analytics Providers
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,7 +25,7 @@ custom
 EN
 Theme
 MDMS Schemas
-70
+72
 Refresh
 Code
 	
@@ -80,6 +81,15 @@ Configuration to show boundary hierarchy levels in CMS UI
 Active
 
 
+common-masters.AnalyticsProvider
+	
+ke
+	
+One row per analytics/error destination the SPA may initialise. type picks the adapter (MATOMO|GA4|POSTHOG|SENTRY|CUSTOM); not enum-constrained because schema/v1/_update returns 501. enabled is false on create so an unseeded env stays dark. The shim reads the state tenant and the active city tenant; a city row overrides the state row of the same code. settings and adapter are open forward-compat buckets. adapter.callTemplates is DATA ONLY, never eval'd. x-ref-schema omitted on purpose.
+	
+Active
+
+
 common-masters.CronJobAPIConfig
 	
 ke
@@ -112,15 +122,7 @@ Form field validation patterns (one row per field type, e.g. email, name)
 	
 Active
 
-
-common-masters.GenderType
-	
-ke
-	
-	
-Active
-
-Showing 1-10 of 70
+Showing 1-10 of 72
 
 Rows per page:
 10
@@ -128,7 +130,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 7
+Page 1 of 8
 Next
 Documentation
 DIGIT DOCUMENTATION

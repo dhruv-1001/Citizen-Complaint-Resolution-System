@@ -1,0 +1,175 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Localization Messages
+3490
+Export
+Bulk import
+Refresh
+Create
+Module:
+All modules
+Code
+	
+Module
+	
+English (en_IN)
+	
+pt (pt_BR)
+	
+Default (default)
+	Actions
+
+25_DE_JUNHO_A
+	
+rainmaker-boundary-admin
+	
+25 de Junho A
+	
+25 de Junho A
+	
+— missing —
+	
+
+
+25_DE_JUNHO_B
+	
+rainmaker-boundary-admin
+	
+25 de Junho B
+	
+25 de Junho B
+	
+— missing —
+	
+
+
+3_DE_FEVEREIRO
+	
+rainmaker-boundary-admin
+	
+3 de Fevereiro
+	
+3 de Fevereiro
+	
+— missing —
+	
+
+
+AADHAAR_IS_REQUIRED
+	
+rainmaker-common
+	
+Aadhaar number is required
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_ANONYMOUS
+	
+rainmaker-common
+	
+Anonymous User
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_ANONYMUS
+	
+rainmaker-common
+	
+Anonymus
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_AUTO_ESCALATE
+	
+rainmaker-common
+	
+Auto Escalate
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_CEMP
+	
+rainmaker-common
+	
+Counter Employee
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_CITIZEN
+	
+rainmaker-common
+	
+Citizen
+	
+— missing —
+	
+— missing —
+	
+
+
+ACCESSCONTROL_ROLES_ROLES_CSR
+	
+rainmaker-common
+	
+Customer Support Representative
+	
+— missing —
+	
+— missing —
+	
+
+Showing 1-10 of 3490
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 349
+Next

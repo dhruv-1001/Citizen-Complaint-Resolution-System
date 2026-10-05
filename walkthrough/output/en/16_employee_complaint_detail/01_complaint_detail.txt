@@ -1,51 +1,52 @@
-Ke
+Ke·8 departments·2 roles
 English
-S
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
 Home
 /
 Complaint Details
 Complaint Details
-Complaint No.
-PG-PGR-2026-04-13-000826
-Category
-ServiceSchedulingComplaints
-Sub-Type
-Service postponed
-Filed Date
-13/04/2026
-County
+COMPLAINT NO.
+PG-PGR-2026-05-17-049902
+COMPLAINT CATEGORY
+LandWayleaveDisputes
+COMPLAINT SUBCATEGORY
+Encroachment on utility wayleave / reserve
+FILED DATE
+17/05/2026
+COUNTY
 Bomet
-Sub County
+SUB COUNTY
 Bomet Central
-Ward
-Mutarakwa
-Current Status
-Pending at Supervisor
-Landmark
+WARD
+Silibwet Township
+CURRENT STATUS
+Pending for assignment
+LANDMARK
 NA
-Description
-dsfgsdfgsfg
+DESCRIPTION
+eajfkn
 Complaint's Location
-Kamandura Mai-Mahiu Narok Road, Bomet
+Bomet, Bomet
 +
 −
  Leaflet | © CARTO © OSM
 Open in Maps
-Lat: -0.781700
-Lng: 35.342800
+Lat: -0.782809
+Lng: 35.337181
 Complaint Timeline
-WF_PGR_ESCALATE
-31/05/2026
-County GRO
-Contact Details: 711000001
-Comments : "Auto-escalated: SLA breach at level 0"
-Assigned
-13/04/2026
-Bomet Admin
-Contact Details: 9100000003
-Comments : "test"
-Applied
-13/04/2026
-Test Citizen
-Contact Details: 9876543211
+ASSIGNED
+21/06/2026
+Cassie Csr
+Contact Details: 777711121
+Comments : "DEMO_SEED_KE"
+APPLIED
+21/06/2026
+Demo Test Citizen
+Contact Details: 712345678
 Take action

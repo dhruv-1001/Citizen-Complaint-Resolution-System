@@ -13,7 +13,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -27,13 +27,13 @@ Bulk import employees
 Tenant: ke
 
 DEPARTMENTS
-33
+42
 DESIGNATIONS
 50
 ROLES
-49
+27
 BOUNDARIES
-60
+31
 STEP 1 · DOWNLOAD TEMPLATE
 Download template
 STEP 2 · UPLOAD FILLED FILE

@@ -10,7 +10,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -42,7 +42,7 @@ Workflow Config
 
 Workflow.BusinessServiceConfig
 
-Auto Escalation
+Workflow Auto Escalation (non-PGR)
 
 Workflow.AutoEscalation
 
@@ -130,7 +130,7 @@ Tenant Boundary (HRMS)
 
 egov-location.TenantBoundary
 
-Auto-Escalation Ignored
+Workflow Escalation Ignore (non-PGR)
 
 Workflow.AutoEscalationStatesToIgnore
 
@@ -141,6 +141,10 @@ Workflow.BusinessServiceMasterConfig
 PGR UI Constants
 
 RAINMAKER-PGR.UIConstants
+
+PGR Escalation
+
+RAINMAKER-PGR.EscalationConfig
 
 Map Configuration
 

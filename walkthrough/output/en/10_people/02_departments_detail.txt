@@ -15,7 +15,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -36,14 +36,14 @@ Active
 Description
 --
 RELATED
-Complaint Types
-22
+Complaint Categories
+23
 Absenteeism / Staff shortage affecting delivery
 Delay in attending / No skilled staff available
 Gross misconduct / Abuse of authority
 Health Workers - Absenteeism / Staff shortage affecting delivery
 Human Resource Disciplinary Cases - Chronic absenteeism / Poor performance
-+17 more
++18 more
 No employees found
 Documentation
 DIGIT DOCUMENTATION

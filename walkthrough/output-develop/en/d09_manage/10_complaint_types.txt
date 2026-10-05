@@ -1,0 +1,38 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Complaint Categories
+Refresh
+Create
+Loading...
+All
+
+Error loading data
+
+AccessDeniedException
+
+Try again

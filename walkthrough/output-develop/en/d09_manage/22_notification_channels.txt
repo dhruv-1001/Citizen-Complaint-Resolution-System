@@ -1,0 +1,40 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Notification Channels
+
+Switch each channel on and choose the provider it sends through. Add or change the accounts themselves under Providers.
+
+Notification Channels
+One active provider per channel. A channel delivers when it is switched on here AND its selected provider is enabled; otherwise every event on it is recorded SKIPPED / NB_NO_PROVIDER. SMS also carries login OTPs — switching it off disables OTP login.
+Policy is read at cidadedemaputo.
+Loading...

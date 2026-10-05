@@ -17,7 +17,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -27,7 +27,6 @@ EN
 Theme
 Notification Logs
 SMS/Email delivered via Novu — WHATSAPP shows as SKIPPED (no provider yet)
-410035
 Refresh
 Channel
 All
@@ -41,188 +40,7 @@ Delivered
 Failed
 Pending
 Skipped
-Created
-	Complaint	Channel	Status	Recipient	Template	Attempts	Error
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-WHATSAPP
-	
-SKIPPED
-	
-***110
-	
-CITIZEN.APPLY.PENDINGFORASSIGNMENT.WHATSAPP.en_IN
-	
-1
-	
-NB_NO_PROVIDER: No provider enabled for channel WHATSAPP
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***110
-	
-CITIZEN.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***8e4
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***865
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***b9f
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***02f
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***04e
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***b09
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***f0e
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-
-24 Aug 2026, 5:00 am
-	
-PG-PGR-2026-08-24-197536
-	
-SMS
-	
-SENT
-	
-***9d6
-	
-GRO.APPLY.PENDINGFORASSIGNMENT.SMS.en_IN
-	
-1
-	
---
-
-Showing 1-10 of 410035
-
-Rows per page:
-10
-25
-50
-100
-Previous
-Page 1 of 41004
-Next
+Loading...
 Documentation
 DIGIT DOCUMENTATION
 

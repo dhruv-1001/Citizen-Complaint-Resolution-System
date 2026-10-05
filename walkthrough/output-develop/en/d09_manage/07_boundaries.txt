@@ -1,0 +1,125 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Analytics Providers
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Hide map
+Boundary map
+79 of 80 boundaries with map geometry
++
+−
+ Leaflet | © OpenStreetMap contributors
+Boundaries
+80
+Refresh
+Create
+Code
+	
+Boundary Type
+	
+Tenant
+
+
+25_DE_JUNHO_A
+	
+Bairro
+	
+cidadedemaputo
+
+
+25_DE_JUNHO_B
+	
+Bairro
+	
+cidadedemaputo
+
+
+3_DE_FEVEREIRO
+	
+Bairro
+	
+cidadedemaputo
+
+
+AEROPORTO_A
+	
+Bairro
+	
+cidadedemaputo
+
+
+AEROPORTO_B
+	
+Bairro
+	
+cidadedemaputo
+
+
+AEROPORTO_INTERNACIONAL_DE_MAPUTO
+	
+Bairro
+	
+cidadedemaputo
+
+
+ALBAZINE
+	
+Bairro
+	
+cidadedemaputo
+
+
+ALTO_MAE_A
+	
+Bairro
+	
+cidadedemaputo
+
+
+ALTO_MAE_B
+	
+Bairro
+	
+cidadedemaputo
+
+
+BAGAMOIO
+	
+Bairro
+	
+cidadedemaputo
+
+Showing 1-10 of 80
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 8
+Next

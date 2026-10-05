@@ -1,0 +1,198 @@
+Ke·8 departments·2 roles
+English
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
+Complaint Resolution Operations
+
+All wards · 05/09/2026 – 05/10/2026
+
++ Add KPI
+Reset
+Export
+Filters
+→
+All wards
+All types
+Clear
+RESOLUTION RATE
+14.8%
+▼ 0.3pp
+Updated 3 min ago
+BREACHED SLA (OPEN)
+3,408
+▲ 2,481.8%
+Updated 3 min ago
+RESOLVED COMPLAINTS
+42
+▲ 0%
+Updated 3 min ago
+REOPEN RATE
+0.0%
+▲ 0pp
+Reopened ÷ resolved
+Updated 3 min ago
+CITIZEN SATISFACTION
+4.0/5
+▲ 0
+Avg. rating on resolved complaints
+Updated 3 min ago
+Open Complaints by Workflow Stage
+
+Subtypes with the most open complaints, each broken down by which workflow stage they're stuck in.
+
+Pending assignment
+Assigned
+Pending reassignment
+Pending at supervisor
+2,500
+2,000
+1,500
+1,000
+500
+0
+1,681
+208
+209
+222
+205
+154
+402
+2,083
+303
+284
+228
+205
+154
+34
+30
+27
+22
+17
+15
+15
+13
+13
+7
+7
+6
+4
+4
+3
+2
+2
+2
+1
+1
+1
+1
+1
+1
+1
+1
+StaffMisconduc
+Absenteeism /
+Garbage
+SampleAuthorityTyp
+QA TestUtilities
+HealthWorkers
+MajorInfrastructur
+Illegalconstruct
+Delay inattending
+PWTESTESCALATION
+Boreholes
+Nostreetlig
+PolicySystemicServ
+LandWayleaveDisput
+MedicalServices
+ServiceSchedulingC
+DrainageFlooding
+WaterConnections
+AmbulanceDelays
+WaterPipes
+Appointment
+ShaServiceDenial
+MaternalNeonatalEm
+Delay intreatment
+IllegalChargesCorr
+PharmacyIssues
+Policygaps /
+Defibrillator /
+WaterConnectio
+LifeThreateningEqu
+MedicalNegligenceM
+StaffAttitude
+Updated 3 min ago
+Complaint map · City
+Created
+Open
+Resolved
+Chemaner
+zoom 9 · District · 260 complaints
+Reset
++
+−
+ Leaflet | © OpenStreetMap
+Created
+−
+No complaints
+1–5
+6–10
+11–20
+21–50
+51–100
+101+
+Pins: complaints filed
+260 of 283 shown on the map (rest have no location)
+
+Zoom in to drill down · click a District to focus
+
+Updated 3 min ago
+Flow ratio by department
+
+Resolved ÷ created
+
+Falling behind (<1.0)
+Catching up (≥1.0)
+0.13
+0.24
+Environment
+Water,Sanitation,Environment,Natural
+1.2
+1.0
+0.7
+0.5
+0.2
+0.0
+1.00
+Updated 3 min ago
+Complaints over time
+Created
+Resolved
+Resolution rate
+SLA compliance rate
+200
+150
+100
+50
+0
+Sat
+Wed
+Fri
+Sun
+Tue
+Thu
+Sat
+Mon
+Wed
+Fri
+Sun
+Tue
+Thu
+Sat
+Mon
+Updated 3 min ago

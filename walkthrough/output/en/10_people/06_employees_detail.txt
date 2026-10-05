@@ -13,7 +13,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -22,57 +22,43 @@ custom
 EN
 Theme
 Back
-Employee: Admin
+Employee: Amy Csr
 Edit
 EMPLOYEE INFO
 Employee Code
-ADMIN_HRMS
+AD_CSR
 Name
-Admin
+Amy Csr
 Mobile
-0111111111
+7872981928
 Status
-INACTIVE
+EMPLOYED
 Type
 PERMANENT
 Active
 Active
 Date of Appointment
-30 Jul 2026
+17 Sept 2026
 USER ACCOUNT
 Gender
-MALE
+FEMALE
 Date of Birth
---
+22 Oct 1992
 Email
 --
 Roles
-MDMS ADMIN
-Complaint Assessor
-Localisation admin
-Employee
 Complainant
-PGR Viewer
-Internal Microservice Role
-Super User
-Complaint Resolver
-HRMS Admin
-Department GRO
-Citizen
 ASSIGNMENTS
 Department	Designation	From Date	Current
 
-Health & Sanitation
+Administration, Public Service & Special Programs
 	
-Chief Sanitary Inspector
-	30 Jul 2026	Current
+Accountant
+	18 Sept 2026	Current
 JURISDICTIONS
 Hierarchy	Boundary Type	Boundary
-ADMIN	Country	
-PWB1_105269771
-
-REVENUE	City	
-bomet
+ADMIN	County	
+BOMET
 Documentation
 DIGIT DOCUMENTATION
 

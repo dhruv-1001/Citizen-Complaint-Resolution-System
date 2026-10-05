@@ -1,0 +1,161 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+Employees
+Org Chart
+Users
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Bulk import
+Employees
+7
+Refresh
+Create
+Status
+All
+Employed
+Inactive
+Add filter
+Employee Code
+	
+Name
+	
+Mobile
+	
+Status
+	Department	Designation	
+Active
+
+
+CMM-GRO-001
+	
+Helena Machava
+	
+841000011
+	
+EMPLOYED
+	
+Solid Waste and Sanitation
+	
+Grievance Redressal Officer
+	
+Active
+
+
+CMM-GRO-002
+	
+Armando Sitoe
+	
+841000014
+	
+EMPLOYED
+	
+Roads and Drainage
+	
+Grievance Redressal Officer
+	
+Active
+
+
+CMM-GRO-003
+	
+Celeste Mondlane
+	
+841000015
+	
+EMPLOYED
+	
+Markets and Fairs
+	
+Grievance Redressal Officer
+	
+Active
+
+
+CMM-GRO-004
+	
+Jaime Chissano
+	
+841000016
+	
+EMPLOYED
+	
+Parks and Public Spaces
+	
+Grievance Redressal Officer
+	
+Active
+
+
+CMM-LME-001
+	
+Tomás Cossa
+	
+841000012
+	
+EMPLOYED
+	
+Solid Waste and Sanitation
+	
+Field Officer
+	
+Active
+
+
+CMM-LME-002
+	
+Lúcia Nhantumbo
+	
+841000013
+	
+EMPLOYED
+	
+Roads and Drainage
+	
+Field Officer
+	
+Active
+
+
+FOUNDER_140e7f6a6da34b4ebc7deef261ed9939
+	
+Walkthrough Maputo
+	
+841000001
+	
+EMPLOYED
+	
+Administration
+	
+Workspace administrator
+	
+Active
+
+Showing 1-7 of 7
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next

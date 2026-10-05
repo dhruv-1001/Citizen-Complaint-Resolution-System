@@ -1,9 +1,11 @@
 # DIGIT Configurator & Employee UI — visual walkthrough
 
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
-the DIGIT configurator (4-phase onboarding wizard + management console) and the digit-ui employee app.
+the DIGIT configurator (4-phase onboarding wizard + management console), the digit-ui employee app,
+both citizen apps and the public dashboard. The develop-branch UI (Keycloak sign-in, five-step
+onboarding) is captured separately on the develop deployment: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
-**90 screens · 18 flows · captured 2026-08-24 · read-only.** Nothing on the deployment was
+**104 screens · 22 flows · captured 2026-10-05 · read-only.** Nothing on the deployment was
 created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
 
 > **There is an interactive version.** This page is the flat, shareable rendering. The capture also
@@ -32,8 +34,12 @@ created, updated or deleted; see [How the capture stayed read-only](#how-the-cap
 - [Employee UI · Sign In](#employee-ui--sign-in)
 - [Employee UI · Complaint inbox](#employee-ui--complaint-inbox)
 - [Employee UI · Complaint detail & workflow](#employee-ui--complaint-detail--workflow)
-- [Employee UI · New complaint intake](#employee-ui--new-complaint-intake)
+- [Employee UI · File a Complaint](#employee-ui--file-a-complaint)
 - [Employee UI · Search complaint](#employee-ui--search-complaint)
+- [Employee UI · Dashboard](#employee-ui--dashboard)
+- [Citizen UI · /citizen sign-in](#citizen-ui--citizen-sign-in)
+- [Citizen UI · /digit-ui/citizen](#citizen-ui--digit-uicitizen)
+- [Public dashboard](#public-dashboard)
 - [Screen inventory, against the product doc](#screen-inventory-against-the-product-doc)
 - [What the capture found on bomet](#what-the-capture-found-on-bomet)
 - [How the capture stayed read-only](#how-the-capture-stayed-read-only)
@@ -116,9 +122,9 @@ Both paths stop at the same wall: the button that creates the hierarchy and the 
 
 ![The same form filled in. Create Hierarchy writes, so it was not clicked](../walkthrough/output/en/03_phase2_boundary/04_p2_create_hierarchy_filled.png)
 
-**Select Existing Hierarchy — every entry offered is a `PW_*` test leftover; the real `ADMIN` hierarchy is the 273rd definition at this tenant and the screen only asks for the first 100 (see [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))**
+**Select Existing Hierarchy — all 100 entries offered are test leftovers (`PW_*`, `ROOT → MID → LEAF`, `ONLY`, `X`); `ke` now has 285 hierarchy definitions and the screen asks for the first 100, unsorted, so the real `ADMIN` hierarchy is never among them (see [finding 2](#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))**
 
-![Select Existing Hierarchy — every entry offered is a PW_ test leftover; the real ADMIN hierarchy is the 273rd definition at this tenant and the screen only asks for the first 100 (see finding 2(#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))](../walkthrough/output/en/03_phase2_boundary/05_p2_select_existing_hierarchy.png)
+![Select Existing Hierarchy — all 100 entries offered are test leftovers (PW_, ROOT → MID → LEAF, ONLY, X); ke now has 285 hierarchy definitions and the screen asks for the first 100, unsorted, so the real ADMIN hierarchy is never among them (see finding 2(#2-phase-4-is-blocked-by-test-leftover-boundary-hierarchies))](../walkthrough/output/en/03_phase2_boundary/05_p2_select_existing_hierarchy.png)
 
 **A hierarchy selected**
 
@@ -156,9 +162,9 @@ Both paths stop at the same wall: the button that creates the hierarchy and the 
 
 ![Suggestion picked, ready to search](../walkthrough/output/en/03_phase2_boundary/14_p2_osm_search_typed.png)
 
-**Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8)**
+**Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB on the develop deployment gives 7 districts and 64 bairros: OSM is missing KaNyaka**
 
-![Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8)](../walkthrough/output/en/03_phase2_boundary/15_p2_osm_map_levels.png)
+![Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB on the develop deployment gives 7 districts and 64 bairros: OSM is missing KaNyaka](../walkthrough/output/en/03_phase2_boundary/15_p2_osm_map_levels.png)
 
 **Each level named — *Município → Distrito Municipal → Bairro*. The selection is now valid and *Create Hierarchy & Boundaries* is enabled; that click writes, so this is where the capture stops**
 
@@ -268,9 +274,9 @@ The complaint registry and the masters behind it — complaint types, the catego
 
 ![Complaint registry](../walkthrough/output/en/09_complaints/01_complaints_list.png)
 
-**Complaint Types**
+**Complaint Categories (the console's new name for complaint types)**
 
-![Complaint Types](../walkthrough/output/en/09_complaints/02_complaint_types_list.png)
+![Complaint Categories (the console's new name for complaint types)](../walkthrough/output/en/09_complaints/02_complaint_types_list.png)
 
 **Complaint Hierarchies**
 
@@ -432,33 +438,33 @@ Anonymous, credential-free access to the tenant's dashboard, and the stable URL 
 
 ## Employee UI · Sign In
 
-`/digit-ui/employee`. City picker, credentials, privacy consent. Tenant `ke` is the only selection that authenticates, because `ADMIN` exists only there — and since the cleanup the picker labels it **Ke**, not *Bomet County*. Its MDMS record still reads `Bomet County`, so this is digit-ui falling back to a prettified tenant code when the label's localization message is missing, not lost data.
+`/digit-ui/employee`. City picker, credentials, privacy consent. Tenant `ke` is the only selection that authenticates, because `ADMIN` exists only there. The picker is long again — the `Target Tenant NNNNNN` / `My City Council` / `E2E Roles` test tenants that the August cleanup removed are back — and it still labels `ke` as **Ke**, not *Bomet County*. After sign-in the app opens in the new employee shell (#2038): a full-width top bar carrying the tenant, department and role counts, and a collapsible rail with **Home**, **File a Complaint**, **Search Complaint** and **Dashboard**.
 
 **The employee sign-in screen**
 
 ![The employee sign-in screen](../walkthrough/output/en/14_employee_login/01_employee_signin_blank.png)
 
-**The city picker — six tenants, `ke` among them as *Ke***
+**The city picker — about seventy entries again, almost all of them test tenants; `ke` is near the bottom as *Ke***
 
-![The city picker — six tenants, ke among them as Ke](../walkthrough/output/en/14_employee_login/02_employee_city_picker.png)
+![The city picker — about seventy entries again, almost all of them test tenants; ke is near the bottom as Ke](../walkthrough/output/en/14_employee_login/02_employee_city_picker.png)
 
 **Filled, with privacy consent ticked**
 
 ![Filled, with privacy consent ticked](../walkthrough/output/en/14_employee_login/03_employee_signin_filled.png)
 
-**Employee home. Only PGR is enabled here**
+**Employee home in the new shell: top bar with tenant · departments · roles, and the rail**
 
-![Employee home. Only PGR is enabled here](../walkthrough/output/en/14_employee_login/04_employee_home.png)
+![Employee home in the new shell: top bar with tenant · departments · roles, and the rail](../walkthrough/output/en/14_employee_login/04_employee_home.png)
 
 ---
 
 ## Employee UI · Complaint inbox
 
-Inbox v2 with its search panel and filter rail, and the legacy inbox behind it. It opens on **My Complaints**, which is empty for `ADMIN` — the deployment's complaints belong to other employees, and **All Complaints** is the tab that shows them.
+Inbox v2 with its search card and filter rail, and the legacy inbox behind it. It opens on **My Complaints**, which is empty for `ADMIN`; **All Complaints** is the tab that shows the deployment's complaints. The filter now says *Complaint Category*, the name the console uses too.
 
-**Inbox v2 as it opens — search panel, filter rail, and the *My Complaints* tab, empty for this operator**
+**Inbox v2 as it opens — search card, filter rail, and the *My Complaints* tab, empty for this operator**
 
-![Inbox v2 as it opens — search panel, filter rail, and the My Complaints tab, empty for this operator](../walkthrough/output/en/15_employee_inbox/01_inbox_v2_my_complaints.png)
+![Inbox v2 as it opens — search card, filter rail, and the My Complaints tab, empty for this operator](../walkthrough/output/en/15_employee_inbox/01_inbox_v2_my_complaints.png)
 
 **The *All Complaints* tab: complaint number, locality, status, current owner and SLA days remaining**
 
@@ -472,47 +478,127 @@ Inbox v2 with its search panel and filter rail, and the legacy inbox behind it. 
 
 ## Employee UI · Complaint detail & workflow
 
-One complaint opened from the inbox: the detail card, and the workflow history below the fold. Opening a complaint is a read; none of the action buttons on it were clicked.
+One complaint opened from the inbox: the detail card, and the complaint timeline below the fold. Opening a complaint is a read; **Take action** and the buttons behind it were not clicked.
 
-**A complaint opened from the inbox: category, sub-type, jurisdiction, status, description and map pin**
+**A complaint opened from the inbox: category, subcategory, location, status, description and map pin**
 
-![A complaint opened from the inbox: category, sub-type, jurisdiction, status, description and map pin](../walkthrough/output/en/16_employee_complaint_detail/01_complaint_detail.png)
+![A complaint opened from the inbox: category, subcategory, location, status, description and map pin](../walkthrough/output/en/16_employee_complaint_detail/01_complaint_detail.png)
 
-**The complaint timeline below it — applied, assigned, then auto-escalated on an SLA breach**
+**The complaint timeline below it — *Applied*, then *Assigned*, with who acted and their comment**
 
-![The complaint timeline below it — applied, assigned, then auto-escalated on an SLA breach](../walkthrough/output/en/16_employee_complaint_detail/02_complaint_workflow_timeline.png)
+![The complaint timeline below it — Applied, then Assigned, with who acted and their comment](../walkthrough/output/en/16_employee_complaint_detail/02_complaint_workflow_timeline.png)
 
 ---
 
-## Employee UI · New complaint intake
+## Employee UI · File a Complaint
 
-The counter-staff intake form: complainant details, the complaint type → category → sub-type cascade, a Leaflet map pin, and a description. Filled in for the capture and **not** submitted.
+The rebuilt intake form (#2038). Complainant phone and name; a description; **Complaint Category → Complaint Subcategory** as searchable pickers; a Leaflet pin; and the boundary cascade **County → Sub County → Ward**, every level visible from the start. Filled in for the capture and **not** submitted. The base map shows *API KEY REQUIRED* tiles — the CARTO basemap it points at wants a key this deployment does not have.
 
-**The intake form as it loads**
+**File a Complaint as it loads**
 
-![The intake form as it loads](../walkthrough/output/en/17_employee_new_complaint/01_create_complaint_blank.png)
+![File a Complaint as it loads](../walkthrough/output/en/17_employee_new_complaint/01_create_complaint_blank.png)
 
-**Complaint category picker open**
+**The whole form. In a full-page capture the fixed rail is drawn over the page and the field labels drop out — a screenshot artefact; they render normally on screen (shot above)**
 
-![Complaint category picker open](../walkthrough/output/en/17_employee_new_complaint/02_dropdown_category_open.png)
+![The whole form. In a full-page capture the fixed rail is drawn over the page and the field labels drop out — a screenshot artefact; they render normally on screen (shot above)](../walkthrough/output/en/17_employee_new_complaint/02_create_complaint_blank_full_page.png)
 
-**County picker open**
+***Complaint Category* — a searchable picker; test categories (`QA Test Utilities`) are listed beside real ones**
 
-![County picker open](../walkthrough/output/en/17_employee_new_complaint/03_dropdown_county_open.png)
+![Complaint Category — a searchable picker; test categories (QA Test Utilities) are listed beside real ones](../walkthrough/output/en/17_employee_new_complaint/03_category_picker_open.png)
+
+***Complaint Subcategory*, scoped to the category picked**
+
+![Complaint Subcategory, scoped to the category picked](../walkthrough/output/en/17_employee_new_complaint/04_subcategory_picker_open.png)
+
+**The boundary cascade starts at *County***
+
+![The boundary cascade starts at County](../walkthrough/output/en/17_employee_new_complaint/05_county_picker_open.png)
 
 **Filled in and left there — SUBMIT was never clicked**
 
-![Filled in and left there — SUBMIT was never clicked](../walkthrough/output/en/17_employee_new_complaint/04_create_complaint_filled_not_submitted.png)
+![Filled in and left there — SUBMIT was never clicked](../walkthrough/output/en/17_employee_new_complaint/06_create_complaint_filled_not_submitted.png)
 
 ---
 
 ## Employee UI · Search complaint
 
-The Search Complaint entry point from the home screen.
+**Search Complaint** on the rail opens the same inbox surface on its search card.
 
-**Search Complaint from the home screen — the same inbox surface, opened on its search panel**
+**Search Complaint — the inbox surface, opened on its search card**
 
-![Search Complaint from the home screen — the same inbox surface, opened on its search panel](../walkthrough/output/en/18_employee_search/01_search_complaint_entry.png)
+![Search Complaint — the inbox surface, opened on its search card](../walkthrough/output/en/18_employee_search/01_search_complaint_entry.png)
+
+---
+
+## Employee UI · Dashboard
+
+`/digit-ui/employee/dashboard` — *Complaint Resolution Operations*, new since the last capture. KPI tiles (resolution rate, breached SLA, resolved complaints, reopen rate, citizen satisfaction) with sparklines, date / ward / type filters, open complaints by workflow stage, a complaint map, and flow ratio by department. The tile layout leaves a large empty block beside the workflow-stage chart at this width.
+
+**Complaint Resolution Operations — filters and KPI tiles**
+
+![Complaint Resolution Operations — filters and KPI tiles](../walkthrough/output/en/19_employee_dashboard/01_dashboard_top.png)
+
+**The whole dashboard: workflow stages, complaint map, flow ratio by department**
+
+![The whole dashboard: workflow stages, complaint map, flow ratio by department](../walkthrough/output/en/19_employee_dashboard/02_dashboard_full_page.png)
+
+**Filters expanded**
+
+![Filters expanded](../walkthrough/output/en/19_employee_dashboard/03_dashboard_filters_open.png)
+
+---
+
+## Citizen UI · /citizen sign-in
+
+The new citizen SPA (digit-ui-v2) at `/citizen`. Sign-in is by Google or by mobile number + OTP. The capture enters a number and stops: **Send OTP** would text a real phone.
+
+**`/citizen` sign-in — Google, or mobile number + OTP**
+
+![/citizen sign-in — Google, or mobile number + OTP](../walkthrough/output/en/20_citizen_v2/01_citizen_v2_signin.png)
+
+**A number entered; *Send OTP* not pressed**
+
+![A number entered; Send OTP not pressed](../walkthrough/output/en/20_citizen_v2/02_citizen_v2_signin_number_entered_not_sent.png)
+
+---
+
+## Citizen UI · /digit-ui/citizen
+
+The classic citizen app, now inside the same shell as the employee app. Signed out it shows **All Services**; **File a Complaint** and **My Complaints** both route to its sign-in.
+
+**Signed out: All Services**
+
+![Signed out: All Services](../walkthrough/output/en/21_citizen_classic/01_citizen_all_services.png)
+
+***File a Complaint* while signed out routes to sign-in**
+
+![File a Complaint while signed out routes to sign-in](../walkthrough/output/en/21_citizen_classic/02_file_a_complaint_signed_out.png)
+
+**So does *My Complaints***
+
+![So does My Complaints](../walkthrough/output/en/21_citizen_classic/03_my_complaints_signed_out.png)
+
+**The classic citizen sign-in**
+
+![The classic citizen sign-in](../walkthrough/output/en/21_citizen_classic/04_citizen_classic_login.png)
+
+---
+
+## Public dashboard
+
+`/digit-ui/public-dashboard` — the anonymous view of the operations dashboard, open to anyone. Its *Complaints by type* chart publishes this deployment's test categories (`QA Test Utilities`, `PWTESTESCALATION`, …) alongside the real ones.
+
+**The public dashboard — no sign-in**
+
+![The public dashboard — no sign-in](../walkthrough/output/en/22_public_dashboard/01_public_dashboard_top.png)
+
+**All of it, including *Complaints by type* with the test categories**
+
+![All of it, including Complaints by type with the test categories](../walkthrough/output/en/22_public_dashboard/02_public_dashboard_full_page.png)
+
+**Filters expanded**
+
+![Filters expanded](../walkthrough/output/en/22_public_dashboard/03_public_dashboard_filters_open.png)
 
 ---
 
@@ -601,88 +687,65 @@ All **42** triggers the doc lists are accounted for below: **21** captured, **12
 
 ## What the capture found on bomet
 
-### 1. The seven broken management screens are fixed
+### 1. What changed since the 2026-08-24 capture
 
-Departments, Designations, Complaint Types, Complaint Hierarchies, Map Configuration, Notification
-Routing and Provider Templates used to render **"Error loading data — No static resource
-v2/_count."** They all load now:
+bomet now runs `master` as of 2026-10-02 (`6f9634f6`). The configurator — sign-in, the 4-phase
+wizard, the management console — looks and behaves as it did; the rename of complaint *types* to
+**Complaint Categories / Subcategories** is the visible difference there. The employee and citizen
+apps changed a lot (#2038):
 
-```
-POST /egov-mdms-service/v2/_count   → 200 {"totalCount": 692}
-POST /egov-mdms-service/v2/_search  → 200, returns records
-```
+* **A new shell.** Full-width top bar with the tenant, its department count and the operator's role
+  count; a collapsible rail with Home, File a Complaint, Search Complaint and Dashboard.
+* **File a Complaint, rebuilt.** Searchable category → subcategory pickers, every boundary level
+  shown from the start (County → Sub County → Ward), sticky actions.
+* **An employee dashboard** at `/digit-ui/employee/dashboard`, and its anonymous twin at
+  `/digit-ui/public-dashboard`.
+* **The citizen side** — the new `/citizen` SPA (Google or OTP sign-in) and the classic
+  `/digit-ui/citizen` app in the same shell. Neither was in the previous walkthrough.
 
-The configurator's datagrid calls `_count` to size its pagination, and the egov-mdms image on bomet
-did not serve that endpoint. It does now, so those seven screens sit in their normal sections in
-this walkthrough instead of in a "known gaps" section, and the management dashboard shows real
-numbers on every tile rather than `…`.
+The develop-branch UI (Keycloak sign-in, the five-step onboarding) is not on bomet; it is
+captured on the develop deployment in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 ### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 
-Phase 4 refuses to start: **"No boundaries found for tenant `ke`. Complete Phase 2 (boundaries)
-first, then retry."** Boundaries *do* exist — the console lists them under the `ADMIN` hierarchy,
-`BOMET → SubCounty → Ward`. The wizard just never looks at them.
+Unchanged since August, and slightly worse. Phase 4 still refuses to start — **"No boundaries
+found for tenant `ke`"** — although the console lists the real `ADMIN` hierarchy
+(`County → SubCounty → Ward`).
 
-`Phase4Page.tsx` picks the hierarchy to search by taking the first one the API returns:
+`Phase4Page.tsx` takes `getHierarchies(tenant)[0]`, and `boundary.ts` fetches that list unsorted
+with `limit: 100`. `ke` now holds **285** hierarchy definitions (273 in August); the 100 the wizard
+gets back are all test leftovers — `PW_*`, `ROOT → MID → LEAF`, `ONLY`, `X` — so the first one is a
+throwaway hierarchy with no boundaries. The same list is what Phase 2's *Select Existing Hierarchy*
+offers, and why the completion page reports `0 boundaries`.
 
-```ts
-const hierarchies = await boundaryService.getHierarchies(targetTenant).catch(() => []);
-const hierarchyType = hierarchies[0]?.hierarchyType;
-```
+Two fixes still apply: delete the junk (`boundary-hierarchy-definition/_delete` exists and
+`utilities/crs_dataloader/unified_loader.py` calls it), and stop picking a hierarchy by array
+position out of an unsorted, truncated list.
 
-and `boundary.ts` fetches that list **unsorted, `limit: 100`, `offset: 0`**. Paging through every
-definition at `ke` shows why that never works here:
+### 3. The test junk came back
 
-```
-273 boundary hierarchy definitions at tenant ke
-  2 are real:      POC_MZPT_ADMIN, ADMIN
-271 are PW_*       Playwright test leftovers
-ADMIN is the LAST one returned (index 272 of 273)
-the wizard only ever asks for the first 100 → it never sees ADMIN
-```
+The August cleanup took the tenant registry from 138 to 45. It is at **75** again, and the
+`Target Tenant NNNNNN` rows are back in Phase 1's *Use Existing Tenant* picker and in the employee
+city picker. The suite keeps writing to this deployment; a one-off cleanup does not hold.
 
-So `hierarchies[0]` is a throwaway hierarchy from an automated test run, the boundary search under
-it returns nothing, and Phase 4 blocks. The same list is what Phase 2's **Select Existing
-Hierarchy** screen renders, which is why that screen shows a hundred `PW_*` entries and offers no
-way to reach `ADMIN`, and why the completion page reports `0 boundaries`.
+It now reaches people who are not testers: the employee **Complaint Category** picker and the
+anonymous **public dashboard** both list test categories (`QA Test Utilities`, `PWTESTESCALATION`)
+next to real ones.
 
-Note the tenant cleanup already done on this deployment did *not* clear these: tenants dropped from
-138 to 45, while the boundary hierarchies stayed at 273. `boundary-service` does expose
-`boundary-hierarchy-definition/_delete` — `utilities/crs_dataloader/unified_loader.py` calls it — so
-they can be removed the same way.
+### 4. The base map needs a key
 
-Two separate things to fix: the deployment is still carrying boundary-hierarchy test junk, and the
-wizard should not be picking a hierarchy by array position out of an unsorted, truncated list.
+File a Complaint's pin map draws *API KEY REQUIRED* tiles. The tile URL points at CARTO's basemaps,
+which now require a key; nothing on the form breaks, but the map is unreadable.
 
-Phase 4's landing screen also states *Prerequisites Met — Phase 2: Boundaries configured* directly
-above the error saying there are none; the checklist is static text, not a live check.
+### 5. Counts at capture time
 
-### 3. The deployment now has real complaints
+From the console's own tiles: 4,731 complaints (5,179 in August), 75 tenants,
+42 departments, 50 designations, 1,195 complaint categories,
+500 employees, 31 boundaries, 17,777 localization messages,
+100 users, 27 access roles.
 
-`ke` holds **2,257 complaints**, where an earlier capture found none across every tenant. The
-employee inbox, the complaint registry, the workflow process list and the complaint detail +
-workflow-history screens all have data to show.
-
-The console's other counts at capture time: 6 tenants, 33 departments,
-50 designations, 778 complaint types, 321 employees,
-60 boundaries, 15,492 localization messages.
-
-### 4. Only PGR is enabled in the employee UI
-
-`/dss/*`, `/hrms/*` and `/workbench/*` all fall back to the employee home screen. The employee app on
-bomet is PGR-only.
-
-### Incidental: what the cleanup did and did not reach
-
-The tenant registry has been cleaned — 6 tenants, down from the 138 an earlier capture found, so
-the `Target Tenant NNNNNN` leftovers are gone from the tenant list and from Phase 1's
-*Use Existing Tenant* picker. The boundary hierarchies were not: 273 definitions, 271 of them
-`PW_*` (see finding 2).
-
-One side effect worth knowing: the employee city picker now labels tenant `ke` as **Ke** rather than
-*Bomet County*. The MDMS record still carries `"name": "Bomet County"`, so digit-ui is falling back
-to a prettified code because the label's localization message no longer resolves. `ADMIN` still
-exists only at `ke`, so it remains the only selection that authenticates.
+Only PGR is enabled in the employee app: `/dss/*`, `/hrms/*` and `/workbench/*` still fall back to
+the home screen. The new dashboard is the shell's own page, not DSS.
 
 ---
 
@@ -754,6 +817,7 @@ Individual pieces:
 .venv/bin/python capture_configurator.py 11_system      # one management flow
 .venv/bin/python capture_onboarding.py 03_phase2_boundary   # one wizard phase
 .venv/bin/python capture_employee.py                    # all employee flows
+.venv/bin/python capture_citizen.py                     # citizen apps + public dashboard
 .venv/bin/python build_site.py                          # re-render the HTML only
 .venv/bin/python build_doc.py                           # re-render this markdown
 ```

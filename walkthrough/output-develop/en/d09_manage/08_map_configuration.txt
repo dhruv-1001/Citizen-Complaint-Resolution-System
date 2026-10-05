@@ -1,0 +1,41 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Map Configuration
+
+Schema: RAINMAKER-PGR.MapConfig
+
+Refresh
+Create
+Add filter
+
+Error loading data
+
+AccessDeniedException
+
+Try again

@@ -13,7 +13,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -27,11 +27,80 @@ TENANT
 Tenant*
 ke
 ke
+ke.bndry
+ke.bomet
 ke.etoebeta
 ke.etoeroles
 ke.hajbvfg
 ke.india
+ke.mycity
+ke.mycitynew
 ke.testcity09230
+ke.testcityABCDA
+ke.testcityABCDAA
+ke.tgt009442
+ke.tgt024977
+ke.tgt026108
+ke.tgt050417
+ke.tgt053638
+ke.tgt091422
+ke.tgt127686
+ke.tgt139537
+ke.tgt141918
+ke.tgt158964
+ke.tgt164739
+ke.tgt173532
+ke.tgt176104
+ke.tgt178034
+ke.tgt203207
+ke.tgt220868
+ke.tgt231950
+ke.tgt233146
+ke.tgt244634
+ke.tgt274248
+ke.tgt274663
+ke.tgt283293
+ke.tgt329131
+ke.tgt338437
+ke.tgt353033
+ke.tgt362945
+ke.tgt365925
+ke.tgt439547
+ke.tgt463059
+ke.tgt470607
+ke.tgt471699
+ke.tgt472993
+ke.tgt492735
+ke.tgt506316
+ke.tgt545035
+ke.tgt545091
+ke.tgt557111
+ke.tgt578054
+ke.tgt578269
+ke.tgt594929
+ke.tgt596727
+ke.tgt600446
+ke.tgt610585
+ke.tgt611450
+ke.tgt622305
+ke.tgt672660
+ke.tgt713912
+ke.tgt716828
+ke.tgt741978
+ke.tgt756769
+ke.tgt783533
+ke.tgt822744
+ke.tgt849976
+ke.tgt850729
+ke.tgt878460
+ke.tgt906205
+ke.tgt926860
+ke.tgt934906
+ke.tgt935737
+ke.tgt952719
+ke.tgt969219
+ke.tgt990157
+ke.tgt994256
 
 Employee is created on this tenant — must match the login subdomain (the city tenant code, e.g. <root>.<city>).
 
@@ -43,13 +112,13 @@ Mobile Number*
 Please enter a valid mobile number (9-10 digits, starting with ()
 
 Email
-Date of Birth*
+Date of Birth
 Gender
 Male
 Male
 Female
 Transgender
-Date of Appointment*
+Date of Appointment
 Employee Status
 Employed
 Employed

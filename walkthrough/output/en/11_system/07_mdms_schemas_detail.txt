@@ -12,10 +12,11 @@ Workflows
 Processes
 MDMS Schemas
 Boundaries
+Analytics Providers
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 

@@ -16,6 +16,9 @@ $PY capture_onboarding.py
 echo "== employee UI"
 $PY capture_employee.py
 
+echo "== citizen apps + public dashboard"
+$PY capture_citizen.py
+
 echo "== rendering the site"
 $PY build_site.py
 

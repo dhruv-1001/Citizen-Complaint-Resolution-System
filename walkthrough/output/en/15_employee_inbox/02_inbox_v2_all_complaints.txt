@@ -1,21 +1,35 @@
-Ke
+Ke·8 departments·2 roles
 English
-S
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
 Home
 /
 Inbox
 Search Citizen Complaint
-Citizen Complaint Resolution System
-New Complaint
+Complaint Management System
+File a Complaint
 Complaint No
 Mobile No
 +254
 Date Range
 Search
-CLEAR SEARCH
-Complaint Subtype
-County*
+Clear
+Filter
+Complaint Category
+Select Complaint Category
+Complaint Subcategory
+Select Complaint Subcategory
+County
 Select County
+Sub County
+Select Sub County
+Ward
+Select Ward
 Status
 Pending for assignment
 Pending for re-assignment
@@ -36,70 +50,70 @@ LOCALITY
 CURRENT STATUS
 CURRENT OWNER
 SLA (DAYS REMAINING)
-PG-PGR-2026-04-13-000826
-ServiceSchedulingComplaints
-Mutarakwa
-Pending At Supervisor
-NA
--119
-PG-PGR-2026-04-13-000848
-complaints.categories.AppointmentCancelled/ExcessiveDelays
-Chemaner
-Pending At Supervisor
-NA
--119
 PG-PGR-2026-05-16-048508
 Staff Misconduct
 Silibwet Township
 Pending for assignment
 loki1
--99
+-141
 PG-PGR-2026-05-15-047197
 AmbulanceDelays
 Chesoen
-Pending for assignment
-Steve Odhiambo
--99
+Pending at LME
+County GRO
+-141
 PG-PGR-2026-05-17-049902
 LandWayleaveDisputes
 Silibwet Township
 Pending for assignment
 Cassie Csr
--98
+-140
 PG-PGR-2026-05-17-049915
 MajorInfrastructureRehabilitation
 Silibwet Township
 Pending for assignment
 Ward Supervisor
--98
+-140
 PG-PGR-2026-05-17-049987
 MaternalNeonatalEmergencies
 Nyangores
 Pending for assignment
 Steve Odhiambo
--98
+-140
 PG-PGR-2026-05-17-050005
 Staff Misconduct
 Silibwet Township
 Pending for assignment
 CHESOEN Ward CSR
--98
+-140
 PG-PGR-2026-05-18-051130
 LandWayleaveDisputes
 Silibwet Township
 Pending at LME
 Ward Supervisor
--97
+-139
 PG-PGR-2026-05-18-051200
 LandWayleaveDisputes
 Silibwet Township
 Pending for assignment
 CHESOEN Ward CSR
--97
-ROWS_PER_PAGE
+-139
+PG-PGR-2026-05-26-063331
+Staff Misconduct
+Silibwet Township
+Pending for assignment
+Test Edit Employee
+-131
+PG-PGR-2026-05-16-048405
+WaterConnections
+Silibwet Township
+Pending for assignment
+CHESOEN Ward CSR
+-128
+Rows per page
 10
 20
 30
 40
 50
-1-10 of 1718
+1-10 of 3517

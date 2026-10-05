@@ -1,0 +1,118 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Analytics Providers
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Access Roles
+27
+Refresh
+Code
+	
+Name
+	
+Description
+
+
+ACCOUNT_ADMIN
+	
+ACCOUNT_ADMIN
+	
+ACCOUNT_ADMIN
+
+
+ANONYMOUS
+	
+Anonymous User
+	
+Anonymous User to be used in case of no auth
+
+
+AUTO_ESCALATE
+	
+Auto Escalation Employee
+	
+Auto Escalation Employee
+
+
+CFC
+	
+Citizen Facilitation Counter
+	
+Rates or reopens complaints on behalf of citizens; referenced by the PGR workflow
+
+
+CITIZEN
+	
+Citizen
+	
+Citizen who can raise complaint
+
+
+CMS_SCREENING_OFFICER
+	
+CMS Screening Officer
+	
+Screens complaints and routes them to the correct department
+
+
+COMMON_EMPLOYEE
+	
+Basic employee roles
+	
+Basic employee roles
+
+
+CONFIG_ADMIN
+	
+Config Admin
+	
+One who can access configs
+
+
+CSR
+	
+Complainant
+	
+One who will create complaints
+
+
+DGRO
+	
+Department GRO
+	
+Department grievance routing officer
+
+Showing 1-10 of 27
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 3
+Next

@@ -15,7 +15,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,7 +24,7 @@ custom
 EN
 Theme
 Boundary Hierarchies
-281
+285
 Refresh
 Create
 Add filter
@@ -40,69 +40,69 @@ ke
 County → SubCounty → Ward
 
 
-ADMIN
-	
-ke.india
-	
-State → District → Ward
-
-
-ADMIN
-	
-ke.etoebeta
-	
-County → SubCounty → Ward
-
-
-ADMIN
-	
-ke.etoeroles
-	
-County → SubCounty → Ward
-
-
-ADMIN
-	
-ke.hajbvfg
-	
-County → District → City → Ward
-
-
-INDIA
-	
-ke.india
-	
-State → District → Ward
-
-
-KE-ADMIN
-	
-ke.india
-	
-State → District → Ward
-
-
-KE-ADMIN
-	
-ke.etoebeta
-	
-County → SubCounty → Ward
-
-
-KE-ADMIN
-	
-ke.etoeroles
-	
-County → SubCounty → Ward
-
-
-POC_MZPT_ADMIN
+ADMIN_DEM
 	
 ke
 	
-Município → Distrito Municipal → Bairro → Quarteirão
+Country → State → City → Ward → w1 → w2 → w3
 
-Showing 1-10 of 281
+
+PW_0001BDE4_BHSHAPE
+	
+ke
+	
+ONLY
+
+
+PW_02C20C85_BOUNDARYCREATEHIER
+	
+ke
+	
+PW_ROOT_LEVEL → PW_CHILD_LEVEL
+
+
+PW_037F8546_BHCREATE
+	
+ke
+	
+LEVEL_A → LEVEL_B
+
+
+PW_0447277D_BHCREATE
+	
+ke
+	
+LEVEL_A → LEVEL_B
+
+
+PW_0468F4FE_BHCREATE
+	
+ke
+	
+LEVEL_A → LEVEL_B
+
+
+PW_05E59E10_BHSHAPE
+	
+ke
+	
+ONLY
+
+
+PW_062E1C17_BHSHOW
+	
+ke
+	
+ROOT → MID → LEAF
+
+
+PW_0644543C_BHSHAPE
+	
+ke
+	
+ONLY
+
+Showing 1-10 of 285
 
 Rows per page:
 10

@@ -1,0 +1,14 @@
+English
+
+Ke
+
+Provide your mobile number
+
+All the communications regarding the application will be sent to this mobile number.
+
+Mobile Number*
++254
+
+Please enter a valid mobile number (9-10 digits)
+
+Next

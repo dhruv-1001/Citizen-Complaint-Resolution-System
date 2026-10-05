@@ -11,7 +11,7 @@ output/_recon/employee_routes.json). The deployment now carries real complaints,
 so the inbox opens onto a complaint detail + workflow timeline; opening one is a
 read, and none of the action buttons on it are ever clicked.
 """
-import asyncio, sys
+import asyncio, os, sys
 from playwright.async_api import async_playwright
 from playwright_scraper import Walker
 from lib import (EMPLOYEE, VIEWPORT, OUT, goto, employee_login,
@@ -62,17 +62,29 @@ async def f16_complaint_detail(ctx, page=None):
     w = Walker(page, OUT / "en" / "16_employee_complaint_detail")
     await goto(page, f"{EMPLOYEE}/pgr/inbox-v2", wait_ms=8000)
     await switch_to_all_complaints(page)
-    # rows are div-based; the complaint number is the only link out
-    rows = page.locator("a[href*='/pgr/complaint-details/']")
-    try:
-        if not await rows.count():
-            print("[skip] no complaint row to open")
-            return page
-        await rows.first.click(timeout=8000)
-        await page.wait_for_timeout(7000)
-    except Exception as e:
-        print(f"[skip] opening complaint: {str(e)[:90]}")
+    # rows are div-based; the complaint number is the only link out.
+    # WT_AVOID_TEXT (comma-separated) skips complaints whose page shows any of
+    # those strings, e.g. a real person's name in the timeline — the walkthrough
+    # is shared, and a complaint's history names whoever acted on it.
+    avoid = [t.strip().lower() for t in os.environ.get("WT_AVOID_TEXT", "").split(",") if t.strip()]
+    hrefs = await page.eval_on_selector_all(
+        "a[href*='/pgr/complaint-details/']", "els => [...new Set(els.map(e => e.href))]")
+    if not hrefs:
+        print("[skip] no complaint row to open")
         return page
+    for href in hrefs[:15]:
+        await goto(page, href, wait_ms=7000)
+        await page.mouse.wheel(0, 1600)
+        await page.wait_for_timeout(1500)
+        text = (await page.inner_text("body")).lower()
+        if not any(t in text for t in avoid):
+            break
+        print(f"[skip] {href.rsplit('/', 1)[-1]}: shows an avoided string")
+    else:
+        print("[skip] every candidate complaint shows an avoided string")
+        return page
+    await page.mouse.wheel(0, -4000)
+    await page.wait_for_timeout(800)
     await w.shot("complaint_detail")
     # the workflow history sits below the fold on a 900px viewport
     await page.mouse.wheel(0, 1600)
@@ -81,29 +93,45 @@ async def f16_complaint_detail(ctx, page=None):
     return page
 
 
+async def pick(page, w, combo_id: str, label: str, *, shot: bool) -> str | None:
+    """Open one of the File a Complaint comboboxes, optionally shoot it open, take the first option."""
+    try:
+        await page.click(f"#{combo_id}", timeout=6000)
+        await page.wait_for_timeout(1200)
+        if shot:
+            await w.shot(f"{label}_open", full_page=False)
+        opt = page.get_by_role("option").first
+        text = (await opt.inner_text()).strip()
+        await opt.click(timeout=4000)
+        await page.wait_for_timeout(1500)
+        return text
+    except Exception as e:
+        print(f"[skip] {combo_id}: {str(e)[:90]}")
+        return None
+
+
 async def f17_new_complaint(ctx, page=None):
+    """File a Complaint (#2038): complainant, category -> subcategory, pin, boundary cascade.
+
+    The pickers are searchable comboboxes now, not the old card dropdowns. The
+    form is filled and SUBMIT is never pressed.
+    """
     page = page or await ctx.new_page()
     w = Walker(page, OUT / "en" / "17_employee_new_complaint")
     await goto(page, f"{EMPLOYEE}/pgr/create-complaint", wait_ms=7000)
-    await w.shot("create_complaint_blank")
+    await w.shot("create_complaint_blank", full_page=False)
+    await w.shot("create_complaint_blank_full_page")
 
-    await w.smart_fill(overrides={"phone": "712345678", "name": "Demo Complainant",
-                                  "description": "Captured for the walkthrough — never submitted"})
-    await page.wait_for_timeout(600)
-
-    # the cascading Category -> Sub-Type selects are custom dropdowns
-    for label in ("Select Category", "Select County"):
-        try:
-            await page.get_by_text(label, exact=True).first.click(timeout=5000)
-            await page.wait_for_timeout(1200)
-            await w.shot(f"dropdown_{label.split()[-1].lower()}_open")
-            opt = page.locator("li[role=option], [role=option]").first
-            if await opt.count():
-                await opt.click(timeout=4000)
-                await page.wait_for_timeout(1200)
-        except Exception as e:
-            print(f"[skip] {label}: {str(e)[:90]}")
-
+    await page.fill("#pgr-create-complaint-complaints_complainant_contact_number", "712345678")
+    await page.fill("#pgr-create-complaint-complaints_complainant_name", "Demo Complainant")
+    desc = page.locator("textarea").first
+    if await desc.count():
+        await desc.fill("Captured for the walkthrough — never submitted")
+    await pick(page, w, "ch-emp-CATEGORY", "category_picker", shot=True)
+    await pick(page, w, "ch-emp-SUB_TYPE", "subcategory_picker", shot=True)
+    for cid, lbl in (("boundary-county", "county_picker"), ("boundary-subcounty", "subcounty_picker"),
+                     ("boundary-ward", "ward_picker")):
+        await pick(page, w, cid, lbl, shot=(cid == "boundary-county"))
     await w.shot("create_complaint_filled_not_submitted")
     return page
 
@@ -113,6 +141,7 @@ async def f18_home_cards(ctx, page=None):
     w = Walker(page, OUT / "en" / "18_employee_search")
     await goto(page, EMPLOYEE, wait_ms=6000)
     try:
+        # the rail entry, not the home card: the shell (#2038) lists it under COMPLAINTS
         await page.get_by_text("Search Complaint", exact=True).first.click(timeout=8000)
         await page.wait_for_timeout(6000)
         await w.shot("search_complaint_entry")
@@ -121,10 +150,27 @@ async def f18_home_cards(ctx, page=None):
     return page
 
 
+async def f19_dashboard(ctx, page=None):
+    """The employee Complaint Resolution Operations dashboard (KPI tiles, filters, charts)."""
+    page = page or await ctx.new_page()
+    w = Walker(page, OUT / "en" / "19_employee_dashboard")
+    await goto(page, f"{EMPLOYEE}/dashboard", wait_ms=12000)
+    await w.shot("dashboard_top", full_page=False)
+    await w.shot("dashboard_full_page")
+    try:
+        await page.get_by_text("Filters", exact=True).first.click(timeout=5000)
+        await page.wait_for_timeout(1500)
+        await w.shot("dashboard_filters_open", full_page=False)
+    except Exception as e:
+        print(f"[skip] dashboard filters: {str(e)[:90]}")
+    return page
+
+
 FLOWS = {"14_employee_login": f14_login, "15_employee_inbox": f15_inbox,
          "16_employee_complaint_detail": f16_complaint_detail,
          "17_employee_new_complaint": f17_new_complaint,
-         "18_employee_search": f18_home_cards}
+         "18_employee_search": f18_home_cards,
+         "19_employee_dashboard": f19_dashboard}
 
 
 async def main():

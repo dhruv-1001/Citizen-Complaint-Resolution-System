@@ -6,7 +6,7 @@ NOTIFICATIONS
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 Complaint Hierarchies
-Complaint Types
+Complaint Categories
 Complaints
 Localization
 PEOPLE
@@ -14,7 +14,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -22,9 +22,10 @@ Management Mode
 custom
 EN
 Theme
-Complaint Types
-778
+Complaint Categories
+1195
 Refresh
+Create
 Department
 All
 Accounts Branch
@@ -51,9 +52,18 @@ Obras Públicas
 Operation & Maintenance
 Others
 Public Works
+PW Audit Edited via API
+PW Dept 1
+PW Dept 2
+PW Dept 3
+PW Dept 4
+PW Dept 5
 PW Dept for designation tests (PW_DESIG_DEPTA_TJ1IWV)
 PW Dept for designation tests (PW_DESIG_DEPTB_TJ1IWW)
 PW Dept for designation tests (PW_DESIG_DEPTC_TJ1IWX)
+PW Existing
+PW Guard Dept PW_0A62D30D_DEPTGUARD
+PW Roundtrip PW_F1B98B1E_DEPTRT edited
 Roads, Public Works & Transport
 Street Lights
 Tax Branch
@@ -212,7 +222,7 @@ Building & Roads
 Active
 	
 
-Showing 1-10 of 778
+Showing 1-10 of 1195
 
 Rows per page:
 10
@@ -220,7 +230,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 78
+Page 1 of 120
 Next
 Documentation
 PGR CONFIGURATION

@@ -12,10 +12,11 @@ Workflows
 Processes
 MDMS Schemas
 Boundaries
+Analytics Providers
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,7 +25,7 @@ custom
 EN
 Theme
 Access Roles
-49
+27
 Refresh
 Code
 	
@@ -33,11 +34,11 @@ Name
 Description
 
 
-ANONYMOUS
+ACCOUNT_ADMIN
 	
-Anonymous User
+Account Admin
 	
-Anonymous User to be used in case of no auth
+Bootstrap/tenant-onboarding admin u2014 full Configurator access
 
 
 ANONYMOUS
@@ -54,32 +55,11 @@ Auto Escalation Employee
 Auto Escalation Employee
 
 
-AUTO_ESCALATE
-	
-Auto Escalation Employee
-	
-Auto Escalation Employee
-
-
 CFC
 	
 CFC
 	
 CFC
-
-
-CFC
-	
-CFC
-	
-CFC
-
-
-CITIZEN
-	
-Citizen
-	
-Citizen who can raise complaint
 
 
 CITIZEN
@@ -96,13 +76,34 @@ Basic employee roles
 Basic employee roles
 
 
-COMMON_EMPLOYEE
+CSR
 	
-Basic employee roles
+Complainant
 	
-Basic employee roles
+One who will create complaints
 
-Showing 1-10 of 49
+
+DGRO
+	
+Department GRO
+	
+Department Grievance Routing Officer
+
+
+E2E_ROLE3
+	
+E2E Acting Role Three (fixture)
+	
+E2E role-escalation fixture — R3 consensus: both holders report to E2E_SUP1_HOLDER. Test-only.
+
+
+E2E_ROLE4
+	
+E2E Acting Role Four (fixture)
+	
+E2E role-escalation fixture — R3 split: holders report to different supervisors. Test-only.
+
+Showing 1-10 of 27
 
 Rows per page:
 10
@@ -110,7 +111,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 5
+Page 1 of 3
 Next
 Documentation
 DIGIT DOCUMENTATION

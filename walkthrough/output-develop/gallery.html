@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIGIT develop UI walkthrough · 141.94.92.163.nip.io (2026-10-05)</title>
+<style>
+  :root{--bg:#0b1020;--card:#151c30;--ink:#e8edf7;--mut:#9fb0d0;--accent:#2f6fdb;--line:#26304a;}
+  *{box-sizing:border-box;} body{margin:0;background:var(--bg);color:var(--ink);
+    font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  header.top{padding:26px 32px 14px;border-bottom:3px solid var(--accent);}
+  header.top h1{margin:0 0 4px;font-size:23px;}
+  header.top p{margin:0;color:var(--mut);}
+  .barrow{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:12px;}
+  .toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;}
+  .toggle button{background:transparent;color:var(--mut);border:0;padding:7px 18px;font-size:13px;cursor:pointer;}
+  .toggle button.active{background:var(--accent);color:#04130a;font-weight:600;}
+  a.map{color:var(--accent);text-decoration:none;font-size:13px;border:1px solid var(--line);padding:7px 13px;border-radius:8px;}
+  a.map:hover{border-color:var(--accent);}
+  nav.flows{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;gap:6px;padding:11px 32px;
+    background:rgba(11,16,32,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+  nav.flows a{color:var(--mut);text-decoration:none;font-size:12.5px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;white-space:nowrap;}
+  nav.flows a:hover{color:#fff;border-color:var(--accent);background:#13351f;}
+  main{padding:8px 32px 64px;}
+  section{padding:24px 0 8px;border-bottom:1px solid var(--line);scroll-margin-top:58px;}
+  section h2{font-size:18px;margin:0 0 6px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .count{font-size:12px;color:var(--mut);border:1px solid var(--line);padding:2px 8px;border-radius:999px;}
+  .empty{color:var(--mut);font-size:13px;font-style:italic;padding:6px 0 14px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:12px;}
+  figure.shot{margin:0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;}
+  figure.shot img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;object-position:top;background:#fff;cursor:zoom-in;}
+  figcaption{padding:9px 11px;font-size:12.5px;color:var(--mut);}
+  figcaption b{color:var(--ink);}
+  #lb{position:fixed;inset:0;background:rgba(4,7,16,.92);display:none;align-items:center;justify-content:center;z-index:40;}
+  #lb.open{display:flex;} #lb img{max-width:95%;max-height:92vh;border:1px solid var(--line);border-radius:8px;background:#fff;}
+  footer{padding:28px 32px;color:var(--mut);font-size:12px;}
+</style></head>
+<body>
+<header class="top">
+  <h1>DIGIT develop UI walkthrough · 141.94.92.163.nip.io (2026-10-05)</h1>
+  <p>Keycloak sign-in, self-serve sign-up, the five-step onboarding done for Cidade de Maputo with OCHA COD-AB boundaries, and the management console as the new workspace's founder sees it. &mdash; <span id="counts"></span></p>
+  <div class="barrow">
+    
+    <a class="map" href="index.html">&#9783; Open the sitemap graph &rarr;</a>
+  </div>
+</header>
+<nav class="flows"><a href="#f_d01_signin">Sign in · Keycloak</a><a href="#f_d02_signup">Sign up · a new workspace</a><a href="#f_d03_branding">Onboarding · 1 Branding</a><a href="#f_d04_geography">Onboarding · 2 Geography (OCHA COD-AB)</a><a href="#f_d05_departments">Onboarding · 3 Departments</a><a href="#f_d06_employees">Onboarding · 4 Employees</a><a href="#f_d07_complaints">Onboarding · 5 Complaints Template</a><a href="#f_d08_onboarding_done">Onboarding · finished</a><a href="#f_d09_manage">Management console · as the new founder</a><a href="#f_d10_apps">Employee &amp; citizen apps</a></nav>
+<main id="main"></main>
+<footer>Click any screenshot to zoom · the sign-up and onboarding steps wrote to a throwaway workspace (cidadedemaputo); everything else was captured read-only.</footer>
+<div id="lb" onclick="this.classList.remove('open')"><img id="lbimg" src=""></div>
+
+<script>
+const FLOWS = [{"anchor": "f_d01_signin", "title": "Sign in \u00b7 Keycloak", "shots": {"en": [{"src": "en/d01_signin/01_configurator_landing.png", "cap": "configurator landing"}, {"src": "en/d01_signin/02_keycloak_email_step.png", "cap": "keycloak email step"}, {"src": "en/d01_signin/03_keycloak_password_step.png", "cap": "keycloak password step"}, {"src": "en/d01_signin/04_password_setup_link_form.png", "cap": "password setup link form"}, {"src": "en/d01_signin/05_signup_blank.png", "cap": "signup blank"}]}}, {"anchor": "f_d02_signup", "title": "Sign up \u00b7 a new workspace", "shots": {"en": [{"src": "en/d02_signup/01_signup_filled.png", "cap": "signup filled"}, {"src": "en/d02_signup/02_signup_check_email.png", "cap": "signup check email"}, {"src": "en/d02_signup/03_mailpit_signin_link_email.png", "cap": "mailpit signin link email"}, {"src": "en/d02_signup/04_account_email_verified.png", "cap": "account email verified"}, {"src": "en/d02_signup/05_account_name_and_code.png", "cap": "account name and code"}, {"src": "en/d02_signup/06_preferences_blank.png", "cap": "preferences blank"}, {"src": "en/d02_signup/07_preferences_mozambique_defaults.png", "cap": "preferences mozambique defaults"}, {"src": "en/d02_signup/08_preferences_filled.png", "cap": "preferences filled"}, {"src": "en/d02_signup/09_review.png", "cap": "review"}, {"src": "en/d02_signup/10_provisioning.png", "cap": "provisioning"}, {"src": "en/d02_signup/11_provisioning_failed_mdms_schema_not_visible.png", "cap": "provisioning failed mdms schema not visible"}, {"src": "en/d02_signup/12_choose_workspace_after_retry.png", "cap": "choose workspace after retry"}]}}, {"anchor": "f_d03_branding", "title": "Onboarding \u00b7 1 Branding", "shots": {"en": [{"src": "en/d03_branding/01_branding_blank.png", "cap": "branding blank"}, {"src": "en/d03_branding/02_branding_logo_uploaded.png", "cap": "branding logo uploaded"}, {"src": "en/d03_branding/03_branding_green_and_gold.png", "cap": "branding green and gold"}]}}, {"anchor": "f_d04_geography", "title": "Onboarding \u00b7 2 Geography (OCHA COD-AB)", "shots": {"en": [{"src": "en/d04_geography/01_geography_choose_source.png", "cap": "geography choose source"}, {"src": "en/d04_geography/02_fetch_boundaries.png", "cap": "fetch boundaries"}, {"src": "en/d04_geography/03_boundary_source_options.png", "cap": "boundary source options"}, {"src": "en/d04_geography/04_cod_suggestions.png", "cap": "cod suggestions"}, {"src": "en/d04_geography/05_cod_map_admin_levels.png", "cap": "cod map admin levels"}, {"src": "en/d04_geography/06_levels_named.png", "cap": "levels named"}, {"src": "en/d04_geography/07_boundaries_created.png", "cap": "boundaries created"}, {"src": "en/d04_geography/08_geography_with_hierarchy.png", "cap": "geography with hierarchy"}]}}, {"anchor": "f_d05_departments", "title": "Onboarding \u00b7 3 Departments", "shots": {"en": [{"src": "en/d05_departments/01_departments_seeded.png", "cap": "departments seeded"}, {"src": "en/d05_departments/02_departments_upload.png", "cap": "departments upload"}, {"src": "en/d05_departments/03_add_department.png", "cap": "add department"}, {"src": "en/d05_departments/04_add_designation.png", "cap": "add designation"}, {"src": "en/d05_departments/05_departments_filled.png", "cap": "departments filled"}]}}, {"anchor": "f_d06_employees", "title": "Onboarding \u00b7 4 Employees", "shots": {"en": [{"src": "en/d06_employees/01_employees_landing.png", "cap": "employees landing"}, {"src": "en/d06_employees/02_employees_upload.png", "cap": "employees upload"}, {"src": "en/d06_employees/03_employee_form_blank.png", "cap": "employee form blank"}, {"src": "en/d06_employees/04_employee_form_filled.png", "cap": "employee form filled"}, {"src": "en/d06_employees/05_employees_list.png", "cap": "employees list"}, {"src": "en/d06_employees/06_invite_failed_identity_session_expired.png", "cap": "invite failed identity session expired"}, {"src": "en/d06_employees/07_password_setup_link_sent.png", "cap": "password setup link sent"}, {"src": "en/d06_employees/08_keycloak_set_password.png", "cap": "keycloak set password"}, {"src": "en/d06_employees/09_employees_one_gro_per_department.png", "cap": "employees one gro per department"}]}}, {"anchor": "f_d07_complaints", "title": "Onboarding \u00b7 5 Complaints Template", "shots": {"en": [{"src": "en/d07_complaints/01_complaints_landing.png", "cap": "complaints landing"}, {"src": "en/d07_complaints/02_complaints_upload.png", "cap": "complaints upload"}, {"src": "en/d07_complaints/03_add_category.png", "cap": "add category"}, {"src": "en/d07_complaints/04_four_categories_sla_3_days.png", "cap": "four categories sla 3 days"}, {"src": "en/d07_complaints/05_finish_refused_workspace_probe_incomplete.png", "cap": "finish refused workspace probe incomplete"}, {"src": "en/d07_complaints/06_finished_lands_in_management_access_denied.png", "cap": "finished lands in management access denied"}]}}, {"anchor": "f_d08_onboarding_done", "title": "Onboarding \u00b7 finished", "shots": {"en": [{"src": "en/d08_onboarding_done/01_branding_done.png", "cap": "branding done"}, {"src": "en/d08_onboarding_done/02_geography_done.png", "cap": "geography done"}, {"src": "en/d08_onboarding_done/03_departments_done.png", "cap": "departments done"}, {"src": "en/d08_onboarding_done/04_employees_done.png", "cap": "employees done"}, {"src": "en/d08_onboarding_done/05_complaints_template_done.png", "cap": "complaints template done"}]}}, {"anchor": "f_d09_manage", "title": "Management console \u00b7 as the new founder", "shots": {"en": [{"src": "en/d09_manage/01_dashboard_home.png", "cap": "dashboard home"}, {"src": "en/d09_manage/02_public_dashboard.png", "cap": "public dashboard"}, {"src": "en/d09_manage/03_tenants.png", "cap": "tenants"}, {"src": "en/d09_manage/04_departments.png", "cap": "departments"}, {"src": "en/d09_manage/05_designations.png", "cap": "designations"}, {"src": "en/d09_manage/06_boundary_hierarchies.png", "cap": "boundary hierarchies"}, {"src": "en/d09_manage/07_boundaries.png", "cap": "boundaries"}, {"src": "en/d09_manage/08_map_configuration.png", "cap": "map configuration"}, {"src": "en/d09_manage/09_complaints.png", "cap": "complaints"}, {"src": "en/d09_manage/10_complaint_types.png", "cap": "complaint types"}, {"src": "en/d09_manage/11_complaint_hierarchies.png", "cap": "complaint hierarchies"}, {"src": "en/d09_manage/12_localization.png", "cap": "localization"}, {"src": "en/d09_manage/13_employees.png", "cap": "employees"}, {"src": "en/d09_manage/14_org_chart.png", "cap": "org chart"}, {"src": "en/d09_manage/15_users.png", "cap": "users"}, {"src": "en/d09_manage/16_access_roles.png", "cap": "access roles"}, {"src": "en/d09_manage/17_workflows.png", "cap": "workflows"}, {"src": "en/d09_manage/18_processes.png", "cap": "processes"}, {"src": "en/d09_manage/19_mdms_schemas.png", "cap": "mdms schemas"}, {"src": "en/d09_manage/20_analytics_providers.png", "cap": "analytics providers"}, {"src": "en/d09_manage/21_notification_configure.png", "cap": "notification configure"}, {"src": "en/d09_manage/22_notification_channels.png", "cap": "notification channels"}, {"src": "en/d09_manage/23_notification_event_catalogue.png", "cap": "notification event catalogue"}, {"src": "en/d09_manage/24_notification_routing.png", "cap": "notification routing"}, {"src": "en/d09_manage/25_notification_templates.png", "cap": "notification templates"}, {"src": "en/d09_manage/26_notification_provider_templates.png", "cap": "notification provider templates"}, {"src": "en/d09_manage/27_notification_providers.png", "cap": "notification providers"}, {"src": "en/d09_manage/28_notification_logs.png", "cap": "notification logs"}, {"src": "en/d09_manage/29_notification_preferences.png", "cap": "notification preferences"}, {"src": "en/d09_manage/30_advanced_all_masters.png", "cap": "advanced all masters"}]}}, {"anchor": "f_d10_apps", "title": "Employee & citizen apps", "shots": {"en": [{"src": "en/d10_apps/01_employee_ui_tenant_slug.png", "cap": "employee ui tenant slug"}, {"src": "en/d10_apps/02_employee_ui_bare_path.png", "cap": "employee ui bare path"}, {"src": "en/d10_apps/03_citizen_signin.png", "cap": "citizen signin"}, {"src": "en/d10_apps/04_public_dashboard_url.png", "cap": "public dashboard url"}]}}];
+const LANGS = [["en", "EN"]];
+const LANG_URLS = {};
+let lang = "en";
+
+function render(){
+  const main = document.getElementById("main");
+  main.innerHTML = FLOWS.map(f => {
+    const shots = f.shots[lang] || [];
+    const cards = shots.length ? shots.map((s,i) =>
+      `<figure class="shot"><img loading="lazy" src="${s.src}" onclick="zoom('${s.src}')" alt="">`+
+      `<figcaption><b>${String(i+1).padStart(2,'0')}.</b> ${s.cap}</figcaption></figure>`).join("")
+      : "";
+    const body = shots.length ? `<div class="grid">${cards}</div>`
+      : `<div class="empty">No ${lang.toUpperCase()} capture for this flow.</div>`;
+    return `<section id="${f.anchor}"><h2>${f.title} <span class="count">${shots.length} ${lang.toUpperCase()} shots</span></h2>${body}</section>`;
+  }).join("");
+  const parts = LANGS.map(([c]) =>
+    FLOWS.reduce((a,f)=>a+(f.shots[c]||[]).length,0) + " " + c.toUpperCase());
+  document.getElementById("counts").textContent = `${parts.join(" · ")} screenshots across ${FLOWS.length} flows`;
+}
+function zoom(src){ const lb=document.getElementById("lb"); document.getElementById("lbimg").src=src; lb.classList.add("open"); }
+function setLang(l){ lang=l;
+  document.querySelectorAll(".toggle button").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
+  render();
+  if(LANG_URLS[l]){ try{ history.replaceState(null,'', LANG_URLS[l]); }catch(e){} } }
+document.querySelectorAll(".toggle button").forEach(b=>{ b.onclick=()=>setLang(b.dataset.lang); });
+document.addEventListener("keydown",e=>{ if(e.key==="Escape") document.getElementById("lb").classList.remove("open"); });
+render();
+</script>
+</body></html>

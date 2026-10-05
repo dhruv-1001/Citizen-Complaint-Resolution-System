@@ -15,7 +15,7 @@ sys.path.insert(0, str(HERE))
 from playwright_scraper import build_sitemap, build_flow_gallery, collect_node_assets
 from playwright_scraper.gallery import build_composite
 
-OUT = HERE / "output"
+OUT = HERE / os.environ.get("WT_OUT", "output")
 
 FLOWS = [
     ("01_login",                 "Configurator · Sign In"),
@@ -34,8 +34,12 @@ FLOWS = [
     ("14_employee_login",        "Employee UI · Sign In"),
     ("15_employee_inbox",        "Employee UI · Complaint inbox"),
     ("16_employee_complaint_detail","Employee UI · Complaint detail & workflow"),
-    ("17_employee_new_complaint","Employee UI · New complaint intake"),
+    ("17_employee_new_complaint","Employee UI · File a Complaint"),
     ("18_employee_search",       "Employee UI · Search complaint"),
+    ("19_employee_dashboard",    "Employee UI · Dashboard"),
+    ("20_citizen_v2",            "Citizen UI · /citizen sign-in"),
+    ("21_citizen_classic",       "Citizen UI · /digit-ui/citizen"),
+    ("22_public_dashboard",      "Public dashboard"),
 ]
 
 # ---------------------------------------------------------------- screen graph
@@ -106,7 +110,12 @@ NODES = [
     ("emp_inbox_v1",     "PGR Inbox (legacy)",                   2, "emp"),
     ("emp_search",       "Search Complaint",                     2, "emp"),
     ("emp_detail",       "Complaint detail + workflow timeline",  3, "emp"),
-    ("emp_new",          "New Complaint intake (not submitted)", 3, "emp"),
+    ("emp_new",          "File a Complaint (not submitted)",     3, "emp"),
+    ("emp_dash",         "Employee Dashboard",                   3, "emp"),
+    # citizen side
+    ("cit_v2",           "Citizen /citizen sign-in",             0, "citizen"),
+    ("cit_classic",      "Citizen /digit-ui/citizen",            0, "citizen"),
+    ("pub_view",         "Public Dashboard (anonymous)",         1, "citizen"),
 ]
 
 MASTERS = ["tenants", "bnd_hier", "boundaries", "map_config", "complaints",
@@ -147,7 +156,9 @@ EDGES = (
      ("emp_login", "emp_home", "Login"),
      ("emp_home", "emp_inbox_v2", ""), ("emp_home", "emp_inbox_v1", ""),
      ("emp_home", "emp_search", ""), ("emp_inbox_v2", "emp_new", "New Complaint"),
-     ("emp_inbox_v2", "emp_detail", "open a complaint")]
+     ("emp_inbox_v2", "emp_detail", "open a complaint"),
+     ("emp_home", "emp_new", "File a Complaint"), ("emp_home", "emp_dash", "Dashboard"),
+     ("cit_classic", "pub_view", "Public Dashboard"), ("public_dash", "pub_view", "shared URL")]
     + [("mgmt_home", n, "") for n in MASTERS]
     + [("mgmt_home", n, "") for n in NOTIFS]
 )
@@ -155,16 +166,17 @@ EDGES = (
 GROUP_COLOR = {
     "auth": "#d8973c", "onboard": "#8b5cf6", "manage": "#2f6fdb", "masters": "#3f7fae",
     "notify": "#2bb3a3", "dash": "#c2477f", "forms": "#5fa8d3", "emp": "#3fae6b",
+    "citizen": "#e0672b",
 }
 LEGEND = [
     ("Sign In", "#d8973c"), ("Onboarding wizard", "#8b5cf6"), ("Management console", "#2f6fdb"),
     ("Masters & registries", "#3f7fae"), ("Notifications", "#2bb3a3"), ("Public dashboard", "#c2477f"),
-    ("Forms & bulk import", "#5fa8d3"), ("Employee UI", "#3fae6b"),
+    ("Forms & bulk import", "#5fa8d3"), ("Employee UI", "#3fae6b"), ("Citizen & public", "#e0672b"),
 ]
 
 CAPTIONS = {
     "login": "/configurator/login — username, password, root tenant, and the Onboarding/Management mode switch",
-    "onb_p1_landing": "Phase 1 landing. 100 tenants already exist under ke, so the skip-ahead banner is shown",
+    "onb_p1_landing": "Phase 1 landing. 75 tenants already exist under ke, so the skip-ahead banner is shown",
     "onb_p1_existing": "Use Existing Tenant — picking a row skips to Phase 2 without creating anything",
     "onb_p1_upload": "Step 1.1: the Tenant Master dropzone",
     "onb_p1_preview": "Preview of a sample workbook, parsed in the browser: Tenant Info and Branding Details tabs",
@@ -190,7 +202,7 @@ CAPTIONS = {
     "boundaries": "Boundary records (BOMET shown)",
     "map_config": "Map Configuration — centre, zoom and tile settings per tenant",
     "complaints": "Complaint registry",
-    "complaint_types": "Complaint Types (service definitions)",
+    "complaint_types": "Complaint Categories (formerly Complaint Types)",
     "complaint_hier": "Complaint Hierarchies — category / sub-category tree",
     "localization": "Localization messages",
     "departments": "Departments master",
@@ -220,7 +232,11 @@ CAPTIONS = {
     "emp_inbox_v1": "Legacy PGR inbox",
     "emp_search": "Search Complaint",
     "emp_detail": "One complaint opened from the inbox, with its workflow history below the fold",
-    "emp_new": "New complaint intake: complainant, type/category/sub-type, map pin, description",
+    "emp_new": "File a Complaint (#2038): complainant, category → subcategory pickers, map pin, County → Sub County → Ward",
+    "emp_dash": "Complaint Resolution Operations — KPI tiles, workflow stages, complaint map, flow ratio by department",
+    "cit_v2": "/citizen — the digit-ui-v2 citizen app: Google or mobile + OTP sign-in (OTP never sent)",
+    "cit_classic": "/digit-ui/citizen signed out: All Services; File a Complaint and My Complaints route to sign-in",
+    "pub_view": "The anonymous public dashboard — test categories are visible here too",
 }
 
 # filename marker -> node id, checked in order
@@ -251,6 +267,14 @@ MARKERS = [
     ("inbox_v2", "emp_inbox_v2"), ("inbox_v1", "emp_inbox_v1"),
     ("complaint_detail", "emp_detail"), ("complaint_workflow", "emp_detail"),
     ("create_complaint", "emp_new"), ("dropdown_", "emp_new"),
+    ("category_picker", "emp_new"), ("county_picker", "emp_new"),
+    # citizen + public dashboard (before "public_dashboard" / "dashboard_" collide)
+    ("citizen_v2", "cit_v2"), ("citizen_all_services", "cit_classic"),
+    ("signed_out", "cit_classic"), ("citizen_classic", "cit_classic"),
+    ("public_dashboard_top", "pub_view"), ("public_dashboard_full", "pub_view"),
+    ("public_dashboard_filters", "pub_view"),
+    ("dashboard_top", "emp_dash"), ("dashboard_full_page", "emp_dash"),
+    ("dashboard_filters", "emp_dash"),
     ("search_complaint", "emp_search"),
     # configurator sign-in + console
     ("signin", "login"),
@@ -331,7 +355,7 @@ if __name__ == "__main__":
     build_sitemap(
         OUT, NODES, EDGES,
         group_colors=GROUP_COLOR, legend=LEGEND, langs=(("en", "EN"),),
-        title="Sitemap · DIGIT Configurator + Employee UI — bomet walkthrough",
+        title="Sitemap · DIGIT Configurator + Employee UI — bomet walkthrough (2026-10-05)",
         heading='DIGIT Configurator &amp; Employee UI <span style="color:var(--mut)">· bometfeedbackhub.digit.org</span>',
         links=[("gallery.html", "Grid gallery →")],
         accent="#2f6fdb",
@@ -343,10 +367,10 @@ if __name__ == "__main__":
 
     build_flow_gallery(
         OUT, FLOWS, langs=(("en", "EN"),),
-        title="DIGIT Configurator & Employee UI — bomet walkthrough",
+        title="DIGIT Configurator & Employee UI — bomet walkthrough (2026-10-05)",
         intro=("Read-only capture of bometfeedbackhub.digit.org: the configurator's 4-phase "
                "onboarding wizard walked screen by screen, the management console, and the "
-               "digit-ui employee app."),
+               "digit-ui employee app, both citizen apps and the public dashboard."),
         links=[("index.html", "&#9783; Open the sitemap graph &rarr;")],
         footer=("Click any screenshot to zoom · captured read-only as ADMIN on tenant ke — "
                 "no record was created, updated or deleted."),
@@ -354,5 +378,5 @@ if __name__ == "__main__":
     )
     shots = sorted(Path(OUT, "en").glob("*/*.png"))
     build_composite(shots, Path(OUT, "_graph_all.png"),
-                    title="DIGIT Configurator + Employee UI — bomet walkthrough", cols=6, thumb_w=420)
+                    title="DIGIT Configurator + Employee UI — bomet walkthrough (2026-10-05)", cols=6, thumb_w=420)
     print(f"_graph_all.png: {len(shots)} shots composited")

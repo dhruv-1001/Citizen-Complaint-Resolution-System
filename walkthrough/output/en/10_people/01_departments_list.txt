@@ -15,7 +15,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,7 +24,7 @@ custom
 EN
 Theme
 Departments
-33
+42
 Export
 Bulk import
 Refresh
@@ -141,7 +141,7 @@ Active
 --
 	
 
-Showing 1-10 of 33
+Showing 1-10 of 42
 
 Rows per page:
 10
@@ -149,7 +149,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 4
+Page 1 of 5
 Next
 Documentation
 DEPARTMENT SETUP

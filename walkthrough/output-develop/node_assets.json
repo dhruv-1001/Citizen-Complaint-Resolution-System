@@ -1,0 +1,189 @@
+{
+  "landing": {
+    "en": [
+      "en/d01_signin/01_configurator_landing.png"
+    ],
+    "caption": "/configurator/ \u2014 a single Log in button; sign-in lives in Keycloak"
+  },
+  "kc": {
+    "en": [
+      "en/d01_signin/02_keycloak_email_step.png",
+      "en/d01_signin/03_keycloak_password_step.png"
+    ],
+    "caption": "Keycloak, username-first: email, then password (or GitHub)"
+  },
+  "pwsetup": {
+    "en": [
+      "en/d01_signin/04_password_setup_link_form.png"
+    ],
+    "caption": "One-use password set-up link by mail"
+  },
+  "signup": {
+    "en": [
+      "en/d02_signup/01_signup_filled.png",
+      "en/d01_signin/05_signup_blank.png",
+      "en/d02_signup/02_signup_check_email.png"
+    ],
+    "caption": "Self-serve sign-up: name and email"
+  },
+  "mail": {
+    "en": [
+      "en/d02_signup/03_mailpit_signin_link_email.png"
+    ],
+    "caption": "The sign-in link in Mailpit"
+  },
+  "account": {
+    "en": [
+      "en/d02_signup/04_account_email_verified.png",
+      "en/d02_signup/05_account_name_and_code.png"
+    ],
+    "caption": "Account name and derived code (CDM \u2192 MZ-CDM)"
+  },
+  "prefs": {
+    "en": [
+      "en/d02_signup/08_preferences_filled.png",
+      "en/d02_signup/06_preferences_blank.png",
+      "en/d02_signup/07_preferences_mozambique_defaults.png"
+    ],
+    "caption": "Country, languages, time zone, financial year, slug, founder mobile"
+  },
+  "review": {
+    "en": [
+      "en/d02_signup/09_review.png",
+      "en/d02_signup/10_provisioning.png",
+      "en/d02_signup/11_provisioning_failed_mdms_schema_not_visible.png"
+    ],
+    "caption": "Review, then provisioning \u2014 failed once on MDMS_SCHEMA_NOT_VISIBLE, finished on retry"
+  },
+  "workspace": {
+    "en": [
+      "en/d02_signup/12_choose_workspace_after_retry.png"
+    ],
+    "caption": "Choose a workspace"
+  },
+  "branding": {
+    "en": [
+      "en/d03_branding/02_branding_logo_uploaded.png",
+      "en/d03_branding/01_branding_blank.png",
+      "en/d03_branding/03_branding_green_and_gold.png"
+    ],
+    "caption": "Logo, name, brand theme"
+  },
+  "geo": {
+    "en": [
+      "en/d04_geography/01_geography_choose_source.png",
+      "en/d04_geography/08_geography_with_hierarchy.png"
+    ],
+    "caption": "Preconfigured (soon), Fetch boundaries, Upload from Excel"
+  },
+  "geo_fetch": {
+    "en": [
+      "en/d04_geography/02_fetch_boundaries.png",
+      "en/d04_geography/03_boundary_source_options.png",
+      "en/d04_geography/04_cod_suggestions.png"
+    ],
+    "caption": "turbopass search \u2014 OCHA COD-AB for Cidade de Maputo"
+  },
+  "geo_levels": {
+    "en": [
+      "en/d04_geography/05_cod_map_admin_levels.png",
+      "en/d04_geography/06_levels_named.png",
+      "en/d04_geography/07_boundaries_created.png"
+    ],
+    "caption": "4 COD levels, 79 areas, named Cidade \u2192 Distrito Municipal \u2192 Posto Administrativo \u2192 Bairro"
+  },
+  "depts": {
+    "en": [
+      "en/d05_departments/05_departments_filled.png",
+      "en/d05_departments/01_departments_seeded.png",
+      "en/d05_departments/02_departments_upload.png",
+      "en/d05_departments/03_add_department.png",
+      "en/d05_departments/04_add_designation.png"
+    ],
+    "caption": "Departments + designations"
+  },
+  "emps": {
+    "en": [
+      "en/d06_employees/04_employee_form_filled.png",
+      "en/d06_employees/01_employees_landing.png",
+      "en/d06_employees/02_employees_upload.png",
+      "en/d06_employees/03_employee_form_blank.png",
+      "en/d06_employees/05_employees_list.png",
+      "en/d06_employees/06_invite_failed_identity_session_expired.png",
+      "en/d06_employees/07_password_setup_link_sent.png",
+      "en/d06_employees/08_keycloak_set_password.png",
+      "en/d06_employees/09_employees_one_gro_per_department.png"
+    ],
+    "caption": "Employees \u2014 one GRO per complaint department"
+  },
+  "cats": {
+    "en": [
+      "en/d07_complaints/01_complaints_landing.png",
+      "en/d07_complaints/02_complaints_upload.png",
+      "en/d07_complaints/03_add_category.png",
+      "en/d07_complaints/04_four_categories_sla_3_days.png",
+      "en/d07_complaints/05_finish_refused_workspace_probe_incomplete.png"
+    ],
+    "caption": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO"
+  },
+  "manage": {
+    "en": [
+      "en/d07_complaints/06_finished_lands_in_management_access_denied.png",
+      "en/d09_manage/01_dashboard_home.png",
+      "en/d09_manage/02_public_dashboard.png",
+      "en/d09_manage/03_tenants.png",
+      "en/d09_manage/04_departments.png",
+      "en/d09_manage/05_designations.png",
+      "en/d09_manage/06_boundary_hierarchies.png",
+      "en/d09_manage/07_boundaries.png",
+      "en/d09_manage/08_map_configuration.png",
+      "en/d09_manage/09_complaints.png",
+      "en/d09_manage/10_complaint_types.png",
+      "en/d09_manage/11_complaint_hierarchies.png",
+      "en/d09_manage/12_localization.png",
+      "en/d09_manage/13_employees.png",
+      "en/d09_manage/14_org_chart.png",
+      "en/d09_manage/15_users.png",
+      "en/d09_manage/16_access_roles.png",
+      "en/d09_manage/17_workflows.png",
+      "en/d09_manage/18_processes.png",
+      "en/d09_manage/19_mdms_schemas.png",
+      "en/d09_manage/20_analytics_providers.png",
+      "en/d09_manage/21_notification_configure.png",
+      "en/d09_manage/22_notification_channels.png",
+      "en/d09_manage/23_notification_event_catalogue.png",
+      "en/d09_manage/24_notification_routing.png",
+      "en/d09_manage/25_notification_templates.png",
+      "en/d09_manage/26_notification_provider_templates.png",
+      "en/d09_manage/27_notification_providers.png",
+      "en/d09_manage/28_notification_logs.png",
+      "en/d09_manage/29_notification_preferences.png",
+      "en/d09_manage/30_advanced_all_masters.png"
+    ],
+    "caption": "Every console route as the founder \u2014 many API calls refused (403)"
+  },
+  "done": {
+    "en": [
+      "en/d08_onboarding_done/01_branding_done.png",
+      "en/d08_onboarding_done/02_geography_done.png",
+      "en/d08_onboarding_done/03_departments_done.png",
+      "en/d08_onboarding_done/04_employees_done.png",
+      "en/d08_onboarding_done/05_complaints_template_done.png"
+    ],
+    "caption": "Each step after Finish setup"
+  },
+  "emp_ui": {
+    "en": [
+      "en/d10_apps/01_employee_ui_tenant_slug.png",
+      "en/d10_apps/02_employee_ui_bare_path.png"
+    ],
+    "caption": "/kd/digit-ui/employee \u2014 blank: its assets 404 on this vhost"
+  },
+  "citizen": {
+    "en": [
+      "en/d10_apps/03_citizen_signin.png",
+      "en/d10_apps/04_public_dashboard_url.png"
+    ],
+    "caption": "/citizen \u2014 digit-ui-v2 sign-in"
+  }
+}

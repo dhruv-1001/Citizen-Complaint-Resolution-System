@@ -1,0 +1,38 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Analytics Providers
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Analytics Providers
+
+Destinations the citizen and employee portal may send analytics to. Nothing is sent until a destination here is switched on. Tenant cidadedemaputo.
+
+Reload
+Add destination
+What the portal will actually run: nothing
+
+No destinations are configured for this tenant. Analytics is off — the portal loads the shim, finds no rows and does nothing.

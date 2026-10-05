@@ -1,0 +1,140 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Analytics Providers
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+MDMS Schemas
+33
+Refresh
+Code
+	
+Tenant
+	
+Description
+	
+Active
+
+
+ACCESSCONTROL-ACTIONS-TEST.actions-test
+	
+cidadedemaputo
+	
+ACCESSCONTROL-ACTIONS-TEST.actions-test
+	
+Active
+
+
+ACCESSCONTROL-ROLEACTIONS.roleactions
+	
+cidadedemaputo
+	
+ACCESSCONTROL-ROLEACTIONS.roleactions
+	
+Active
+
+
+ACCESSCONTROL-ROLES.roles
+	
+cidadedemaputo
+	
+ACCESSCONTROL-ROLES.roles
+	
+Active
+
+
+CMS-BOUNDARY.HierarchySchema
+	
+cidadedemaputo
+	
+CMS-BOUNDARY.HierarchySchema
+	
+Active
+
+
+common-masters.Department
+	
+cidadedemaputo
+	
+common-masters.Department
+	
+Active
+
+
+common-masters.Designation
+	
+cidadedemaputo
+	
+common-masters.Designation
+	
+Active
+
+
+common-masters.GenderType
+	
+cidadedemaputo
+	
+common-masters.GenderType
+	
+Active
+
+
+common-masters.IdFormat
+	
+cidadedemaputo
+	
+common-masters.IdFormat
+	
+Active
+
+
+common-masters.MobileNumberValidation
+	
+cidadedemaputo
+	
+common-masters.MobileNumberValidation
+	
+Active
+
+
+common-masters.StateInfo
+	
+cidadedemaputo
+	
+common-masters.StateInfo
+	
+Active
+
+Showing 1-10 of 33
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 4
+Next

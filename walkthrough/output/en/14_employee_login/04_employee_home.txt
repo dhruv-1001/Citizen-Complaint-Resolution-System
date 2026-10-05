@@ -1,7 +1,14 @@
-Ke
+Ke·8 departments·2 roles
 English
-S
-Citizen Complaint Resolution System
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
+Complaint Management System
+File a Complaint
 Search Complaint
 Dashboard
 Dashboard

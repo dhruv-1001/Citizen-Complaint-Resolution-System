@@ -1,0 +1,41 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+User Preferences
+0
+
+Per-user notification consent — read-only
+
+Refresh
+User	Preferred Language	WhatsApp	SMS	Email
+
+No records found

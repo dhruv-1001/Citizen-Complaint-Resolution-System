@@ -1,3 +1,4 @@
 # The walkthrough helpers (Walker, build_sitemap, build_flow_gallery, build_composite).
 # Pulled straight from the upstream repo — it is not on PyPI.
+playwright==1.59.0  # matches chromium-1217; newer pins a CfT build whose CDN download times out
 playwright-scraper @ git+https://github.com/ChakshuGautam/playwright-scraper.git

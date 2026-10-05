@@ -15,7 +15,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,7 +24,7 @@ custom
 EN
 Theme
 Tenants
-6
+75
 Refresh
 Code
 	
@@ -42,6 +42,24 @@ Bomet County
 Bomet County
 	
 Ke
+
+
+ke.bndry
+	
+My City Council
+	
+My City
+	
+My District
+
+
+ke.bomet
+	
+Bomet County
+	
+Bomet County
+	
+Bomet County
 
 
 ke.etoebeta
@@ -80,6 +98,24 @@ India
 —
 
 
+ke.mycity
+	
+My City Council
+	
+My City
+	
+My District
+
+
+ke.mycitynew
+	
+My City Council
+	
+My City
+	
+My District
+
+
 ke.testcity09230
 	
 Random City 09230
@@ -88,7 +124,7 @@ My City
 	
 My District
 
-Showing 1-6 of 6
+Showing 1-10 of 75
 
 Rows per page:
 10
@@ -96,7 +132,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 1
+Page 1 of 8
 Next
 Documentation
 TENANT CONFIGURATION

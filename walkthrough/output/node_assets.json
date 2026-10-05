@@ -11,7 +11,7 @@
     "en": [
       "en/02_phase1_tenant/01_p1_landing.png"
     ],
-    "caption": "Phase 1 landing. 100 tenants already exist under ke, so the skip-ahead banner is shown"
+    "caption": "Phase 1 landing. 75 tenants already exist under ke, so the skip-ahead banner is shown"
   },
   "onb_p1_existing": {
     "en": [
@@ -180,7 +180,7 @@
     "en": [
       "en/09_complaints/02_complaint_types_list.png"
     ],
-    "caption": "Complaint Types (service definitions)"
+    "caption": "Complaint Categories (formerly Complaint Types)"
   },
   "complaint_hier": {
     "en": [
@@ -366,17 +366,51 @@
   },
   "emp_new": {
     "en": [
-      "en/17_employee_new_complaint/04_create_complaint_filled_not_submitted.png",
+      "en/17_employee_new_complaint/06_create_complaint_filled_not_submitted.png",
       "en/17_employee_new_complaint/01_create_complaint_blank.png",
-      "en/17_employee_new_complaint/02_dropdown_category_open.png",
-      "en/17_employee_new_complaint/03_dropdown_county_open.png"
+      "en/17_employee_new_complaint/02_create_complaint_blank_full_page.png",
+      "en/17_employee_new_complaint/03_category_picker_open.png",
+      "en/17_employee_new_complaint/04_subcategory_picker_open.png",
+      "en/17_employee_new_complaint/05_county_picker_open.png"
     ],
-    "caption": "New complaint intake: complainant, type/category/sub-type, map pin, description"
+    "caption": "File a Complaint (#2038): complainant, category \u2192 subcategory pickers, map pin, County \u2192 Sub County \u2192 Ward"
   },
   "emp_search": {
     "en": [
       "en/18_employee_search/01_search_complaint_entry.png"
     ],
     "caption": "Search Complaint"
+  },
+  "emp_dash": {
+    "en": [
+      "en/19_employee_dashboard/02_dashboard_full_page.png",
+      "en/19_employee_dashboard/01_dashboard_top.png",
+      "en/19_employee_dashboard/03_dashboard_filters_open.png"
+    ],
+    "caption": "Complaint Resolution Operations \u2014 KPI tiles, workflow stages, complaint map, flow ratio by department"
+  },
+  "cit_v2": {
+    "en": [
+      "en/20_citizen_v2/01_citizen_v2_signin.png",
+      "en/20_citizen_v2/02_citizen_v2_signin_number_entered_not_sent.png"
+    ],
+    "caption": "/citizen \u2014 the digit-ui-v2 citizen app: Google or mobile + OTP sign-in (OTP never sent)"
+  },
+  "cit_classic": {
+    "en": [
+      "en/21_citizen_classic/01_citizen_all_services.png",
+      "en/21_citizen_classic/02_file_a_complaint_signed_out.png",
+      "en/21_citizen_classic/03_my_complaints_signed_out.png",
+      "en/21_citizen_classic/04_citizen_classic_login.png"
+    ],
+    "caption": "/digit-ui/citizen signed out: All Services; File a Complaint and My Complaints route to sign-in"
+  },
+  "pub_view": {
+    "en": [
+      "en/22_public_dashboard/02_public_dashboard_full_page.png",
+      "en/22_public_dashboard/01_public_dashboard_top.png",
+      "en/22_public_dashboard/03_public_dashboard_filters_open.png"
+    ],
+    "caption": "The anonymous public dashboard \u2014 test categories are visible here too"
   }
 }

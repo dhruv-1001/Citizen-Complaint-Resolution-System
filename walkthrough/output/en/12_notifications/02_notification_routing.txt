@@ -20,7 +20,7 @@ City Modules
 ID Formats
 Workflow Business Services
 Workflow Config
-Auto Escalation
+Workflow Auto Escalation (non-PGR)
 SLA Config
 Role Actions
 Roles
@@ -42,16 +42,17 @@ UI Homepage
 Theme Config
 Mobile Number Validation
 Tenant Boundary (HRMS)
-Auto-Escalation Ignored
+Workflow Escalation Ignore (non-PGR)
 Workflow BS Master
 PGR UI Constants
+PGR Escalation
 Map Configuration
 PGR Notification Routing
 PGR Notification Templates
 PGR Provider Templates
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -61,8 +62,9 @@ EN
 Theme
 PGR Notification Routing
 Schema: RAINMAKER-PGR.NotificationRouting
-28
+32
 Refresh
+Create
 Add filter
 Business Service
 	
@@ -238,7 +240,7 @@ Active
 --
 	
 
-Showing 1-10 of 28
+Showing 1-10 of 32
 
 Rows per page:
 10
@@ -246,7 +248,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 3
+Page 1 of 4
 Next
 Documentation
 DIGIT DOCUMENTATION

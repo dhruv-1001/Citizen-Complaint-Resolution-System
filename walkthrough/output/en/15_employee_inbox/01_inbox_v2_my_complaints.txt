@@ -1,21 +1,35 @@
-Ke
+Ke·8 departments·2 roles
 English
-S
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
 Home
 /
 Inbox
 Search Citizen Complaint
-Citizen Complaint Resolution System
-New Complaint
+Complaint Management System
+File a Complaint
 Complaint No
 Mobile No
 +254
 Date Range
 Search
-CLEAR SEARCH
-Complaint Subtype
-County*
+Clear
+Filter
+Complaint Category
+Select Complaint Category
+Complaint Subcategory
+Select Complaint Subcategory
+County
 Select County
+Sub County
+Select Sub County
+Ward
+Select Ward
 Status
 Pending for assignment
 Pending for re-assignment
@@ -31,4 +45,75 @@ Apply
 Clear All
 My Complaints
 All Complaints
-No Results Found
+COMPLAINT NO
+LOCALITY
+CURRENT STATUS
+CURRENT OWNER
+SLA (DAYS REMAINING)
+PG-PGR-2026-09-02-252214
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-33
+PG-PGR-2026-09-03-254626
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-31
+PG-PGR-2026-09-03-255029
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-31
+PG-PGR-2026-09-04-256524
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-30
+PG-PGR-2026-09-05-258003
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-29
+PG-PGR-2026-09-06-259484
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-28
+PG-PGR-2026-09-07-260964
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-27
+PG-PGR-2026-09-08-262449
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-26
+PG-PGR-2026-09-09-263924
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-25
+PG-PGR-2026-09-10-265411
+Staff Misconduct
+Chesoen
+Pending at LME
+Admin
+-24
+Rows per page
+10
+20
+30
+40
+50
+1-10 of 60

@@ -2,7 +2,7 @@ Skip to main content
 DIGITAdmin Console
 Management
 
-Super Admin
+Admin
 
 ke
 
@@ -34,6 +34,142 @@ Use Existing Tenant
 These tenants are already configured under ke (created via deploy bootstrap, MCP, or a previous wizard run). Pick one to skip tenant creation and jump straight to Phase 2.
 
 Code	Name	Description	Action
+ke.tgt220868	Target Tenant 220868	—	Use this
+
+ke.tgt822744	Target Tenant 822744	—	Use this
+
+ke.tgt596727	Target Tenant 596727	—	Use this
+
+ke.tgt990157	Target Tenant 990157	—	Use this
+
+ke.tgt471699	Target Tenant 471699	—	Use this
+
+ke.tgt024977	Target Tenant 024977	—	Use this
+
+ke.tgt878460	Target Tenant 878460	—	Use this
+
+ke.tgt756769	Target Tenant 756769	—	Use this
+
+ke.tgt244634	Target Tenant 244634	—	Use this
+
+ke.tgt741978	Target Tenant 741978	—	Use this
+
+ke.tgt329131	Target Tenant 329131	—	Use this
+
+ke.tgt338437	Target Tenant 338437	—	Use this
+
+ke.tgt127686	Target Tenant 127686	—	Use this
+
+ke.tgt672660	Target Tenant 672660	—	Use this
+
+ke.tgt545091	Target Tenant 545091	—	Use this
+
+ke.tgt158964	Target Tenant 158964	—	Use this
+
+ke.tgt611450	Target Tenant 611450	—	Use this
+
+ke.tgt713912	Target Tenant 713912	—	Use this
+
+ke.tgt472993	Target Tenant 472993	—	Use this
+
+ke.tgt091422	Target Tenant 091422	—	Use this
+
+ke.tgt716828	Target Tenant 716828	—	Use this
+
+ke.tgt952719	Target Tenant 952719	—	Use this
+
+ke.tgt203207	Target Tenant 203207	—	Use this
+
+ke.tgt141918	Target Tenant 141918	—	Use this
+
+ke.tgt439547	Target Tenant 439547	—	Use this
+
+ke.tgt610585	Target Tenant 610585	—	Use this
+
+ke.tgt783533	Target Tenant 783533	—	Use this
+
+ke.tgt463059	Target Tenant 463059	—	Use this
+
+ke.tgt545035	Target Tenant 545035	—	Use this
+
+ke.tgt506316	Target Tenant 506316	—	Use this
+
+ke.tgt365925	Target Tenant 365925	—	Use this
+
+ke.tgt274248	Target Tenant 274248	—	Use this
+
+ke.tgt578269	Target Tenant 578269	—	Use this
+
+ke.tgt164739	Target Tenant 164739	—	Use this
+
+ke.tgt178034	Target Tenant 178034	—	Use this
+
+ke.tgt935737	Target Tenant 935737	—	Use this
+
+ke.tgt173532	Target Tenant 173532	—	Use this
+
+ke.tgt026108	Target Tenant 026108	—	Use this
+
+ke.tgt850729	Target Tenant 850729	—	Use this
+
+ke.tgt231950	Target Tenant 231950	—	Use this
+
+ke.tgt906205	Target Tenant 906205	—	Use this
+
+ke.tgt926860	Target Tenant 926860	—	Use this
+
+ke.tgt050417	Target Tenant 050417	—	Use this
+
+ke.tgt934906	Target Tenant 934906	—	Use this
+
+ke.mycity	My City Council	My City Council	Use this
+
+ke.tgt233146	Target Tenant 233146	—	Use this
+
+ke.tgt849976	Target Tenant 849976	—	Use this
+
+ke.tgt470607	Target Tenant 470607	—	Use this
+
+ke.tgt053638	Target Tenant 053638	—	Use this
+
+ke.tgt353033	Target Tenant 353033	—	Use this
+
+ke.tgt622305	Target Tenant 622305	—	Use this
+
+ke.testcityABCDAA	Random City 09230	Random City 09230	Use this
+
+ke.testcityABCDA	Random City 09230	Random City 09230	Use this
+
+ke.tgt283293	Target Tenant 283293	—	Use this
+
+ke.tgt362945	Target Tenant 362945	—	Use this
+
+ke.tgt600446	Target Tenant 600446	—	Use this
+
+ke.tgt994256	Target Tenant 994256	—	Use this
+
+ke.tgt594929	Target Tenant 594929	—	Use this
+
+ke.tgt557111	Target Tenant 557111	—	Use this
+
+ke.tgt139537	Target Tenant 139537	—	Use this
+
+ke.tgt176104	Target Tenant 176104	—	Use this
+
+ke.tgt274663	Target Tenant 274663	—	Use this
+
+ke.tgt492735	Target Tenant 492735	—	Use this
+
+ke.tgt009442	Target Tenant 009442	—	Use this
+
+ke.tgt969219	Target Tenant 969219	—	Use this
+
+ke.mycitynew	My City Council	My City Council	Use this
+
+ke.bndry	My City Council	My City Council	Use this
+
+ke.tgt578054	Target Tenant 578054	—	Use this
+
 ke.testcity09230	Random City 09230	Random City 09230	Use this
 
 ke.india	India	India context demo city	Use this
@@ -43,6 +179,8 @@ ke.etoebeta	E2E Roles Beta	E2E role-escalation fixture tenant: E2E Roles Beta. T
 ke.etoeroles	E2E Roles Alpha	E2E role-escalation fixture tenant: E2E Roles Alpha. Test-only.	Use this
 
 ke.hajbvfg	ke.hajbvfg	City tenant: ke.hajbvfg	Use this
+
+ke.bomet	Bomet County	—	Use this
 
 ke	Bomet County	State tenant root: ke	Use this
 ← Back

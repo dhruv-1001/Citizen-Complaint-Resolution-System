@@ -6,7 +6,7 @@ NOTIFICATIONS
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 Complaint Hierarchies
-Complaint Types
+Complaint Categories
 Complaints
 Localization
 PEOPLE
@@ -14,7 +14,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -23,7 +23,7 @@ custom
 EN
 Theme
 Complaints
-2257
+4731
 Refresh
 Create
 Status
@@ -31,9 +31,9 @@ All
 Pending Assignment
 Pending Reassignment
 Pending at LME
-Pending at Supervisor
+Pending at Supervisor (legacy)
 Resolved
-Resolved by Supervisor
+Resolved by Supervisor (legacy)
 Rejected
 Closed (after resolution)
 Closed (after rejection)
@@ -64,9 +64,18 @@ Obras Públicas
 Operation & Maintenance
 Others
 Public Works
+PW Audit Edited via API
+PW Dept 1
+PW Dept 2
+PW Dept 3
+PW Dept 4
+PW Dept 5
 PW Dept for designation tests (PW_DESIG_DEPTA_TJ1IWV)
 PW Dept for designation tests (PW_DESIG_DEPTB_TJ1IWW)
 PW Dept for designation tests (PW_DESIG_DEPTC_TJ1IWX)
+PW Existing
+PW Guard Dept PW_0A62D30D_DEPTGUARD
+PW Roundtrip PW_F1B98B1E_DEPTRT edited
 Roads, Public Works & Transport
 Street Lights
 Tax Branch
@@ -76,7 +85,7 @@ Works Branch
 Add filter
 Request ID
 	
-Type
+Subcategory
 	Department	
 Description
 	
@@ -85,176 +94,176 @@ Status
 Created
 
 
-PG-PGR-2026-08-24-197536
+PG-PGR-2026-10-05-302914
 	
-RudeBehavior
+GarbageMissedGarbageCollection
 	
-Water, Sanitation, Environment, Natural Resources & Climate
+Environment
 	
-E2E API test — 2026-08-23T23:29:59.419Z
-	
-PENDINGFORASSIGNMENT
-	
-E2E API Citizen
-	
-BOMET_BOMET_CENTRAL_CHESOEN
-	
-24 Aug 2026, 4:59 am
-
-
-PG-PGR-2026-08-24-197534
-	
-RudeBehavior
-	
-Water, Sanitation, Environment, Natural Resources & Climate
-	
-PW track-complaint test — auto-filed
+adasds
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
-BOMET_BOMET_CENTRAL_CHESOEN
+BOMET_SOTIK_CHEMAGEL
 	
-24 Aug 2026, 4:59 am
+5 Oct 2026, 6:13 pm
 
 
-PG-PGR-2026-08-24-197533
+PG-PGR-2026-10-05-302909
 	
-RudeBehavior
+QA_POWER_FLUCTUATION
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-PW reopen UI test — auto-resolved by spec
-	
-RESOLVED
-	
-E2E-Citizen-1787525453614
-	
-BOMET_BOMET_CENTRAL_CHESOEN
-	
-24 Aug 2026, 4:59 am
-
-
-PG-PGR-2026-08-24-197531
-	
-RudeBehavior
-	
-Water, Sanitation, Environment, Natural Resources & Climate
-	
-PW rate UI test — auto-resolved by spec
-	
-RESOLVED
-	
-E2E-Citizen-1787525453614
-	
-BOMET_BOMET_CENTRAL_CHESOEN
-	
-24 Aug 2026, 4:58 am
-
-
-PG-PGR-2026-08-24-197530
-	
-RudeBehavior
-	
-Water, Sanitation, Environment, Natural Resources & Climate
-	
-PW #1750 prime-meridian geo-location detail test
+asass
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
 BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 4:58 am
+5 Oct 2026, 6:09 pm
 
 
-PG-PGR-2026-08-24-197529
+PG-PGR-2026-10-05-302730
 	
-RudeBehavior
+QA_POWER_FLUCTUATION
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-PW #1750 legacy zero geo-location detail test
+lkhsdailabdsfiluuhadfsi
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
-BOMET_BOMET_CENTRAL_CHESOEN
+BOMET_BOMET_EAST_CHEMANER
 	
-24 Aug 2026, 4:58 am
+5 Oct 2026, 3:11 pm
 
 
-PG-PGR-2026-08-24-197528
+PG-PGR-2026-10-05-302728
 	
-RudeBehavior
+QA_POWER_FLUCTUATION
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-PW #1750 equator geo-location detail test
+iuahdfiouuhsuidfh
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
-BOMET_BOMET_CENTRAL_CHESOEN
+BOMET_BOMET_EAST_LONGISA
 	
-24 Aug 2026, 4:58 am
+5 Oct 2026, 3:10 pm
 
 
-PG-PGR-2026-08-24-197527
+PG-PGR-2026-10-05-302634
 	
-RudeBehavior
+PWTESTESCALATION
+	
+Administration, Public Service & Special Programs
+	
+Test Description
+	
+REJECTED
+	
+--
+	
+BOMET_KONOIN_BOITO
+	
+5 Oct 2026, 1:36 pm
+
+
+PG-PGR-2026-10-05-302515
+	
+GarbageMissedGarbageCollection
+	
+Environment
+	
+asas
+	
+PENDINGFORASSIGNMENT
+	
+--
+	
+BOMET_BOMET_CENTRAL_MUTARAKWA
+	
+5 Oct 2026, 11:39 am
+
+
+PG-PGR-2026-10-05-302491
+	
+QA_POWER_FLUCTUATION
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-PW #1750 missing geo-location detail test
+asas
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
-BOMET_BOMET_CENTRAL_CHESOEN
+BOMET_BOMET_EAST_KEMBU
 	
-24 Aug 2026, 4:58 am
+5 Oct 2026, 11:16 am
 
 
-PG-PGR-2026-08-24-197526
+PG-PGR-2026-10-05-302485
 	
-RudeBehavior
+QA_POWER_FLUCTUATION
 	
 Water, Sanitation, Environment, Natural Resources & Climate
 	
-PW detail-page test — auto-filed
+asdasdsad
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
 BOMET_BOMET_CENTRAL_CHESOEN
 	
-24 Aug 2026, 4:58 am
+5 Oct 2026, 11:11 am
 
 
-PG-PGR-2026-08-24-197518
+PG-PGR-2026-10-05-302398
 	
-RudeBehavior
+GarbageMissedGarbageCollection
 	
-Water, Sanitation, Environment, Natural Resources & Climate
+Environment
 	
-reject-ui seed 2026-08-23T23:22:03.691Z
+asdasdasd
 	
 PENDINGFORASSIGNMENT
 	
-E2E-Citizen-1787525453614
+--
 	
-BOMET_BOMET_CENTRAL_CHESOEN
+BOMET_BOMET_CENTRAL_SINGORWET
 	
-24 Aug 2026, 4:52 am
+5 Oct 2026, 9:44 am
 
-Showing 1-10 of 2257
+
+PG-PGR-2026-10-05-302380
+	
+DrugStockOuts
+	
+Medical Services
+	
+asdsadas
+	
+PENDINGFORASSIGNMENT
+	
+--
+	
+BOMET_BOMET_EAST_KEMBU
+	
+5 Oct 2026, 9:28 am
+
+Showing 1-10 of 4731
 
 Rows per page:
 10
@@ -262,7 +271,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 226
+Page 1 of 474
 Next
 Documentation
 DIGIT DOCUMENTATION

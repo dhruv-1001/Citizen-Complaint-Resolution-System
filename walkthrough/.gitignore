@@ -3,7 +3,11 @@
 __pycache__/
 
 # Reconnaissance artefacts and the composite sheet — both regenerable, and
-# neither is referenced by the gallery or the docs. The 89 captured screens in
+# neither is referenced by the gallery or the docs. The captured screens in
 # output/en/ ARE committed, so the gallery works straight from a clone.
 output/_recon/
 output/_graph_all.png
+
+# develop-deployment capture: same rules
+output-develop/_recon/
+output-develop/_graph_all.png

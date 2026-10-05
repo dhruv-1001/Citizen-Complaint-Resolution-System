@@ -2,7 +2,7 @@ Skip to main content
 DIGITAdmin Console
 Management
 
-Super Admin
+Admin
 
 ke
 
@@ -41,9 +41,9 @@ Template: Employee_Master_Dynamic.xlsx
 
 Available data from DIGIT:
 
-• Departments: 33 loaded
+• Departments: 42 loaded
 • Designations: 50 loaded
-• Roles: 49 available
+• Roles: 27 available
 • Boundaries: 0 loaded
 Start Phase 4
 

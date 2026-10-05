@@ -1,0 +1,61 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Boundary Hierarchies
+2
+Refresh
+Create
+Add filter
+Hierarchy Type
+	
+Tenant
+	app.fields.levels
+
+ADMIN
+	
+cidadedemaputo
+	
+Cidade → Distrito Municipal → Posto Administrativo → Bairro
+
+
+WORKSPACE
+	
+cidadedemaputo
+	
+ROOT
+
+Showing 1-2 of 2
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next

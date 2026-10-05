@@ -6,7 +6,7 @@ NOTIFICATIONS
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 Complaint Hierarchies
-Complaint Types
+Complaint Categories
 Complaints
 Localization
 PEOPLE
@@ -14,7 +14,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -23,7 +23,7 @@ custom
 EN
 Theme
 Localization Messages
-15492
+11639
 Export
 Bulk import
 Refresh
@@ -34,13 +34,13 @@ Code
 	
 Module
 	
-EN (en_IN)
+English (en_IN)
 	
-HI (hi_IN)
+FRANÇAIS (fr_FR)
 	
-PT (pt_BR)
+PORTUGUÊS (pt_PT)
 	
-FR (fr_FR)
+Default (default)
 	Actions
 
 2 Star or below
@@ -49,23 +49,9 @@ rainmaker-common
 	
 2 stars or below
 	
-2 स्टार या नीचे
+2 étoiles ou moins
 	
-— missing —
-	
-— missing —
-	
-
-
-3 Star and Above
-	
-rainmaker-common
-	
-— missing —
-	
-3 स्टार और ऊपर
-	
-— missing —
+2 estrelas ou menos
 	
 — missing —
 	
@@ -77,112 +63,126 @@ rainmaker-common
 	
 Aadhaar number is required
 	
-— missing —
-	
-— missing —
-	
 Le numéro Aadhaar est requis
 	
-
-
-ABG_ABG_GENERATE_NEW_BILL
+O número Aadhaar é obrigatório
 	
-rainmaker-common
-	
-— missing —
-	
-नया बिल जनरेट करें
-	
-— missing —
-	
-— missing —
+Aadhaar number is required
 	
 
 
-ABG_ABG_PAY
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_CODE
 	
-rainmaker-common
+rainmaker-workbench
 	
-— missing —
+code
 	
-भुगतन करे
+code
 	
-— missing —
+code
 	
-— missing —
-	
-
-
-ABG_COMMON_TABLE_COL_ACTION
-	
-rainmaker-common
-	
-— missing —
-	
-कार्यवाही
-	
-— missing —
-	
-— missing —
+code
 	
 
 
-ABG_COMMON_TABLE_COL_BILL_AMOUNT
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_DISPLAYNAME
 	
-rainmaker-common
+rainmaker-workbench
 	
-— missing —
+displayName
 	
-बिल की राशि (रु)
-	
-— missing —
+displayName
 	
 — missing —
+	
+displayName
 	
 
 
-ABG_COMMON_TABLE_COL_BILL_DATE
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_ENABLED
 	
-rainmaker-common
+rainmaker-workbench
 	
-— missing —
+enabled
 	
-बिल की तिथि
-	
-— missing —
+enabled
 	
 — missing —
+	
+enabled
 	
 
 
-ABG_COMMON_TABLE_COL_BILL_NO
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_ID
 	
-rainmaker-common
+rainmaker-workbench
 	
-— missing —
+id
 	
-बिल नंबर
-	
-— missing —
+id
 	
 — missing —
+	
+id
 	
 
 
-ABG_COMMON_TABLE_COL_CONSUMER_NAME
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_LEFTICON
 	
-rainmaker-common
+rainmaker-workbench
 	
-— missing —
+leftIcon
 	
-उपभोक्ता का नाम
-	
-— missing —
+leftIcon
 	
 — missing —
+	
+leftIcon
 	
 
-Showing 1-10 of 15492
+
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_NAME
+	
+rainmaker-workbench
+	
+name
+	
+name
+	
+— missing —
+	
+name
+	
+
+
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_NAVIGATIONURL
+	
+rainmaker-workbench
+	
+navigationURL
+	
+navigationURL
+	
+— missing —
+	
+navigationURL
+	
+
+
+ACCESSCONTROL_ACTIONS_TEST_ACTIONS_TEST_ORDERNUMBER
+	
+rainmaker-workbench
+	
+orderNumber
+	
+orderNumber
+	
+— missing —
+	
+orderNumber
+	
+
+Showing 1-10 of 11639
 
 Rows per page:
 10
@@ -190,7 +190,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 1550
+Page 1 of 1164
 Next
 Documentation
 LOCALIZATION

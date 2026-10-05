@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sitemap · DIGIT develop UI walkthrough · 141.94.92.163.nip.io (2026-10-05)</title>
+<script src="https://unpkg.com/vis-network@10.1.0/standalone/umd/vis-network.min.js"></script>
+<style>
+  :root{--bg:#0b1020;--panel:#121a2e;--ink:#e8edf7;--mut:#9fb0d0;--line:#26304a;--accent:#2f6fdb;}
+  *{box-sizing:border-box;} html,body{margin:0;height:100%;}
+  body{background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+  header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:18px;flex-wrap:wrap;}
+  header h1{font-size:17px;margin:0;}
+  header .sub{color:var(--mut);font-size:12.5px;}
+  .spacer{flex:1;}
+  .toggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;}
+  .toggle button{background:transparent;color:var(--mut);border:0;padding:7px 16px;font-size:13px;cursor:pointer;}
+  .toggle button.active{background:var(--accent);color:#04130a;font-weight:600;}
+  .legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mut);}
+  .legend span{display:inline-flex;align-items:center;gap:5px;}
+  .dot{width:10px;height:10px;border-radius:3px;display:inline-block;}
+  a.gallery{color:var(--accent);text-decoration:none;font-size:12.5px;border:1px solid var(--line);padding:6px 12px;border-radius:8px;}
+  a.gallery:hover{border-color:var(--accent);}
+  #net{width:100%;height:calc(100vh - 120px);}
+  /* lightbox */
+  #lb{position:fixed;inset:0;background:rgba(4,7,16,.92);display:none;z-index:50;flex-direction:column;}
+  #lb.open{display:flex;}
+  #lb .bar{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line);}
+  #lb .bar b{font-size:15px;} #lb .bar .meta{color:var(--mut);font-size:12.5px;}
+  #lb .zoomctl{margin-left:auto;display:flex;align-items:center;gap:4px;}
+  #lb .zoomctl button{background:#1b2438;color:var(--ink);border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:14px;min-width:30px;height:28px;padding:0 8px;}
+  #lb .zoomctl button:hover{border-color:var(--accent);}
+  #lb .zoomctl #zlabel{min-width:50px;font-size:12.5px;color:var(--mut);background:none;border:0;}
+  #lb .bar .x{margin-left:14px;cursor:pointer;font-size:22px;color:var(--mut);background:none;border:0;}
+  #lb .stage{flex:1;display:flex;align-items:safe center;justify-content:safe center;overflow:auto;padding:16px;}
+  #lb img{max-width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;cursor:zoom-in;user-select:none;-webkit-user-drag:none;flex-shrink:0;}
+  #lb .nav{position:absolute;top:50%;transform:translateY(-50%);font-size:40px;color:#fff;background:rgba(0,0,0,.35);
+           border:0;cursor:pointer;padding:6px 16px;border-radius:8px;}
+  #lb .prev{left:14px;} #lb .next{right:14px;}
+  #lb .count{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);color:var(--mut);font-size:12.5px;}
+</style></head>
+<body>
+<header>
+  <div>
+    <h1>DIGIT develop UI <span style="color:var(--mut)">· 141.94.92.163.nip.io</span></h1>
+    <div class="sub">20/20 screens captured · click a node to zoom its screenshots</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="legend"><span><i class="dot" style="background:#d8973c"></i>Sign in</span><span><i class="dot" style="background:#e0672b"></i>Sign up</span><span><i class="dot" style="background:#8b5cf6"></i>Onboarding</span><span><i class="dot" style="background:#2f6fdb"></i>Management console</span><span><i class="dot" style="background:#3fae6b"></i>Employee & citizen apps</span></div>
+  
+  <a class="gallery" href="gallery.html">Grid gallery →</a>
+</header>
+<div id="net"></div>
+
+<div id="lb">
+  <div class="bar"><b id="lbTitle"></b><span class="meta" id="lbMeta"></span>
+    <div class="zoomctl">
+      <button onclick="zoomBy(-1)" title="Zoom out (−)">−</button>
+      <button id="zlabel" onclick="zoomToggle()" title="Toggle fit / 100% — or click the image">Fit</button>
+      <button onclick="zoomBy(1)" title="Zoom in (+)">+</button>
+    </div>
+    <button class="x" onclick="closeLb()" title="Close (Esc)">✕</button></div>
+  <div class="stage">
+    <button class="nav prev" onclick="step(-1)">‹</button>
+    <img id="lbImg" src="">
+    <button class="nav next" onclick="step(1)">›</button>
+    <div class="count" id="lbCount"></div>
+  </div>
+</div>
+
+<script>
+const DATA = {"nodes": [{"id": "landing", "label": "Configurator \u00b7 Log in", "level": 0, "group": "auth", "imgs": {"en": "en/d01_signin/01_configurator_landing.png"}, "color": "#d8973c", "captured": true}, {"id": "kc", "label": "Keycloak sign-in", "level": 1, "group": "auth", "imgs": {"en": "en/d01_signin/02_keycloak_email_step.png"}, "color": "#d8973c", "captured": true}, {"id": "pwsetup", "label": "Set up / reset password", "level": 1, "group": "auth", "imgs": {"en": "en/d01_signin/04_password_setup_link_form.png"}, "color": "#d8973c", "captured": true}, {"id": "signup", "label": "Create an account", "level": 1, "group": "auth", "imgs": {"en": "en/d02_signup/01_signup_filled.png"}, "color": "#d8973c", "captured": true}, {"id": "mail", "label": "Mailpit \u00b7 sign-in link", "level": 2, "group": "auth", "imgs": {"en": "en/d02_signup/03_mailpit_signin_link_email.png"}, "color": "#d8973c", "captured": true}, {"id": "account", "label": "Account \u00b7 name + code", "level": 2, "group": "signup", "imgs": {"en": "en/d02_signup/04_account_email_verified.png"}, "color": "#e0672b", "captured": true}, {"id": "prefs", "label": "Preferences", "level": 2, "group": "signup", "imgs": {"en": "en/d02_signup/08_preferences_filled.png"}, "color": "#e0672b", "captured": true}, {"id": "review", "label": "Review + provisioning", "level": 3, "group": "signup", "imgs": {"en": "en/d02_signup/09_review.png"}, "color": "#e0672b", "captured": true}, {"id": "workspace", "label": "Choose a workspace", "level": 3, "group": "signup", "imgs": {"en": "en/d02_signup/12_choose_workspace_after_retry.png"}, "color": "#e0672b", "captured": true}, {"id": "branding", "label": "1 \u00b7 Branding", "level": 4, "group": "onboard", "imgs": {"en": "en/d03_branding/02_branding_logo_uploaded.png"}, "color": "#8b5cf6", "captured": true}, {"id": "geo", "label": "2 \u00b7 Geography", "level": 4, "group": "onboard", "imgs": {"en": "en/d04_geography/01_geography_choose_source.png"}, "color": "#8b5cf6", "captured": true}, {"id": "geo_fetch", "label": "Fetch boundaries (COD-AB)", "level": 5, "group": "onboard", "imgs": {"en": "en/d04_geography/02_fetch_boundaries.png"}, "color": "#8b5cf6", "captured": true}, {"id": "geo_levels", "label": "Map Admin Levels", "level": 5, "group": "onboard", "imgs": {"en": "en/d04_geography/05_cod_map_admin_levels.png"}, "color": "#8b5cf6", "captured": true}, {"id": "depts", "label": "3 \u00b7 Departments", "level": 4, "group": "onboard", "imgs": {"en": "en/d05_departments/05_departments_filled.png"}, "color": "#8b5cf6", "captured": true}, {"id": "emps", "label": "4 \u00b7 Employees", "level": 4, "group": "onboard", "imgs": {"en": "en/d06_employees/04_employee_form_filled.png"}, "color": "#8b5cf6", "captured": true}, {"id": "cats", "label": "5 \u00b7 Complaints Template", "level": 4, "group": "onboard", "imgs": {"en": "en/d07_complaints/01_complaints_landing.png"}, "color": "#8b5cf6", "captured": true}, {"id": "done", "label": "Onboarding finished", "level": 5, "group": "onboard", "imgs": {"en": "en/d08_onboarding_done/01_branding_done.png"}, "color": "#8b5cf6", "captured": true}, {"id": "manage", "label": "Management console", "level": 6, "group": "manage", "imgs": {"en": "en/d07_complaints/06_finished_lands_in_management_access_denied.png"}, "color": "#2f6fdb", "captured": true}, {"id": "emp_ui", "label": "Employee app (blank)", "level": 0, "group": "apps", "imgs": {"en": "en/d10_apps/01_employee_ui_tenant_slug.png"}, "color": "#3fae6b", "captured": true}, {"id": "citizen", "label": "Citizen /citizen", "level": 0, "group": "apps", "imgs": {"en": "en/d10_apps/03_citizen_signin.png"}, "color": "#3fae6b", "captured": true}], "edges": [{"from": "landing", "to": "kc", "label": "Log in"}, {"from": "landing", "to": "pwsetup", "label": ""}, {"from": "landing", "to": "signup", "label": "Create an account"}, {"from": "signup", "to": "mail", "label": "link by mail"}, {"from": "mail", "to": "account", "label": "open link"}, {"from": "account", "to": "prefs", "label": "Continue"}, {"from": "prefs", "to": "review", "label": "Continue"}, {"from": "review", "to": "workspace", "label": "write: Create account"}, {"from": "kc", "to": "workspace", "label": "Sign In"}, {"from": "workspace", "to": "branding", "label": ""}, {"from": "branding", "to": "geo", "label": "write: Save"}, {"from": "geo", "to": "geo_fetch", "label": "Search boundaries"}, {"from": "geo_fetch", "to": "geo_levels", "label": "Search"}, {"from": "geo_levels", "to": "depts", "label": "write: Create + Save"}, {"from": "depts", "to": "emps", "label": "write: Save"}, {"from": "emps", "to": "cats", "label": "write: Save"}, {"from": "cats", "to": "done", "label": "write: Finish setup"}, {"from": "done", "to": "manage", "label": "lands in"}], "shots": {"landing": {"shots": {"en": ["en/d01_signin/01_configurator_landing.png"]}, "caption": "/configurator/ \u2014 a single Log in button; sign-in lives in Keycloak"}, "kc": {"shots": {"en": ["en/d01_signin/02_keycloak_email_step.png", "en/d01_signin/03_keycloak_password_step.png"]}, "caption": "Keycloak, username-first: email, then password (or GitHub)"}, "pwsetup": {"shots": {"en": ["en/d01_signin/04_password_setup_link_form.png"]}, "caption": "One-use password set-up link by mail"}, "signup": {"shots": {"en": ["en/d02_signup/01_signup_filled.png", "en/d01_signin/05_signup_blank.png", "en/d02_signup/02_signup_check_email.png"]}, "caption": "Self-serve sign-up: name and email"}, "mail": {"shots": {"en": ["en/d02_signup/03_mailpit_signin_link_email.png"]}, "caption": "The sign-in link in Mailpit"}, "account": {"shots": {"en": ["en/d02_signup/04_account_email_verified.png", "en/d02_signup/05_account_name_and_code.png"]}, "caption": "Account name and derived code (CDM \u2192 MZ-CDM)"}, "prefs": {"shots": {"en": ["en/d02_signup/08_preferences_filled.png", "en/d02_signup/06_preferences_blank.png", "en/d02_signup/07_preferences_mozambique_defaults.png"]}, "caption": "Country, languages, time zone, financial year, slug, founder mobile"}, "review": {"shots": {"en": ["en/d02_signup/09_review.png", "en/d02_signup/10_provisioning.png", "en/d02_signup/11_provisioning_failed_mdms_schema_not_visible.png"]}, "caption": "Review, then provisioning \u2014 failed once on MDMS_SCHEMA_NOT_VISIBLE, finished on retry"}, "workspace": {"shots": {"en": ["en/d02_signup/12_choose_workspace_after_retry.png"]}, "caption": "Choose a workspace"}, "branding": {"shots": {"en": ["en/d03_branding/02_branding_logo_uploaded.png", "en/d03_branding/01_branding_blank.png", "en/d03_branding/03_branding_green_and_gold.png"]}, "caption": "Logo, name, brand theme"}, "geo": {"shots": {"en": ["en/d04_geography/01_geography_choose_source.png", "en/d04_geography/08_geography_with_hierarchy.png"]}, "caption": "Preconfigured (soon), Fetch boundaries, Upload from Excel"}, "geo_fetch": {"shots": {"en": ["en/d04_geography/02_fetch_boundaries.png", "en/d04_geography/03_boundary_source_options.png", "en/d04_geography/04_cod_suggestions.png"]}, "caption": "turbopass search \u2014 OCHA COD-AB for Cidade de Maputo"}, "geo_levels": {"shots": {"en": ["en/d04_geography/05_cod_map_admin_levels.png", "en/d04_geography/06_levels_named.png", "en/d04_geography/07_boundaries_created.png"]}, "caption": "4 COD levels, 79 areas, named Cidade \u2192 Distrito Municipal \u2192 Posto Administrativo \u2192 Bairro"}, "depts": {"shots": {"en": ["en/d05_departments/05_departments_filled.png", "en/d05_departments/01_departments_seeded.png", "en/d05_departments/02_departments_upload.png", "en/d05_departments/03_add_department.png", "en/d05_departments/04_add_designation.png"]}, "caption": "Departments + designations"}, "emps": {"shots": {"en": ["en/d06_employees/04_employee_form_filled.png", "en/d06_employees/01_employees_landing.png", "en/d06_employees/02_employees_upload.png", "en/d06_employees/03_employee_form_blank.png", "en/d06_employees/05_employees_list.png", "en/d06_employees/06_invite_failed_identity_session_expired.png", "en/d06_employees/07_password_setup_link_sent.png", "en/d06_employees/08_keycloak_set_password.png", "en/d06_employees/09_employees_one_gro_per_department.png"]}, "caption": "Employees \u2014 one GRO per complaint department"}, "cats": {"shots": {"en": ["en/d07_complaints/01_complaints_landing.png", "en/d07_complaints/02_complaints_upload.png", "en/d07_complaints/03_add_category.png", "en/d07_complaints/04_four_categories_sla_3_days.png", "en/d07_complaints/05_finish_refused_workspace_probe_incomplete.png"]}, "caption": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO"}, "done": {"shots": {"en": ["en/d08_onboarding_done/01_branding_done.png", "en/d08_onboarding_done/02_geography_done.png", "en/d08_onboarding_done/03_departments_done.png", "en/d08_onboarding_done/04_employees_done.png", "en/d08_onboarding_done/05_complaints_template_done.png"]}, "caption": "Each step after Finish setup"}, "manage": {"shots": {"en": ["en/d07_complaints/06_finished_lands_in_management_access_denied.png", "en/d09_manage/01_dashboard_home.png", "en/d09_manage/02_public_dashboard.png", "en/d09_manage/03_tenants.png", "en/d09_manage/04_departments.png", "en/d09_manage/05_designations.png", "en/d09_manage/06_boundary_hierarchies.png", "en/d09_manage/07_boundaries.png", "en/d09_manage/08_map_configuration.png", "en/d09_manage/09_complaints.png", "en/d09_manage/10_complaint_types.png", "en/d09_manage/11_complaint_hierarchies.png", "en/d09_manage/12_localization.png", "en/d09_manage/13_employees.png", "en/d09_manage/14_org_chart.png", "en/d09_manage/15_users.png", "en/d09_manage/16_access_roles.png", "en/d09_manage/17_workflows.png", "en/d09_manage/18_processes.png", "en/d09_manage/19_mdms_schemas.png", "en/d09_manage/20_analytics_providers.png", "en/d09_manage/21_notification_configure.png", "en/d09_manage/22_notification_channels.png", "en/d09_manage/23_notification_event_catalogue.png", "en/d09_manage/24_notification_routing.png", "en/d09_manage/25_notification_templates.png", "en/d09_manage/26_notification_provider_templates.png", "en/d09_manage/27_notification_providers.png", "en/d09_manage/28_notification_logs.png", "en/d09_manage/29_notification_preferences.png", "en/d09_manage/30_advanced_all_masters.png"]}, "caption": "Every console route as the founder \u2014 many API calls refused (403)"}, "emp_ui": {"shots": {"en": ["en/d10_apps/01_employee_ui_tenant_slug.png", "en/d10_apps/02_employee_ui_bare_path.png"]}, "caption": "/kd/digit-ui/employee \u2014 blank: its assets 404 on this vhost"}, "citizen": {"shots": {"en": ["en/d10_apps/03_citizen_signin.png", "en/d10_apps/04_public_dashboard_url.png"]}, "caption": "/citizen \u2014 digit-ui-v2 sign-in"}}};
+const LANGS = [["en", "EN"]];
+const LANG_URLS = {};
+const STR = {"subtitle": "{captured}/{total} screens captured \u00b7 click a node to zoom its screenshots", "no_capture": "no capture", "alt_lang": "(other language)", "none": "no capture available"};
+let lang = "en";
+
+const GRAY = "data:image/svg+xml;utf8," + encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" width="240" height="150"><rect width="100%" height="100%" fill="#1b2438"/>'+
+  '<text x="50%" y="50%" fill="#5b6b8c" font-family="sans-serif" font-size="13" text-anchor="middle" dy=".3em">'+STR.no_capture+'</text></svg>'
+);
+
+function imgFor(n){ const p=n.imgs[lang]; return p ? "_thumbs/"+p : GRAY; }
+
+const visNodes = new vis.DataSet(DATA.nodes.map(n => ({
+  id:n.id, label:n.label, level:n.level,
+  shape:"image", image:imgFor(n),
+  brokenImage:GRAY,
+  size:34,
+  font:{color:"#e8edf7", size:13, multi:false, vadjust:4, face:"-apple-system,Segoe UI,Roboto"},
+  borderWidth:3, color:{border:n.captured? n.color : "#3a4660", background:"#121a2e"},
+  shapeProperties:{useBorderWithImage:true},
+  opacity: n.captured? 1 : 0.45,
+})));
+
+const visEdges = new vis.DataSet(DATA.edges.map((e,i)=>({
+  id:"e"+i, from:e.from, to:e.to, label:e.label||undefined,
+  arrows:{to:{enabled:true,scaleFactor:0.6}},
+  color:{color:"#3a4660",highlight:"#2f6fdb"},
+  font:{color:"#7f8db0",size:10,strokeWidth:0,align:"middle"},
+  smooth:{type:"cubicBezier",forceDirection:"vertical",roundness:0.45},
+})));
+
+const container = document.getElementById("net");
+const network = new vis.Network(container, {nodes:visNodes, edges:visEdges}, {
+  layout:{hierarchical:{enabled:true,direction:"UD",sortMethod:"directed",levelSeparation:150,nodeSpacing:190,treeSpacing:230}},
+  physics:false,
+  interaction:{hover:true,zoomView:true,dragView:true,tooltipDelay:120},
+  nodes:{labelHighlightBold:false},
+});
+
+network.on("click", params => {
+  if(params.nodes.length){ openLb(params.nodes[0]); }
+});
+
+// ---- lightbox ----
+let curNode=null, curShots=[], curIdx=0;
+function shotsFor(id, l){ const s=(DATA.shots[id]||{}).shots||{}; return s[l]||[]; }
+function openLb(id){
+  curNode=id; curShots=shotsFor(id, lang); curIdx=0;
+  const node = DATA.nodes.find(n=>n.id===id);
+  document.getElementById("lbTitle").textContent = node? node.label : id;
+  if(!curShots.length){
+    // fallback to any other language that has captures
+    for(const [code] of LANGS){
+      if(code!==lang && shotsFor(id, code).length){ curShots = shotsFor(id, code); break; }
+    }
+    document.getElementById("lbMeta").textContent = curShots.length? STR.alt_lang : STR.none;
+  } else {
+    document.getElementById("lbMeta").textContent = "("+lang.toUpperCase()+")";
+  }
+  render();
+  document.getElementById("lb").classList.add("open");
+}
+function shotName(p){ return p.split("/").pop().replace(/\.png$/,"").replace(/^\d+_/,"").replace(/_/g," "); }
+function render(){
+  const img=document.getElementById("lbImg");
+  zoom=0;                                   // reset zoom on each new shot
+  if(curShots.length){ img.src=curShots[curIdx]; img.style.display="block"; applyZoom(); }
+  else { img.style.display="none"; }
+  const nm = curShots.length? shotName(curShots[curIdx]) : "";
+  const counter = curShots.length>1 ? (curIdx+1)+" / "+curShots.length+"  ·  " : "";
+  document.getElementById("lbCount").textContent = counter + nm;
+}
+function step(d){ if(!curShots.length) return; curIdx=(curIdx+d+curShots.length)%curShots.length; render(); }
+function closeLb(){ document.getElementById("lb").classList.remove("open"); }
+
+// ---- zoom ----
+let zoom=0; const ZLVL=[0,1,1.5,2,3];       // 0 = fit-to-screen; else multiplier of natural pixels
+function applyZoom(){
+  const img=document.getElementById("lbImg");
+  if(zoom===0){ img.style.maxWidth="100%"; img.style.maxHeight="none"; img.style.width="auto"; img.style.height="auto"; img.style.cursor="zoom-in"; }
+  else { img.style.maxWidth="none"; img.style.maxHeight="none"; img.style.height="auto";
+         img.style.width=(img.naturalWidth*ZLVL[zoom])+"px"; img.style.cursor="grab"; }
+  document.getElementById("zlabel").textContent = zoom===0 ? "Fit" : Math.round(ZLVL[zoom]*100)+"%";
+}
+function zoomBy(d){ zoom=Math.max(0,Math.min(ZLVL.length-1, zoom+d)); applyZoom(); }
+function zoomToggle(){ zoom = zoom===0 ? 1 : 0; applyZoom(); }
+
+// click image toggles fit/100% (unless it was a pan-drag); drag pans when zoomed
+(function(){
+  const img=document.getElementById("lbImg");
+  const stage=document.querySelector("#lb .stage");
+  let pan=null, moved=false;
+  img.addEventListener("mousedown", e=>{ if(zoom===0){return;} pan={x:e.clientX,y:e.clientY,l:stage.scrollLeft,t:stage.scrollTop}; moved=false; img.style.cursor="grabbing"; e.preventDefault(); });
+  window.addEventListener("mousemove", e=>{ if(!pan)return; if(Math.abs(e.clientX-pan.x)+Math.abs(e.clientY-pan.y)>3) moved=true; stage.scrollLeft=pan.l-(e.clientX-pan.x); stage.scrollTop=pan.t-(e.clientY-pan.y); });
+  window.addEventListener("mouseup", ()=>{ if(pan){ pan=null; img.style.cursor="grab"; } });
+  img.addEventListener("click", e=>{ if(moved){ moved=false; return; } zoomToggle(); });
+})();
+
+document.addEventListener("keydown",e=>{
+  if(!document.getElementById("lb").classList.contains("open")) return;
+  if(e.key==="Escape") closeLb();
+  else if(e.key==="ArrowRight") step(1);
+  else if(e.key==="ArrowLeft") step(-1);
+  else if(e.key==="+"||e.key==="=") zoomBy(1);
+  else if(e.key==="-"||e.key==="_") zoomBy(-1);
+  else if(e.key==="0") { zoom=0; applyZoom(); }
+});
+
+// ---- language toggle ----
+function setLang(l){
+  lang=l;
+  document.querySelectorAll(".toggle button").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
+  DATA.nodes.forEach(n=> visNodes.update({id:n.id, image:imgFor(n)}));
+  if(document.getElementById("lb").classList.contains("open") && curNode){ openLb(curNode); }
+  if(LANG_URLS[l]){ try{ history.replaceState(null,'', LANG_URLS[l]); }catch(e){} }
+}
+document.querySelectorAll(".toggle button").forEach(b=>{ b.onclick=()=>setLang(b.dataset.lang); });
+
+network.once("afterDrawing",()=>network.fit({animation:false}));
+</script>
+</body></html>

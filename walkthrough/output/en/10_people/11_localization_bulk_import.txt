@@ -6,7 +6,7 @@ NOTIFICATIONS
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 Complaint Hierarchies
-Complaint Types
+Complaint Categories
 Complaints
 Localization
 PEOPLE
@@ -14,7 +14,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 

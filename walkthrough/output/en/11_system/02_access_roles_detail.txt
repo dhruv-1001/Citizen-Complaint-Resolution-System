@@ -12,10 +12,11 @@ Workflows
 Processes
 MDMS Schemas
 Boundaries
+Analytics Providers
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -24,14 +25,14 @@ custom
 EN
 Theme
 Back
-Role: Anonymous User
+Role: Account Admin
 DETAILS
 Code
-ANONYMOUS
+ACCOUNT_ADMIN
 Name
-Anonymous User
+Account Admin
 Description
-Anonymous User to be used in case of no auth
+Bootstrap/tenant-onboarding admin u2014 full Configurator access
 Documentation
 DIGIT DOCUMENTATION
 

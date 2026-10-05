@@ -12,10 +12,11 @@ Workflows
 Processes
 MDMS Schemas
 Boundaries
+Analytics Providers
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -25,12 +26,12 @@ EN
 Theme
 Hide map
 Boundary map
-32 of 34 boundaries with map geometry
+32 of 150 boundaries with map geometry
 +
 −
  Leaflet | © OpenStreetMap contributors
 Boundaries
-60
+31
 Refresh
 Create
 Code
@@ -109,7 +110,7 @@ Ward
 	
 ke
 
-Showing 1-10 of 60
+Showing 1-10 of 31
 
 Rows per page:
 10
@@ -117,7 +118,7 @@ Rows per page:
 50
 100
 Previous
-Page 1 of 6
+Page 1 of 4
 Next
 Documentation
 BOUNDARY MANAGEMENT

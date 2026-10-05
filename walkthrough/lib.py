@@ -23,11 +23,16 @@ USERNAME = os.environ.get("WT_USER", "ADMIN")
 PASSWORD = os.environ.get("WT_PASS", "eGov@123")
 
 CONFIGURATOR = f"{HOST}/configurator"
-EMPLOYEE = f"{HOST}/digit-ui/employee"
+# Tenant-scoped digit-ui deployments serve the employee app under
+# /<slug>/digit-ui/employee; override the whole URL when that applies.
+EMPLOYEE = os.environ.get("WT_EMPLOYEE", f"{HOST}/digit-ui/employee")
+CITIZEN = os.environ.get("WT_CITIZEN", f"{HOST}/digit-ui/citizen")
 
 VIEWPORT = {"width": 1440, "height": 900}
 HERE = Path(__file__).resolve().parent
-OUT = HERE / "output"
+# One output tree per deployment: WT_OUT=output-develop keeps a second capture
+# from overwriting the first.
+OUT = HERE / os.environ.get("WT_OUT", "output")
 
 # ---------------------------------------------------------------- read-only guard
 

@@ -1,0 +1,42 @@
+Ke·8 departments·2 roles
+English
+A
+Home
+COMPLAINTS
+File a Complaint
+Search Complaint
+Dashboard
+Logout
+Home
+/
+File a Complaint
+Complainant Details
+Complainant Phone No.
+*
++254
+Complainant Name
+*
+Complaint Details
+Describe your complaint
+*
+Complaint Category
+*
+Complaint Category*
+QA Test Utilities
+Complaint Subcategory*
+QA Power Fluctuation
+Location Details
+Pin Location
+Click and hold to drop the pin to complaint location. If you are not able to pin the location you can skip the continue for next step.
+ Leaflet | © CARTO © OSM
+Postal Code
+Complaint's Location
+*
+County*
+Bomet
+Sub County*
+Bomet Central
+Ward*
+Chesoen
+Landmark
+SUBMIT

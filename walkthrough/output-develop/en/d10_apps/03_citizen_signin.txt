@@ -1,0 +1,5 @@
+Citizen sign in
+Enter your mobile number to receive a sign-in code.
+Mobile number
++254
+Send OTP

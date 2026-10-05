@@ -1,0 +1,45 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Notification Providers
+
+Delivery accounts. Credentials are stored by the notification service and never shown again. Choose which one each channel uses under Channels.
+
+Sync WhatsApp templates
+Add Provider
+Refresh
+
+Error loading data
+
+Notification Providers request failed (400): {"ResponseInfo":null,"Errors":[{"id":null,"parentId":null,"code":"NB_NOVU_INTEGRATIONS_FAILED","message":"Failed listing Novu integrations: 401 Unauthorized: \"{\"error\":\"Unauthorized\",\"statusCode\":401,\"timestamp\":\"2026-10-05T14:25:06.954Z\",\"path\":\"/v1/integrations\",\"message\":\"API Key not found\",\"ctx\":{\"error\":\"Unauthorized\",\"statusCode\":401}}\"","description":null,"params":null}]}
+
+Try again

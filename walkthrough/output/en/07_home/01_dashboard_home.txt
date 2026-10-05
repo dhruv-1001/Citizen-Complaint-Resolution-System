@@ -10,7 +10,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -20,11 +20,11 @@ EN
 Theme
 DIGIT Management Studio
 
-6
+75
 
 Tenants
 
-33
+42
 
 Departments
 
@@ -32,23 +32,23 @@ Departments
 
 Designations
 
-778
+1195
 
-Complaint Types
+Complaint Categories
 
-321
+500
 
 Employees
 
-60
+31
 
 Boundaries
 
-2257
+4731
 
 Complaints
 
-15492
+17777
 
 Localization Messages
 
@@ -56,7 +56,7 @@ Localization Messages
 
 Users
 
-49
+27
 
 Access Roles
 

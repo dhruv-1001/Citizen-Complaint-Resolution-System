@@ -13,7 +13,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -69,7 +69,7 @@ Active
 
 123456789
 	
-Vinoth
+Rahul Test
 	
 123456789
 	

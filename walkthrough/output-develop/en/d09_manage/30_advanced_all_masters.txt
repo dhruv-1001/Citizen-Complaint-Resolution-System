@@ -1,0 +1,190 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Advanced Entities
+
+Browse and manage all MDMS schema data.
+
+State Info
+
+common-masters.StateInfo
+
+City Modules
+
+tenant.citymodule
+
+ID Formats
+
+common-masters.IdFormat
+
+Business Services
+
+Workflow.BusinessService
+
+Workflow Config
+
+Workflow.BusinessServiceConfig
+
+Workflow Auto Escalation (non-PGR)
+
+Workflow.AutoEscalation
+
+SLA Config
+
+common-masters.wfSlaConfig
+
+Role Actions
+
+ACCESSCONTROL-ROLEACTIONS.roleactions
+
+Roles
+
+ACCESSCONTROL-ROLES.roles
+
+Action Mappings
+
+ACCESSCONTROL-ACTIONS-TEST.actions-test
+
+Encryption Policy
+
+DataSecurity.EncryptionPolicy
+
+Decryption ABAC
+
+DataSecurity.DecryptionABAC
+
+Masking Patterns
+
+DataSecurity.MaskingPatterns
+
+Security Policy
+
+DataSecurity.SecurityPolicy
+
+Inbox Config
+
+INBOX.InboxQueryConfiguration
+
+Deactivation Reasons
+
+egov-hrms.DeactivationReason
+
+Degrees
+
+egov-hrms.Degree
+
+Employment Tests
+
+egov-hrms.EmploymentTest
+
+Specializations
+
+egov-hrms.Specalization
+
+Gender Types
+
+common-masters.GenderType
+
+Employee Status
+
+egov-hrms.EmployeeStatus
+
+Employee Type
+
+egov-hrms.EmployeeType
+
+Cron Jobs
+
+common-masters.CronJobAPIConfig
+
+UI Homepage
+
+common-masters.uiHomePage
+
+Theme Config
+
+common-masters.ThemeConfig
+
+Mobile Number Validation
+
+common-masters.MobileNumberValidation
+
+Tenant Boundary (HRMS)
+
+egov-location.TenantBoundary
+
+Workflow Escalation Ignore (non-PGR)
+
+Workflow.AutoEscalationStatesToIgnore
+
+Workflow BS Master
+
+Workflow.BusinessServiceMasterConfig
+
+PGR UI Constants
+
+RAINMAKER-PGR.UIConstants
+
+PGR Escalation
+
+RAINMAKER-PGR.EscalationConfig
+
+Map Configuration
+
+RAINMAKER-PGR.MapConfig
+
+Notification Events
+
+NOTIFICATIONS.EventCatalogue
+
+Notification Routing
+
+NOTIFICATIONS.Routing
+
+Notification Templates
+
+NOTIFICATIONS.Template
+
+Notification Provider Templates
+
+NOTIFICATIONS.ProviderTemplate
+
+Notification Channels
+
+NOTIFICATIONS.Channel
+
+Legacy (PGR) Notification Routing
+
+RAINMAKER-PGR.NotificationRouting
+
+Legacy (PGR) Notification Templates
+
+RAINMAKER-PGR.NotificationTemplate
+
+Legacy (PGR) Provider Templates
+
+RAINMAKER-PGR.NotificationProviderTemplate
+
+Legacy (PGR) Notification Channels
+
+RAINMAKER-PGR.NotificationChannel

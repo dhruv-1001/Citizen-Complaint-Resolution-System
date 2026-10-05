@@ -1,0 +1,67 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Notification Logs
+0
+
+One row per recipient × channel — SENT means the transport accepted it; DELIVERED needs provider receipts
+
+Refresh
+Channel
+All
+SMS
+Email
+WhatsApp
+No channel (nothing sent)
+Status
+All
+Sent (accepted by transport)
+Delivered
+Bounced
+Failed
+Skipped
+Rejected (bad event)
+Received (dry run)
+Produced by
+All
+Sent as finished message
+Routed by notifications
+Test sends
+All
+Show test sends
+
+Produced by: "Sent as finished message" — the module that raised the event also wrote the words. "Routed by notifications" — the notification service decided who to tell and wrote the words from your templates. Rows with no channel are decisions taken before there was a channel to send on: nothing was sent.
+
+Created
+	Tenant	Reference	Channel	Status	Produced by	Recipient	Template	Provider ref	Attempts	Error
+
+No records found

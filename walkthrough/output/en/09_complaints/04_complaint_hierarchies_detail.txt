@@ -6,7 +6,7 @@ NOTIFICATIONS
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 Complaint Hierarchies
-Complaint Types
+Complaint Categories
 Complaints
 Localization
 PEOPLE
@@ -14,7 +14,7 @@ SYSTEM
 Advanced
 Switch to Onboarding
 
-Super Admin
+Admin
 
 ke
 
@@ -30,9 +30,9 @@ PGR
 Levels
 2
 Total nodes
-2356
-Leaf complaint types
-758
+4016
+Complaint subcategories
+1174
 HIERARCHY LEVELS (DEFINITION)
 CATEGORY
 SUB_TYPE
@@ -177,6 +177,32 @@ PWSUB_aaadhfbjd
 (PwsectorAaadhfbjdPwsubAaadhfbjd)
 leaf · PWD_aaadhfbjd · 48h
 AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aabedjhdc
+(PwauthorityTypeAabedjhdc)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aabedjhdc
+(PwauthorityTypeAabedjhdc_PwmainCategoryAabedjhdc)
+SECTOR
+PWSECTOR_aabedjhdc
+(PwauthorityTypeAabedjhdc_PwmainCategoryAabedjhdc_PwsectorAabedjhdc)
+Sub-Type
+PWSUB_aabedjhdc
+(PwsectorAabedjhdcPwsubAabedjhdc)
+leaf · PWD_aabedjhdc · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aacjffiaa
+(PwauthorityTypeAacjffiaa)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aacjffiaa
+(PwauthorityTypeAacjffiaa_PwmainCategoryAacjffiaa)
+SECTOR
+PWSECTOR_aacjffiaa
+(PwauthorityTypeAacjffiaa_PwmainCategoryAacjffiaa_PwsectorAacjffiaa)
+Sub-Type
+PWSUB_aacjffiaa
+(PwsectorAacjffiaaPwsubAacjffiaa)
+leaf · PWD_aacjffiaa · 48h
+AUTHORITY_TYPE
 PWAUTHORITY_TYPE_aacjiaghj
 (PwauthorityTypeAacjiaghj)
 MAIN_CATEGORY
@@ -203,6 +229,19 @@ PWSUB_aaeighhif
 (PwsectorAaeighhifPwsubAaeighhif)
 leaf · PWD_aaeighhif · 48h
 AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aafgjiahd
+(PwauthorityTypeAafgjiahd)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aafgjiahd
+(PwauthorityTypeAafgjiahd_PwmainCategoryAafgjiahd)
+SECTOR
+PWSECTOR_aafgjiahd
+(PwauthorityTypeAafgjiahd_PwmainCategoryAafgjiahd_PwsectorAafgjiahd)
+Sub-Type
+PWSUB_aafgjiahd
+(PwsectorAafgjiahdPwsubAafgjiahd)
+leaf · PWD_aafgjiahd · 48h
+AUTHORITY_TYPE
 PWAUTHORITY_TYPE_aafifegdd
 (PwauthorityTypeAafifegdd)
 MAIN_CATEGORY
@@ -228,6 +267,58 @@ Sub-Type
 PWSUB_aahadcbbi
 (PwsectorAahadcbbiPwsubAahadcbbi)
 leaf · PWD_aahadcbbi · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aahdahcbf
+(PwauthorityTypeAahdahcbf)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aahdahcbf
+(PwauthorityTypeAahdahcbf_PwmainCategoryAahdahcbf)
+SECTOR
+PWSECTOR_aahdahcbf
+(PwauthorityTypeAahdahcbf_PwmainCategoryAahdahcbf_PwsectorAahdahcbf)
+Sub-Type
+PWSUB_aahdahcbf
+(PwsectorAahdahcbfPwsubAahdahcbf)
+leaf · PWD_aahdahcbf · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aaiabdbcg
+(PwauthorityTypeAaiabdbcg)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aaiabdbcg
+(PwauthorityTypeAaiabdbcg_PwmainCategoryAaiabdbcg)
+SECTOR
+PWSECTOR_aaiabdbcg
+(PwauthorityTypeAaiabdbcg_PwmainCategoryAaiabdbcg_PwsectorAaiabdbcg)
+Sub-Type
+PWSUB_aaiabdbcg
+(PwsectorAaiabdbcgPwsubAaiabdbcg)
+leaf · PWD_aaiabdbcg · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_aaiaecbfd
+(PwauthorityTypeAaiaecbfd)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_aaiaecbfd
+(PwauthorityTypeAaiaecbfd_PwmainCategoryAaiaecbfd)
+SECTOR
+PWSECTOR_aaiaecbfd
+(PwauthorityTypeAaiaecbfd_PwmainCategoryAaiaecbfd_PwsectorAaiaecbfd)
+Sub-Type
+PWSUB_aaiaecbfd
+(PwsectorAaiaecbfdPwsubAaiaecbfd)
+leaf · PWD_aaiaecbfd · 48h
+AUTHORITY_TYPE
+PWAUTHORITY_TYPE_abbcbcejh
+(PwauthorityTypeAbbcbcejh)
+MAIN_CATEGORY
+PWMAIN_CATEGORY_abbcbcejh
+(PwauthorityTypeAbbcbcejh_PwmainCategoryAbbcbcejh)
+SECTOR
+PWSECTOR_abbcbcejh
+(PwauthorityTypeAbbcbcejh_PwmainCategoryAbbcbcejh_PwsectorAbbcbcejh)
+Sub-Type
+PWSUB_abbcbcejh
+(PwsectorAbbcbcejhPwsubAbbcbcejh)
+leaf · PWD_abbcbcejh · 48h
 AUTHORITY_TYPE
 PWAUTHORITY_TYPE_abbfjfijf
 (PwauthorityTypeAbbfjfijf)
@@ -268,106 +359,15 @@ PWSUB_abcggbeij
 (PwsectorAbcggbeijPwsubAbcggbeij)
 leaf · PWD_abcggbeij · 48h
 AUTHORITY_TYPE
-PWAUTHORITY_TYPE_abfbeefee
-(PwauthorityTypeAbfbeefee)
+PWAUTHORITY_TYPE_abehdeeic
+(PwauthorityTypeAbehdeeic)
 MAIN_CATEGORY
-PWMAIN_CATEGORY_abfbeefee
-(PwauthorityTypeAbfbeefee_PwmainCategoryAbfbeefee)
+PWMAIN_CATEGORY_abehdeeic
+(PwauthorityTypeAbehdeeic_PwmainCategoryAbehdeeic)
 SECTOR
-PWSECTOR_abfbeefee
-(PwauthorityTypeAbfbeefee_PwmainCategoryAbfbeefee_PwsectorAbfbeefee)
-Sub-Type
-PWSUB_abfbeefee
-(PwsectorAbfbeefeePwsubAbfbeefee)
-leaf · PWD_abfbeefee · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_abgacjdeb
-(PwauthorityTypeAbgacjdeb)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_abgacjdeb
-(PwauthorityTypeAbgacjdeb_PwmainCategoryAbgacjdeb)
-SECTOR
-PWSECTOR_abgacjdeb
-(PwauthorityTypeAbgacjdeb_PwmainCategoryAbgacjdeb_PwsectorAbgacjdeb)
-Sub-Type
-PWSUB_abgacjdeb
-(PwsectorAbgacjdebPwsubAbgacjdeb)
-leaf · PWD_abgacjdeb · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_abhfjjegg
-(PwauthorityTypeAbhfjjegg)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_abhfjjegg
-(PwauthorityTypeAbhfjjegg_PwmainCategoryAbhfjjegg)
-SECTOR
-PWSECTOR_abhfjjegg
-(PwauthorityTypeAbhfjjegg_PwmainCategoryAbhfjjegg_PwsectorAbhfjjegg)
-Sub-Type
-PWSUB_abhfjjegg
-(PwsectorAbhfjjeggPwsubAbhfjjegg)
-leaf · PWD_abhfjjegg · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_abjddiddi
-(PwauthorityTypeAbjddiddi)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_abjddiddi
-(PwauthorityTypeAbjddiddi_PwmainCategoryAbjddiddi)
-SECTOR
-PWSECTOR_abjddiddi
-(PwauthorityTypeAbjddiddi_PwmainCategoryAbjddiddi_PwsectorAbjddiddi)
-Sub-Type
-PWSUB_abjddiddi
-(PwsectorAbjddiddiPwsubAbjddiddi)
-leaf · PWD_abjddiddi · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_acahfadbg
-(PwauthorityTypeAcahfadbg)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_acahfadbg
-(PwauthorityTypeAcahfadbg_PwmainCategoryAcahfadbg)
-SECTOR
-PWSECTOR_acahfadbg
-(PwauthorityTypeAcahfadbg_PwmainCategoryAcahfadbg_PwsectorAcahfadbg)
-Sub-Type
-PWSUB_acahfadbg
-(PwsectorAcahfadbgPwsubAcahfadbg)
-leaf · PWD_acahfadbg · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_acdifdfef
-(PwauthorityTypeAcdifdfef)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_acdifdfef
-(PwauthorityTypeAcdifdfef_PwmainCategoryAcdifdfef)
-SECTOR
-PWSECTOR_acdifdfef
-(PwauthorityTypeAcdifdfef_PwmainCategoryAcdifdfef_PwsectorAcdifdfef)
-Sub-Type
-PWSUB_acdifdfef
-(PwsectorAcdifdfefPwsubAcdifdfef)
-leaf · PWD_acdifdfef · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_acejbdcgj
-(PwauthorityTypeAcejbdcgj)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_acejbdcgj
-(PwauthorityTypeAcejbdcgj_PwmainCategoryAcejbdcgj)
-SECTOR
-PWSECTOR_acejbdcgj
-(PwauthorityTypeAcejbdcgj_PwmainCategoryAcejbdcgj_PwsectorAcejbdcgj)
-Sub-Type
-PWSUB_acejbdcgj
-(PwsectorAcejbdcgjPwsubAcejbdcgj)
-leaf · PWD_acejbdcgj · 48h
-AUTHORITY_TYPE
-PWAUTHORITY_TYPE_acffgadfi
-(PwauthorityTypeAcffgadfi)
-MAIN_CATEGORY
-PWMAIN_CATEGORY_acffgadfi
-(PwauthorityTypeAcffgadfi_PwmainCategoryAcffgadfi)
-SECTOR
-PWSECTOR_acffgadfi
-(PwauthorityTypeAcffgadfi_PwmainCategoryAcffgadfi_PwsectorAcffgadfi)
-Loading more… (100 of 2356)
+PWSECTOR_abehdeeic
+(PwauthorityTypeAbehdeeic_PwmainCategoryAbehdeeic_PwsectorAbehdeeic)
+Loading more… (100 of 4016)
 Documentation
 DIGIT DOCUMENTATION
 

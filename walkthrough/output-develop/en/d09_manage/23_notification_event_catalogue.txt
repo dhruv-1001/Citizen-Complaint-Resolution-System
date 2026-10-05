@@ -1,0 +1,47 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Read-only
+
+Events are declared by the module that produces them — PGR's rows are generated from its workflow at seed time — so they are shown here but not edited here. A new event arrives with the module that fires it.
+
+Notification Events
+
+Schema: NOTIFICATIONS.EventCatalogue
+
+Refresh
+
+Error loading data
+
+AccessDeniedException
+
+Try again

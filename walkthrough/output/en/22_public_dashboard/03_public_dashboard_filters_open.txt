@@ -1,0 +1,110 @@
+Complaint Resolution Operations
+
+All wards · 05/09/2026 – 05/10/2026
+
+PUBLIC VIEW
++ Add KPI
+Reset
+Export
+Filters
+→
+All wards
+All types
+Clear
+NEW COMPLAINTS CREATED
+284
+Updated 4 min ago
+RESOLUTION RATE
+14.8%
+Updated 4 min ago
+REOPEN RATE
+0.0%
+Reopened ÷ resolved
+Updated 4 min ago
+OPEN COMPLAINTS
+3,585
+Updated 4 min ago
+RESOLVED COMPLAINTS
+42
+Updated 4 min ago
+Complaints by type
+
+Complaints filed, by type
+
+1131
+1131
+331
+331
+139
+139
+125
+125
+25
+25
+21
+9
+2
+1
+1
+1
+Staff Misconduct
+Absenteeism / Staffshortage affectingdelivery
+HealthWorkers
+QA Test Utilities
+PWTESTESCALATION
+Garbage
+Illegalconstructions
+WaterPipes
+RoadsPublicWorks
+DrainageFlooding
+PharmacyIssues
+1200
+900
+600
+300
+0
+Updated 4 min ago
+Complaints over time
+Created
+Resolved
+Resolution rate
+SLA compliance rate
+200
+150
+100
+50
+0
+Sat
+Mon
+Wed
+Fri
+Sun
+Tue
+Thu
+Sat
+Mon
+Wed
+Fri
+Sun
+Tue
+Thu
+Sat
+Mon
+Updated 4 min ago
+Department-wise resolution rate
+
+Resolved ÷ filed per department
+
+25.1%
+4.8%
+0%
+0%
+0%
+0%
+Water, Sanitation, Environment, NaturalResources & Climate
+Environment
+Public Works
+Medical Services
+Public Works Department
+Administration, Public Service & SpecialPrograms
+Updated 4 min ago
