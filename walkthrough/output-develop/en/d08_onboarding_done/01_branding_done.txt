@@ -1,64 +1,50 @@
 Skip to main content
 
-DIGIT
+Cidade de Maputo
 
 Complaints Management
 
-MAIN
-Dashboard
-Public Dashboard
-NOTIFICATIONS
-TENANT MANAGEMENT
-COMPLAINT MANAGEMENT
-PEOPLE
-SYSTEM
-Advanced
-Switch to Onboarding
+Let's set up your organisation
+5 of 5 completed
+ACCOUNT
+Branding
+, done
+ORGANISATION
+Geography
+, done
+Departments
+, done
+Employees
+, done
+COMPLAINTS
+Complaints Template
+, done
+Go to Management
 Powered by
-Management Mode
-custom
+Complaint Management System Onboarding
 Help
-EN
 Theme
 W
-DIGIT Management Studio
 
-...
+ORGANISATION SETUP
 
-Tenants
+Completed
+Branding
 
-...
+Your logo, name and colour appear across your workspace and on the services citizens and employees experience.
 
-Departments
+Organisation logo
 
-...
+Logo uploaded.
 
-Designations
+Replace
+Remove
+Organisation name
 
-...
+Change this name in Workspace settings.
 
-Complaint Categories
+Brand Theme
 
-7
+Applied across the services citizens and employees use.
 
-Employees
-
-80
-
-Boundaries
-
-...
-
-Complaints
-
-3490
-
-Localization Messages
-
-0
-
-Users
-
-27
-
-Access Roles
+Save and continueSkip branding

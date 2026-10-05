@@ -9,12 +9,11 @@ Dashboard
 Public Dashboard
 NOTIFICATIONS
 TENANT MANAGEMENT
-Tenants
-Departments
-Designations
-Hierarchies
-Map Configuration
 COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+Localization
 PEOPLE
 SYSTEM
 Advanced
@@ -26,25 +25,16 @@ Help
 EN
 Theme
 W
-Tenants
+Complaint Hierarchies
 1
 Refresh
-Code
-	
-Name
-	
-City
-	
-District
+Create
+Hierarchy Type
+	Levels
 
-
-cidadedemaputo
+PGR
 	
-Cidade de Maputo
-	
-Cidade de Maputo
-	
-—
+COMPLAINT_TYPE → SUB_TYPE (leaf)
 
 Showing 1-1 of 1
 

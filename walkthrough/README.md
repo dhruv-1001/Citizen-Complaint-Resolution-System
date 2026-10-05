@@ -192,6 +192,8 @@ anonymous public dashboard. The complaint-form map needs a CARTO key.
 **develop deployment** — sign-in is Keycloak-only; self-serve sign-up and the five onboarding steps work
 end to end, with rough edges (a provisioning read-after-write race, an opaque
 `WORKSPACE_PROBE_INCOMPLETE` that really means "one GRO per department", "Email (optional)" that is
-required, an identity session that expires under you). The new workspace's founder is then refused
-most of the management console (403), and the employee app is blank because the vhost 404s its own
-assets. Turbopass was deployed on the box for this capture.
+required, an identity session that expires under you). The founder's console permissions were
+missing from the sign-up seed — fixed upstream (#2269, open) and patched on the server for this
+workspace, so the console is captured clean. Still broken there: the employee app (the vhost 404s
+its own assets) and the notification provider screens (novu-bridge's Novu key is rejected).
+Turbopass was deployed on the box for this capture.

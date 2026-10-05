@@ -26,75 +26,49 @@ Help
 EN
 Theme
 W
-Departments
-5
-Export
-Bulk import
+Map Configuration
+1
+
+Schema: RAINMAKER-PGR.MapConfig
+
 Refresh
 Create
-Status
-All
-Active
-Inactive
+Add filter
 Code
 	
-Name
+Max Zoom
 	
-Status
+Min Zoom
 	
-Description
+Tile Url
+	
+Default Zoom
+	
+Map Provider
+	
+Base Map Theme
+	
+Tile Attribution
 	Actions
 
-MARKETS_AND_FAIRS
+DEFAULT
 	
-Markets and Fairs
+--
 	
-Active
+--
+	
+--
+	
+10
+	
+Select...
+	
+Select...
 	
 --
 	
 
-
-ONBOARDING_ADMIN
-	
-Administration
-	
-Active
-	
---
-	
-
-
-PARKS_AND_PUBLIC_SPACES
-	
-Parks and Public Spaces
-	
-Active
-	
---
-	
-
-
-ROADS_AND_DRAINAGE
-	
-Roads and Drainage
-	
-Active
-	
---
-	
-
-
-SOLID_WASTE_AND_SANITATION
-	
-Solid Waste and Sanitation
-	
-Active
-	
---
-	
-
-Showing 1-5 of 5
+Showing 1-1 of 1
 
 Rows per page:
 10

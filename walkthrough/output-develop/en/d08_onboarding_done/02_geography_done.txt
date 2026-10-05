@@ -1,64 +1,62 @@
 Skip to main content
 
-DIGIT
+Cidade de Maputo
 
 Complaints Management
 
-MAIN
-Dashboard
-Public Dashboard
-NOTIFICATIONS
-TENANT MANAGEMENT
-COMPLAINT MANAGEMENT
-PEOPLE
-SYSTEM
-Advanced
-Switch to Onboarding
+Let's set up your organisation
+5 of 5 completed
+ACCOUNT
+Branding
+, done
+ORGANISATION
+Geography
+, done
+Departments
+, done
+Employees
+, done
+COMPLAINTS
+Complaints Template
+, done
+Go to Management
 Powered by
-Management Mode
-custom
+Complaint Management System Onboarding
 Help
-EN
 Theme
 W
-DIGIT Management Studio
 
-...
+YOUR ORGANISATION
 
-Tenants
+Completed
+Geography
 
-...
+The boundary hierarchies your complaint services work in. Bring them in from one of three sources.
 
-Departments
+How do you want to bring in your geography?
+Preconfigured
 
-...
+Start from a boundary set we already hold for your country.
 
-Designations
+Coming soon
+Fetch boundaries
 
-...
+Pull administrative boundaries, with map polygons, from the official sets (OCHA COD-AB, geoBoundaries) or OpenStreetMap.
 
-Complaint Categories
+Search boundaries
+Upload from Excel
 
-7
+Bring in your own levels and areas from a spreadsheet.
 
-Employees
+Upload a file
 
-80
+1 hierarchy
 
-Boundaries
+ADMIN
 
-...
+1 cidade · 7 distrito municipals · 7 posto administrativos · 64 bairros
 
-Complaints
+Cidade → Distrito Municipal → Posto Administrativo → Bairro
 
-3490
-
-Localization Messages
-
-0
-
-Users
-
-27
-
-Access Roles
+Back
+Save and continue

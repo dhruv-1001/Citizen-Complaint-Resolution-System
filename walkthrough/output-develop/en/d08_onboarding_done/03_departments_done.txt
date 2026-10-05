@@ -1,64 +1,75 @@
 Skip to main content
 
-DIGIT
+Cidade de Maputo
 
 Complaints Management
 
-MAIN
-Dashboard
-Public Dashboard
-NOTIFICATIONS
-TENANT MANAGEMENT
-COMPLAINT MANAGEMENT
-PEOPLE
-SYSTEM
-Advanced
-Switch to Onboarding
+Let's set up your organisation
+5 of 5 completed
+ACCOUNT
+Branding
+, done
+ORGANISATION
+Geography
+, done
+Departments
+, done
+Employees
+, done
+COMPLAINTS
+Complaints Template
+, done
+Go to Management
 Powered by
-Management Mode
-custom
+Complaint Management System Onboarding
 Help
-EN
 Theme
 W
-DIGIT Management Studio
 
-...
+YOUR ORGANISATION
 
-Tenants
-
-...
-
+Completed
 Departments
 
-...
+The departments complaints get routed to, and the designations your employees hold.
 
+Departments
+5
+Upload a file
+Add department
+CODE	DEPARTMENT	
+ACTIONS
+
+ONBOARDING_ADMIN	
+Administration
+	EditRemove
+SOLID_WASTE_AND_SANITATION	
+Solid Waste and Sanitation
+	EditRemove
+ROADS_AND_DRAINAGE	
+Roads and Drainage
+	EditRemove
+MARKETS_AND_FAIRS	
+Markets and Fairs
+	EditRemove
+PARKS_AND_PUBLIC_SPACES	
+Parks and Public Spaces
+	EditRemove
 Designations
+3
+Upload a file
+Add designation
+CODE	DESIGNATION	DEPARTMENTS	
+ACTIONS
 
-...
-
-Complaint Categories
-
-7
-
-Employees
-
-80
-
-Boundaries
-
-...
-
-Complaints
-
-3490
-
-Localization Messages
-
-0
-
-Users
-
-27
-
-Access Roles
+ONBOARDING_FOUNDER	
+Workspace administrator
+	—	EditRemove
+GRIEVANCE_REDRESSAL_OFFICER	
+Grievance Redressal Officer
+	Solid Waste and Sanitation, Roads and Drainage, Markets and Fairs, Parks and Public Spaces	EditRemove
+FIELD_OFFICER	
+Field Officer
+	Solid Waste and Sanitation, Roads and Drainage, Markets and Fairs, Parks and Public Spaces	EditRemove
+Back
+Save and continue

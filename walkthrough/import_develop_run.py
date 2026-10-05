@@ -59,9 +59,6 @@ RUN = {
         ("s21_emp_form_02_employee_form_blank.png", "employee_form_blank"),
         ("s22_emp_add_01_employee_form_filled.png", "employee_form_filled"),
         ("s22_emp_add_02_employees_list.png", "employees_list"),
-        ("s29_emp_gros_01_employees_list.png", "invite_failed_identity_session_expired"),
-        ("s31_reset_request_03_reset_password_sent.png", "password_setup_link_sent"),
-        ("s32_set_password_02_kc_new_password_form.png", "keycloak_set_password"),
         ("s33_relogin_finish_03_employees_list.png", "employees_one_gro_per_department"),
     ],
     "d07_complaints": [
@@ -69,8 +66,6 @@ RUN = {
         ("s24_cat_form_01_complaints_upload.png", "complaints_upload"),
         ("s25_cat_add_01_category_form_filled.png", "add_category"),
         ("s27_finish_01_complaints_sla_3_days.png", "four_categories_sla_3_days"),
-        ("s28_finish_dbg_01_finish_409.png", "finish_refused_workspace_probe_incomplete"),
-        ("s33_relogin_finish_04_after_finish.png", "finished_lands_in_management_access_denied"),
     ],
 }
 

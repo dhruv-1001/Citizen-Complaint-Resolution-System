@@ -1,0 +1,200 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Complaint Categories
+14
+Refresh
+Create
+Department
+All
+Administration
+Markets and Fairs
+Parks and Public Spaces
+Roads and Drainage
+Solid Waste and Sanitation
+Parent
+	
+Service Code
+	
+Name
+	
+Department
+	
+SLA (hrs)
+	
+Status
+	Actions
+
+GarbageAndSanitation
+	
+GarbageAndSanitationBlockedPublicToilet
+	
+Blocked public toilet
+	
+Solid Waste and Sanitation
+	
+72
+	
+Active
+	
+
+
+GarbageAndSanitation
+	
+GarbageAndSanitationGarbageNotCollected
+	
+Garbage not collected
+	
+Solid Waste and Sanitation
+	
+72
+	
+Active
+	
+
+
+GarbageAndSanitation
+	
+GarbageAndSanitationIllegalDumping
+	
+Illegal dumping
+	
+Solid Waste and Sanitation
+	
+72
+	
+Active
+	
+
+
+GarbageAndSanitation
+	
+GarbageAndSanitationOverflowingContainer
+	
+Overflowing container
+	
+Solid Waste and Sanitation
+	
+72
+	
+Active
+	
+
+
+Markets
+	
+MarketsDamagedMarketInfrastructure
+	
+Damaged market infrastructure
+	
+Markets and Fairs
+	
+72
+	
+Active
+	
+
+
+Markets
+	
+MarketsIllegalStreetVending
+	
+Illegal street vending
+	
+Markets and Fairs
+	
+72
+	
+Active
+	
+
+
+Markets
+	
+MarketsUnhygienicMarketStall
+	
+Unhygienic market stall
+	
+Markets and Fairs
+	
+72
+	
+Active
+	
+
+
+ParksAndPublicSpaces
+	
+ParksAndPublicSpacesBrokenBenchOrPlayground
+	
+Broken bench or playground
+	
+Parks and Public Spaces
+	
+72
+	
+Active
+	
+
+
+ParksAndPublicSpaces
+	
+ParksAndPublicSpacesFallenTree
+	
+Fallen tree
+	
+Parks and Public Spaces
+	
+72
+	
+Active
+	
+
+
+ParksAndPublicSpaces
+	
+ParksAndPublicSpacesOvergrownGrass
+	
+Overgrown grass
+	
+Parks and Public Spaces
+	
+72
+	
+Active
+	
+
+Showing 1-10 of 14
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 2
+Next

@@ -64,7 +64,10 @@ async def install_readonly_guard(context) -> None:
         req = route.request
         url = req.url
         low = url.lower()
-        if any(a in low for a in ALLOW):
+        # GETs never write. Without this, the `filestore/v1/files` marker (meant
+        # for uploads) also blocked `GET /filestore/v1/files/id?…` — the tenant
+        # logo — so captured headers showed a broken image.
+        if req.method == "GET" or any(a in low for a in ALLOW):
             await route.continue_()
             return
         if req.method in WRITE_METHODS or any(m in low for m in WRITE_MARKERS):

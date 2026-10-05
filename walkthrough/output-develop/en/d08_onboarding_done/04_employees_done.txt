@@ -1,64 +1,114 @@
 Skip to main content
 
-DIGIT
+Cidade de Maputo
 
 Complaints Management
 
-MAIN
-Dashboard
-Public Dashboard
-NOTIFICATIONS
-TENANT MANAGEMENT
-COMPLAINT MANAGEMENT
-PEOPLE
-SYSTEM
-Advanced
-Switch to Onboarding
+Let's set up your organisation
+5 of 5 completed
+ACCOUNT
+Branding
+, done
+ORGANISATION
+Geography
+, done
+Departments
+, done
+Employees
+, done
+COMPLAINTS
+Complaints Template
+, done
+Go to Management
 Powered by
-Management Mode
-custom
+Complaint Management System Onboarding
 Help
-EN
 Theme
 W
-DIGIT Management Studio
 
-...
+YOUR ORGANISATION
 
-Tenants
-
-...
-
-Departments
-
-...
-
-Designations
-
-...
-
-Complaint Categories
-
-7
-
+Completed
 Employees
 
-80
+The people who will use your complaint system.
 
-Boundaries
+Employees
+7
+Upload a file
+Add employee
+CODE	NAME	CONTACT	DEPARTMENT	SYSTEM ROLES	JURISDICTIONS	
+ACTIONS
 
-...
-
-Complaints
-
-3490
-
-Localization Messages
-
-0
-
-Users
-
-27
-
-Access Roles
+CMM-LME-001	
+Tomás Cossa
+CMM-LME-001
+	
+841000012
+tomas.cossa@example.com
+	
+Solid Waste and Sanitation
+Field Officer
+	EMPLOYEE, PGR_LME	Cidade de Maputo, KaMpfumo	Remove
+FOUNDER_140e7f6a6da34b4ebc7deef261ed9939	
+Walkthrough Maputo(you)
+FOUNDER_140e7f6a6da34b4ebc7deef261ed9939
+	
+841000001
+walkthrough.maputo@example.com
+	
+Administration
+Workspace administrator
+	EMPLOYEE, LOC_ADMIN, HRMS_ADMIN, MDMS_ADMIN, SUPERUSER, WORKFLOW_ADMIN, ACCOUNT_ADMIN, INTERNAL_MICROSERVICE_ROLE	cidadedemaputo	
+CMM-GRO-001	
+Helena Machava
+CMM-GRO-001
+	
+841000011
+helena.machava@example.com
+	
+Solid Waste and Sanitation
+Grievance Redressal Officer
+	EMPLOYEE, DGRO, GRO	Cidade de Maputo	Remove
+CMM-GRO-002	
+Armando Sitoe
+CMM-GRO-002
+	
+841000014
+armando.sitoe@example.com
+	
+Roads and Drainage
+Grievance Redressal Officer
+	EMPLOYEE, DGRO, GRO	Cidade de Maputo	Remove
+CMM-LME-002	
+Lúcia Nhantumbo
+CMM-LME-002
+	
+841000013
+lucia.nhantumbo@example.com
+	
+Roads and Drainage
+Field Officer
+	EMPLOYEE, PGR_LME	Cidade de Maputo, Nhlamankulo	Remove
+CMM-GRO-003	
+Celeste Mondlane
+CMM-GRO-003
+	
+841000015
+celeste.mondlane@example.com
+	
+Markets and Fairs
+Grievance Redressal Officer
+	EMPLOYEE, DGRO, GRO	Cidade de Maputo	Remove
+CMM-GRO-004	
+Jaime Chissano
+CMM-GRO-004
+	
+841000016
+jaime.chissano@example.com
+	
+Parks and Public Spaces
+Grievance Redressal Officer
+	EMPLOYEE, DGRO, GRO	Cidade de Maputo	Remove
+Back
+Save and continue

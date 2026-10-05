@@ -8,6 +8,15 @@ MAIN
 Dashboard
 Public Dashboard
 NOTIFICATIONS
+Providers
+Channels
+Configure
+Events
+Templates
+Routing
+Provider Templates (WhatsApp)
+Logs
+User Preferences
 TENANT MANAGEMENT
 COMPLAINT MANAGEMENT
 PEOPLE
@@ -21,44 +30,12 @@ Help
 EN
 Theme
 W
-DIGIT Management Studio
-
-1
-
-Tenants
-
-5
-
-Departments
-
-3
-
-Designations
-
-14
-
-Complaint Categories
-
-7
-
-Employees
-
-80
-
-Boundaries
-
+Notification Templates
 0
 
-Complaints
+Schema: NOTIFICATIONS.Template
 
-3490
+Refresh
+ID
 
-Localization Messages
-
-0
-
-Users
-
-27
-
-Access Roles
+No records found

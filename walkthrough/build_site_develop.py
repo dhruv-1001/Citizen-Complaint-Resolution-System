@@ -24,7 +24,7 @@ FLOWS = [
     ("d07_complaints",      "Onboarding · 5 Complaints Template"),
     ("d08_onboarding_done", "Onboarding · finished"),
     ("d09_manage",          "Management console · as the new founder"),
-    ("d10_apps",            "Employee & citizen apps"),
+    ("d10_apps",            "Citizen app"),
 ]
 
 NODES = [
@@ -46,7 +46,6 @@ NODES = [
     ("cats",      "5 · Complaints Template",         4, "onboard"),
     ("done",      "Onboarding finished",             5, "onboard"),
     ("manage",    "Management console",              6, "manage"),
-    ("emp_ui",    "Employee app (blank)",            0, "apps"),
     ("citizen",   "Citizen /citizen",                0, "apps"),
 ]
 
@@ -65,7 +64,7 @@ EDGES = [
 GROUP_COLOR = {"auth": "#d8973c", "signup": "#e0672b", "onboard": "#8b5cf6",
                "manage": "#2f6fdb", "apps": "#3fae6b"}
 LEGEND = [("Sign in", "#d8973c"), ("Sign up", "#e0672b"), ("Onboarding", "#8b5cf6"),
-          ("Management console", "#2f6fdb"), ("Employee & citizen apps", "#3fae6b")]
+          ("Management console", "#2f6fdb"), ("Citizen app", "#3fae6b")]
 
 CAPTIONS = {
     "landing": "/configurator/ — a single Log in button; sign-in lives in Keycloak",
@@ -86,7 +85,6 @@ CAPTIONS = {
     "cats": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO",
     "done": "Each step after Finish setup",
     "manage": "Every console route as the founder — many API calls refused (403)",
-    "emp_ui": "/kd/digit-ui/employee — blank: its assets 404 on this vhost",
     "citizen": "/citizen — digit-ui-v2 sign-in",
 }
 
@@ -105,8 +103,7 @@ MARKERS = [
     ("d05_departments", "", "depts"), ("d06_employees", "", "emps"),
     ("d07_complaints", "finished_lands", "manage"), ("d07_complaints", "", "cats"),
     ("d08_onboarding_done", "", "done"), ("d09_manage", "", "manage"),
-    ("d10_apps", "employee_ui", "emp_ui"), ("d10_apps", "citizen", "citizen"),
-    ("d10_apps", "public_dashboard", "citizen"),
+    ("d10_apps", "citizen", "citizen"),
 ]
 
 

@@ -1,64 +1,99 @@
 Skip to main content
 
-DIGIT
+Cidade de Maputo
 
 Complaints Management
 
-MAIN
-Dashboard
-Public Dashboard
-NOTIFICATIONS
-TENANT MANAGEMENT
-COMPLAINT MANAGEMENT
-PEOPLE
-SYSTEM
-Advanced
-Switch to Onboarding
+Let's set up your organisation
+5 of 5 completed
+ACCOUNT
+Branding
+, done
+ORGANISATION
+Geography
+, done
+Departments
+, done
+Employees
+, done
+COMPLAINTS
+Complaints Template
+, done
+Go to Management
 Powered by
-Management Mode
-custom
+Complaint Management System Onboarding
 Help
-EN
 Theme
 W
-DIGIT Management Studio
 
-...
+COMPLAINTS
 
-Tenants
+Completed
+Complaints Template
 
-...
+Set up the kinds of complaints people can raise, which department handles each, and how long they should take to resolve.
 
-Departments
+Complaint categories
 
-...
+4
 
-Designations
+Complaint subcategories
 
-...
+14
 
-Complaint Categories
+Complaint categories
+Add complaint category
 
-7
+Garbage and Sanitation
 
-Employees
+Handled by Solid Waste and Sanitation
 
-80
+Edit
+Remove
+Garbage not collected
+Overflowing container
+Illegal dumping
+Blocked public toilet
 
-Boundaries
+Roads and Drainage
 
-...
+Handled by Roads and Drainage
 
-Complaints
+Edit
+Remove
+Pothole
+Blocked drain
+Flooded street
+Damaged sidewalk
 
-3490
+Markets
 
-Localization Messages
+Handled by Markets and Fairs
 
-0
+Edit
+Remove
+Unhygienic market stall
+Illegal street vending
+Damaged market infrastructure
 
-Users
+Parks and Public Spaces
 
-27
+Handled by Parks and Public Spaces
 
-Access Roles
+Edit
+Remove
+Fallen tree
+Broken bench or playground
+Overgrown grass
+How much time should a complaint have to be resolved?
+
+This is your own target, not a legal SLA. Complaints past it show as overdue. It applies to every category.
+
+1 day
+3 days
+1 week
+2 weeks
+or
+hours
+Back
+Finish setup

@@ -1,0 +1,62 @@
+Skip to main content
+
+DIGIT
+
+Complaints Management
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Switch to Onboarding
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Complaints
+0
+Refresh
+Create
+Status
+All
+Pending Assignment
+Pending Reassignment
+Pending at LME
+Pending at Supervisor (legacy)
+Resolved
+Resolved by Supervisor (legacy)
+Rejected
+Closed (after resolution)
+Closed (after rejection)
+Cancelled
+Department
+All
+Administration
+Markets and Fairs
+Parks and Public Spaces
+Roads and Drainage
+Solid Waste and Sanitation
+Add filter
+Request ID
+	
+Subcategory
+	Department	
+Description
+	
+Status
+	Citizen	Locality	
+Created
+
+No records found

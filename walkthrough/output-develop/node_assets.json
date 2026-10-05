@@ -108,10 +108,7 @@
       "en/d06_employees/02_employees_upload.png",
       "en/d06_employees/03_employee_form_blank.png",
       "en/d06_employees/05_employees_list.png",
-      "en/d06_employees/06_invite_failed_identity_session_expired.png",
-      "en/d06_employees/07_password_setup_link_sent.png",
-      "en/d06_employees/08_keycloak_set_password.png",
-      "en/d06_employees/09_employees_one_gro_per_department.png"
+      "en/d06_employees/06_employees_one_gro_per_department.png"
     ],
     "caption": "Employees \u2014 one GRO per complaint department"
   },
@@ -120,46 +117,9 @@
       "en/d07_complaints/01_complaints_landing.png",
       "en/d07_complaints/02_complaints_upload.png",
       "en/d07_complaints/03_add_category.png",
-      "en/d07_complaints/04_four_categories_sla_3_days.png",
-      "en/d07_complaints/05_finish_refused_workspace_probe_incomplete.png"
+      "en/d07_complaints/04_four_categories_sla_3_days.png"
     ],
     "caption": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO"
-  },
-  "manage": {
-    "en": [
-      "en/d07_complaints/06_finished_lands_in_management_access_denied.png",
-      "en/d09_manage/01_dashboard_home.png",
-      "en/d09_manage/02_public_dashboard.png",
-      "en/d09_manage/03_tenants.png",
-      "en/d09_manage/04_departments.png",
-      "en/d09_manage/05_designations.png",
-      "en/d09_manage/06_boundary_hierarchies.png",
-      "en/d09_manage/07_boundaries.png",
-      "en/d09_manage/08_map_configuration.png",
-      "en/d09_manage/09_complaints.png",
-      "en/d09_manage/10_complaint_types.png",
-      "en/d09_manage/11_complaint_hierarchies.png",
-      "en/d09_manage/12_localization.png",
-      "en/d09_manage/13_employees.png",
-      "en/d09_manage/14_org_chart.png",
-      "en/d09_manage/15_users.png",
-      "en/d09_manage/16_access_roles.png",
-      "en/d09_manage/17_workflows.png",
-      "en/d09_manage/18_processes.png",
-      "en/d09_manage/19_mdms_schemas.png",
-      "en/d09_manage/20_analytics_providers.png",
-      "en/d09_manage/21_notification_configure.png",
-      "en/d09_manage/22_notification_channels.png",
-      "en/d09_manage/23_notification_event_catalogue.png",
-      "en/d09_manage/24_notification_routing.png",
-      "en/d09_manage/25_notification_templates.png",
-      "en/d09_manage/26_notification_provider_templates.png",
-      "en/d09_manage/27_notification_providers.png",
-      "en/d09_manage/28_notification_logs.png",
-      "en/d09_manage/29_notification_preferences.png",
-      "en/d09_manage/30_advanced_all_masters.png"
-    ],
-    "caption": "Every console route as the founder \u2014 many API calls refused (403)"
   },
   "done": {
     "en": [
@@ -171,17 +131,40 @@
     ],
     "caption": "Each step after Finish setup"
   },
-  "emp_ui": {
+  "manage": {
     "en": [
-      "en/d10_apps/01_employee_ui_tenant_slug.png",
-      "en/d10_apps/02_employee_ui_bare_path.png"
+      "en/d09_manage/01_dashboard_home.png",
+      "en/d09_manage/02_public_dashboard.png",
+      "en/d09_manage/03_tenants.png",
+      "en/d09_manage/04_departments.png",
+      "en/d09_manage/05_designations.png",
+      "en/d09_manage/06_boundaries.png",
+      "en/d09_manage/07_map_configuration.png",
+      "en/d09_manage/08_complaints.png",
+      "en/d09_manage/09_complaint_types.png",
+      "en/d09_manage/10_complaint_hierarchies.png",
+      "en/d09_manage/11_localization.png",
+      "en/d09_manage/12_employees.png",
+      "en/d09_manage/13_org_chart.png",
+      "en/d09_manage/14_users.png",
+      "en/d09_manage/15_access_roles.png",
+      "en/d09_manage/16_workflows.png",
+      "en/d09_manage/17_processes.png",
+      "en/d09_manage/18_mdms_schemas.png",
+      "en/d09_manage/19_analytics_providers.png",
+      "en/d09_manage/20_notification_event_catalogue.png",
+      "en/d09_manage/21_notification_routing.png",
+      "en/d09_manage/22_notification_templates.png",
+      "en/d09_manage/23_notification_provider_templates.png",
+      "en/d09_manage/24_notification_logs.png",
+      "en/d09_manage/25_notification_preferences.png",
+      "en/d09_manage/26_advanced_all_masters.png"
     ],
-    "caption": "/kd/digit-ui/employee \u2014 blank: its assets 404 on this vhost"
+    "caption": "Every console route as the founder \u2014 many API calls refused (403)"
   },
   "citizen": {
     "en": [
-      "en/d10_apps/03_citizen_signin.png",
-      "en/d10_apps/04_public_dashboard_url.png"
+      "en/d10_apps/01_citizen_signin.png"
     ],
     "caption": "/citizen \u2014 digit-ui-v2 sign-in"
   }
