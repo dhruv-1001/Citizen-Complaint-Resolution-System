@@ -91,6 +91,15 @@
     ],
     "caption": "4 COD levels, 79 areas, named Cidade \u2192 Distrito Municipal \u2192 Posto Administrativo \u2192 Bairro"
   },
+  "geo_preconf": {
+    "en": [
+      "en/d04b_preconfigured/01_geography_preconfigured_card.png",
+      "en/d04b_preconfigured/02_preconfigured_levels.png",
+      "en/d04b_preconfigured/03_per_level_confidence.png",
+      "en/d04b_preconfigured/04_levels_named.png"
+    ],
+    "caption": "Preconfigured: the country's official set with per-level confidence, no search"
+  },
   "depts": {
     "en": [
       "en/d05_departments/05_departments_filled.png",

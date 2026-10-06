@@ -5,7 +5,7 @@ DIGIT configurator: Keycloak sign-in, self-serve sign-up, the five-step onboardi
 **Cidade de Maputo** with OCHA COD-AB boundaries, and the management console as the new workspace's
 founder sees it; plus the employee and citizen apps.
 
-**74 screens · 10 flows · captured 2026-10-05.** Unlike the bomet walkthrough this one
+**78 screens · 11 flows · captured 2026-10-05.** Unlike the bomet walkthrough this one
 **writes**: the sign-up and the onboarding steps created a throwaway workspace (authorised for this
 capture; see [What was changed on the server](#9-what-was-changed-on-the-server-for-this-capture)).
 Everything else was captured read-only.
@@ -21,6 +21,7 @@ is in [`digit-ui-walkthrough.md`](digit-ui-walkthrough.md).
 - [Sign up · a new workspace](#sign-up--a-new-workspace)
 - [Onboarding · 1 Branding](#onboarding--1-branding)
 - [Onboarding · 2 Geography](#onboarding--2-geography)
+- [Onboarding · 2b Geography — Preconfigured](#onboarding--2b-geography--preconfigured)
 - [Onboarding · 3 Departments](#onboarding--3-departments)
 - [Onboarding · 4 Employees](#onboarding--4-employees)
 - [Onboarding · 5 Complaints Template](#onboarding--5-complaints-template)
@@ -160,13 +161,37 @@ For comparison, OpenStreetMap (bomet's Overpass path) returns three levels for t
 
 ![All four levels named; Create Hierarchy & Boundaries writes](../walkthrough/output-develop/en/d04_geography/06_levels_named.png)
 
-**79 boundaries created — the message says *from OSM data* though the source was COD-AB**
+**Boundaries created — 2,342 areas, restyled to match Geography**
 
-![79 boundaries created — the message says from OSM data though the source was COD-AB](../walkthrough/output-develop/en/d04_geography/07_boundaries_created.png)
+![Boundaries created — 2,342 areas, restyled to match Geography](../walkthrough/output-develop/en/d04_geography/07_boundaries_created.png)
 
 **Back on Geography: one hierarchy, *1 cidade · 7 distrito municipals · 7 posto administrativos · 64 bairros* (English plurals on Portuguese names)**
 
 ![Back on Geography: one hierarchy, 1 cidade · 7 distrito municipals · 7 posto administrativos · 64 bairros (English plurals on Portuguese names)](../walkthrough/output-develop/en/d04_geography/08_geography_with_hierarchy.png)
+
+---
+
+## Onboarding · 2b Geography — Preconfigured
+
+The **Preconfigured** source (PR #2311, deployed on this server on 2026-10-06): instead of searching, the card already knows the workspace's country — from the tenant record, else the founder's dial code (+258 → Mozambique) — and offers that country's official boundary set with a plain-language confidence line. *Confirmed* means a second, independently drawn set (here geoBoundaries) has nearly the same areas; *one source only* means a level could not be checked, not that it is wrong.
+
+**Use these boundaries** opens the level screen on the whole country, no search needed: 5 levels, 2,342 areas, every one nested in the level above, each level marked with how well it was confirmed. These screens are from the second workspace, *Conselho Municipal de Maputo*, so the first one did not get a second hierarchy.
+
+**Geography with *Preconfigured* enabled: Mozambique's official set, its levels, and how well each was confirmed**
+
+![Geography with Preconfigured enabled: Mozambique's official set, its levels, and how well each was confirmed](../walkthrough/output-develop/en/d04b_preconfigured/01_geography_preconfigured_card.png)
+
+**Use these boundaries → the level screen, opened on the whole country: source, confidence summary, data check**
+
+![Use these boundaries → the level screen, opened on the whole country: source, confidence summary, data check](../walkthrough/output-develop/en/d04b_preconfigured/02_preconfigured_levels.png)
+
+**Each level with its status — *Confirmed*, *Partly confirmed · 83.2%*, *One source only* — and the areas the other source draws differently**
+
+![Each level with its status — Confirmed, Partly confirmed · 83.2%, One source only — and the areas the other source draws differently](../walkthrough/output-develop/en/d04b_preconfigured/03_per_level_confidence.png)
+
+**All four levels named; *Create Hierarchy & Boundaries* writes**
+
+![All four levels named; Create Hierarchy & Boundaries writes](../walkthrough/output-develop/en/d04b_preconfigured/04_levels_named.png)
 
 ---
 
@@ -544,8 +569,17 @@ Authorised for this walkthrough, and kept in place:
 * **The Cidade de Maputo workspace** — tenant `cidadedemaputo`, 79 boundaries, 5 departments,
   3 designations, 7 employees, 4 categories / 14 subcategories at 72 h, owned by the throwaway
   account `walkthrough.maputo@example.com` (mail in Mailpit).
-* **A second, empty workspace** — *Conselho Municipal de Maputo*, code `CMM`, slug `maputo`, owned
-  by `walkthrough.signup@example.com`; signed up only to re-check finding 3, not onboarded.
+* **A second workspace** — *Conselho Municipal de Maputo*, code `CMM`, slug `maputo`, owned by
+  `walkthrough.signup@example.com`; signed up to re-check finding 3, then used for the Preconfigured
+  screens (Branding, and Geography: Mozambique's official set, 2,342 areas).
+* **PR #2311 (Preconfigured), deployed 2026-10-06** — configurator and turbopass only:
+  * the configurator bundle in `/var/www/configurator` was rebuilt from the deployed identity source
+    with the PR's configurator changes merged on top (three-way, no conflicts); the previous bundle
+    is kept in `/var/www/configurator.bak-pre-pr2311-*`;
+  * `turbopass-search` now runs the PR's search-api (`turbopass-search:pr2311`, adds
+    `GET /boundary/official`) against a boundary DB that carries the cross-source agreement
+    (`/opt/turbopass/overture-data-preconfigured`); the previous container is kept, stopped, as
+    `turbopass-search-prev-*`, and the previous DB is untouched.
 
 No other tenant was touched.
 

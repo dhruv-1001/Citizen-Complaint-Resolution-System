@@ -8,7 +8,7 @@ live wherever that run kept them; this script copies the chosen ones into
 numbered flow directories so build_site / build_doc_develop treat them like any
 other capture.
 
-    .venv/bin/python import_develop_run.py /path/to/run/shots
+    .venv/bin/python import_develop_run.py /path/to/run/shots [/path/to/preconfigured/shots]
 """
 import shutil, sys
 from pathlib import Path
@@ -70,12 +70,29 @@ RUN = {
 }
 
 
+# The Preconfigured path (PR #2311), run on 2026-10-06 in the second, empty
+# workspace so the existing one did not get a second hierarchy.
+PRECONFIGURED = {
+    "d04b_preconfigured": [
+        ("p03_levels_01_geography_preconfigured_card.png", "geography_preconfigured_card"),
+        ("p03_levels_02_preconfigured_levels_top.png", "preconfigured_levels"),
+        ("levels_per_level_confidence.png", "per_level_confidence"),
+        ("p04_create_01_preconfigured_levels_named.png", "levels_named"),
+        # ("boundaries_created.png", "boundaries_created"),  -- added once the run finishes
+    ],
+}
+
+
 def main() -> int:
-    if len(sys.argv) != 2:
+    if len(sys.argv) not in (2, 3):
         print(__doc__); return 2
     src = Path(sys.argv[1])
     missing = 0
-    for flow, shots in RUN.items():
+    runs = [(src, RUN)]
+    if len(sys.argv) == 3:
+        runs.append((Path(sys.argv[2]), PRECONFIGURED))
+    for src, run in runs:
+      for flow, shots in run.items():
         d = EN / flow
         shutil.rmtree(d, ignore_errors=True); d.mkdir(parents=True)
         for i, (name, label) in enumerate(shots, 1):
