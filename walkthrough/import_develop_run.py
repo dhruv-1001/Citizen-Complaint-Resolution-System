@@ -70,15 +70,16 @@ RUN = {
 }
 
 
-# The Preconfigured path (PR #2311), run on 2026-10-06 in the second, empty
-# workspace so the existing one did not get a second hierarchy.
+# The Preconfigured path (PR #2311): the Fetch search with the source fixed to
+# the country's official set, run on 2026-10-06 in the Cidade de Maputo workspace.
 PRECONFIGURED = {
     "d04b_preconfigured": [
-        ("p03_levels_01_geography_preconfigured_card.png", "geography_preconfigured_card"),
-        ("p03_levels_02_preconfigured_levels_top.png", "preconfigured_levels"),
-        ("levels_per_level_confidence.png", "per_level_confidence"),
-        ("p04_create_01_preconfigured_levels_named.png", "levels_named"),
-        # ("boundaries_created.png", "boundaries_created"),  -- added once the run finishes
+        ("p07_preconf_v2_01_01_geography_preconfigured_card.png", "geography_preconfigured_card"),
+        ("p07_preconf_v2_02_02_preconfigured_search.png", "preconfigured_search"),
+        ("p07_preconf_v2_03_03_preconfigured_suggestions.png", "preconfigured_suggestions"),
+        ("p07_preconf_v2_04_04_levels.png", "preconfigured_levels"),
+        ("p07_preconf_v2_05_05_per_level_confidence.png", "per_level_confidence"),
+        ("p07_preconf_v2_06_06_boundaries_created.png", "boundaries_created"),
     ],
 }
 

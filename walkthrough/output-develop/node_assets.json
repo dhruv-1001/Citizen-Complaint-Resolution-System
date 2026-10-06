@@ -94,9 +94,11 @@
   "geo_preconf": {
     "en": [
       "en/d04b_preconfigured/01_geography_preconfigured_card.png",
-      "en/d04b_preconfigured/02_preconfigured_levels.png",
-      "en/d04b_preconfigured/03_per_level_confidence.png",
-      "en/d04b_preconfigured/04_levels_named.png"
+      "en/d04b_preconfigured/02_preconfigured_search.png",
+      "en/d04b_preconfigured/03_preconfigured_suggestions.png",
+      "en/d04b_preconfigured/04_preconfigured_levels.png",
+      "en/d04b_preconfigured/05_per_level_confidence.png",
+      "en/d04b_preconfigured/06_boundaries_created.png"
     ],
     "caption": "Preconfigured: the country's official set with per-level confidence, no search"
   },

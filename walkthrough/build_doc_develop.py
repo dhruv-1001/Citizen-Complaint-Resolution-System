@@ -62,16 +62,18 @@ SECTIONS = [
      "city — 1 / 6 / 63 — and misses the KaNyaka district."),
 
     ("d04b_preconfigured", "Onboarding · 2b Geography — Preconfigured",
-     "The **Preconfigured** source (PR #2311, deployed on this server on 2026-10-06): instead of "
-     "searching, the card already knows the workspace's country — from the tenant record, else the "
-     "founder's dial code (+258 → Mozambique) — and offers that country's official boundary set "
-     "with a plain-language confidence line. *Confirmed* means a second, independently drawn set "
-     "(here geoBoundaries) has nearly the same areas; *one source only* means a level could not be "
-     "checked, not that it is wrong.\n\n"
-     "**Use these boundaries** opens the level screen on the whole country, no search needed: "
-     "5 levels, 2,342 areas, every one nested in the level above, each level marked with how well "
-     "it was confirmed. These screens are from the second workspace, *Conselho Municipal de "
-     "Maputo*, so the first one did not get a second hierarchy."),
+     "The **Preconfigured** source (PR #2311, deployed on this server on 2026-10-06). The card "
+     "already knows the workspace's country — from the tenant record, else the founder's dial code "
+     "(+258 → Mozambique) — and the best boundary set for it. **Use these boundaries** opens the "
+     "same search as Fetch boundaries, but with the source **fixed** to that official set, a "
+     "**High / Medium / Low** confidence tag and a one-line headline; suggestions are limited to "
+     "the country.\n\n"
+     "The tag comes from how far a second, independently drawn source (here geoBoundaries) agrees, "
+     "level by level: *High* when every level it has is confirmed, *Medium* when some only partly "
+     "match or the other source is years older, *Low* when nothing could be cross-checked. "
+     "Mozambique is **Medium**: provinces confirmed, districts and administrative posts partly "
+     "match an older source, localities exist in one source only. *One source only* means a level "
+     "could not be checked, not that it is wrong."),
 
     ("d05_departments", "Onboarding · 3 Departments",
      "Departments and designations, typed in or uploaded. A new workspace starts with "
@@ -145,10 +147,12 @@ SHOTS = {
     "boundaries_created": "79 boundaries created — the message says *from OSM data* though the source was COD-AB",
     "geography_with_hierarchy": "Back on Geography: one hierarchy, *1 cidade · 7 distrito municipals · 7 posto administrativos · 64 bairros* (English plurals on Portuguese names)",
 
-    "geography_preconfigured_card": "Geography with **Preconfigured** enabled: Mozambique's official set, its levels, and how well each was confirmed",
-    "preconfigured_levels": "Use these boundaries → the level screen, opened on the whole country: source, confidence summary, data check",
-    "per_level_confidence": "Each level with its status — *Confirmed*, *Partly confirmed · 83.2%*, *One source only* — and the areas the other source draws differently",
-    "boundaries_created": "Boundaries created — 2,342 areas, restyled to match Geography",
+    "geography_preconfigured_card": "Geography: the **Preconfigured** card names Mozambique's official set, its levels, a confidence tag and the headline",
+    "preconfigured_search": "Use these boundaries → the Fetch search, with the source fixed to Mozambique's official set: *Medium confidence*, OCHA COD-AB · Jan 2025",
+    "preconfigured_suggestions": "Suggestions come only from Mozambique's official set",
+    "preconfigured_levels": "The level screen for Cidade de Maputo: the same summary and tag, the data check, the polygons",
+    "per_level_confidence": "Each level with its status against the second source — *Confirmed*, *Partly confirmed · n%*, *One source only*",
+    "boundaries_created": "Boundaries created — 79 areas in four levels, with the licence line",
 
     "departments_seeded": "Departments as a new workspace starts",
     "departments_upload": "Upload a departments file, with a template to download",
@@ -331,12 +335,14 @@ Authorised for this walkthrough, and kept in place:
   3 designations, 7 employees, 4 categories / 14 subcategories at 72 h, owned by the throwaway
   account `walkthrough.maputo@example.com` (mail in Mailpit).
 * **A second workspace** — *Conselho Municipal de Maputo*, code `CMM`, slug `maputo`, owned by
-  `walkthrough.signup@example.com`; signed up to re-check finding 3, then used for the Preconfigured
-  screens (Branding, and Geography: Mozambique's official set, 2,342 areas).
+  `walkthrough.signup@example.com`; signed up to re-check finding 3. The first version of
+  Preconfigured loaded the whole country into it (2,342 areas; the run was stopped with 2,095
+  linked) before Preconfigured was changed to search instead.
 * **PR #2311 (Preconfigured), deployed 2026-10-06** — configurator and turbopass only:
   * the configurator bundle in `/var/www/configurator` was rebuilt from the deployed identity source
-    with the PR's configurator changes merged on top (three-way, no conflicts); the previous bundle
-    is kept in `/var/www/configurator.bak-pre-pr2311-*`;
+    with the PR's configurator changes merged on top (three-way, no conflicts), and rebuilt again
+    for the PR's search-based Preconfigured (`1a331f681`); the bundle from before the PR is kept in
+    `/var/www/configurator.bak-pre-pr2311-*`, the first PR build in `…bak-pr2311-v1-*`;
   * `turbopass-search` now runs the PR's search-api (`turbopass-search:pr2311`, adds
     `GET /boundary/official`) against a boundary DB that carries the cross-source agreement
     (`/opt/turbopass/overture-data-preconfigured`); the previous container is kept, stopped, as
