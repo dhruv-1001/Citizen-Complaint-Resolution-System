@@ -68,7 +68,8 @@ function Confidence({ set }: { set: OfficialSet }) {
  * how confident we are in it. Choosing it opens the Fetch search with the
  * source fixed to that set. The country is not editable here — it is the
  * workspace's — so a workspace without one is told why the option is unavailable
- * rather than asked to pick.
+ * rather than asked to pick. When the option can't be used the card is shown
+ * disabled; a country we hold no set for yet reads as coming soon.
  */
 export function PreconfiguredCard({
   state,
@@ -79,8 +80,13 @@ export function PreconfiguredCard({
   onUse: () => void;
   onRetry: () => void;
 }) {
+  const disabled = state.status === 'unavailable' || state.status === 'unknown-country' || state.status === 'none';
   return (
-    <div className="flex flex-col rounded-lg border border-border bg-card p-4" data-testid="preconfigured-card">
+    <div
+      className={`flex flex-col rounded-lg border border-border bg-card p-4 ${disabled ? 'opacity-75' : ''}`}
+      aria-disabled={disabled || undefined}
+      data-testid="preconfigured-card"
+    >
       <div className="w-10 h-10 rounded-md bg-primary/10 text-primary flex items-center justify-center">
         <LayoutGrid className="w-5 h-5" />
       </div>
@@ -104,9 +110,9 @@ export function PreconfiguredCard({
           </p>
         )}
         {state.status === 'none' && (
-          <p className="text-xs leading-5 text-muted-foreground" data-testid="option-unavailable">
-            We don't hold preconfigured boundaries for {countryName(state.country)} yet. Fetch or upload them
-            instead.
+          <p className="text-sm leading-5 text-muted-foreground" data-testid="option-unavailable">
+            Preconfigured boundaries for {countryName(state.country)} are coming soon. Until then, fetch or upload
+            them.
           </p>
         )}
         {state.status === 'error' && (
@@ -142,6 +148,13 @@ export function PreconfiguredCard({
             Use these boundaries
             <ArrowRight className="w-4 h-4" />
           </Button>
+        </div>
+      )}
+      {state.status === 'none' && (
+        <div className="mt-4">
+          <span className="inline-flex h-9 items-center px-3 text-sm font-medium text-primary/70" data-testid="preconfigured-coming-soon">
+            Coming soon
+          </span>
         </div>
       )}
     </div>

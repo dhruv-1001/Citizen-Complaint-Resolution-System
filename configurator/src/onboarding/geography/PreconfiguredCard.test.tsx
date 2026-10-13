@@ -54,11 +54,26 @@ describe('PreconfiguredCard', () => {
   });
 
   it('says why it is unavailable instead of offering a country picker', () => {
-    const { rerender } = render(<PreconfiguredCard state={{ status: 'unknown-country' }} onUse={vi.fn()} onRetry={vi.fn()} />);
+    render(<PreconfiguredCard state={{ status: 'unknown-country' }} onUse={vi.fn()} onRetry={vi.fn()} />);
     expect(screen.getByTestId('option-unavailable').textContent).toContain('This workspace has no country recorded from signup');
     expect(screen.queryByRole('button')).toBeNull();
-    rerender(<PreconfiguredCard state={{ status: 'none', country: 'TZ' }} onUse={vi.fn()} onRetry={vi.fn()} />);
-    expect(screen.getByTestId('option-unavailable').textContent).toContain('Tanzania');
+    expect(screen.getByTestId('preconfigured-card').getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('shows a country without a set yet as coming soon, and disabled', () => {
+    render(<PreconfiguredCard state={{ status: 'none', country: 'TZ' }} onUse={vi.fn()} onRetry={vi.fn()} />);
+    expect(screen.getByTestId('option-unavailable').textContent).toBe(
+      'Preconfigured boundaries for Tanzania are coming soon. Until then, fetch or upload them.',
+    );
+    expect(screen.getByTestId('preconfigured-coming-soon').textContent).toBe('Coming soon');
+    expect(screen.getByTestId('preconfigured-card').getAttribute('aria-disabled')).toBe('true');
+    expect(screen.queryByRole('button')).toBeNull();
+  });
+
+  it('is enabled when a set is ready', () => {
+    render(<PreconfiguredCard state={{ status: 'ready', country: 'MZ', set: MZ }} onUse={vi.fn()} onRetry={vi.fn()} />);
+    expect(screen.getByTestId('preconfigured-card').getAttribute('aria-disabled')).toBeNull();
+    expect(screen.queryByTestId('preconfigured-coming-soon')).toBeNull();
   });
 
   it('offers a retry when a listed country\'s set could not be loaded', () => {
