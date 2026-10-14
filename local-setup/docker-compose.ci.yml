@@ -1,0 +1,20 @@
+# Per-tenant compose overlay for the `ci` tenant: the throwaway stack the
+# "Integration tests" workflow (.github/workflows/integration-tests.yml)
+# deploys on a GitHub runner. The per-tenant overlay step in playbook-deploy.yml
+# copies it to /opt/digit and layers it on every compose call.
+#
+# Mailpit is the SMTP server Keycloak needs (identity_smtp_host in
+# host_vars/ci.yml.example; the deploy refuses Keycloak without one). Nothing
+# leaves the runner: mail is kept in Mailpit, and the workflow reads it on
+# 127.0.0.1:18025 when a test needs a sign-up link.
+services:
+  mailpit:
+    image: axllent/mailpit:v1.31.2
+    container_name: mailpit
+    environment:
+      MP_SMTP_AUTH_ACCEPT_ANY: "1"
+      MP_SMTP_AUTH_ALLOW_INSECURE: "1"
+    ports:
+      - "127.0.0.1:18025:8025"
+    networks:
+      - egov-network
