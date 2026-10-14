@@ -48,7 +48,7 @@ jobs:
   plan:
     name: Plan
     if: github.event_name != 'pull_request' || !github.event.pull_request.draft
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
     outputs:
       run: ${{ steps.plan.outputs.run }}
@@ -92,7 +92,7 @@ jobs:
     name: Build ${{ matrix.image.image }}
     needs: plan
     if: needs.plan.outputs.run == 'true'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
       # One image that does not build means no stack to test: stop the rest.
@@ -132,7 +132,10 @@ jobs:
     name: Deploy and test
     needs: [plan, build]
     if: needs.plan.outputs.run == 'true'
-    runs-on: ubuntu-latest
+    # Pinned, not ubuntu-latest (Ubuntu 26 from 2026-10-19): the playbook
+    # installs Docker and packages for the release it finds, and 24.04 is the
+    # one this was proven on. Move it deliberately.
+    runs-on: ubuntu-24.04
     # Deploy ~30-40 min + suite ~30-40 min, with headroom; the suite has its
     # own global timeout below, so a slow run still reports what it finished.
     timeout-minutes: 170
@@ -207,10 +210,11 @@ jobs:
           npm ci
           npx playwright install --with-deps chromium
 
-      # Accounts the suite signs in with: see scripts/ci-identities.mjs.
+      # A fresh stack has nobody who can sign in through Keycloak: add the
+      # workspace, an admin and the seeded employees (scripts/ci-identities.sh).
       - name: Provision test identities
         working-directory: tests/integration-tests
-        run: node scripts/ci-identities.mjs > "$RUNNER_TEMP/identities.env"
+        run: bash scripts/ci-identities.sh > "$RUNNER_TEMP/identities.env"
 
       - name: Run the suite
         id: suite

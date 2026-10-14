@@ -66,6 +66,9 @@ run_ci_tests: false
 enable_otp_services: false
 # Development only: citizens sign in with the fixed OTP 123456.
 identity_dev_fixed_otp: true
+# CI: phone OTP is the citizen sign-in the suite drives (citizen-setup);
+# without it the BFF answers PHONE_OTP_DISABLED.
+identity_citizen_signin_methods: [phone_otp]
 enable_search_stack: false
 enable_mcp: true
 # MCP from this checkout, so a PR that changes digit-mcp/ is what gets tested.
