@@ -33,12 +33,13 @@
 import fs from 'node:fs';
 
 /**
- * Images the CI stack runs that a PR can change. `image` and `context` /
+ * The CCRS images the CI stack runs, all built from the checkout on every run;
+ * `match` says which source paths change each one. `image` and `context` /
  * `dockerfile` / `buildArgs` mirror build/build-config.yml (what the nightly
  * builds); `var` is the host_vars pin from ccrs_image_catalog in
  * local-setup/ansible/inventory/group_vars/digit.yml, which outranks the
  * compose default. digit-mcp is not here: the CI profile sets build_mcp, so the
- * deploy builds it from the checkout anyway.
+ * deploy builds it from the checkout itself.
  *
  * Images whose compose profile the CI profile leaves off (novu-bridge,
  * digit-config-service, digit-user-preferences-service, xstate-chatbot) are in

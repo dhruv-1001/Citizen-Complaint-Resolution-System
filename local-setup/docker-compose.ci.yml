@@ -5,9 +5,18 @@
 #
 # Mailpit is the SMTP server Keycloak needs (identity_smtp_host in
 # host_vars/ci.yml.example; the deploy refuses Keycloak without one). Nothing
-# leaves the runner: mail is kept in Mailpit, and the workflow reads it on
-# 127.0.0.1:18025 when a test needs a sign-up link.
+# leaves the runner: mail is kept in Mailpit (127.0.0.1:18025).
 services:
+  # The citizen OTP limits protect real phones from SMS floods. On the runner
+  # the suite signs one fixture citizen in dozens of times from one IP, and the
+  # defaults (5 codes per phone and 20 per IP an hour, 30 s between codes)
+  # failed 10 citizen specs with OTP_RATE_LIMITED / OTP_RESEND_TOO_SOON. Codes
+  # are the fixed development code and go nowhere (identity_dev_fixed_otp).
+  identity-bff:
+    environment:
+      IDENTITY_CITIZEN_OTP_PHONE_SEND_LIMIT: "10000"
+      IDENTITY_CITIZEN_OTP_IP_SEND_LIMIT: "100000"
+      IDENTITY_CITIZEN_OTP_RESEND_SECONDS: "1"
   mailpit:
     image: axllent/mailpit:v1.31.2
     container_name: mailpit

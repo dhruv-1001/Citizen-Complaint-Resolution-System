@@ -93,7 +93,10 @@ kc_user() {
 }
 
 # 1. The admin the suite signs in as.
-roles=$(for r in SUPERUSER EMPLOYEE MDMS_ADMIN LOC_ADMIN ACCOUNT_ADMIN HRMS_ADMIN GRO CSR PGR_LME DGRO; do
+# Every role the seeded ADMIN@pg holds, plus the admin roles the deploy grants
+# it (MDMS_ADMIN, LOC_ADMIN, HRMS_ADMIN), so the configurator shows it the same.
+roles=$(for r in SUPERUSER EMPLOYEE CITIZEN MDMS_ADMIN LOC_ADMIN ACCOUNT_ADMIN HRMS_ADMIN GRO DGRO CSR PGR_LME \
+                 PGR_VIEWER SUPERVISOR AUTO_ESCALATE; do
   printf '{"code":"%s","name":"%s","tenantId":"%s"},' "$r" "$r" "$TENANT"; done)
 body=$(jq -nc --arg u "$DIGIT_ADMIN" --arg t "$TENANT" --arg p "$PASSWORD" --argjson roles "[${roles%,}]" \
   '{RequestInfo:{apiId:"digit",ver:"1.0"},User:{userName:$u,name:"CI Suite Admin",mobileNumber:"9000000101",
