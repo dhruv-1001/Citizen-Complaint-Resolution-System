@@ -1,0 +1,13 @@
+Skip to main content
+Back to workspace
+Workspace settings
+Workspace name
+
+Current name: Cidade de Maputo
+
+Change workspace name
+Invitation expiry (hours)
+
+1 hour to 90 days. Default: 336 hours (14 days).
+
+Save invitation expiry

@@ -1,0 +1,39 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Access Roles
+Workflows
+Processes
+MDMS Schemas
+Boundaries
+Analytics Providers
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Workflow Processes
+0
+Refresh
+Business ID
+	
+Action
+	State	
+Created
+
+No records found

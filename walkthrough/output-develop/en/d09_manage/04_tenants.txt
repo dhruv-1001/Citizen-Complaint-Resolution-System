@@ -1,0 +1,61 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Branding
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Tenants
+1
+Refresh
+Code
+	
+Name
+	
+City
+	
+District
+	Status
+
+cidadedemaputo
+	
+Cidade de Maputo
+	
+Cidade de Maputo
+	
+—
+	
+Active
+
+Showing 1-1 of 1
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next

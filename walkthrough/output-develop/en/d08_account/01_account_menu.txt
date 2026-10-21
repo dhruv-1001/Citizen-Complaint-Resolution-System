@@ -1,0 +1,74 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+DIGIT Management Studio
+
+1
+
+Tenants
+
+5
+
+Departments
+
+3
+
+Designations
+
+14
+
+Complaint Categories
+
+7
+
+Employees
+
+80
+
+Boundaries
+
+0
+
+Complaints
+
+4486
+
+Localization Messages
+
+0
+
+Users
+
+27
+
+Access Roles
+
+Walkthrough Maputo
+
+cidadedemaputo
+
+Your account
+Members
+Workspace settings
+Open DIGIT Docs
+Sign out

@@ -1,0 +1,48 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Branding
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Branding
+
+Your logo, name and colour appear across your workspace and on the services citizens and employees experience.
+
+Account logo
+
+Logo uploaded.
+
+Replace
+Remove
+Account name
+
+Change this name in Workspace settings.
+
+Brand Theme
+
+Applied across the services citizens and employees use.
+
+Save changes

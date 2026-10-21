@@ -174,7 +174,7 @@ SHOTS = {
     "p2_osm_search": "OSM path — search the area to import",
     "p2_osm_search_typeahead": "The Nominatim typeahead resolving *Cidade de Maputo/Mozambique*; picking a suggestion scopes the Overpass lookup to that exact relation",
     "p2_osm_search_typed": "Suggestion picked, ready to search",
-    "p2_osm_map_levels": "Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB on the develop deployment gives 7 districts and 64 bairros: OSM is missing KaNyaka",
+    "p2_osm_map_levels": "Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB (the develop walkthrough) gives 7 districts and 64 bairros: OSM is missing KaNyaka",
     "p2_osm_levels_selected": "All three levels included",
     "p2_osm_levels_named": "Each level named — *Município → Distrito Municipal → Bairro*. The selection is now valid and **Create Hierarchy & Boundaries** is enabled; that click writes, so this is where the capture stops",
 
@@ -422,7 +422,7 @@ apps changed a lot (#2038):
   `/digit-ui/citizen` app in the same shell. Neither was in the previous walkthrough.
 
 The develop-branch UI (Keycloak sign-in, the five-step onboarding) is not on bomet; it is
-captured on the develop deployment in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+captured on a local develop stack in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 ### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 
@@ -583,7 +583,7 @@ def main() -> int:
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
 the DIGIT configurator (4-phase onboarding wizard + management console), the digit-ui employee app,
 both citizen apps and the public dashboard. The develop-branch UI (Keycloak sign-in, five-step
-onboarding) is captured separately on the develop deployment: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+onboarding) is captured separately, on a local develop stack: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 **{total} screens · {len(SECTIONS)} flows · captured {CAPTURED} · read-only.** Nothing on the deployment was
 created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).

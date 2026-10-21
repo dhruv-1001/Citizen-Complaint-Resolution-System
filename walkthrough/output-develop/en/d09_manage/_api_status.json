@@ -1,131 +1,161 @@
 {
   "dashboard_home": {
-    "requests": 30,
+    "requests": 35,
     "denied": 0,
     "errors": 0
   },
   "public_dashboard": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
     "errors": 0
   },
-  "tenants": {
-    "requests": 8,
-    "denied": 0,
-    "errors": 0
-  },
-  "departments": {
-    "requests": 8,
-    "denied": 0,
-    "errors": 0
-  },
-  "designations": {
-    "requests": 8,
-    "denied": 0,
-    "errors": 0
-  },
-  "boundaries": {
-    "requests": 12,
-    "denied": 0,
-    "errors": 0
-  },
-  "map_configuration": {
-    "requests": 9,
-    "denied": 0,
-    "errors": 0
-  },
-  "complaints": {
-    "requests": 10,
-    "denied": 0,
-    "errors": 0
-  },
-  "complaint_types": {
+  "branding": {
     "requests": 13,
     "denied": 0,
     "errors": 0
   },
-  "complaint_hierarchies": {
-    "requests": 8,
-    "denied": 0,
-    "errors": 0
-  },
-  "localization": {
+  "tenants": {
     "requests": 12,
     "denied": 0,
     "errors": 0
   },
+  "departments": {
+    "requests": 12,
+    "denied": 0,
+    "errors": 0
+  },
+  "designations": {
+    "requests": 12,
+    "denied": 0,
+    "errors": 0
+  },
+  "boundary_hierarchies": {
+    "requests": 12,
+    "denied": 0,
+    "errors": 0
+  },
+  "boundaries": {
+    "requests": 16,
+    "denied": 0,
+    "errors": 0
+  },
+  "map_configuration": {
+    "requests": 13,
+    "denied": 0,
+    "errors": 0
+  },
+  "complaints": {
+    "requests": 14,
+    "denied": 0,
+    "errors": 0
+  },
+  "complaint_types": {
+    "requests": 14,
+    "denied": 0,
+    "errors": 0
+  },
+  "complaint_hierarchies": {
+    "requests": 12,
+    "denied": 0,
+    "errors": 0
+  },
+  "escalation_policy": {
+    "requests": 13,
+    "denied": 0,
+    "errors": 0
+  },
+  "localization": {
+    "requests": 16,
+    "denied": 0,
+    "errors": 0
+  },
   "employees": {
-    "requests": 15,
+    "requests": 19,
     "denied": 0,
     "errors": 0
   },
   "org_chart": {
-    "requests": 9,
+    "requests": 13,
     "denied": 0,
     "errors": 0
   },
   "users": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
     "errors": 0
   },
   "access_roles": {
-    "requests": 7,
+    "requests": 12,
     "denied": 0,
     "errors": 0
   },
   "workflows": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
     "errors": 0
   },
   "processes": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
     "errors": 0
   },
   "mdms_schemas": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
     "errors": 0
   },
   "analytics_providers": {
-    "requests": 8,
+    "requests": 12,
     "denied": 0,
     "errors": 0
   },
+  "notification_configure": {
+    "requests": 34,
+    "denied": 0,
+    "errors": 3
+  },
+  "notification_channels": {
+    "requests": 29,
+    "denied": 0,
+    "errors": 6
+  },
   "notification_event_catalogue": {
-    "requests": 8,
+    "requests": 12,
     "denied": 0,
     "errors": 0
   },
   "notification_routing": {
-    "requests": 8,
+    "requests": 12,
     "denied": 0,
     "errors": 0
   },
   "notification_templates": {
-    "requests": 8,
+    "requests": 12,
     "denied": 0,
     "errors": 0
   },
   "notification_provider_templates": {
-    "requests": 8,
+    "requests": 12,
     "denied": 0,
     "errors": 0
+  },
+  "notification_providers": {
+    "requests": 30,
+    "denied": 0,
+    "errors": 6
   },
   "notification_logs": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
-    "errors": 0
+    "errors": 1
   },
   "notification_preferences": {
-    "requests": 7,
+    "requests": 11,
     "denied": 0,
-    "errors": 0
+    "errors": 1
   },
   "advanced_all_masters": {
-    "requests": 6,
+    "requests": 10,
     "denied": 0,
     "errors": 0
   }

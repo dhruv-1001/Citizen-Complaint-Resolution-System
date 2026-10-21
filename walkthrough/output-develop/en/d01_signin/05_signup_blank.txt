@@ -12,7 +12,7 @@ Governance that learns
 
 “Connecting citizen voices to responsive institutions and efficient services through an experience that feels natural.”
 
-© 2026 eGovernments Foundation · DIGIT
+© 2026 eGovernments Foundation · Powered by DIGIT
 
 ACCOUNT
 (CURRENT STEP)
@@ -27,12 +27,10 @@ Verify your email to begin
 
 Confirm who you are first. Once your email is verified, you can name your account and continue the setup.
 
-FIRST NAME
-LAST NAME
-EMAIL ADDRESS
+FIRST NAME*
+LAST NAME*
+EMAIL ADDRESS*
 Email me a sign-in link
-OR
-GitHub
 
 By continuing, you agree to the Terms of Service and Privacy Notice.
 

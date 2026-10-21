@@ -1,0 +1,83 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Branding
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Map Configuration
+1
+
+Schema: RAINMAKER-PGR.MapConfig
+
+Refresh
+Create
+Add filter
+Code
+	
+Max Zoom
+	
+Min Zoom
+	
+Tile Url
+	
+Default Zoom
+	
+Map Provider
+	
+Base Map Theme
+	
+Tile Attribution
+	Status	Actions
+
+DEFAULT
+	
+--
+	
+--
+	
+--
+	
+10
+	
+Select...
+	
+Select...
+	
+--
+	
+Active
+	
+
+Showing 1-1 of 1
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next

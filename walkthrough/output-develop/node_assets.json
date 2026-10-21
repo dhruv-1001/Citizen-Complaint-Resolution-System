@@ -26,39 +26,39 @@
     ],
     "caption": "Self-serve sign-up: name and email"
   },
-  "mail": {
-    "en": [
-      "en/d02_signup/03_mailpit_signin_link_email.png"
-    ],
-    "caption": "The sign-in link in Mailpit"
-  },
   "account": {
     "en": [
-      "en/d02_signup/04_account_email_verified.png",
-      "en/d02_signup/05_account_name_and_code.png"
+      "en/d02_signup/03_account_email_verified.png",
+      "en/d02_signup/04_account_name_and_code.png"
     ],
-    "caption": "Account name and derived code (CDM \u2192 MZ-CDM)"
+    "caption": "Account name and a code derived from it"
   },
   "prefs": {
     "en": [
-      "en/d02_signup/08_preferences_filled.png",
-      "en/d02_signup/06_preferences_blank.png",
-      "en/d02_signup/07_preferences_mozambique_defaults.png"
+      "en/d02_signup/07_preferences_filled.png",
+      "en/d02_signup/05_preferences_blank.png",
+      "en/d02_signup/06_preferences_mozambique_defaults.png"
     ],
     "caption": "Country, languages, time zone, financial year, slug, founder mobile"
   },
   "review": {
     "en": [
-      "en/d02_signup/09_review.png",
-      "en/d02_signup/10_provisioning.png"
+      "en/d02_signup/08_review.png",
+      "en/d02_signup/09_provisioning.png"
     ],
-    "caption": "Review, then provisioning \u2014 failed once on MDMS_SCHEMA_NOT_VISIBLE, finished on retry"
+    "caption": "Review, then provisioning"
   },
-  "workspace": {
+  "home": {
     "en": [
-      "en/d02_signup/11_choose_workspace.png"
+      "en/d02b_home/01_tour_1_what_onboarding_is.png",
+      "en/d02b_home/02_tour_2_complaints_template.png",
+      "en/d02b_home/03_tour_3_branding.png",
+      "en/d02b_home/04_tour_4_geography.png",
+      "en/d02b_home/05_tour_5_departments_employees.png",
+      "en/d02b_home/06_tour_6_reopen.png",
+      "en/d02b_home/07_onboarding_home.png"
     ],
-    "caption": "Choose a workspace"
+    "caption": "Onboarding Home: welcome tour, next step, Learn the basics videos, documentation"
   },
   "branding": {
     "en": [
@@ -70,113 +70,101 @@
   },
   "geo": {
     "en": [
-      "en/d04_geography/01_geography_choose_source.png",
-      "en/d04_geography/08_geography_with_hierarchy.png"
+      "en/d04_geography/01_geography_choose_source.png"
     ],
-    "caption": "Preconfigured (soon), Fetch boundaries, Upload from Excel"
+    "caption": "Preconfigured boundaries (with a confidence tag), Fetch boundaries, Upload from Excel"
   },
   "geo_fetch": {
     "en": [
       "en/d04_geography/02_fetch_boundaries.png",
       "en/d04_geography/03_boundary_source_options.png",
-      "en/d04_geography/04_cod_suggestions.png"
+      "en/d04_geography/04_fetch_suggestions.png",
+      "en/d04_geography/05_fetch_map_admin_levels.png"
     ],
-    "caption": "turbopass search \u2014 OCHA COD-AB for Cidade de Maputo"
+    "caption": "Search with a choice of source \u2014 read-only here"
   },
-  "geo_levels": {
+  "geo_excel": {
     "en": [
-      "en/d04_geography/05_cod_map_admin_levels.png",
-      "en/d04_geography/06_levels_named.png",
-      "en/d04_geography/07_boundaries_created.png"
+      "en/d04_geography/06_excel_define_hierarchy.png"
     ],
-    "caption": "4 COD levels, 79 areas, named Cidade \u2192 Distrito Municipal \u2192 Posto Administrativo \u2192 Bairro"
+    "caption": "Define the hierarchy's levels, then upload"
   },
   "geo_preconf": {
     "en": [
-      "en/d04b_preconfigured/01_geography_preconfigured_card.png",
-      "en/d04b_preconfigured/02_preconfigured_search.png",
-      "en/d04b_preconfigured/03_preconfigured_suggestions.png",
-      "en/d04b_preconfigured/04_preconfigured_levels.png",
-      "en/d04b_preconfigured/05_per_level_confidence.png",
-      "en/d04b_preconfigured/06_boundaries_created.png"
+      "en/d04b_preconfigured/01_preconfigured_search.png",
+      "en/d04b_preconfigured/02_preconfigured_suggestions.png",
+      "en/d04b_preconfigured/03_preconfigured_levels.png",
+      "en/d04b_preconfigured/04_per_level_confidence.png",
+      "en/d04b_preconfigured/05_levels_named.png",
+      "en/d04b_preconfigured/06_boundaries_created.png",
+      "en/d04b_preconfigured/07_geography_with_hierarchy.png"
     ],
-    "caption": "Preconfigured: the country's official set with per-level confidence, no search"
+    "caption": "Search Mozambique's official set (Medium confidence) \u2192 79 areas for Cidade de Maputo"
   },
   "depts": {
     "en": [
       "en/d05_departments/05_departments_filled.png",
-      "en/d05_departments/01_departments_seeded.png",
+      "en/d05_departments/01_departments_landing.png",
       "en/d05_departments/02_departments_upload.png",
       "en/d05_departments/03_add_department.png",
       "en/d05_departments/04_add_designation.png"
     ],
-    "caption": "Departments + designations"
+    "caption": "4 departments, 2 designations"
   },
   "emps": {
     "en": [
-      "en/d06_employees/04_employee_form_filled.png",
+      "en/d06_employees/03_employee_form_filled.png",
       "en/d06_employees/01_employees_landing.png",
       "en/d06_employees/02_employees_upload.png",
-      "en/d06_employees/03_employee_form_blank.png",
-      "en/d06_employees/05_employees_list.png",
-      "en/d06_employees/06_employees_one_gro_per_department.png"
+      "en/d06_employees/04_employees_list.png"
     ],
-    "caption": "Employees \u2014 one GRO per complaint department"
+    "caption": "6 employees: a GRO per department, 2 field officers"
   },
   "cats": {
     "en": [
       "en/d07_complaints/01_complaints_landing.png",
       "en/d07_complaints/02_complaints_upload.png",
       "en/d07_complaints/03_add_category.png",
-      "en/d07_complaints/04_four_categories_sla_3_days.png"
+      "en/d07_complaints/04_categories_added.png",
+      "en/d07_complaints/05_default_resolution_time.png"
     ],
-    "caption": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO"
+    "caption": "4 categories, 14 subcategories, 3-day default"
   },
-  "done": {
+  "acct": {
     "en": [
-      "en/d08_onboarding_done/01_branding_done.png",
-      "en/d08_onboarding_done/02_geography_done.png",
-      "en/d08_onboarding_done/03_departments_done.png",
-      "en/d08_onboarding_done/04_employees_done.png",
-      "en/d08_onboarding_done/05_complaints_template_done.png"
+      "en/d08_account/01_account_menu.png",
+      "en/d08_account/02_your_account.png",
+      "en/d08_account/03_members.png",
+      "en/d08_account/04_workspace_settings.png"
     ],
-    "caption": "Each step after Finish setup"
+    "caption": "Your account, Members, Workspace settings"
   },
   "manage": {
     "en": [
       "en/d09_manage/01_dashboard_home.png",
-      "en/d09_manage/02_public_dashboard.png",
-      "en/d09_manage/03_tenants.png",
-      "en/d09_manage/04_departments.png",
-      "en/d09_manage/05_designations.png",
-      "en/d09_manage/06_boundaries.png",
-      "en/d09_manage/07_map_configuration.png",
-      "en/d09_manage/08_complaints.png",
-      "en/d09_manage/09_complaint_types.png",
-      "en/d09_manage/10_complaint_hierarchies.png",
-      "en/d09_manage/11_localization.png",
-      "en/d09_manage/12_employees.png",
-      "en/d09_manage/13_org_chart.png",
-      "en/d09_manage/14_users.png",
-      "en/d09_manage/15_access_roles.png",
-      "en/d09_manage/16_workflows.png",
-      "en/d09_manage/17_processes.png",
-      "en/d09_manage/18_mdms_schemas.png",
-      "en/d09_manage/19_analytics_providers.png",
-      "en/d09_manage/20_notification_event_catalogue.png",
-      "en/d09_manage/21_notification_routing.png",
-      "en/d09_manage/22_notification_templates.png",
-      "en/d09_manage/23_notification_provider_templates.png",
-      "en/d09_manage/24_notification_logs.png",
-      "en/d09_manage/25_notification_preferences.png",
-      "en/d09_manage/26_advanced_all_masters.png"
+      "en/d09_manage/03_branding.png",
+      "en/d09_manage/04_tenants.png",
+      "en/d09_manage/05_departments.png",
+      "en/d09_manage/06_designations.png",
+      "en/d09_manage/08_boundaries.png",
+      "en/d09_manage/09_map_configuration.png",
+      "en/d09_manage/10_complaints.png",
+      "en/d09_manage/11_complaint_types.png",
+      "en/d09_manage/12_complaint_hierarchies.png",
+      "en/d09_manage/13_escalation_policy.png",
+      "en/d09_manage/15_employees.png",
+      "en/d09_manage/16_org_chart.png",
+      "en/d09_manage/17_users.png",
+      "en/d09_manage/18_access_roles.png",
+      "en/d09_manage/20_processes.png",
+      "en/d09_manage/21_mdms_schemas.png",
+      "en/d09_manage/22_analytics_providers.png",
+      "en/d09_manage/25_notification_event_catalogue.png",
+      "en/d09_manage/26_notification_routing.png",
+      "en/d09_manage/27_notification_templates.png",
+      "en/d09_manage/28_notification_provider_templates.png",
+      "en/d09_manage/32_advanced_all_masters.png"
     ],
-    "caption": "Every console route as the founder \u2014 many API calls refused (403)"
-  },
-  "citizen": {
-    "en": [
-      "en/d10_apps/01_citizen_signin.png"
-    ],
-    "caption": "/citizen \u2014 digit-ui-v2 sign-in"
+    "caption": "Every console route \u2014 no refused calls"
   }
 }

@@ -1,0 +1,177 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+Complaint Hierarchies
+Complaint Categories
+Complaints
+PGR Escalation Policy
+Localization
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+PGR Escalation Policy
+cidadedemaputo
+
+Tenant: cidadedemaputo · State policy · Inherits defaults from state policy · Runtime: automatic scan every 5 minutes
+
+Refresh
+Save policy
+Escalation Parameters & Default Ladder
+Maximum Escalation Levels (Reporting Hops)
+Levels 1 to 5 (effective depth is capped by ladder length)
+Automatic Escalation States
+PENDINGATLME
+×
+Add
+
+Workflow statuses scanned by background scheduler. Each state must have an ESCALATE transition defined for SYSTEM.
+
+Default Cumulative Thresholds (State Ladder)
+Level	Auto	Cumulative SLA %	Example (10h complaint)	Absolute Fallback
+L1	
+Active
+	
+%
+	8h after complaint creation	
+1h
+
+L2	
+Active
+	
+%
+	12h after complaint creation	
+4h
+
+L3	
+Active
+	
+%
+	20h after complaint creation	
+1d
+
+The cumulative complaint-age clock starts at complaint creation (reopening starts a fresh clock; reassignment does not). Manual escalation consumes one level immediately; the automatic scheduler then evaluates the next cumulative threshold.
+
+Remove level
+Complaint-type Catalogue & Custom Overrides
+14 complaint types
+•
+0 overridden
+•
+14 using default
+All statuses
+All departments
+	
+Complaint Type & Hierarchy Path
+	
+Department
+	
+Base SLA
+	Effective Levels	
+Source
+	Action
+	
+Blocked public toilet
+GarbageAndSanitationBlockedPublicToilet
+
+Garbage and Sanitation › Blocked public toilet
+
+	SOLID_WASTE_AND_SANITATION	72h	80% · 120% · 200%	Default	
+Set
+	
+Garbage not collected
+GarbageAndSanitationGarbageNotCollected
+
+Garbage and Sanitation › Garbage not collected
+
+	SOLID_WASTE_AND_SANITATION	72h	80% · 120% · 200%	Default	
+Set
+	
+Illegal dumping
+GarbageAndSanitationIllegalDumping
+
+Garbage and Sanitation › Illegal dumping
+
+	SOLID_WASTE_AND_SANITATION	72h	80% · 120% · 200%	Default	
+Set
+	
+Overflowing container
+GarbageAndSanitationOverflowingContainer
+
+Garbage and Sanitation › Overflowing container
+
+	SOLID_WASTE_AND_SANITATION	72h	80% · 120% · 200%	Default	
+Set
+	
+Damaged market infrastructure
+MarketsDamagedMarketInfrastructure
+
+Markets › Damaged market infrastructure
+
+	MARKETS_AND_FAIRS	72h	80% · 120% · 200%	Default	
+Set
+	
+Illegal street vending
+MarketsIllegalStreetVending
+
+Markets › Illegal street vending
+
+	MARKETS_AND_FAIRS	72h	80% · 120% · 200%	Default	
+Set
+	
+Unhygienic market stall
+MarketsUnhygienicMarketStall
+
+Markets › Unhygienic market stall
+
+	MARKETS_AND_FAIRS	72h	80% · 120% · 200%	Default	
+Set
+	
+Broken bench or playground
+ParksAndPublicSpacesBrokenBenchOrPlayground
+
+Parks and Public Spaces › Broken bench or playground
+
+	PARKS_AND_PUBLIC_SPACES	72h	80% · 120% · 200%	Default	
+Set
+	
+Fallen tree
+ParksAndPublicSpacesFallenTree
+
+Parks and Public Spaces › Fallen tree
+
+	PARKS_AND_PUBLIC_SPACES	72h	80% · 120% · 200%	Default	
+Set
+	
+Overgrown grass
+ParksAndPublicSpacesOvergrownGrass
+
+Parks and Public Spaces › Overgrown grass
+
+	PARKS_AND_PUBLIC_SPACES	72h	80% · 120% · 200%	Default	
+Set
+Showing 1-10 of 14
+Rows per page:
+10
+Previous
+Page 1 of 2
+Next
+▸
+Advanced: Canonical Policy JSON & Diagnostics
+Copy JSON

@@ -1,0 +1,94 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+Tenants
+Branding
+Departments
+Designations
+Hierarchies
+Map Configuration
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Designations
+3
+Export
+Bulk import
+Refresh
+Create
+Status
+All
+Active
+Inactive
+Add filter
+Code
+	
+Name
+	
+Status
+	Department	
+Description
+	Actions
+
+FIELD_OFFICER
+	
+Field Officer
+	
+Active
+	
+SOLID_WASTE_AND_SANITATION, ROADS_AND_DRAINAGE, MARKETS_AND_FAIRS, PARKS_AND_PUBLIC_SPACES
+	
+Field Officer
+	
+
+
+GRIEVANCE_REDRESSAL_OFFICER
+	
+Grievance Redressal Officer
+	
+Active
+	
+SOLID_WASTE_AND_SANITATION, ROADS_AND_DRAINAGE, MARKETS_AND_FAIRS, PARKS_AND_PUBLIC_SPACES
+	
+Grievance Redressal Officer
+	
+
+
+ONBOARDING_FOUNDER
+	
+Workspace administrator
+	
+Active
+	
+--
+	
+Initial workspace founder
+	
+
+Showing 1-3 of 3
+
+Rows per page:
+10
+25
+50
+100
+Previous
+Page 1 of 1
+Next

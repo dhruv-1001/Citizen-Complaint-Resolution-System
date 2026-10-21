@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Import the screenshots of the one-off onboarding run into output-develop/.
+"""Import the screenshots of the onboarding run into output-develop/.
 
 The sign-up and the five onboarding steps WRITE (a Keycloak user, a tenant,
-boundaries, departments, employees, complaint types), so they were driven once,
-step by step, on 2026-10-05 — not by a re-runnable capture. Their screenshots
-live wherever that run kept them; this script copies the chosen ones into
-numbered flow directories so build_site / build_doc_develop treat them like any
-other capture.
+boundaries, departments, employees, complaint types), so they are driven once,
+step by step, against a throwaway workspace — on 2026-10-21 against the local
+develop stack (develop f713f9e6c) — not by a re-runnable capture. This script
+copies the chosen screenshots into numbered flow directories so build_site /
+build_doc_develop treat them like any other capture.
 
-    .venv/bin/python import_develop_run.py /path/to/run/shots [/path/to/preconfigured/shots]
+    .venv/bin/python import_develop_run.py /path/to/run/shots
 """
 import shutil, sys
 from pathlib import Path
@@ -19,81 +19,76 @@ EN = HERE / "output-develop" / "en"
 # flow -> [(source file in the run's shots dir, label)]
 RUN = {
     "d02_signup": [
-        ("s02_signup_submit_01_signup_filled.png", "signup_filled"),
-        ("s02_signup_submit_02_signup_link_sent.png", "signup_check_email"),
-        ("s03_mailpit_message.png", "mailpit_signin_link_email"),
-        ("s04_account_01_account_blank.png", "account_email_verified"),
-        ("s04_account_02_account_filled.png", "account_name_and_code"),
-        ("s05_prefs_01_preferences_blank.png", "preferences_blank"),
-        ("s06_prefs_fill_01_preferences_country_mozambique.png", "preferences_mozambique_defaults"),
-        ("s07_review_01_preferences_filled.png", "preferences_filled"),
-        ("s07_review_02_review.png", "review"),
-        ("s08_create_02_creating_0.png", "provisioning"),
-        ("s10_workspace_01_choose_workspace.png", "choose_workspace"),
+        ("a03_signup_filled.png", "signup_filled"),
+        ("a04_check_email.png", "signup_check_email"),
+        ("a06_account_verified.png", "account_email_verified"),
+        ("a07_account_name_code.png", "account_name_and_code"),
+        ("a08_preferences_blank.png", "preferences_blank"),
+        ("a09_preferences_mozambique.png", "preferences_mozambique_defaults"),
+        ("a10_preferences_filled.png", "preferences_filled"),
+        ("a11_review.png", "review"),
+        ("a12_provisioning.png", "provisioning"),
+    ],
+    "d02b_home": [
+        ("a13_tour_1.png", "tour_1_what_onboarding_is"),
+        ("a13_tour_2.png", "tour_2_complaints_template"),
+        ("a13_tour_3.png", "tour_3_branding"),
+        ("a13_tour_4.png", "tour_4_geography"),
+        ("a13_tour_5.png", "tour_5_departments_employees"),
+        ("a13_tour_6.png", "tour_6_reopen"),
+        ("a14_onboarding_home.png", "onboarding_home"),
     ],
     "d03_branding": [
-        ("s11_branding_01_branding_blank.png", "branding_blank"),
-        ("s11_branding_02_branding_logo_uploaded.png", "branding_logo_uploaded"),
-        ("s11_branding_03_branding_green_gold.png", "branding_green_and_gold"),
+        ("b01_branding_blank.png", "branding_blank"),
+        ("b02_branding_logo_uploaded.png", "branding_logo_uploaded"),
+        ("b03_branding_green_and_gold.png", "branding_green_and_gold"),
     ],
     "d04_geography": [
-        ("s12_geo_fetch_01_geography_landing.png", "geography_choose_source"),
-        ("s12_geo_fetch_02_fetch_open.png", "fetch_boundaries"),
-        ("s13_geo_search_01_source_options_open.png", "boundary_source_options"),
-        ("s16_geo_create_01_cod_suggestions.png", "cod_suggestions"),
-        ("s16_geo_create_03_cod_map_levels.png", "cod_map_admin_levels"),
-        ("s16_geo_create_04_levels_named.png", "levels_named"),
-        ("s16_geo_create_07_after_create.png", "boundaries_created"),
-        ("s17_geo_save_01_geography_with_hierarchy.png", "geography_with_hierarchy"),
+        ("c01_geography_landing.png", "geography_choose_source"),
+        ("c02_fetch_search.png", "fetch_boundaries"),
+        ("c03_fetch_source_options.png", "boundary_source_options"),
+        ("c04_fetch_suggestions.png", "fetch_suggestions"),
+        ("c05_fetch_levels.png", "fetch_map_admin_levels"),
+        ("c06_excel_landing.png", "excel_define_hierarchy"),
+    ],
+    "d04b_preconfigured": [
+        ("d01_preconf_search.png", "preconfigured_search"),
+        ("d02_preconf_suggestions.png", "preconfigured_suggestions"),
+        ("d03_preconf_levels.png", "preconfigured_levels"),
+        ("d04_preconf_per_level.png", "per_level_confidence"),
+        ("d05_preconf_levels_named.png", "levels_named"),
+        ("d06_boundaries_created.png", "boundaries_created"),
+        ("d07_geography_with_hierarchy.png", "geography_with_hierarchy"),
     ],
     "d05_departments": [
-        ("s18_dept_forms_01_departments_seeded.png", "departments_seeded"),
-        ("s18_dept_forms_04_departments_upload.png", "departments_upload"),
-        ("s19_dept_add_01_add_department_filled.png", "add_department"),
-        ("s19_dept_add_02_add_designation_filled.png", "add_designation"),
-        ("s19_dept_add_03_departments_filled.png", "departments_filled"),
+        ("e01_departments_landing.png", "departments_landing"),
+        ("e02_departments_upload.png", "departments_upload"),
+        ("e03_add_department.png", "add_department"),
+        ("e04_add_designation.png", "add_designation"),
+        ("e05_departments_filled.png", "departments_filled"),
     ],
     "d06_employees": [
-        ("s20_dept_save_01_employees_landing.png", "employees_landing"),
-        ("s21_emp_form_01_employees_upload.png", "employees_upload"),
-        ("s21_emp_form_02_employee_form_blank.png", "employee_form_blank"),
-        ("s22_emp_add_01_employee_form_filled.png", "employee_form_filled"),
-        ("s22_emp_add_02_employees_list.png", "employees_list"),
-        ("s33_relogin_finish_03_employees_list.png", "employees_one_gro_per_department"),
+        ("f01_employees_landing.png", "employees_landing"),
+        ("f02_employees_upload.png", "employees_upload"),
+        ("f04_employee_form_filled.png", "employee_form_filled"),
+        ("f05_employees_list.png", "employees_list"),
     ],
     "d07_complaints": [
-        ("s23_emp_save_01_complaints_landing.png", "complaints_landing"),
-        ("s24_cat_form_01_complaints_upload.png", "complaints_upload"),
-        ("s25_cat_add_01_category_form_filled.png", "add_category"),
-        ("s27_finish_01_complaints_sla_3_days.png", "four_categories_sla_3_days"),
-    ],
-}
-
-
-# The Preconfigured path (PR #2311): the Fetch search with the source fixed to
-# the country's official set, run on 2026-10-06 in the Cidade de Maputo workspace.
-PRECONFIGURED = {
-    "d04b_preconfigured": [
-        ("p07_preconf_v2_01_01_geography_preconfigured_card.png", "geography_preconfigured_card"),
-        ("p07_preconf_v2_02_02_preconfigured_search.png", "preconfigured_search"),
-        ("p07_preconf_v2_03_03_preconfigured_suggestions.png", "preconfigured_suggestions"),
-        ("p07_preconf_v2_04_04_levels.png", "preconfigured_levels"),
-        ("p07_preconf_v2_05_05_per_level_confidence.png", "per_level_confidence"),
-        ("p07_preconf_v2_06_06_boundaries_created.png", "boundaries_created"),
+        ("g01_complaints_landing.png", "complaints_landing"),
+        ("g02_complaints_upload.png", "complaints_upload"),
+        ("g03_add_category.png", "add_category"),
+        ("g04_categories_added.png", "categories_added"),
+        ("g05_default_resolution_time.png", "default_resolution_time"),
     ],
 }
 
 
 def main() -> int:
-    if len(sys.argv) not in (2, 3):
+    if len(sys.argv) != 2:
         print(__doc__); return 2
     src = Path(sys.argv[1])
     missing = 0
-    runs = [(src, RUN)]
-    if len(sys.argv) == 3:
-        runs.append((Path(sys.argv[2]), PRECONFIGURED))
-    for src, run in runs:
-      for flow, shots in run.items():
+    for flow, shots in RUN.items():
         d = EN / flow
         shutil.rmtree(d, ignore_errors=True); d.mkdir(parents=True)
         for i, (name, label) in enumerate(shots, 1):

@@ -52,13 +52,13 @@ async def images_ready(page, *, timeout_ms: int = 10000) -> None:
 
 async def kc_login(page, w=None):
     """Keycloak is username-first: email -> Sign In -> password -> Sign In -> workspace."""
-    if not (EMAIL and PASS):
-        raise RuntimeError("set WT_KC_EMAIL and WT_KC_PASS")
     await goto(page, f"{CONF}/", wait_ms=4000)
     if not await page.locator("button:has-text('Log in')").count():
         await choose_workspace(page)
-        print(f"[kc login] already signed in -> {page.url}")      # session from an earlier flow
+        print(f"[kc login] already signed in -> {page.url}")      # earlier flow or WT_STORAGE_STATE
         return
+    if not (EMAIL and PASS):
+        raise RuntimeError("not signed in: set WT_KC_EMAIL + WT_KC_PASS, or WT_STORAGE_STATE")
     await page.click("button:has-text('Log in')")
     await page.wait_for_selector("#username", timeout=30000)
     await page.fill("#username", EMAIL)
@@ -107,62 +107,55 @@ async def d01_signin(browser):
         await w.shot("keycloak_password_step", full_page=False)
     await goto(page, f"{CONF}/", wait_ms=4000)
     await page.click("text=Set up or reset your password")
-    await page.wait_for_timeout(1500)
+    await page.wait_for_timeout(5000)          # the brand panel's quote fades in; don't catch it mid-fade
     await w.shot("password_setup_link_form", full_page=False)
     await goto(page, f"{CONF}/signup", wait_ms=4000)
     await w.shot("signup_blank", full_page=False)
     await ctx.close()
 
 
-ONBOARDING_STEPS = [
-    ("Branding", "branding_done"),
-    ("Geography", "geography_done"),
-    ("Departments", "departments_done"),
-    ("Employees", "employees_done"),
-    ("Complaints Template", "complaints_template_done"),
+ACCOUNT_PAGES = [
+    ("/account", "your_account"),
+    ("/members", "members"),
+    ("/workspace-settings", "workspace_settings"),
 ]
 
 
-async def d08_onboarding_done(ctx):
-    """Each onboarding step after Finish setup — the state an admin returns to.
-
-    Once setup is finished, /onboarding/<step> URLs redirect to the console, so
-    the steps are reached the way an admin would: Switch to Onboarding, then
-    the step rail.
-    """
+async def d08_account(ctx):
+    """The account menu and its three pages. Once onboarding is finished the
+    /onboarding/* routes redirect to the console, so there is no "finished
+    steps" view any more; these are what an admin reaches from the header."""
     page = await ctx.new_page()
     await kc_login(page)
-    w = Walker(page, EN / "d08_onboarding_done")
+    w = Walker(page, EN / "d08_account")
     await goto(page, f"{CONF}/manage", wait_ms=5000)
-    await page.get_by_text("Switch to Onboarding").first.click()
-    await page.wait_for_timeout(6000)
-    for rail_label, label in ONBOARDING_STEPS:
-        await page.get_by_role("button", name=rail_label).first.click()
-        await page.wait_for_timeout(5000)
-        if "/onboarding/" not in page.url:
-            raise RuntimeError(f"{rail_label}: left onboarding for {page.url}")
+    await page.locator("button[aria-haspopup=menu]").last.click()
+    await page.wait_for_timeout(1200)
+    await w.shot("account_menu", full_page=False)
+    await page.keyboard.press("Escape")
+    for path, label in ACCOUNT_PAGES:
+        await goto(page, f"{CONF}{path}", wait_ms=5000)
         await dismiss_overlays(page)
         await images_ready(page)
         await w.shot(label)
-    await page.get_by_text("Go to Management").first.click()   # leave the app in Management mode
-    await page.wait_for_timeout(4000)
     await page.close()
 
 
-# The develop route table (configurator/src/admin/DigitLayout.tsx).
+# The develop route table (configurator/src/admin/navGroups.ts).
 MANAGE = [
     ("/manage", "dashboard_home"),
     ("/manage/public-dashboard", "public_dashboard"),
+    ("/manage/branding", "branding"),
     ("/manage/tenants", "tenants"),
     ("/manage/departments", "departments"),
     ("/manage/designations", "designations"),
-    # Boundary Hierarchies is left out: its Levels column header renders the raw
-    # translation key `app.fields.levels`.
+    ("/manage/boundary-hierarchies", "boundary_hierarchies"),
     ("/manage/boundaries", "boundaries"),
     ("/manage/map-config", "map_configuration"),
     ("/manage/complaints", "complaints"),
     ("/manage/complaint-hierarchy", "complaint_types"),
     ("/manage/complaint-hierarchies", "complaint_hierarchies"),
+    ("/manage/escalation-policy", "escalation_policy"),
     ("/manage/localization", "localization"),
     ("/manage/employees", "employees"),
     ("/manage/org-chart", "org_chart"),
@@ -172,14 +165,13 @@ MANAGE = [
     ("/manage/workflow-processes", "processes"),
     ("/manage/mdms-schemas", "mdms_schemas"),
     ("/manage/analytics-providers", "analytics_providers"),
-    # Configure Notifications is left out: on a workspace with no notification
-    # setup it renders a warning box written for operators (NB_NO_ROUTING, deploy.sh).
-    # Notification Channels and Providers are left out while novu-bridge's Novu
-    # key is rejected (401) — both screens render an error for every tenant.
+    ("/manage/notification-configure", "notification_configure"),
+    ("/manage/notifications-channel", "notification_channels"),
     ("/manage/notifications-event-catalogue", "notification_event_catalogue"),
     ("/manage/notifications-routing", "notification_routing"),
     ("/manage/notifications-template", "notification_templates"),
     ("/manage/notifications-provider-template", "notification_provider_templates"),
+    ("/manage/notification-provider", "notification_providers"),
     ("/manage/notification-log", "notification_logs"),
     ("/manage/notification-preference", "notification_preferences"),
     ("/manage/advanced", "advanced_all_masters"),
@@ -240,14 +232,17 @@ async def d10_apps(browser):
 
 
 FLOWS_BROWSER = {"d01_signin": d01_signin, "d10_apps": d10_apps}
-FLOWS_CTX = {"d08_onboarding_done": d08_onboarding_done, "d09_manage": d09_manage}
+FLOWS_CTX = {"d08_account": d08_account, "d09_manage": d09_manage}
+DEFAULT = ["d01_signin", "d08_account", "d09_manage"]      # configurator only
 
 
 async def main():
-    want = sys.argv[1:] or [*FLOWS_BROWSER, *FLOWS_CTX]
+    want = sys.argv[1:] or DEFAULT
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        ctx = await browser.new_context(viewport=VIEWPORT, ignore_https_errors=True)
+        # WT_STORAGE_STATE: a saved signed-in session — a magic-link account has no password.
+        state = os.environ.get("WT_STORAGE_STATE") or None
+        ctx = await browser.new_context(viewport=VIEWPORT, ignore_https_errors=True, storage_state=state)
         await install_readonly_guard(ctx)
         for name in want:
             print(f"\n########## {name}")

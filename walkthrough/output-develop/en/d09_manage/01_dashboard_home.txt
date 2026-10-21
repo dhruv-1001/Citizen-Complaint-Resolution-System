@@ -2,7 +2,7 @@ Skip to main content
 
 DIGIT
 
-Complaints Management
+Complaint Management System
 
 MAIN
 Dashboard
@@ -13,7 +13,7 @@ COMPLAINT MANAGEMENT
 PEOPLE
 SYSTEM
 Advanced
-Switch to Onboarding
+Open complaint desk
 Powered by
 Management Mode
 custom
@@ -51,7 +51,7 @@ Boundaries
 
 Complaints
 
-3490
+4486
 
 Localization Messages
 

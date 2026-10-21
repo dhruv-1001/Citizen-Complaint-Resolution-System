@@ -17,97 +17,91 @@ bs.OUT = OUT                       # make_thumbs / use_thumbs_in read the module
 FLOWS = [
     ("d01_signin",          "Sign in · Keycloak"),
     ("d02_signup",          "Sign up · a new workspace"),
+    ("d02b_home",           "Onboarding · Home and welcome tour"),
     ("d03_branding",        "Onboarding · 1 Branding"),
-    ("d04_geography",       "Onboarding · 2 Geography (OCHA COD-AB)"),
+    ("d04_geography",       "Onboarding · 2 Geography"),
     ("d04b_preconfigured",  "Onboarding · 2b Geography — Preconfigured"),
     ("d05_departments",     "Onboarding · 3 Departments"),
     ("d06_employees",       "Onboarding · 4 Employees"),
     ("d07_complaints",      "Onboarding · 5 Complaints Template"),
-    ("d08_onboarding_done", "Onboarding · finished"),
-    ("d09_manage",          "Management console · as the new founder"),
-    ("d10_apps",            "Citizen app"),
+    ("d08_account",         "Account menu"),
+    ("d09_manage",          "Management console"),
 ]
 
 NODES = [
-    ("landing",   "Configurator · Log in",           0, "auth"),
-    ("kc",        "Keycloak sign-in",                1, "auth"),
-    ("pwsetup",   "Set up / reset password",         1, "auth"),
-    ("signup",    "Create an account",               1, "auth"),
-    ("mail",      "Mailpit · sign-in link",          2, "auth"),
-    ("account",   "Account · name + code",           2, "signup"),
-    ("prefs",     "Preferences",                     2, "signup"),
-    ("review",    "Review + provisioning",           3, "signup"),
-    ("workspace", "Choose a workspace",              3, "signup"),
-    ("branding",  "1 · Branding",                    4, "onboard"),
-    ("geo",       "2 · Geography",                   4, "onboard"),
-    ("geo_fetch", "Fetch boundaries (COD-AB)",       5, "onboard"),
-    ("geo_levels","Map Admin Levels",                5, "onboard"),
-    ("geo_preconf","Preconfigured (official set)",   5, "onboard"),
-    ("depts",     "3 · Departments",                 4, "onboard"),
-    ("emps",      "4 · Employees",                   4, "onboard"),
-    ("cats",      "5 · Complaints Template",         4, "onboard"),
-    ("done",      "Onboarding finished",             5, "onboard"),
-    ("manage",    "Management console",              6, "manage"),
-    ("citizen",   "Citizen /citizen",                0, "apps"),
+    ("landing",    "Configurator · Log in",           0, "auth"),
+    ("kc",         "Keycloak sign-in",                1, "auth"),
+    ("pwsetup",    "Set up / reset password",         1, "auth"),
+    ("signup",     "Create an account",               1, "auth"),
+    ("account",    "Account · name + code",           2, "signup"),
+    ("prefs",      "Preferences",                     2, "signup"),
+    ("review",     "Review + provisioning",           3, "signup"),
+    ("home",       "Onboarding Home + tour",          3, "onboard"),
+    ("branding",   "1 · Branding",                    4, "onboard"),
+    ("geo",        "2 · Geography",                   4, "onboard"),
+    ("geo_fetch",  "Fetch boundaries",                5, "onboard"),
+    ("geo_excel",  "Upload from Excel",               5, "onboard"),
+    ("geo_preconf","Preconfigured (official set)",    5, "onboard"),
+    ("depts",      "3 · Departments",                 4, "onboard"),
+    ("emps",       "4 · Employees",                   4, "onboard"),
+    ("cats",       "5 · Complaints Template",         4, "onboard"),
+    ("manage",     "Management console",              6, "manage"),
+    ("acct",       "Account menu",                    6, "manage"),
 ]
 
 EDGES = [
     ("landing", "kc", "Log in"), ("landing", "pwsetup", ""), ("landing", "signup", "Create an account"),
-    ("signup", "mail", "link by mail"), ("mail", "account", "open link"),
+    ("signup", "account", "emailed sign-in link"),
     ("account", "prefs", "Continue"), ("prefs", "review", "Continue"),
-    ("review", "workspace", "write: Create account"), ("kc", "workspace", "Sign In"),
-    ("workspace", "branding", ""), ("branding", "geo", "write: Save"),
-    ("geo", "geo_fetch", "Search boundaries"), ("geo", "geo_preconf", "Use these boundaries"), ("geo_fetch", "geo_levels", "Search"),
-    ("geo_levels", "depts", "write: Create + Save"), ("depts", "emps", "write: Save"),
-    ("emps", "cats", "write: Save"), ("cats", "done", "write: Finish setup"),
-    ("done", "manage", "lands in"),
+    ("review", "home", "write: Create account"), ("home", "branding", "Set Up Branding"),
+    ("branding", "geo", "write: Save"),
+    ("geo", "geo_preconf", "Use these boundaries"), ("geo", "geo_fetch", "Search boundaries"),
+    ("geo", "geo_excel", "Upload a file"),
+    ("geo_preconf", "depts", "write: Create + Save"), ("depts", "emps", "write: Save"),
+    ("emps", "cats", "write: Save"), ("cats", "manage", "write: Finish setup"),
+    ("manage", "acct", "account menu"), ("kc", "manage", "Sign In"),
 ]
 
-GROUP_COLOR = {"auth": "#d8973c", "signup": "#e0672b", "onboard": "#8b5cf6",
-               "manage": "#2f6fdb", "apps": "#3fae6b"}
+GROUP_COLOR = {"auth": "#d8973c", "signup": "#e0672b", "onboard": "#8b5cf6", "manage": "#2f6fdb"}
 LEGEND = [("Sign in", "#d8973c"), ("Sign up", "#e0672b"), ("Onboarding", "#8b5cf6"),
-          ("Management console", "#2f6fdb"), ("Citizen app", "#3fae6b")]
+          ("Management console + account", "#2f6fdb")]
 
 CAPTIONS = {
     "landing": "/configurator/ — a single Log in button; sign-in lives in Keycloak",
     "kc": "Keycloak, username-first: email, then password (or GitHub)",
     "pwsetup": "One-use password set-up link by mail",
     "signup": "Self-serve sign-up: name and email",
-    "mail": "The sign-in link in Mailpit",
-    "account": "Account name and derived code (CDM → MZ-CDM)",
+    "account": "Account name and a code derived from it",
     "prefs": "Country, languages, time zone, financial year, slug, founder mobile",
-    "review": "Review, then provisioning — failed once on MDMS_SCHEMA_NOT_VISIBLE, finished on retry",
-    "workspace": "Choose a workspace",
+    "review": "Review, then provisioning",
+    "home": "Onboarding Home: welcome tour, next step, Learn the basics videos, documentation",
     "branding": "Logo, name, brand theme",
-    "geo": "Preconfigured (soon), Fetch boundaries, Upload from Excel",
-    "geo_fetch": "turbopass search — OCHA COD-AB for Cidade de Maputo",
-    "geo_levels": "4 COD levels, 79 areas, named Cidade → Distrito Municipal → Posto Administrativo → Bairro",
-    "geo_preconf": "Preconfigured: the country's official set with per-level confidence, no search",
-    "depts": "Departments + designations",
-    "emps": "Employees — one GRO per complaint department",
-    "cats": "4 categories, 14 subcategories, 3-day target; Finish refused until every department had a GRO",
-    "done": "Each step after Finish setup",
-    "manage": "Every console route as the founder — many API calls refused (403)",
-    "citizen": "/citizen — digit-ui-v2 sign-in",
+    "geo": "Preconfigured boundaries (with a confidence tag), Fetch boundaries, Upload from Excel",
+    "geo_fetch": "Search with a choice of source — read-only here",
+    "geo_excel": "Define the hierarchy's levels, then upload",
+    "geo_preconf": "Search Mozambique's official set (Medium confidence) → 79 areas for Cidade de Maputo",
+    "depts": "4 departments, 2 designations",
+    "emps": "6 employees: a GRO per department, 2 field officers",
+    "cats": "4 categories, 14 subcategories, 3-day default",
+    "manage": "Every console route — no refused calls",
+    "acct": "Your account, Members, Workspace settings",
 }
 
 # (flow, filename marker) -> node; first match wins
 MARKERS = [
     ("d01_signin", "configurator_landing", "landing"), ("d01_signin", "keycloak", "kc"),
     ("d01_signin", "password_setup", "pwsetup"), ("d01_signin", "signup", "signup"),
-    ("d02_signup", "signup_", "signup"), ("d02_signup", "mailpit", "mail"),
+    ("d02_signup", "signup_", "signup"),
     ("d02_signup", "account_", "account"), ("d02_signup", "preferences", "prefs"),
     ("d02_signup", "review", "review"), ("d02_signup", "provisioning", "review"),
-    ("d02_signup", "choose_workspace", "workspace"),
+    ("d02b_home", "", "home"),
     ("d03_branding", "", "branding"),
-    ("d04_geography", "geography_choose", "geo"), ("d04_geography", "geography_with", "geo"),
-    ("d04_geography", "fetch_", "geo_fetch"), ("d04_geography", "source_options", "geo_fetch"),
-    ("d04_geography", "cod_suggestions", "geo_fetch"), ("d04_geography", "", "geo_levels"),
+    ("d04_geography", "geography_choose", "geo"), ("d04_geography", "excel", "geo_excel"),
+    ("d04_geography", "", "geo_fetch"),
     ("d04b_preconfigured", "", "geo_preconf"),
     ("d05_departments", "", "depts"), ("d06_employees", "", "emps"),
     ("d07_complaints", "finished_lands", "manage"), ("d07_complaints", "", "cats"),
-    ("d08_onboarding_done", "", "done"), ("d09_manage", "", "manage"),
-    ("d10_apps", "citizen", "citizen"),
+    ("d08_account", "", "acct"), ("d09_manage", "", "manage"),
 ]
 
 
@@ -125,8 +119,8 @@ if __name__ == "__main__":
     build_sitemap(
         OUT, NODES, EDGES,
         group_colors=GROUP_COLOR, legend=LEGEND, langs=(("en", "EN"),),
-        title="Sitemap · DIGIT develop UI walkthrough · 141.94.92.163.nip.io (2026-10-05)",
-        heading='DIGIT develop UI <span style="color:var(--mut)">· 141.94.92.163.nip.io</span>',
+        title="Sitemap · DIGIT configurator on develop — walkthrough (2026-10-21)",
+        heading='DIGIT configurator <span style="color:var(--mut)">· develop f713f9e6c, local stack</span>',
         links=[("gallery.html", "Grid gallery →")],
         accent="#2f6fdb",
     )
@@ -135,12 +129,12 @@ if __name__ == "__main__":
     bs.use_thumbs_in(("index.html", "sitemap.html"))
     build_flow_gallery(
         OUT, FLOWS, langs=(("en", "EN"),),
-        title="DIGIT develop UI walkthrough · 141.94.92.163.nip.io (2026-10-05)",
-        intro=("Keycloak sign-in, self-serve sign-up, the five-step onboarding done for Cidade de "
-               "Maputo with OCHA COD-AB boundaries, and the management console as the new "
-               "workspace's founder sees it."),
+        title="DIGIT configurator on develop — walkthrough (2026-10-21)",
+        intro=("The configurator on develop (f713f9e6c): Keycloak sign-in, self-serve sign-up, the "
+               "onboarding Home and tour, the five steps done for Cidade de Maputo with Mozambique's "
+               "official boundaries, the account pages, and the management console."),
         links=[("index.html", "&#9783; Open the sitemap graph &rarr;")],
-        footer=("Click any screenshot to zoom · the sign-up and onboarding steps wrote to a "
-                "throwaway workspace (cidadedemaputo); everything else was captured read-only."),
+        footer=("Click any screenshot to zoom · captured on a local develop stack on 2026-10-21; the "
+                "sign-up and onboarding steps wrote to a throwaway workspace there, everything else is read-only."),
         accent="#2f6fdb",
     )

@@ -7,11 +7,12 @@ https://govt-onboard-flow.proto.theflywheel.in:
 | Deployment | Branch it runs | Output | Flat doc |
 |---|---|---|---|
 | **bometfeedbackhub.digit.org** | `master` (2026-10-02) | `output/` | [`docs/digit-ui-walkthrough.md`](../docs/digit-ui-walkthrough.md) |
-| **develop deployment** (141.94.92.163.nip.io) | `develop` UI — Keycloak sign-in, five-step onboarding | `output-develop/` | [`docs/digit-ui-walkthrough-develop.md`](../docs/digit-ui-walkthrough-develop.md) |
+| **local develop stack** (`deploy.sh maputo`) | `develop` (`f713f9e6c`, 2026-10-21) — configurator only | `output-develop/` | [`docs/digit-ui-walkthrough-develop.md`](../docs/digit-ui-walkthrough-develop.md) |
 
-Both last captured **2026-10-05**. bomet is captured strictly read-only; on the develop deployment the sign-up and
-onboarding steps were carried out for real against a throwaway workspace (Cidade de Maputo, OCHA
-COD-AB boundaries) — see the develop doc.
+bomet was last captured **2026-10-05**, strictly read-only. The develop configurator was re-captured
+**2026-10-21** on a local stack, where the sign-up and onboarding steps were carried out for real
+against a throwaway workspace (Cidade de Maputo, Mozambique's official boundaries) — see the develop
+doc.
 
 Built with [ChakshuGautam/playwright-scraper](https://github.com/ChakshuGautam/playwright-scraper).
 
@@ -159,7 +160,7 @@ municipal → bairro), which is what the walkthrough shows.
 | `capture_onboarding.py` | the 4-phase wizard, walked screen by screen up to each write |
 | `capture_employee.py` | the six employee-UI flows |
 | `capture_citizen.py` | both citizen apps (up to sign-in) and the public dashboard |
-| `capture_develop.py` | develop deployment: Keycloak sign-in screens, finished onboarding steps, every console route (+ API status per route), the apps |
+| `capture_develop.py` | develop configurator: Keycloak sign-in screens, the account pages, every console route (+ API status per route); `WT_STORAGE_STATE` reuses a signed-in session |
 | `import_develop_run.py` | copies the screenshots of the one-off onboarding run into `output-develop/` |
 | `build_site_develop.py`, `build_doc_develop.py` | the develop site and `docs/digit-ui-walkthrough-develop.md` |
 | `fixtures/` | sample onboarding workbooks, parsed in-browser to reach the preview/verify screens |
@@ -189,11 +190,9 @@ blocked by test-leftover boundary hierarchies (285 now). The test junk the Augus
 back (75 tenants), and test complaint categories now show in the employee picker and on the
 anonymous public dashboard. The complaint-form map needs a CARTO key.
 
-**develop deployment** — sign-in is Keycloak-only; self-serve sign-up and the five onboarding steps work
-end to end, with rough edges (a provisioning read-after-write race, an opaque
-`WORKSPACE_PROBE_INCOMPLETE` that really means "one GRO per department", "Email (optional)" that is
-required, an identity session that expires under you). The founder's console permissions were
-missing from the sign-up seed — fixed upstream (#2269, open) and patched on the server for this
-workspace, so the console is captured clean. Still broken there: the employee app (the vhost 404s
-its own assets) and the notification provider screens (novu-bridge's Novu key is rejected).
-Turbopass was deployed on the box for this capture.
+**develop (local, 2026-10-21)** — sign-up, the new onboarding Home and tour, and all five steps ran end
+to end without an error, Geography through the new Preconfigured source (Mozambique, Medium
+confidence). The founder's console permissions are fixed: no refused calls on any console screen.
+Not pictured: Boundary Hierarchies (raw `app.fields.levels` header) and Workflow Business Services
+(lists 0) — both still bugs on develop — and the notification screens, because the local stack runs
+without Novu.

@@ -1,0 +1,102 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Advanced Entities
+
+Browse and manage all MDMS schema data.
+
+State Info
+
+common-masters.StateInfo
+
+City Modules
+
+tenant.citymodule
+
+ID Formats
+
+common-masters.IdFormat
+
+SLA Config
+
+common-masters.wfSlaConfig
+
+Role Actions
+
+ACCESSCONTROL-ROLEACTIONS.roleactions
+
+Roles
+
+ACCESSCONTROL-ROLES.roles
+
+Action Mappings
+
+ACCESSCONTROL-ACTIONS-TEST.actions-test
+
+Deactivation Reasons
+
+egov-hrms.DeactivationReason
+
+Gender Types
+
+common-masters.GenderType
+
+Employee Status
+
+egov-hrms.EmployeeStatus
+
+Employee Type
+
+egov-hrms.EmployeeType
+
+UI Homepage
+
+common-masters.uiHomePage
+
+Theme Config
+
+common-masters.ThemeConfig
+
+Mobile Number Validation
+
+common-masters.MobileNumberValidation
+
+PGR UI Constants
+
+RAINMAKER-PGR.UIConstants
+
+Legacy (PGR) Notification Routing
+
+RAINMAKER-PGR.NotificationRouting
+
+Legacy (PGR) Notification Templates
+
+RAINMAKER-PGR.NotificationTemplate
+
+Legacy (PGR) Provider Templates
+
+RAINMAKER-PGR.NotificationProviderTemplate
+
+Legacy (PGR) Notification Channels
+
+RAINMAKER-PGR.NotificationChannel

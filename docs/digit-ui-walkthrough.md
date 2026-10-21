@@ -3,7 +3,7 @@
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
 the DIGIT configurator (4-phase onboarding wizard + management console), the digit-ui employee app,
 both citizen apps and the public dashboard. The develop-branch UI (Keycloak sign-in, five-step
-onboarding) is captured separately on the develop deployment: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+onboarding) is captured separately, on a local develop stack: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 **104 screens · 22 flows · captured 2026-10-05 · read-only.** Nothing on the deployment was
 created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
@@ -162,9 +162,9 @@ Both paths stop at the same wall: the button that creates the hierarchy and the 
 
 ![Suggestion picked, ready to search](../walkthrough/output/en/03_phase2_boundary/14_p2_osm_search_typed.png)
 
-**Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB on the develop deployment gives 7 districts and 64 bairros: OSM is missing KaNyaka**
+**Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB (the develop walkthrough) gives 7 districts and 64 bairros: OSM is missing KaNyaka**
 
-![Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB on the develop deployment gives 7 districts and 64 bairros: OSM is missing KaNyaka](../walkthrough/output/en/03_phase2_boundary/15_p2_osm_map_levels.png)
+![Map Admin Levels — the three levels Overpass returned: 1 city (level 4), 6 distritos municipais (level 5), 63 bairros (level 8). The same city through OCHA COD-AB (the develop walkthrough) gives 7 districts and 64 bairros: OSM is missing KaNyaka](../walkthrough/output/en/03_phase2_boundary/15_p2_osm_map_levels.png)
 
 **Each level named — *Município → Distrito Municipal → Bairro*. The selection is now valid and *Create Hierarchy & Boundaries* is enabled; that click writes, so this is where the capture stops**
 
@@ -704,7 +704,7 @@ apps changed a lot (#2038):
   `/digit-ui/citizen` app in the same shell. Neither was in the previous walkthrough.
 
 The develop-branch UI (Keycloak sign-in, the five-step onboarding) is not on bomet; it is
-captured on the develop deployment in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+captured on a local develop stack in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 ### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 

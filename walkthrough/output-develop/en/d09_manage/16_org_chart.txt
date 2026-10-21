@@ -1,0 +1,59 @@
+Skip to main content
+
+DIGIT
+
+Complaint Management System
+
+MAIN
+Dashboard
+Public Dashboard
+NOTIFICATIONS
+TENANT MANAGEMENT
+COMPLAINT MANAGEMENT
+PEOPLE
+Employees
+Org Chart
+Users
+SYSTEM
+Advanced
+Open complaint desk
+Powered by
+Management Mode
+custom
+Help
+EN
+Theme
+W
+Org Chart
+Cidade de Maputo
+7
+TOTAL
+0
+WITH MGR
+7
+ORPHANS
+0
+UNRESOLVED
+0
+CYCLES
+Manager
+Member
+Unresolved manager
+Inactive
+No reporting relationships for this tenant.
+Everyone is listed under "No reporting relationship".
+NO REPORTING RELATIONSHIP (7)
+Walkthrough Maputo
+ONBOARDING_FOUNDER · ONBOARDING_ADMIN
+Celeste Mondlane
+GRIEVANCE_REDRESSAL_OFFICER · MARKETS_AND_FAIRS
+Helena Machava
+GRIEVANCE_REDRESSAL_OFFICER · SOLID_WASTE_AND_SANITATION
+Armando Sitoe
+GRIEVANCE_REDRESSAL_OFFICER · ROADS_AND_DRAINAGE
+Lúcia Nhantumbo
+FIELD_OFFICER · ROADS_AND_DRAINAGE
+Jaime Chissano
+GRIEVANCE_REDRESSAL_OFFICER · PARKS_AND_PUBLIC_SPACES
+Tomás Cossa
+FIELD_OFFICER · SOLID_WASTE_AND_SANITATION

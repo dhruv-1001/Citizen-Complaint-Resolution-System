@@ -20,6 +20,3 @@ Continue with your password or an identity provider. You will choose a workspace
 
 USERNAME OR EMAIL
 Sign In
-OR
-Or sign in with
-Log in with GitHub
