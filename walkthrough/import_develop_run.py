@@ -3,8 +3,8 @@
 
 The sign-up and the five onboarding steps WRITE (a Keycloak user, a tenant,
 boundaries, departments, employees, complaint types), so they are driven once,
-step by step, against a throwaway workspace — on 2026-10-21 against the local
-develop stack (develop f713f9e6c) — not by a re-runnable capture. This script
+step by step, against a throwaway workspace — on 2026-10-26 against the local
+master stack (master 5dc402e09) — not by a re-runnable capture. This script
 copies the chosen screenshots into numbered flow directories so build_site /
 build_doc_develop treat them like any other capture.
 
@@ -55,10 +55,11 @@ RUN = {
         ("d01_preconf_search.png", "preconfigured_search"),
         ("d02_preconf_suggestions.png", "preconfigured_suggestions"),
         ("d03_preconf_levels.png", "preconfigured_levels"),
-        ("d04_preconf_per_level.png", "per_level_confidence"),
+        ("d03b_preconf_data_check.png", "data_check"),
         ("d05_preconf_levels_named.png", "levels_named"),
-        ("d06_boundaries_created.png", "boundaries_created"),
-        ("d07_geography_with_hierarchy.png", "geography_with_hierarchy"),
+        ("d06_geography_list.png", "geography_list"),
+        ("d07_save_confirm.png", "save_confirm"),
+        ("d08_saving.png", "saving"),
     ],
     "d05_departments": [
         ("e01_departments_landing.png", "departments_landing"),
@@ -70,6 +71,7 @@ RUN = {
     "d06_employees": [
         ("f01_employees_landing.png", "employees_landing"),
         ("f02_employees_upload.png", "employees_upload"),
+        ("f03_employee_form_blank.png", "employee_form_blank"),
         ("f04_employee_form_filled.png", "employee_form_filled"),
         ("f05_employees_list.png", "employees_list"),
     ],

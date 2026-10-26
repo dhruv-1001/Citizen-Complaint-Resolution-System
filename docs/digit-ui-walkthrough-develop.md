@@ -1,15 +1,16 @@
-# DIGIT configurator on `develop` — visual walkthrough
+# DIGIT configurator on `master` — visual walkthrough
 
-A screen-by-screen capture of the DIGIT configurator as it is on the `develop` branch
-(`f713f9e6c`): Keycloak sign-in, self-serve sign-up, the onboarding Home and tour, the five
+A screen-by-screen capture of the DIGIT configurator as it is on the `master` branch
+(`5dc402e09`): Keycloak sign-in, self-serve sign-up, the onboarding Home and tour, the five
 onboarding steps carried out for **Cidade de Maputo** with Mozambique's official boundaries, the
 account pages, and the management console.
 
-**78 screens · 11 flows · captured 2026-10-21 on a local develop stack.** The sign-up
+**76 screens · 11 flows · captured 2026-10-26 on a local master stack.** The sign-up
 and onboarding steps created a throwaway workspace on that local stack; everything else was
 captured read-only. See [How this capture was made](#how-this-capture-was-made).
 
-The `master`-branch UI on bomet is in [`digit-ui-walkthrough.md`](digit-ui-walkthrough.md).
+The bomet capture of 2026-10-05 (configurator wizard, employee and citizen apps) is in
+[`digit-ui-walkthrough.md`](digit-ui-walkthrough.md).
 
 ---
 
@@ -27,7 +28,7 @@ The `master`-branch UI on bomet is in [`digit-ui-walkthrough.md`](digit-ui-walkt
 - [Account menu](#account-menu)
 - [Management console](#management-console)
 - [API calls per console screen](#api-calls-per-console-screen)
-- [What changed since the 2026-10-05 capture](#what-changed-since-the-2026-10-05-capture)
+- [What changed since the 2026-10-21 capture](#what-changed-since-the-2026-10-21-capture)
 - [What is not pictured](#what-is-not-pictured)
 - [How this capture was made](#how-this-capture-was-made)
 
@@ -35,15 +36,15 @@ The `master`-branch UI on bomet is in [`digit-ui-walkthrough.md`](digit-ui-walkt
 
 ## Sign in · Keycloak
 
-`/configurator/` has no form of its own. **Log in** hands off to Keycloak, which asks for the email first, then the password; you choose a workspace after signing in. Accounts that came in through a sign-up link have no password until they use **Set up or reset your password**.
+`/configurator/` has no form of its own. **Log in** hands off to Keycloak, which asks for the username or email first, then the password; you choose a workspace after signing in. Accounts that came in through a sign-up link have no password until they use **Set up or reset your password**.
 
 **`/configurator/` — one button, *Log in*; the form lives in Keycloak**
 
 ![/configurator/ — one button, Log in; the form lives in Keycloak](../walkthrough/output-develop/en/d01_signin/01_configurator_landing.png)
 
-**Keycloak, step one: email (or GitHub)**
+**Keycloak, step one: username or email**
 
-![Keycloak, step one: email (or GitHub)](../walkthrough/output-develop/en/d01_signin/02_keycloak_email_step.png)
+![Keycloak, step one: username or email](../walkthrough/output-develop/en/d01_signin/02_keycloak_email_step.png)
 
 **Step two: password**
 
@@ -53,15 +54,15 @@ The `master`-branch UI on bomet is in [`digit-ui-walkthrough.md`](digit-ui-walkt
 
 ![Set up or reset your password — a one-use link by mail](../walkthrough/output-develop/en/d01_signin/04_password_setup_link_form.png)
 
-***Create an account*: name and email**
+***Create an account*: name and email; continuing accepts the Terms of Service and Privacy Notice**
 
-![Create an account: name and email](../walkthrough/output-develop/en/d01_signin/05_signup_blank.png)
+![Create an account: name and email; continuing accepts the Terms of Service and Privacy Notice](../walkthrough/output-develop/en/d01_signin/05_signup_blank.png)
 
 ---
 
 ## Sign up · a new workspace
 
-**Create an account** is self-serve: name and email, then a one-use sign-in link by mail (on this stack the mail lands in Mailpit). Then three steps — **Account** (name and a code derived from it), **Preferences** (country, languages, time zone, financial year, URL slug, the founder's mobile), **Review** — and the provisioning screen while the workspace, its basics, the founder's employee record, account, membership and sign-in are created.
+**Create an account** is self-serve: name and email, then a one-use sign-in link by mail (on this stack the mail lands in Mailpit). Then three steps — **Account** (name and a code derived from it), **Preferences** (country, languages, time zone, financial year, URL slug, the founder's mobile), **Review** — and the provisioning screen while the workspace, its basics, the founder's employee record, account, membership and sign-in are created. The terms are accepted on the first screen (*By continuing, you agree…*); Review has no checkbox.
 
 The workspace onboarded in this walkthrough is a throwaway: **Cidade de Maputo**, Mozambique, English + Portuguese, `Africa/Maputo`, January–December.
 
@@ -85,17 +86,17 @@ The workspace onboarded in this walkthrough is a throwaway: **Cidade de Maputo**
 
 ![Preferences](../walkthrough/output-develop/en/d02_signup/05_preferences_blank.png)
 
-**Picking Mozambique fills in the time zone and the URL slug**
+**Picking Mozambique fills in the time zone and the mobile number format (+258)**
 
-![Picking Mozambique fills in the time zone and the URL slug](../walkthrough/output-develop/en/d02_signup/06_preferences_mozambique_defaults.png)
+![Picking Mozambique fills in the time zone and the mobile number format (+258)](../walkthrough/output-develop/en/d02_signup/06_preferences_mozambique_defaults.png)
 
 **Portuguese added, financial year January–December, founder's mobile**
 
 ![Portuguese added, financial year January–December, founder's mobile](../walkthrough/output-develop/en/d02_signup/07_preferences_filled.png)
 
-**Review**
+**Review: account code `MZ-CIDADE-DE-MAPUTO`, then *Create account* — no terms checkbox here**
 
-![Review](../walkthrough/output-develop/en/d02_signup/08_review.png)
+![Review: account code MZ-CIDADE-DE-MAPUTO, then Create account — no terms checkbox here](../walkthrough/output-develop/en/d02_signup/08_review.png)
 
 **Setting up Cidade de Maputo**
 
@@ -111,9 +112,9 @@ Provisioning lands on the onboarding **Home**. A six-slide tour explains what on
 
 ![Welcome tour 1 of 6 — what onboarding is for](../walkthrough/output-develop/en/d02b_home/01_tour_1_what_onboarding_is.png)
 
-**2 — Complaints Template: what citizens can report, and who handles it**
+**2 — Complaints Template**
 
-![2 — Complaints Template: what citizens can report, and who handles it](../walkthrough/output-develop/en/d02b_home/02_tour_2_complaints_template.png)
+![2 — Complaints Template](../walkthrough/output-develop/en/d02b_home/02_tour_2_complaints_template.png)
 
 **3 — Branding**
 
@@ -157,29 +158,29 @@ Logo, account name (changed in Workspace settings) and one of three brand themes
 
 ## Onboarding · 2 Geography
 
-Three sources. **Preconfigured boundaries** already knows the country — Mozambique, from sign-up — and offers its official boundary set with a confidence tag and the source line. **Fetch boundaries** searches the boundary service with a choice of source. **Upload from Excel** starts by defining the hierarchy's levels.
+Three sources. **Preconfigured boundaries** already knows the country — Mozambique, from sign-up — and offers its official boundary set with its levels and a confidence tag. **Fetch boundaries** searches with a choice of source: official boundaries or OpenStreetMap. **Upload from Excel** starts by defining the hierarchy's levels.
 
-The Fetch and Excel screens below are read-only: nothing was created from them. The boundaries were brought in through Preconfigured, in the next section.
+The Fetch and Excel screens below are read-only: nothing was added from them. The boundaries were brought in through Preconfigured, in the next section.
 
-**Geography: *Preconfigured boundaries* (Mozambique, Medium confidence, OCHA COD-AB · Jan 2025), Fetch boundaries, Upload from Excel**
+**Geography: *Preconfigured boundaries* (Mozambique, four levels, Medium confidence), Fetch boundaries, Upload from Excel**
 
-![Geography: Preconfigured boundaries (Mozambique, Medium confidence, OCHA COD-AB · Jan 2025), Fetch boundaries, Upload from Excel](../walkthrough/output-develop/en/d04_geography/01_geography_choose_source.png)
+![Geography: Preconfigured boundaries (Mozambique, four levels, Medium confidence), Fetch boundaries, Upload from Excel](../walkthrough/output-develop/en/d04_geography/01_geography_choose_source.png)
 
 **Fetch boundaries — source, area search, optional map provider**
 
 ![Fetch boundaries — source, area search, optional map provider](../walkthrough/output-develop/en/d04_geography/02_fetch_boundaries.png)
 
-**Sources: Official (best per country), OCHA COD-AB, geoBoundaries, Overture**
+**Sources: Official boundaries or OpenStreetMap**
 
-![Sources: Official (best per country), OCHA COD-AB, geoBoundaries, Overture](../walkthrough/output-develop/en/d04_geography/03_boundary_source_options.png)
+![Sources: Official boundaries or OpenStreetMap](../walkthrough/output-develop/en/d04_geography/03_boundary_source_options.png)
 
-**Typing a place: suggestions with level and number of areas inside**
+**Typing a place: a suggestion with its level and the number of areas inside**
 
-![Typing a place: suggestions with level and number of areas inside](../walkthrough/output-develop/en/d04_geography/04_fetch_suggestions.png)
+![Typing a place: a suggestion with its level and the number of areas inside](../walkthrough/output-develop/en/d04_geography/04_fetch_suggestions.png)
 
-**The level screen Fetch opens — not created from here**
+**The level screen Fetch opens, with *Download boundary list* under the map — nothing added from here**
 
-![The level screen Fetch opens — not created from here](../walkthrough/output-develop/en/d04_geography/05_fetch_map_admin_levels.png)
+![The level screen Fetch opens, with Download boundary list under the map — nothing added from here](../walkthrough/output-develop/en/d04_geography/05_fetch_map_admin_levels.png)
 
 **Upload from Excel starts by defining the hierarchy's levels**
 
@@ -189,9 +190,11 @@ The Fetch and Excel screens below are read-only: nothing was created from them. 
 
 ## Onboarding · 2b Geography — Preconfigured
 
-**Use these boundaries** opens the Fetch search with the source **fixed** to the country's official set — here OCHA COD-AB — and suggestions limited to the country. The tag reads how far a second, independently drawn source (geoBoundaries) agrees, level by level: *High* when every level it has is confirmed, *Medium* when some only partly match or the other source is years older, *Low* when nothing could be cross-checked. Mozambique is **Medium**: provinces confirmed, districts and administrative posts partly match an older source, localities exist in one source only. *One source only* means a level could not be checked, not that it is wrong.
+**Use these boundaries** opens the search with the source **fixed** to the country's official set — here OCHA COD-AB — and suggestions limited to the country. The tag reads how far a second, independently drawn source (geoBoundaries) agrees, level by level: *High* when every level it has is confirmed, *Medium* when some only partly match or the other source is years older, *Low* when nothing could be cross-checked. Mozambique is **Medium**: provinces confirmed, districts and administrative posts partly match an older source, localities exist in one source only. *One source only* means a level could not be checked, not that it is wrong.
 
 For Cidade de Maputo the set has four nested levels — 1 city, 7 districts, 7 administrative posts, 64 bairros (the districts and posts are the same seven places in Maputo city) — named here in the local terms *Cidade → Distrito Municipal → Posto Administrativo → Bairro*: 79 areas in all.
+
+**Create Hierarchy & Boundaries** no longer writes anything: it puts the selection in a list on the Geography page, where it can still be edited or removed. Only **Save and continue** writes, after a confirmation that saved boundaries can't be edited or removed.
 
 **Use these boundaries → the search, with the source fixed to Mozambique's official set: *Medium confidence*, OCHA COD-AB · Jan 2025, and the headline**
 
@@ -201,31 +204,35 @@ For Cidade de Maputo the set has four nested levels — 1 city, 7 districts, 7 a
 
 ![Suggestions come only from Mozambique's official set](../walkthrough/output-develop/en/d04b_preconfigured/02_preconfigured_suggestions.png)
 
-**The level screen for Cidade de Maputo: summary, data check (every level fully nested), polygons**
+**The level screen for Cidade de Maputo: the validation report (folded), the map, *Download boundary list***
 
-![The level screen for Cidade de Maputo: summary, data check (every level fully nested), polygons](../walkthrough/output-develop/en/d04b_preconfigured/03_preconfigured_levels.png)
+![The level screen for Cidade de Maputo: the validation report (folded), the map, Download boundary list](../walkthrough/output-develop/en/d04b_preconfigured/03_preconfigured_levels.png)
 
-**Each level with its status against the second source — *Confirmed*, *Partly confirmed · n%*, *One source only***
+**The validation report unfolded: 79 areas, 79 will be created, every level nested in the one above**
 
-![Each level with its status against the second source — Confirmed, Partly confirmed · n%, One source only](../walkthrough/output-develop/en/d04b_preconfigured/04_per_level_confidence.png)
+![The validation report unfolded: 79 areas, 79 will be created, every level nested in the one above](../walkthrough/output-develop/en/d04b_preconfigured/04_data_check.png)
 
-**The four levels named in local terms**
+**Each level with its status against the second source — *Confirmed*, *Partly confirmed*, *One source only* — named in local terms**
 
-![The four levels named in local terms](../walkthrough/output-develop/en/d04b_preconfigured/05_levels_named.png)
+![Each level with its status against the second source — Confirmed, Partly confirmed, One source only — named in local terms](../walkthrough/output-develop/en/d04b_preconfigured/05_levels_named.png)
 
-**Boundaries created — 79 areas in four levels, with the licence line**
+***Create Hierarchy & Boundaries* puts the selection in a list: *Not saved yet*, with Edit and Remove**
 
-![Boundaries created — 79 areas in four levels, with the licence line](../walkthrough/output-develop/en/d04b_preconfigured/06_boundaries_created.png)
+![Create Hierarchy & Boundaries puts the selection in a list: Not saved yet, with Edit and Remove](../walkthrough/output-develop/en/d04b_preconfigured/06_geography_list.png)
 
-**Back on Geography: the hierarchy, ready to save**
+***Save and continue* asks first: once saved, the boundaries can't be edited or removed**
 
-![Back on Geography: the hierarchy, ready to save](../walkthrough/output-develop/en/d04b_preconfigured/07_geography_with_hierarchy.png)
+![Save and continue asks first: once saved, the boundaries can't be edited or removed](../walkthrough/output-develop/en/d04b_preconfigured/07_save_confirm.png)
+
+**Saving the boundaries, with progress**
+
+![Saving the boundaries, with progress](../walkthrough/output-develop/en/d04b_preconfigured/08_saving.png)
 
 ---
 
 ## Onboarding · 3 Departments
 
-Departments and designations, typed in or uploaded; codes are derived from the names. Four municipal departments, and two designations — Grievance Redressal Officer and Field Officer — linked to all four.
+Departments and designations, typed in or uploaded; codes are suggested from the names. Four municipal departments, and two designations — Grievance Redressal Officer and Field Officer — linked to all four.
 
 **Departments: create manually or bulk upload**
 
@@ -235,61 +242,65 @@ Departments and designations, typed in or uploaded; codes are derived from the n
 
 ![Bulk upload, with a template to download](../walkthrough/output-develop/en/d05_departments/02_departments_upload.png)
 
-**Add department — code derived from the name**
+**Add department — code suggested from the name**
 
-![Add department — code derived from the name](../walkthrough/output-develop/en/d05_departments/03_add_department.png)
+![Add department — code suggested from the name](../walkthrough/output-develop/en/d05_departments/03_add_department.png)
 
 **Add designation, linked to departments**
 
 ![Add designation, linked to departments](../walkthrough/output-develop/en/d05_departments/04_add_designation.png)
 
-**Four departments, two designations**
+**Four departments, two designations, each with Edit and Remove**
 
-![Four departments, two designations](../walkthrough/output-develop/en/d05_departments/05_departments_filled.png)
+![Four departments, two designations, each with Edit and Remove](../walkthrough/output-develop/en/d05_departments/05_departments_filled.png)
 
 ---
 
 ## Onboarding · 4 Employees
 
-People added one at a time or from a staff list. Each gets a department, a designation, system roles and jurisdictions. Six here: one grievance officer (GRO) for each complaint department, so every complaint has someone to assign it, and two field officers (`PGR_LME`) for their districts.
+People added one at a time or from a staff list. Each gets one department, a designation, system roles and jurisdictions, and signs in to the employee app with their email. Six here: one grievance officer (*Complaint Assessor*, `GRO`) for each complaint department, so every complaint has someone to assign it, and two field officers (*Complaint Resolver*, `PGR_LME`) for their districts.
 
 **Employees: create manually or bulk upload**
 
 ![Employees: create manually or bulk upload](../walkthrough/output-develop/en/d06_employees/01_employees_landing.png)
 
-**Bulk upload**
+**Bulk upload: a template built with the workspace's departments, designations, roles and 79 areas**
 
-![Bulk upload](../walkthrough/output-develop/en/d06_employees/02_employees_upload.png)
+![Bulk upload: a template built with the workspace's departments, designations, roles and 79 areas](../walkthrough/output-develop/en/d06_employees/02_employees_upload.png)
 
-**A field officer: Solid Waste and Sanitation, Field Officer, `EMPLOYEE` + `PGR_LME`, jurisdiction KaMpfumo**
+**Add an employee: one department, a designation, system roles, jurisdictions**
 
-![A field officer: Solid Waste and Sanitation, Field Officer, EMPLOYEE + PGR_LME, jurisdiction KaMpfumo](../walkthrough/output-develop/en/d06_employees/03_employee_form_filled.png)
+![Add an employee: one department, a designation, system roles, jurisdictions](../walkthrough/output-develop/en/d06_employees/03_employee_form_blank.png)
 
-**Six employees: a GRO for each department, two field officers**
+**A field officer: Solid Waste and Sanitation, Field Officer, *Employee* + *Complaint Resolver* (`PGR_LME`), jurisdiction KaMpfumo**
 
-![Six employees: a GRO for each department, two field officers](../walkthrough/output-develop/en/d06_employees/04_employees_list.png)
+![A field officer: Solid Waste and Sanitation, Field Officer, Employee + Complaint Resolver (PGR_LME), jurisdiction KaMpfumo](../walkthrough/output-develop/en/d06_employees/04_employee_form_filled.png)
+
+**The list — seven with the founder; each new employee also gets `CSR`**
+
+![The list — seven with the founder; each new employee also gets CSR](../walkthrough/output-develop/en/d06_employees/05_employees_list.png)
 
 ---
 
 ## Onboarding · 5 Complaints Template
 
-Complaint categories, each handled by one department, with subcategories one per line and an optional resolution time of their own; the default for every category is set below the list (3 days here). Four categories, fourteen subcategories. **Finish setup** opens the management console — its first screen is the console home below.
+Complaint categories, each handled by one department, with subcategories one per line and an optional resolution time of their own; the default for every category is set below the list (3 days here). Categories stay *Unsaved*, each with Edit and Remove, until **Finish setup** saves them. Four categories, fourteen subcategories. **Finish setup** opens the management console — its first screen is the console home below.
 
 **Complaints Template: start from scratch or bulk upload**
 
 ![Complaints Template: start from scratch or bulk upload](../walkthrough/output-develop/en/d07_complaints/01_complaints_landing.png)
 
-**Bulk upload**
+**Bulk upload starts by defining the complaint hierarchy's levels**
 
-![Bulk upload](../walkthrough/output-develop/en/d07_complaints/02_complaints_upload.png)
+![Bulk upload starts by defining the complaint hierarchy's levels](../walkthrough/output-develop/en/d07_complaints/02_complaints_upload.png)
 
 **Add a complaint category: name, handling department, subcategories, resolution time**
 
 ![Add a complaint category: name, handling department, subcategories, resolution time](../walkthrough/output-develop/en/d07_complaints/03_add_category.png)
 
-**Four categories, fourteen subcategories**
+**Four categories, fourteen subcategories — *Unsaved*, each with Edit and Remove**
 
-![Four categories, fourteen subcategories](../walkthrough/output-develop/en/d07_complaints/04_categories_added.png)
+![Four categories, fourteen subcategories — Unsaved, each with Edit and Remove](../walkthrough/output-develop/en/d07_complaints/04_categories_added.png)
 
 **The default resolution time — a target, not a legal SLA**
 
@@ -321,11 +332,11 @@ The header's account menu: **Your account** (password, authenticator, email, sig
 
 ## Management console
 
-The console for the new workspace, route by route, as its founder sees it. Every screen pictured loaded without a refused or failed call. A few routes are not pictured; [What is not pictured](#what-is-not-pictured) says which and why.
+The console for the new workspace, route by route, as its founder sees it. Its home opens with **Workspace links**: the addresses of the workspace's employee app and citizen app, to copy or open. Every screen pictured loaded without a refused or failed call. A few routes are not pictured; [What is not pictured](#what-is-not-pictured) says which and why.
 
-**Console home: tenants, departments, designations, complaint categories, employees, boundaries, localization messages, access roles**
+**Console home: *Workspace links* to the employee and citizen apps, then tenants, departments, designations, complaint categories, employees, boundaries, localization messages, users, access roles**
 
-![Console home: tenants, departments, designations, complaint categories, employees, boundaries, localization messages, access roles](../walkthrough/output-develop/en/d09_manage/01_dashboard_home.png)
+![Console home: Workspace links to the employee and citizen apps, then tenants, departments, designations, complaint categories, employees, boundaries, localization messages, users, access roles](../walkthrough/output-develop/en/d09_manage/01_dashboard_home.png)
 
 **Branding, editable after onboarding**
 
@@ -335,33 +346,33 @@ The console for the new workspace, route by route, as its founder sees it. Every
 
 ![Tenants — the workspace's own tenant](../walkthrough/output-develop/en/d09_manage/04_tenants.png)
 
-**Departments**
+**Departments — the four, plus the founder's Administration**
 
-![Departments](../walkthrough/output-develop/en/d09_manage/05_departments.png)
+![Departments — the four, plus the founder's Administration](../walkthrough/output-develop/en/d09_manage/05_departments.png)
 
-**Designations**
+**Designations — the two, plus the founder's Workspace administrator**
 
-![Designations](../walkthrough/output-develop/en/d09_manage/06_designations.png)
+![Designations — the two, plus the founder's Workspace administrator](../walkthrough/output-develop/en/d09_manage/06_designations.png)
 
-**Boundaries — 80 (79 imported + the workspace root), on the map**
+**Boundaries — 80 (79 imported + the workspace root), 79 with map outlines**
 
-![Boundaries — 80 (79 imported + the workspace root), on the map](../walkthrough/output-develop/en/d09_manage/08_boundaries.png)
+![Boundaries — 80 (79 imported + the workspace root), 79 with map outlines](../walkthrough/output-develop/en/d09_manage/08_boundaries.png)
 
 **Map Configuration**
 
 ![Map Configuration](../walkthrough/output-develop/en/d09_manage/09_map_configuration.png)
 
-**Complaints — status tabs; none filed yet**
+**Complaints — none filed yet**
 
-![Complaints — status tabs; none filed yet](../walkthrough/output-develop/en/d09_manage/10_complaints.png)
+![Complaints — none filed yet](../walkthrough/output-develop/en/d09_manage/10_complaints.png)
 
-**Complaint Categories — the 4 categories and their subcategories, by department**
+**Complaint Categories — the 14 subcategories with their department and 72-hour SLA**
 
-![Complaint Categories — the 4 categories and their subcategories, by department](../walkthrough/output-develop/en/d09_manage/11_complaint_types.png)
+![Complaint Categories — the 14 subcategories with their department and 72-hour SLA](../walkthrough/output-develop/en/d09_manage/11_complaint_types.png)
 
-**Complaint Hierarchies — category → subcategory**
+**Complaint Hierarchies — `COMPLAINT_TYPE → SUB_TYPE`**
 
-![Complaint Hierarchies — category → subcategory](../walkthrough/output-develop/en/d09_manage/12_complaint_hierarchies.png)
+![Complaint Hierarchies — COMPLAINT_TYPE → SUB_TYPE](../walkthrough/output-develop/en/d09_manage/12_complaint_hierarchies.png)
 
 **PGR Escalation Policy — levels, ladder, automatic scan every 5 minutes**
 
@@ -387,29 +398,13 @@ The console for the new workspace, route by route, as its founder sees it. Every
 
 ![Workflow Processes — none until a complaint is filed](../walkthrough/output-develop/en/d09_manage/20_processes.png)
 
-**MDMS Schemas**
+**MDMS Schemas — 33**
 
-![MDMS Schemas](../walkthrough/output-develop/en/d09_manage/21_mdms_schemas.png)
+![MDMS Schemas — 33](../walkthrough/output-develop/en/d09_manage/21_mdms_schemas.png)
 
 **Analytics Providers — nothing is sent until a destination is switched on**
 
 ![Analytics Providers — nothing is sent until a destination is switched on](../walkthrough/output-develop/en/d09_manage/22_analytics_providers.png)
-
-**Notification Event Catalogue (read-only; events come from the modules)**
-
-![Notification Event Catalogue (read-only; events come from the modules)](../walkthrough/output-develop/en/d09_manage/25_notification_event_catalogue.png)
-
-**Notification Routing**
-
-![Notification Routing](../walkthrough/output-develop/en/d09_manage/26_notification_routing.png)
-
-**Notification Templates**
-
-![Notification Templates](../walkthrough/output-develop/en/d09_manage/27_notification_templates.png)
-
-**Provider Templates**
-
-![Provider Templates](../walkthrough/output-develop/en/d09_manage/28_notification_provider_templates.png)
 
 **Advanced — every MDMS master**
 
@@ -441,61 +436,69 @@ Every console screen pictured above, with the API calls it made while loading an
 | Workflow Processes | 11 | 0 | 0 |
 | MDMS Schemas | 11 | 0 | 0 |
 | Analytics Providers | 12 | 0 | 0 |
-| Notification Event Catalogue (read-only; events come from the modules) | 12 | 0 | 0 |
-| Notification Routing | 12 | 0 | 0 |
-| Notification Templates | 12 | 0 | 0 |
-| Provider Templates | 12 | 0 | 0 |
 | Advanced | 10 | 0 | 0 |
 
 ---
 
-## What changed since the 2026-10-05 capture
+## What changed since the 2026-10-21 capture
 
-The earlier walkthrough of the develop UI was captured on a remote develop deployment on
-2026-10-05. Since then:
+The previous walkthrough was captured on 2026-10-21 on a local stack running `develop`
+(`f713f9e6c`). This one runs `master` (`5dc402e09`). What the screens show differently:
 
-* **The onboarding Home and welcome tour** are new: sign-up lands on Home, not on Branding, with
-  a six-slide tour, the next step, *Learn the basics* videos and a documentation panel on every
-  step.
-* **Preconfigured boundaries** is live in Geography: the country's official boundary set with a
-  High / Medium / Low confidence tag, searched like Fetch with the source fixed.
-* **The founder's console permissions are fixed** in the sign-up seed. Every console screen
-  pictured here loaded without a refused call (in the earlier capture most of the console read
-  *AccessDeniedException*).
-* **Complaint categories** can each have their own resolution time, with a default for the rest.
-* **The account menu** has *Your account*, *Members* and *Workspace settings*; the console has
-  **Branding** and **Escalation Policy**; and once onboarding is finished its steps redirect to
-  the console instead of offering *Switch to Onboarding*.
-* Sign-up and onboarding ran end to end without an error: no provisioning race, no refused
-  finish, no expired session.
+* **Geography keeps a list until you save.** *Create Hierarchy & Boundaries* now puts the chosen
+  boundaries in a list on the Geography page (*Not saved yet*, with Edit and Remove) instead of
+  creating them. *Save and continue* asks for confirmation — saved boundaries can't be edited or
+  removed — and shows the save's progress. The old *Boundaries created* result screen is gone.
+* **Geography names fewer data sources.** The Preconfigured card no longer carries a source line,
+  and Fetch's source picker offers *Official boundaries* and *OpenStreetMap* instead of four
+  options naming COD-AB, geoBoundaries and Overture. The Preconfigured search still names OCHA
+  COD-AB with its confidence tag.
+* **The level screen** has a *Download boundary list* link under the map, and the confidence
+  summary and data check, shown open before, are folded into a *Geographic Boundary Validation
+  Report*.
+* **Sign-up's Review step** no longer has a terms checkbox; the line on the first sign-up screen
+  (*By continuing, you agree to the Terms of Service and Privacy Notice*) is the only one left.
+* **Add an employee** takes one department, from a dropdown (it was a list of checkboxes), and
+  the confirmation says staff sign in with their email (it used to give the employee code).
+* **The console home** opens with *Workspace links*: the employee app and citizen app addresses,
+  with Copy and Open.
+* Sign-up, all five steps and Finish setup again ran without an error, and no pictured console
+  screen made a refused or failed call.
+
+The four notification masters (Events, Routing, Templates, Provider Templates) that were pictured
+on 2026-10-21 as empty lists are now listed below instead, with the other notification screens.
 
 ## What is not pictured
 
 These console routes were captured but are left out, because each shows something that isn't a
 fair picture of the product:
 
-* **Boundary hierarchies** — its Levels column header is the raw translation key `app.fields.levels`
-* **Workflows** — it lists 0 business services although the PGR workflow exists for the tenant
-* **Public Dashboard — anonymous access, off until published** — its preview shows grey placeholder tiles until complaints are filed
-* **Localization — English and Portuguese columns** — most Portuguese messages read “— missing —”, and inherited platform messages include India-specific ones (Aadhaar)
-* **Notification configure** — notifications are not deployed on this local stack
-* **Notification channels** — notifications are not deployed on this local stack
-* **Notification providers** — notifications are not deployed on this local stack
-* **Notification logs** — notifications are not deployed on this local stack
-* **Notification preferences** — notifications are not deployed on this local stack
+* **Public Dashboard** — its preview shows grey placeholder tiles until complaints are filed
+* **Boundary Hierarchies** — its Levels column header is the raw translation key `app.fields.levels`
+* **Localization** — many Portuguese and default-locale entries read “— missing —”, and inherited platform messages include India-specific ones (Aadhaar)
+* **Workflow Business Services** — it lists 0 business services, so the complaint workflow doesn't show
+* **Configure Notifications** — it reports no notification configuration on the tenant: this local stack is deployed without notifications (Novu)
+* **Notification Channels** — every channel is off, with “Novu workflow … not found”: this local stack is deployed without notifications (Novu)
+* **Notification Events** — empty, although its note says PGR's rows are generated at seed time: this local stack is deployed without notifications (Novu)
+* **Notification Routing** — empty: this local stack is deployed without notifications (Novu)
+* **Notification Templates** — empty: this local stack is deployed without notifications (Novu)
+* **Notification Provider Templates** — empty: this local stack is deployed without notifications (Novu)
+* **Notification Providers** — “Error loading data” (500): this local stack is deployed without notifications (Novu)
+* **Notification Logs** — “Error loading data” (500): this local stack is deployed without notifications (Novu)
+* **User Preferences** — “Error loading data” (500): this local stack is deployed without notifications (Novu)
 
-Boundary Hierarchies, Workflow Business Services and the Localization gaps are still on `develop`;
-the Public Dashboard preview fills in once complaints exist. The notification screens only fail
-because this local stack is deployed without notifications (Novu); on a deployment with them they
-load.
+Boundary Hierarchies, Workflow Business Services and the Localization gaps are as `master`
+ships them; the Public Dashboard preview fills in once complaints exist. The notification screens
+fail or are empty only because this local stack is deployed without notifications (Novu): the
+deploy installs the notification configuration only when they are enabled.
 
 ---
 
 ## How this capture was made
 
-Against the **local** DIGIT stack, deployed from `develop` at `f713f9e6c` on 2026-10-21 with
-`local-setup/ansible/deploy.sh maputo` (images `develop-f713f9e6`; the configurator built from the
-same commit). Nothing was written to any shared server.
+Against the **local** DIGIT stack, deployed from `master` at `5dc402e09` on 2026-10-26 with
+`local-setup/ansible/deploy.sh maputo` (backend images `master-b4adf0d`; the configurator built from
+`5dc402e09`). Nothing was written to any shared server.
 
 * **The sign-up and the five onboarding steps write.** They were driven once, click by click,
   against a new throwaway workspace — the steps unlock one after another, so stopping before each
@@ -505,6 +508,8 @@ same commit). Nothing was written to any shared server.
   captures the sign-in screens, the account pages and every console route behind the request
   guard (it ended with `read-only guard: no mutating requests were attempted`), recording the API
   calls each console screen made.
+* **Every screenshot was looked at** before publishing; the ones that show an error or an empty
+  placeholder are listed under [What is not pictured](#what-is-not-pictured).
 
 ```bash
 cd walkthrough

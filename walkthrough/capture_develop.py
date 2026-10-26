@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-"""Capture the develop-branch UI on the develop deployment (https://141.94.92.163.nip.io).
+"""Capture the configurator on a local DIGIT stack (`local-setup/ansible/deploy.sh maputo`).
 
-Unlike bomet, this deployment signs in through Keycloak + the Identity BFF, so
-the capture needs a Keycloak account, not a DIGIT one:
+Last run 2026-10-26 against a local stack on master (5dc402e09), configurator at
+http://localhost/configurator/. Unlike bomet, the configurator signs in through
+Keycloak + the Identity BFF, so the capture needs a Keycloak account, not a
+DIGIT one: a password, or a saved signed-in session (an account that signed up
+through the magic link has no password):
 
+    WT_HOST=http://localhost WT_OUT=output-develop \\
     WT_KC_EMAIL=you@example.com WT_KC_PASS=... .venv/bin/python capture_develop.py
+    # or WT_STORAGE_STATE=/path/to/signed-in-state.json instead of WT_KC_PASS
 
 READ-ONLY. The onboarding writes (sign-up, Branding -> Complaints Template)
 were done once, by hand-driven clicks, and their screenshots are imported by
-`import_develop_run.py`; this script only revisits finished screens and the
-management console, behind the same request guard as the bomet capture.
+`import_develop_run.py`; this script only revisits the sign-in screens, the
+account pages and the management console, behind the same request guard as
+the bomet capture.
 
 Run one flow with:  .venv/bin/python capture_develop.py d09_manage
 """

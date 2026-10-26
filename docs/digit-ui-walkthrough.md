@@ -2,8 +2,8 @@
 
 A screen-by-screen capture of **[bometfeedbackhub.digit.org](https://bometfeedbackhub.digit.org)** —
 the DIGIT configurator (4-phase onboarding wizard + management console), the digit-ui employee app,
-both citizen apps and the public dashboard. The develop-branch UI (Keycloak sign-in, five-step
-onboarding) is captured separately, on a local develop stack: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+both citizen apps and the public dashboard. The newer configurator UI (Keycloak sign-in, five-step
+onboarding) is captured separately, on a local `master` stack: [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 **104 screens · 22 flows · captured 2026-10-05 · read-only.** Nothing on the deployment was
 created, updated or deleted; see [How the capture stayed read-only](#how-the-capture-stayed-read-only).
@@ -703,8 +703,8 @@ apps changed a lot (#2038):
 * **The citizen side** — the new `/citizen` SPA (Google or OTP sign-in) and the classic
   `/digit-ui/citizen` app in the same shell. Neither was in the previous walkthrough.
 
-The develop-branch UI (Keycloak sign-in, the five-step onboarding) is not on bomet; it is
-captured on a local develop stack in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
+The newer configurator UI (Keycloak sign-in, the five-step onboarding) is not on bomet; it is
+captured on a local `master` stack in [`digit-ui-walkthrough-develop.md`](digit-ui-walkthrough-develop.md).
 
 ### 2. Phase 4 is blocked by test-leftover boundary hierarchies
 

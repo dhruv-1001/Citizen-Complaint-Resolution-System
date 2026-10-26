@@ -10,7 +10,7 @@
       "en/d01_signin/02_keycloak_email_step.png",
       "en/d01_signin/03_keycloak_password_step.png"
     ],
-    "caption": "Keycloak, username-first: email, then password (or GitHub)"
+    "caption": "Keycloak, username-first: username or email, then password"
   },
   "pwsetup": {
     "en": [
@@ -81,7 +81,7 @@
       "en/d04_geography/04_fetch_suggestions.png",
       "en/d04_geography/05_fetch_map_admin_levels.png"
     ],
-    "caption": "Search with a choice of source \u2014 read-only here"
+    "caption": "Search official boundaries or OpenStreetMap \u2014 read-only here"
   },
   "geo_excel": {
     "en": [
@@ -91,15 +91,16 @@
   },
   "geo_preconf": {
     "en": [
+      "en/d04b_preconfigured/07_save_confirm.png",
       "en/d04b_preconfigured/01_preconfigured_search.png",
       "en/d04b_preconfigured/02_preconfigured_suggestions.png",
       "en/d04b_preconfigured/03_preconfigured_levels.png",
-      "en/d04b_preconfigured/04_per_level_confidence.png",
+      "en/d04b_preconfigured/04_data_check.png",
       "en/d04b_preconfigured/05_levels_named.png",
-      "en/d04b_preconfigured/06_boundaries_created.png",
-      "en/d04b_preconfigured/07_geography_with_hierarchy.png"
+      "en/d04b_preconfigured/06_geography_list.png",
+      "en/d04b_preconfigured/08_saving.png"
     ],
-    "caption": "Search Mozambique's official set (Medium confidence) \u2192 79 areas for Cidade de Maputo"
+    "caption": "Search Mozambique's official set (Medium confidence) \u2192 a list of 79 areas, saved after a confirmation"
   },
   "depts": {
     "en": [
@@ -113,10 +114,11 @@
   },
   "emps": {
     "en": [
-      "en/d06_employees/03_employee_form_filled.png",
+      "en/d06_employees/04_employee_form_filled.png",
       "en/d06_employees/01_employees_landing.png",
       "en/d06_employees/02_employees_upload.png",
-      "en/d06_employees/04_employees_list.png"
+      "en/d06_employees/03_employee_form_blank.png",
+      "en/d06_employees/05_employees_list.png"
     ],
     "caption": "6 employees: a GRO per department, 2 field officers"
   },
@@ -159,12 +161,8 @@
       "en/d09_manage/20_processes.png",
       "en/d09_manage/21_mdms_schemas.png",
       "en/d09_manage/22_analytics_providers.png",
-      "en/d09_manage/25_notification_event_catalogue.png",
-      "en/d09_manage/26_notification_routing.png",
-      "en/d09_manage/27_notification_templates.png",
-      "en/d09_manage/28_notification_provider_templates.png",
       "en/d09_manage/32_advanced_all_masters.png"
     ],
-    "caption": "Every console route \u2014 no refused calls"
+    "caption": "Workspace links, then every console route pictured \u2014 no refused calls"
   }
 }

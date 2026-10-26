@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Render output-develop/index.html (sitemap graph) and gallery.html (grid) for the develop capture.
+"""Render output-develop/index.html (sitemap graph) and gallery.html (grid) for the configurator capture.
 
-Same renderer as build_site.py, with the develop capture's own flows and screen graph.
+Same renderer as build_site.py, with this capture's own flows and screen graph. The capture
+keeps its "develop" file names; since 2026-10-26 it is taken on a local master stack.
 
     .venv/bin/python build_site_develop.py
 """
@@ -57,7 +58,7 @@ EDGES = [
     ("branding", "geo", "write: Save"),
     ("geo", "geo_preconf", "Use these boundaries"), ("geo", "geo_fetch", "Search boundaries"),
     ("geo", "geo_excel", "Upload a file"),
-    ("geo_preconf", "depts", "write: Create + Save"), ("depts", "emps", "write: Save"),
+    ("geo_preconf", "depts", "list, then write: Save and continue"), ("depts", "emps", "write: Save"),
     ("emps", "cats", "write: Save"), ("cats", "manage", "write: Finish setup"),
     ("manage", "acct", "account menu"), ("kc", "manage", "Sign In"),
 ]
@@ -68,7 +69,7 @@ LEGEND = [("Sign in", "#d8973c"), ("Sign up", "#e0672b"), ("Onboarding", "#8b5cf
 
 CAPTIONS = {
     "landing": "/configurator/ — a single Log in button; sign-in lives in Keycloak",
-    "kc": "Keycloak, username-first: email, then password (or GitHub)",
+    "kc": "Keycloak, username-first: username or email, then password",
     "pwsetup": "One-use password set-up link by mail",
     "signup": "Self-serve sign-up: name and email",
     "account": "Account name and a code derived from it",
@@ -77,13 +78,13 @@ CAPTIONS = {
     "home": "Onboarding Home: welcome tour, next step, Learn the basics videos, documentation",
     "branding": "Logo, name, brand theme",
     "geo": "Preconfigured boundaries (with a confidence tag), Fetch boundaries, Upload from Excel",
-    "geo_fetch": "Search with a choice of source — read-only here",
+    "geo_fetch": "Search official boundaries or OpenStreetMap — read-only here",
     "geo_excel": "Define the hierarchy's levels, then upload",
-    "geo_preconf": "Search Mozambique's official set (Medium confidence) → 79 areas for Cidade de Maputo",
+    "geo_preconf": "Search Mozambique's official set (Medium confidence) → a list of 79 areas, saved after a confirmation",
     "depts": "4 departments, 2 designations",
     "emps": "6 employees: a GRO per department, 2 field officers",
     "cats": "4 categories, 14 subcategories, 3-day default",
-    "manage": "Every console route — no refused calls",
+    "manage": "Workspace links, then every console route pictured — no refused calls",
     "acct": "Your account, Members, Workspace settings",
 }
 
@@ -119,8 +120,8 @@ if __name__ == "__main__":
     build_sitemap(
         OUT, NODES, EDGES,
         group_colors=GROUP_COLOR, legend=LEGEND, langs=(("en", "EN"),),
-        title="Sitemap · DIGIT configurator on develop — walkthrough (2026-10-21)",
-        heading='DIGIT configurator <span style="color:var(--mut)">· develop f713f9e6c, local stack</span>',
+        title="Sitemap · DIGIT configurator on master — walkthrough (2026-10-26)",
+        heading='DIGIT configurator <span style="color:var(--mut)">· master 5dc402e09, local stack</span>',
         links=[("gallery.html", "Grid gallery →")],
         accent="#2f6fdb",
     )
@@ -129,12 +130,12 @@ if __name__ == "__main__":
     bs.use_thumbs_in(("index.html", "sitemap.html"))
     build_flow_gallery(
         OUT, FLOWS, langs=(("en", "EN"),),
-        title="DIGIT configurator on develop — walkthrough (2026-10-21)",
-        intro=("The configurator on develop (f713f9e6c): Keycloak sign-in, self-serve sign-up, the "
+        title="DIGIT configurator on master — walkthrough (2026-10-26)",
+        intro=("The configurator on master (5dc402e09): Keycloak sign-in, self-serve sign-up, the "
                "onboarding Home and tour, the five steps done for Cidade de Maputo with Mozambique's "
                "official boundaries, the account pages, and the management console."),
         links=[("index.html", "&#9783; Open the sitemap graph &rarr;")],
-        footer=("Click any screenshot to zoom · captured on a local develop stack on 2026-10-21; the "
+        footer=("Click any screenshot to zoom · captured on a local master stack on 2026-10-26; the "
                 "sign-up and onboarding steps wrote to a throwaway workspace there, everything else is read-only."),
         accent="#2f6fdb",
     )

@@ -22,6 +22,25 @@ EN
 Theme
 W
 DIGIT Management Studio
+Workspace links
+
+Employee app
+
+Where your staff sign in and handle complaints
+
+http://localhost/cidade-de-maputo/digit-ui/employee
+
+Copy
+Open
+
+Citizen app
+
+Share this with citizens to file and track complaints
+
+http://localhost/cidade-de-maputo/digit-ui/citizen
+
+Copy
+Open
 
 1
 
@@ -51,7 +70,7 @@ Boundaries
 
 Complaints
 
-4486
+4496
 
 Localization Messages
 
